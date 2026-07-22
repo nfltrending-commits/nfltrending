@@ -1,0 +1,26 @@
+# Cloudflare Pages redirect rules for NFLtrending.com
+# Redirects all old WordPress article URLs to homepage (301 = permanent, preserves SEO value)
+
+# Old WordPress date-based post URLs
+/20*/*  /  301
+
+# Old WordPress category pages
+/category/*  /  301
+
+# Old WordPress tag pages
+/tag/*  /  301
+
+# Old WordPress pagination
+/page/*  /  301
+
+# Old WordPress author pages
+/author/*  /  301
+
+# Common WordPress pages
+/wp-admin  https://www.wordpress.com  302
+/wp-login.php  /  301
+/feed  /  301
+/feed/*  /  301
+
+# Catch-all: anything not found goes to homepage
+/*  /index.html  200

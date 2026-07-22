@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NFLTrending | 2026 Season News, Picks & Live Odds</title>
+  <meta name="description" content="Your #1 source for NFL trending news, injury reports, expert picks, live betting odds, and 2026 season analysis." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --red:#d4001a;--red-dk:#a80015;--gold:#f5a623;
+      --navy:#0a0e1a;--navy2:#111827;--navy3:#1e2a3a;--navy4:#253347;
+      --text:#e8ecf3;--muted:#8a97aa;--border:#1e2a3a;--radius:10px;
+      --green:#22c55e;--green-bg:rgba(34,197,94,0.12);
+      --orange-bg:rgba(239,68,68,0.12);--orange:#ef4444;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--navy);color:var(--text);line-height:1.6;font-size:15px}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+
+    /* ── NAV ── */
+    .nav{position:sticky;top:0;z-index:100;background:rgba(10,14,26,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 20px}
+    .nav-inner{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:60px;gap:20px}
+    .nav-logo{font-size:22px;font-weight:900;letter-spacing:-.5px;display:flex;align-items:center;gap:2px}
+    .nav-logo .r{color:var(--red)}.nav-logo .g{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none}
+    .nav-links a{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;transition:color .2s}
+    .nav-links a:hover{color:#fff}
+    .nav-cta{background:var(--red);color:#fff;font-size:13px;font-weight:700;padding:9px 18px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;transition:background .2s,transform .15s;flex-shrink:0}
+    .nav-cta:hover{background:var(--red-dk);transform:translateY(-1px)}
+
+    /* ── TICKER ── */
+    .ticker{background:var(--red);padding:8px 0;overflow:hidden;white-space:nowrap}
+    .ticker-track{display:inline-flex;gap:60px;animation:ticker 32s linear infinite}
+    .ticker-item{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#fff;display:inline-flex;align-items:center;gap:8px}
+    .ticker-sep{color:rgba(255,255,255,.4)}
+    @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* ── HERO ── */
+    .hero{background:linear-gradient(135deg,#0a0e1a 0%,#14203a 50%,#1a0a0f 100%);border-bottom:1px solid var(--border);padding:70px 20px 60px;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(212,0,26,.18) 0%,transparent 65%);pointer-events:none}
+    .hero-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 380px;gap:50px;align-items:center}
+    .hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(212,0,26,.15);border:1px solid rgba(212,0,26,.3);color:var(--red);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:5px 12px;border-radius:20px;margin-bottom:18px}
+    .hero h1{font-size:clamp(32px,5vw,54px);font-weight:900;line-height:1.1;letter-spacing:-1px;margin-bottom:20px}
+    .hero h1 em{color:var(--red);font-style:normal}
+    .hero p{color:var(--muted);font-size:16px;max-width:520px;margin-bottom:32px}
+    .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-size:15px;font-weight:700;padding:14px 28px;border-radius:8px;transition:background .2s,transform .15s,box-shadow .2s}
+    .btn-primary:hover{background:var(--red-dk);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,0,26,.4)}
+    .btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--border);color:var(--text);font-size:15px;font-weight:600;padding:14px 24px;border-radius:8px;transition:border-color .2s,background .2s}
+    .btn-secondary:hover{border-color:var(--muted);background:var(--navy2)}
+
+    /* OFFER CARD */
+    .offer-card{background:var(--navy2);border:1px solid var(--border);border-radius:14px;padding:28px;position:relative;overflow:hidden}
+    .offer-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),var(--gold))}
+    .offer-badge{display:inline-block;background:var(--gold);color:#000;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:4px;margin-bottom:12px}
+    .offer-card h3{font-size:13px;color:var(--muted);font-weight:500;margin-bottom:6px}
+    .offer-amount{font-size:42px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1;margin-bottom:4px}
+    .offer-sub{font-size:13px;color:var(--muted);margin-bottom:20px}
+    .offer-features{list-style:none;margin-bottom:22px}
+    .offer-features li{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text);padding:5px 0;border-bottom:1px solid var(--border)}
+    .offer-features li:last-child{border-bottom:none}
+    .offer-features li::before{content:'✓';color:var(--gold);font-weight:700}
+    .offer-claim{display:block;text-align:center;background:linear-gradient(135deg,var(--red),#ff2d47);color:#fff;font-size:15px;font-weight:800;padding:14px;border-radius:8px;text-transform:uppercase;letter-spacing:.5px;transition:opacity .2s,transform .15s,box-shadow .2s}
+    .offer-claim:hover{opacity:.92;transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,0,26,.45)}
+    .offer-disclaimer{text-align:center;font-size:10px;color:var(--muted);margin-top:10px}
+
+    /* LAYOUT */
+    .container{max-width:1200px;margin:auto;padding:0 20px}
+    .section{padding:56px 0}
+    .section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px}
+    .section-title{font-size:22px;font-weight:800;display:flex;align-items:center;gap:10px}
+    .section-title::after{content:'';display:block;width:30px;height:3px;background:var(--red);border-radius:2px}
+    .view-all{font-size:12px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.5px;border:1px solid rgba(212,0,26,.3);padding:6px 14px;border-radius:6px;transition:background .2s}
+    .view-all:hover{background:rgba(212,0,26,.1)}
+    .two-col{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:start}
+
+    /* SKELETON */
+    .skeleton{background:linear-gradient(90deg,var(--navy3) 25%,var(--navy4) 50%,var(--navy3) 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:4px}
+    @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+    .skel-thumb{width:100%;aspect-ratio:16/9}
+    .skel-line{height:14px;margin-bottom:8px}
+    .skel-line.s{width:55%}.skel-line.m{width:80%}.skel-line.l{width:100%}
+    .skel-body{padding:18px}
+
+    /* NEWS GRID */
+    .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .news-card{background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s;cursor:pointer;display:flex;flex-direction:column}
+    .news-card:hover{transform:translateY(-4px);border-color:var(--navy4);box-shadow:0 12px 32px rgba(0,0,0,.4)}
+    .news-card.featured{grid-column:span 2}
+    .news-thumb{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--navy3)}
+    .news-thumb-placeholder{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,var(--navy3),var(--navy4));display:flex;align-items:center;justify-content:center;font-size:48px}
+    .news-body{padding:18px;flex:1;display:flex;flex-direction:column}
+    .news-cat{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--red);margin-bottom:8px}
+    .news-card h3{font-size:15px;font-weight:700;line-height:1.4;margin-bottom:10px;flex:1}
+    .news-card.featured h3{font-size:19px}
+    .news-card p{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+    .news-meta{display:flex;align-items:center;gap:12px;font-size:11px;color:var(--muted);margin-top:auto}
+    .news-meta .author{font-weight:600;color:var(--text)}
+    .news-meta .dot{opacity:.4}
+
+    /* LIVE BADGE */
+    .live-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(212,0,26,.15);border:1px solid rgba(212,0,26,.3);color:var(--red);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:3px 8px;border-radius:4px}
+    .live-dot{width:6px;height:6px;border-radius:50%;background:var(--red);animation:pulse 1.5s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+    .feed-status{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:6px}
+    .feed-status.live{color:var(--green)}
+
+    /* SIDEBAR */
+    .sidebar-widget{background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:20px}
+    .sidebar-widget:last-child{margin-bottom:0}
+    .widget-header{background:var(--navy3);padding:12px 16px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+    .widget-body{padding:16px}
+    .hot-item{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);transition:opacity .2s}
+    .hot-item:hover{opacity:.8}
+    .hot-item:last-child{border-bottom:none;padding-bottom:0}
+    .hot-num{font-size:22px;font-weight:900;color:var(--border);line-height:1;flex-shrink:0;width:28px}
+    .hot-item h4{font-size:13px;font-weight:600;line-height:1.4;margin-bottom:4px}
+    .hot-item span{font-size:11px;color:var(--muted)}
+
+    /* LIVE ODDS */
+    .odds-game{padding:14px 0;border-bottom:1px solid var(--border)}
+    .odds-game:last-child{border-bottom:none;padding-bottom:0}
+    .odds-teams{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+    .odds-team{font-size:13px;font-weight:700}
+    .odds-time{font-size:11px;color:var(--muted)}
+    .odds-row{display:flex;gap:6px}
+    .odds-chip{flex:1;text-align:center;background:var(--navy3);border:1px solid var(--border);border-radius:5px;padding:7px 4px;cursor:pointer;transition:background .2s,border-color .2s}
+    .odds-chip:hover{background:var(--navy4);border-color:var(--red)}
+    .odds-chip .type{color:var(--muted);font-size:10px;margin-bottom:2px}
+    .odds-chip .val{font-weight:700;font-size:13px}
+    .odds-status{font-size:11px;color:var(--muted);text-align:center;padding:8px 0}
+
+    /* PICKS TABLE */
+    .picks-table{background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+    .picks-table table{width:100%;border-collapse:collapse}
+    .picks-table th{background:var(--navy3);padding:12px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);text-align:left;border-bottom:1px solid var(--border)}
+    .picks-table td{padding:14px 16px;font-size:14px;border-bottom:1px solid var(--border);vertical-align:middle}
+    .picks-table tr:last-child td{border-bottom:none}
+    .picks-table tr:hover td{background:rgba(255,255,255,.03)}
+    .team-tag{display:inline-flex;align-items:center;gap:6px;font-weight:700}
+    .team-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+    .pick-badge{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;text-transform:uppercase}
+    .pick-badge.over{background:var(--green-bg);color:var(--green)}
+    .pick-badge.under{background:var(--orange-bg);color:var(--orange)}
+    .pick-badge.spread,.pick-badge.moneyline{background:rgba(245,166,35,.15);color:var(--gold)}
+    .confidence{display:flex;gap:3px}
+    .conf-dot{width:8px;height:8px;border-radius:2px}
+    .conf-dot.on{background:var(--gold)}.conf-dot.off{background:var(--navy4)}
+    .btn-pick{display:inline-block;background:var(--red);color:#fff;font-size:11px;font-weight:700;padding:6px 14px;border-radius:5px;text-transform:uppercase;transition:background .2s}
+    .btn-pick:hover{background:var(--red-dk)}
+    .pick-analysis{font-size:12px;color:var(--muted);line-height:1.5;padding:0 16px 14px;display:none}
+    .picks-table tr.expanded .pick-analysis{display:block}
+
+    /* BETTING BANNER */
+    .betting-banner{background:linear-gradient(135deg,#14203a,#1a0a0f);border:1px solid rgba(212,0,26,.25);border-radius:14px;padding:36px 40px;display:flex;align-items:center;justify-content:space-between;gap:30px;position:relative;overflow:hidden}
+    .betting-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(212,0,26,.12),transparent 60%)}
+    .betting-banner .bleft{position:relative}
+    .betting-banner .tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gold);margin-bottom:8px}
+    .betting-banner h2{font-size:clamp(22px,3vw,32px);font-weight:900;line-height:1.15;margin-bottom:10px}
+    .betting-banner h2 span{color:var(--red)}
+    .betting-banner p{font-size:14px;color:var(--muted);max-width:460px}
+    .betting-banner .bright{flex-shrink:0;position:relative;text-align:center}
+    .betting-banner .amount{font-size:56px;font-weight:900;color:#fff;line-height:1;letter-spacing:-2px}
+    .betting-banner .amount small{font-size:20px;font-weight:600;color:var(--muted)}
+    .betting-banner .blabel{font-size:13px;color:var(--muted);margin-bottom:18px}
+    .btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#000;font-size:14px;font-weight:800;padding:13px 26px;border-radius:8px;text-transform:uppercase;transition:filter .2s,transform .15s}
+    .btn-gold:hover{filter:brightness(1.1);transform:translateY(-2px)}
+
+    /* TEAMS */
+    .teams-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .team-card{background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;transition:transform .2s,border-color .2s;cursor:pointer}
+    .team-card:hover{transform:translateY(-3px);border-color:var(--navy4)}
+    .team-emoji{font-size:36px;margin-bottom:10px}
+    .team-name{font-size:13px;font-weight:700;margin-bottom:4px}
+    .team-record{font-size:12px;color:var(--muted);margin-bottom:10px}
+    .team-odds-pill{display:inline-block;background:var(--navy3);border:1px solid var(--border);font-size:12px;font-weight:700;color:var(--gold);padding:4px 12px;border-radius:20px}
+
+    /* NEWSLETTER */
+    .newsletter{background:var(--navy2);border:1px solid var(--border);border-radius:14px;padding:44px;text-align:center}
+    .newsletter h2{font-size:28px;font-weight:900;margin-bottom:10px}
+    .newsletter p{color:var(--muted);margin-bottom:28px;max-width:460px;margin-left:auto;margin-right:auto}
+    .email-form{display:flex;gap:10px;max-width:480px;margin:auto}
+    .email-form input{flex:1;background:var(--navy);border:1px solid var(--border);color:var(--text);font-family:'Inter',sans-serif;font-size:14px;padding:12px 16px;border-radius:8px;outline:none;transition:border-color .2s}
+    .email-form input:focus{border-color:var(--red)}
+    .email-form input::placeholder{color:var(--muted)}
+    .email-form button{background:var(--red);color:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:700;padding:12px 22px;border:none;border-radius:8px;cursor:pointer;white-space:nowrap;transition:background .2s}
+    .email-form button:hover{background:var(--red-dk)}
+    .newsletter-fine{font-size:11px;color:var(--muted);margin-top:12px}
+    .form-success{display:none;color:var(--green);font-size:14px;font-weight:600;margin-top:14px}
+
+    /* FOOTER */
+    .footer{background:var(--navy2);border-top:1px solid var(--border);padding:48px 20px 28px}
+    .footer-inner{max-width:1200px;margin:auto}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+    .footer-brand .logo{font-size:20px;font-weight:900;margin-bottom:12px}
+    .footer-brand p{font-size:13px;color:var(--muted);line-height:1.7;max-width:280px}
+    .footer-col h4{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-bottom:14px}
+    .footer-col ul{list-style:none}
+    .footer-col ul li{margin-bottom:10px}
+    .footer-col ul li a{font-size:13px;color:var(--muted);transition:color .2s}
+    .footer-col ul li a:hover{color:var(--text)}
+    .footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+    .footer-bottom p{font-size:11px;color:var(--muted);max-width:720px;line-height:1.7}
+    .footer-links{display:flex;gap:20px;flex-shrink:0}
+    .footer-links a{font-size:12px;color:var(--muted);transition:color .2s}
+    .footer-links a:hover{color:var(--text)}
+
+    /* ── COINSALSA BLOCK ── */
+    .cs-section{padding:56px 0;background:linear-gradient(180deg,var(--navy) 0%,#071a14 100%)}
+    .cs-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px}
+    .cs-brand{display:flex;align-items:center;gap:12px}
+    .cs-logo{font-size:22px;font-weight:900;letter-spacing:-.5px}
+    .cs-logo .cs{color:#00c896}.cs-logo .salsa{color:#fff}.cs-logo .dot{color:var(--gold)}
+    .cs-tagline{font-size:12px;color:var(--muted);border-left:2px solid var(--border);padding-left:12px}
+    .cs-ig-btn{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#f77737);color:#fff;font-size:12px;font-weight:700;padding:8px 16px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px;transition:opacity .2s,transform .15s;flex-shrink:0}
+    .cs-ig-btn:hover{opacity:.9;transform:translateY(-1px)}
+    .cs-grid{display:grid;grid-template-columns:1fr 300px;gap:24px;align-items:start}
+    .cs-news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .cs-card{background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s;display:flex;flex-direction:column}
+    .cs-card:hover{transform:translateY(-4px);border-color:#0d3d2e;box-shadow:0 12px 28px rgba(0,200,150,.08)}
+    .cs-card.big{grid-column:span 2}
+    .cs-card-thumb{width:100%;aspect-ratio:16/9;object-fit:cover;background:linear-gradient(135deg,#071a14,#0d3d2e)}
+    .cs-card-thumb-placeholder{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#071a14,#0d3d2e);display:flex;align-items:center;justify-content:center;font-size:40px}
+    .cs-card-body{padding:16px;flex:1;display:flex;flex-direction:column}
+    .cs-cat{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#00c896;margin-bottom:6px}
+    .cs-card h3{font-size:14px;font-weight:700;line-height:1.4;margin-bottom:8px;flex:1}
+    .cs-card.big h3{font-size:16px}
+    .cs-card p{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px}
+    .cs-meta{font-size:11px;color:var(--muted);margin-top:auto}
+    /* Instagram widget */
+    .cs-ig-widget{background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+    .cs-ig-header{background:#0d1f18;padding:14px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border)}
+    .cs-ig-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#833ab4,#fd1d1d,#f77737);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+    .cs-ig-handle{font-size:13px;font-weight:700}
+    .cs-ig-sub{font-size:11px;color:var(--muted)}
+    .cs-ig-post{width:100%;aspect-ratio:1/1;background:linear-gradient(135deg,#071a14,#0d3d2e);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .cs-ig-post iframe{width:100%;border:none;min-height:400px}
+    .cs-ig-placeholder{text-align:center;padding:32px 20px}
+    .cs-ig-placeholder .emoji{font-size:48px;margin-bottom:12px}
+    .cs-ig-placeholder p{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px}
+    .cs-ig-footer{padding:14px 16px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+    .cs-ig-stats{font-size:12px;color:var(--muted)}
+    .cs-ig-cta{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#f77737);color:#fff;font-size:11px;font-weight:700;padding:7px 14px;border-radius:5px;text-transform:uppercase;letter-spacing:.5px;transition:opacity .2s}
+    .cs-ig-cta:hover{opacity:.9}
+    /* Divider */
+    .cs-divider{height:1px;background:linear-gradient(90deg,transparent,#00c896,transparent);margin:0 0 40px;opacity:.3}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .hero-inner{grid-template-columns:1fr}
+      .offer-card{max-width:440px}
+      .news-grid{grid-template-columns:repeat(2,1fr)}
+      .news-card.featured{grid-column:span 2}
+      .footer-top{grid-template-columns:1fr 1fr}
+      .teams-grid{grid-template-columns:repeat(2,1fr)}
+      .two-col{grid-template-columns:1fr}
+      .cs-grid{grid-template-columns:1fr}
+      .cs-news-grid{grid-template-columns:repeat(2,1fr)}
+      .cs-card.big{grid-column:span 2}
+    }
+    @media(max-width:768px){
+      .nav-links{display:none}
+      .hero{padding:48px 20px 40px}
+      .news-grid{grid-template-columns:1fr}
+      .news-card.featured{grid-column:span 1}
+      .betting-banner{flex-direction:column;text-align:center;padding:28px 22px}
+      .betting-banner p{margin:auto}
+      .footer-top{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+      .footer-links{flex-wrap:wrap;gap:14px}
+      .teams-grid{grid-template-columns:repeat(2,1fr)}
+      .email-form{flex-direction:column}
+      .picks-table{overflow-x:auto}
+      .picks-table table{min-width:600px}
+      .cs-news-grid{grid-template-columns:1fr}
+      .cs-card.big{grid-column:span 1}
+      .cs-header{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><span class="r">NFL</span>Trending<span class="g">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#news">News</a></li>
+      <li><a href="#odds">Odds</a></li>
+      <li><a href="#picks">Picks</a></li>
+      <li><a href="#teams">Teams</a></li>
+      <li><a href="#newsletter">Newsletter</a></li>
+      <li><a href="#crypto" style="color:#00c896">🌶️ CoinSalsa</a></li>
+    </ul>
+    <a href="https://www.mybookie.ag/?affid=1108" class="nav-cta" target="_blank" rel="noopener">Claim Bonus →</a>
+  </div>
+</nav>
+
+<!-- LIVE TICKER -->
+<div class="ticker">
+  <div class="ticker-track" id="ticker-track">
+    <span class="ticker-item">🏈 Loading latest NFL headlines…</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">🏈 2026 NFL Season</div>
+      <h1>Your Edge for the <em>2026 Season</em> Starts Here</h1>
+      <p>Live NFL news, real-time odds from every major sportsbook, and AI-powered expert picks — all updated automatically, every day.</p>
+      <div class="hero-btns">
+        <a href="#picks" class="btn-primary">🏆 View This Week's Picks</a>
+        <a href="#news" class="btn-secondary">📰 Latest News</a>
+      </div>
+    </div>
+    <div>
+      <div class="offer-card">
+        <div class="offer-badge">⚡ Limited Time</div>
+        <h3>Welcome Offer — New Users</h3>
+        <div class="offer-amount">$1,000</div>
+        <div class="offer-sub">Bet Credit Bonus on First Deposit</div>
+        <ul class="offer-features">
+          <li>No rollover requirements</li>
+          <li>Live in-game betting available</li>
+          <li>Same-game parlays on every matchup</li>
+          <li>Instant withdrawals via PayPal & Venmo</li>
+          <li>NFL-exclusive boosts every week</li>
+        </ul>
+        <a href="https://www.mybookie.ag/?affid=1108" class="offer-claim" target="_blank" rel="noopener">Claim Your Bonus Now →</a>
+        <p class="offer-disclaimer">21+ only. Terms apply. Gambling problem? Call 1-800-GAMBLER.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS + SIDEBAR -->
+<section class="section" id="news">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <div class="section-header">
+          <div class="section-title">🔥 Trending Now</div>
+          <span class="feed-status" id="news-status">Loading…</span>
+        </div>
+        <div class="news-grid" id="news-grid">
+          <!-- skeletons -->
+          <div class="news-card featured"><div class="skel-thumb skeleton"></div><div class="skel-body"><div class="skel-line s skeleton" style="margin-bottom:12px"></div><div class="skel-line l skeleton"></div><div class="skel-line m skeleton"></div><div class="skel-line s skeleton" style="margin-top:16px"></div></div></div>
+          <div class="news-card"><div class="skel-thumb skeleton"></div><div class="skel-body"><div class="skel-line s skeleton" style="margin-bottom:12px"></div><div class="skel-line l skeleton"></div><div class="skel-line m skeleton"></div></div></div>
+          <div class="news-card"><div class="skel-thumb skeleton"></div><div class="skel-body"><div class="skel-line s skeleton" style="margin-bottom:12px"></div><div class="skel-line l skeleton"></div><div class="skel-line m skeleton"></div></div></div>
+          <div class="news-card"><div class="skel-thumb skeleton"></div><div class="skel-body"><div class="skel-line s skeleton" style="margin-bottom:12px"></div><div class="skel-line l skeleton"></div></div></div>
+          <div class="news-card"><div class="skel-thumb skeleton"></div><div class="skel-body"><div class="skel-line s skeleton" style="margin-bottom:12px"></div><div class="skel-line l skeleton"></div></div></div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div>
+        <div class="sidebar-widget">
+          <div class="widget-header">🔥 Hot Topics</div>
+          <div class="widget-body" id="hot-topics">
+            <div class="hot-item"><div class="hot-num">01</div><div><div class="skel-line m skeleton" style="margin-bottom:6px"></div><div class="skel-line s skeleton"></div></div></div>
+            <div class="hot-item"><div class="hot-num">02</div><div><div class="skel-line m skeleton" style="margin-bottom:6px"></div><div class="skel-line s skeleton"></div></div></div>
+            <div class="hot-item"><div class="hot-num">03</div><div><div class="skel-line m skeleton" style="margin-bottom:6px"></div><div class="skel-line s skeleton"></div></div></div>
+            <div class="hot-item"><div class="hot-num">04</div><div><div class="skel-line m skeleton" style="margin-bottom:6px"></div><div class="skel-line s skeleton"></div></div></div>
+          </div>
+        </div>
+
+        <!-- LIVE ODDS SIDEBAR -->
+        <div class="sidebar-widget" id="odds">
+          <div class="widget-header">
+            <span>📊 Live Odds</span>
+            <span class="feed-status" id="odds-status" style="font-size:10px;text-transform:none;font-weight:400;">Loading…</span>
+          </div>
+          <div class="widget-body" id="odds-widget">
+            <div class="odds-status">Fetching live lines…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BETTING BANNER -->
+<section style="padding:0 0 56px">
+  <div class="container">
+    <div class="betting-banner">
+      <div class="bleft">
+        <div class="tag">⚡ Exclusive Partner Offer</div>
+        <h2>Ready to Back Your <span>Picks</span> With Real Money?</h2>
+        <p>Join thousands of NFL fans already betting smarter this season. Sharpest lines, fastest payouts, and the best welcome bonus in the game.</p>
+      </div>
+      <div class="bright">
+        <div class="amount"><small>Up to</small> $1K</div>
+        <div class="blabel">in bet credits on signup</div>
+        <a href="https://www.mybookie.ag/?affid=1108" class="btn-gold" target="_blank" rel="noopener">🏆 Claim Bonus Now</a>
+        <p style="font-size:10px;color:var(--muted);margin-top:10px">21+ | Terms apply | Gamble responsibly</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERT PICKS (from picks.json, updated by Make) -->
+<section class="section" id="picks" style="padding-top:0">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-title">🎯 Expert Picks</div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <span class="feed-status" id="picks-status">Loading…</span>
+        <a href="https://www.mybookie.ag/?affid=1108" class="view-all" target="_blank" rel="noopener">Bet These →</a>
+      </div>
+    </div>
+    <div class="picks-table" id="picks-table">
+      <table>
+        <thead>
+          <tr><th>Matchup</th><th>Pick</th><th>Line</th><th>Type</th><th>Confidence</th><th>Action</th></tr>
+        </thead>
+        <tbody id="picks-body">
+          <tr><td colspan="6" style="text-align:center;padding:28px;color:var(--muted)">Loading picks…</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:11px;color:var(--muted);margin-top:10px;text-align:right" id="picks-updated"></p>
+  </div>
+</section>
+
+<!-- TEAMS -->
+<section class="section" id="teams" style="padding-top:0">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-title">🏆 Super Bowl Futures</div>
+      <a href="https://www.mybookie.ag/?affid=1108" class="view-all" target="_blank" rel="noopener">Bet Futures →</a>
+    </div>
+    <div class="teams-grid">
+      <div class="team-card"><div class="team-emoji">🏈</div><div class="team-name">Kansas City Chiefs</div><div class="team-record">Preseason Favorite</div><div class="team-odds-pill">+320</div></div>
+      <div class="team-card"><div class="team-emoji">🦅</div><div class="team-name">Philadelphia Eagles</div><div class="team-record">NFC Contender</div><div class="team-odds-pill">+550</div></div>
+      <div class="team-card"><div class="team-emoji">⚡</div><div class="team-name">Baltimore Ravens</div><div class="team-record">AFC Dark Horse</div><div class="team-odds-pill">+650</div></div>
+      <div class="team-card"><div class="team-emoji">🌉</div><div class="team-name">San Francisco 49ers</div><div class="team-record">NFC West Titans</div><div class="team-odds-pill">+700</div></div>
+      <div class="team-card"><div class="team-emoji">🐃</div><div class="team-name">Buffalo Bills</div><div class="team-record">AFC Powerhouse</div><div class="team-odds-pill">+750</div></div>
+      <div class="team-card"><div class="team-emoji">⭐</div><div class="team-name">Dallas Cowboys</div><div class="team-record">NFC East Rival</div><div class="team-odds-pill">+900</div></div>
+      <div class="team-card"><div class="team-emoji">🐬</div><div class="team-name">Miami Dolphins</div><div class="team-record">Sleeper Pick</div><div class="team-odds-pill">+1200</div></div>
+      <div class="team-card"><div class="team-emoji">🐏</div><div class="team-name">LA Rams</div><div class="team-record">Wild Card Threat</div><div class="team-odds-pill">+1400</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COINSALSA CRYPTO BLOCK -->
+<section class="cs-section" id="crypto">
+  <div class="container">
+    <div class="cs-divider"></div>
+    <div class="cs-header">
+      <div class="cs-brand">
+        <div class="cs-logo"><span class="cs">Coin</span><span class="salsa">Salsa</span><span class="dot">.</span></div>
+        <div class="cs-tagline">Live crypto news & analysis<br>from our sister brand</div>
+      </div>
+      <a href="YOUR_COINSALSA_INSTAGRAM_URL" class="cs-ig-btn" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        Follow @CoinSalsa
+      </a>
+    </div>
+
+    <div class="cs-grid">
+      <!-- Crypto news grid -->
+      <div>
+        <div class="cs-news-grid" id="cs-news-grid">
+          <!-- skeletons -->
+          <div class="cs-card big"><div class="cs-card-thumb-placeholder skeleton" style="background:linear-gradient(135deg,#071a14,#0d3d2e)"></div><div class="cs-card-body"><div class="skel-line s skeleton" style="margin-bottom:10px"></div><div class="skel-line l skeleton"></div><div class="skel-line m skeleton"></div></div></div>
+          <div class="cs-card"><div class="cs-card-thumb-placeholder skeleton" style="background:linear-gradient(135deg,#071a14,#0d3d2e)"></div><div class="cs-card-body"><div class="skel-line s skeleton" style="margin-bottom:10px"></div><div class="skel-line l skeleton"></div></div></div>
+          <div class="cs-card"><div class="cs-card-thumb-placeholder skeleton" style="background:linear-gradient(135deg,#071a14,#0d3d2e)"></div><div class="cs-card-body"><div class="skel-line s skeleton" style="margin-bottom:10px"></div><div class="skel-line l skeleton"></div></div></div>
+          <div class="cs-card"><div class="cs-card-thumb-placeholder skeleton" style="background:linear-gradient(135deg,#071a14,#0d3d2e)"></div><div class="cs-card-body"><div class="skel-line s skeleton" style="margin-bottom:10px"></div><div class="skel-line l skeleton"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Instagram widget -->
+      <div class="cs-ig-widget">
+        <div class="cs-ig-header">
+          <div class="cs-ig-avatar">🌶️</div>
+          <div>
+            <div class="cs-ig-handle">@CoinSalsa</div>
+            <div class="cs-ig-sub">Crypto news & picks</div>
+          </div>
+        </div>
+        <div id="cs-ig-post" class="cs-ig-post">
+          <div class="cs-ig-placeholder">
+            <div class="emoji">🌶️</div>
+            <p>Loading latest post from<br><strong>@CoinSalsa</strong></p>
+          </div>
+        </div>
+        <div class="cs-ig-footer">
+          <span class="cs-ig-stats" id="cs-ig-updated">Updated weekly</span>
+          <a href="YOUR_COINSALSA_INSTAGRAM_URL" class="cs-ig-cta" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            Follow Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section" id="newsletter" style="padding-top:0">
+  <div class="container">
+    <div class="newsletter">
+      <h2>📬 Stay Ahead of the Line</h2>
+      <p>Get injury alerts, sharp movement tips, and AI-powered picks delivered every Monday morning — free. Used by 40,000+ NFL bettors.</p>
+      <form class="email-form" id="signup-form">
+        <input type="email" id="signup-email" placeholder="Enter your email address" required />
+        <button type="submit" id="signup-btn">Subscribe Free</button>
+      </form>
+      <p class="newsletter-fine">No spam. One-click unsubscribe anytime. We never share your email.</p>
+      <p class="form-success" id="form-success">✓ You're in! Check your inbox for a welcome email.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo"><span style="color:var(--red)">NFL</span>Trending<span style="color:var(--gold)">.</span></div>
+        <p>Your edge for every NFL season. Expert picks, live odds, injury intel, and the best sportsbook offers — trusted by over 40,000 fans since 2018.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Coverage</h4>
+        <ul>
+          <li><a href="#news">Latest News</a></li>
+          <li><a href="#">Injury Reports</a></li>
+          <li><a href="#picks">Expert Picks</a></li>
+          <li><a href="#teams">Team Analysis</a></li>
+          <li><a href="#">Draft Coverage</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Betting</h4>
+        <ul>
+          <li><a href="https://www.mybookie.ag/?affid=1108" target="_blank" rel="noopener">Top Sportsbooks</a></li>
+          <li><a href="#odds">Live Odds</a></li>
+          <li><a href="#picks">Parlay Picks</a></li>
+          <li><a href="#">Betting Lingo</a></li>
+          <li><a href="#">Responsible Gaming</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>NFLTrending.com is intended for users 21 years and older. This site contains sports betting information and affiliate links to licensed sportsbooks. Gambling involves risk. Please gamble responsibly. If you have a gambling problem, call <strong>1-800-GAMBLER</strong>. NFLTrending.com is not affiliated with the NFL, any NFL team, or any official league entity. Odds sourced from The Odds API. News sourced from public RSS feeds. Picks are for entertainment purposes only.</p>
+      <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Sitemap</a><a href="#">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ═══════════════════════════════════════════════
+//  CONFIG — fill these in before deploying
+// ═══════════════════════════════════════════════
+const CONFIG = {
+  affiliateLink:  'https://www.mybookie.ag/?affid=1108',
+  oddsApiKey:     'f70349f8d948e94299c459c081fc3b32',
+  makeWebhookUrl: 'YOUR_MAKE_WEBHOOK_URL',      // from Make Scenario B
+};
+
+// ═══════════════════════════════════════════════
+//  UTILITIES
+// ═══════════════════════════════════════════════
+const RSS2JSON = 'https://api.rss2json.com/v1/api.json?rss_url=';
+const FEEDS = [
+  { url: 'https://www.espn.com/espn/rss/nfl/news',            label: 'ESPN' },
+  { url: 'https://www.cbssports.com/rss/headlines/nfl/',       label: 'CBS Sports' },
+  { url: 'https://news.google.com/rss/search?q=NFL+2026&hl=en-US&gl=US&ceid=US:en', label: 'Google News' },
+];
+const EMOJIS = ['🏈','🏟️','⚡','🔥','💰','🎯','📋','🏆'];
+const CATS   = ['Breaking','Analysis','Picks','Injury','Rumors','Betting','Preview','Report'];
+
+const rand   = arr => arr[Math.floor(Math.random() * arr.length)];
+const strip  = h  => (h || '').replace(/<[^>]*>/g,'').replace(/&[^;]+;/g,' ').trim();
+const trunc  = (s, n) => { const c = strip(s); return c.length > n ? c.slice(0,n).trim()+'…' : c; };
+
+function timeAgo(d) {
+  const m = Math.floor((Date.now() - new Date(d)) / 60000);
+  if (m < 60)  return m + 'm ago';
+  if (m < 1440) return Math.floor(m/60) + 'h ago';
+  return Math.floor(m/1440) + 'd ago';
+}
+
+function fmtDate(iso) {
+  return new Date(iso).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
+}
+
+// ═══════════════════════════════════════════════
+//  NEWS FEED
+// ═══════════════════════════════════════════════
+function buildNewsCard(item, featured) {
+  const card = document.createElement('div');
+  card.className = 'news-card' + (featured ? ' featured' : '');
+  const thumb = item.thumbnail?.startsWith('http')
+    ? `<img class="news-thumb" src="${item.thumbnail}" alt="" loading="lazy"
+         onerror="this.outerHTML='<div class=\\'news-thumb-placeholder\\'>${rand(EMOJIS)}</div>'">`
+    : `<div class="news-thumb-placeholder">${rand(EMOJIS)}</div>`;
+  const desc = featured ? `<p>${trunc(item.description || item.content || '', 180)}</p>` : '';
+  card.innerHTML = `
+    ${thumb}
+    <div class="news-body">
+      <div class="news-cat">${rand(CATS)}</div>
+      <h3>${item.title || 'NFL Update'}</h3>
+      ${desc}
+      <div class="news-meta">
+        <span class="author">${item.author || item.feed || 'NFL Staff'}</span>
+        <span class="dot">·</span>
+        <span>${timeAgo(item.pubDate)}</span>
+      </div>
+    </div>`;
+  card.onclick = () => window.open(item.link || CONFIG.affiliateLink, '_blank', 'noopener');
+  return card;
+}
+
+function renderNews(items) {
+  const grid = document.getElementById('news-grid');
+  grid.innerHTML = '';
+  items.slice(0, 5).forEach((item, i) => grid.appendChild(buildNewsCard(item, i === 0)));
+}
+
+function renderHotTopics(items) {
+  document.getElementById('hot-topics').innerHTML = items.slice(0, 4).map((item, i) => `
+    <a href="${item.link || CONFIG.affiliateLink}" target="_blank" rel="noopener" class="hot-item" style="text-decoration:none">
+      <div class="hot-num">0${i+1}</div>
+      <div><h4>${trunc(item.title, 72)}</h4><span>${item.feed || 'NFL News'} · ${timeAgo(item.pubDate)}</span></div>
+    </a>`).join('');
+}
+
+function renderTicker(items) {
+  const headlines = items.slice(0, 8).map(i =>
+    `<span class="ticker-item">🏈 ${trunc(i.title,80)}<span class="ticker-sep"> | </span></span>`
+  ).join('');
+  const track = document.getElementById('ticker-track');
+  track.innerHTML = headlines + headlines;
+}
+
+async function loadNews() {
+  const statusEl = document.getElementById('news-status');
+  const all = [];
+  for (const feed of FEEDS) {
+    try {
+      const r = await fetch(`${RSS2JSON}${encodeURIComponent(feed.url)}&count=10`);
+      if (!r.ok) continue;
+      const d = await r.json();
+      if (d.status === 'ok' && d.items?.length) {
+        d.items.forEach(i => { i.feed = feed.label; });
+        all.push(...d.items);
+      }
+    } catch {}
+  }
+  if (!all.length) { renderFallbackNews(); return; }
+  all.sort((a,b) => new Date(b.pubDate) - new Date(a.pubDate));
+  const seen = new Set();
+  const unique = all.filter(i => { const k = i.title.slice(0,40).toLowerCase(); if(seen.has(k)) return false; seen.add(k); return true; });
+  renderNews(unique);
+  renderHotTopics(unique.slice(5));
+  renderTicker(unique);
+  statusEl.innerHTML = '<span class="live-badge"><span class="live-dot"></span> Live</span> Updated just now';
+  statusEl.className = 'feed-status live';
+}
+
+function renderFallbackNews() {
+  const now = Date.now();
+  const items = [
+    { title:"Chiefs' Dynasty Machine Rolls Into 2026 — Can Anyone Dethrone Kansas City?", description:"Patrick Mahomes and the Chiefs open as odds-on favorites again. We break down what changed, who's hunting them, and where the best betting value lies.", link:CONFIG.affiliateLink, pubDate:new Date(now-1800000).toISOString(), feed:'NFLTrending', thumbnail:'' },
+    { title:"Ravens WR Corps in Question — Injury Report Rattles Preseason Oddsmakers", description:"Baltimore's receiving group took a hit in camp. Here's what it means for Lamar's numbers and your parlays.", link:CONFIG.affiliateLink, pubDate:new Date(now-3600000).toISOString(), feed:'NFLTrending', thumbnail:'' },
+    { title:"5 Bold Predictions for the 2026 NFL Season That Will Make You Money", description:"Contrarian takes with genuine value — including an NFC sleeper at 40/1 that sharp bettors are quietly loading up on.", link:CONFIG.affiliateLink, pubDate:new Date(now-7200000).toISOString(), feed:'NFLTrending', thumbnail:'' },
+    { title:"Top Sportsbooks Ranked for the 2026 NFL Season", description:"We reviewed 14 platforms. Here's where the best odds, bonuses, and promos actually are.", link:CONFIG.affiliateLink, pubDate:new Date(now-10800000).toISOString(), feed:'NFLTrending', thumbnail:'' },
+    { title:"Eagles QB Battle Heats Up in Training Camp — What It Means for Week 1", description:"The depth chart is murky heading into preseason. A late decision could swing the entire NFC East.", link:CONFIG.affiliateLink, pubDate:new Date(now-14400000).toISOString(), feed:'NFLTrending', thumbnail:'' },
+  ];
+  renderNews(items); renderHotTopics(items.slice(1)); renderTicker(items);
+  document.getElementById('news-status').textContent = '📡 Curated content';
+}
+
+// ═══════════════════════════════════════════════
+//  LIVE ODDS  (The Odds API)
+// ═══════════════════════════════════════════════
+async function loadOdds() {
+  const widget  = document.getElementById('odds-widget');
+  const statusEl = document.getElementById('odds-status');
+  if (!CONFIG.oddsApiKey) {
+    widget.innerHTML = buildStaticOdds();
+    statusEl.textContent = 'Sample odds';
+    return;
+  }
+  try {
+    const url = `https://api.the-odds-api.com/v4/sports/americanfootball_nfl/odds/?apiKey=${CONFIG.oddsApiKey}&regions=us&markets=h2h,spreads,totals&oddsFormat=american&daysFrom=3`;
+    const r = await fetch(url);
+    if (!r.ok) throw new Error('API error');
+    const games = await r.json();
+    if (!games.length) { widget.innerHTML = '<div class="odds-status">No games scheduled this week.</div>'; return; }
+    widget.innerHTML = games.slice(0,4).map(g => {
+      const home = g.home_team, away = g.away_team;
+      const bm = g.bookmakers?.[0];
+      const spread = bm?.markets?.find(m=>m.key==='spreads')?.outcomes;
+      const total  = bm?.markets?.find(m=>m.key==='totals')?.outcomes;
+      const h2h    = bm?.markets?.find(m=>m.key==='h2h')?.outcomes;
+      const sp = spread?.find(o=>o.name===home);
+      const tot = total?.find(o=>o.name==='Over');
+      const ml = h2h?.find(o=>o.name===home);
+      const fmt = n => n > 0 ? '+'+n : n;
+      return `<div class="odds-game">
+        <div class="odds-teams"><span class="odds-team">${away}</span><span class="odds-time">vs</span><span class="odds-team">${home}</span></div>
+        <div class="odds-row">
+          ${sp  ? `<a href="${CONFIG.affiliateLink}" target="_blank" rel="noopener" class="odds-chip"><div class="type">Spread</div><div class="val">${sp.point>0?'+':''}${sp.point}</div></a>` : ''}
+          ${tot ? `<a href="${CONFIG.affiliateLink}" target="_blank" rel="noopener" class="odds-chip"><div class="type">Total</div><div class="val">${tot.point}</div></a>` : ''}
+          ${ml  ? `<a href="${CONFIG.affiliateLink}" target="_blank" rel="noopener" class="odds-chip"><div class="type">ML</div><div class="val">${fmt(ml.price)}</div></a>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+    statusEl.innerHTML = '<span style="color:var(--green)">● Live</span>';
+    // Add bet CTA
+    widget.innerHTML += `<div style="margin-top:14px;text-align:center"><a href="${CONFIG.affiliateLink}" class="btn-primary" style="font-size:13px;padding:10px 20px;justify-content:center" target="_blank" rel="noopener">Bet These Games →</a></div>`;
+  } catch {
+    widget.innerHTML = buildStaticOdds();
+    statusEl.textContent = 'Sample odds';
+  }
+}
+
+function buildStaticOdds() {
+  const games = [
+    { away:'Chiefs', home:'Ravens', spread:'-3.5', total:'52.5', ml:'-175' },
+    { away:'Eagles', home:'Cowboys', spread:'-2',  total:'48',   ml:'-120' },
+    { away:'49ers',  home:'Rams',    spread:'+1.5', total:'46',   ml:'+105' },
+  ];
+  return games.map(g => `
+    <div class="odds-game">
+      <div class="odds-teams"><span class="odds-team">${g.away}</span><span class="odds-time">vs</span><span class="odds-team">${g.home}</span></div>
+      <div class="odds-row">
+        <a href="${CONFIG.affiliateLink}" target="_blank" rel="noopener" class="odds-chip"><div class="type">Spread</div><div class="val">${g.spread}</div></a>
+        <a href="${CONFIG.affiliateLink}" target="_blank" rel="noopener" class="odds-chip"><div class="type">Total</div><div class="val">${g.total}</div></a>
+        <a href="${CONFIG.affiliateLink}" target="_blank" rel="noopener" class="odds-chip"><div class="type">ML</div><div class="val">${g.ml}</div></a>
+      </div>
+    </div>`).join('') +
+    `<div style="margin-top:14px;text-align:center"><a href="${CONFIG.affiliateLink}" class="btn-primary" style="font-size:13px;padding:10px 20px;justify-content:center" target="_blank" rel="noopener">Bet These Games →</a></div>`;
+}
+
+// ═══════════════════════════════════════════════
+//  EXPERT PICKS  (from /picks.json — updated by Make)
+// ═══════════════════════════════════════════════
+async function loadPicks() {
+  const statusEl = document.getElementById('picks-status');
+  const tbody = document.getElementById('picks-body');
+  const updatedEl = document.getElementById('picks-updated');
+  try {
+    const r = await fetch('/picks.json?v=' + Date.now());
+    if (!r.ok) throw new Error();
+    const data = await r.json();
+    tbody.innerHTML = data.picks.map(p => {
+      const dots = Array.from({length:5},(_,i) =>
+        `<div class="conf-dot ${i < p.confidence ? 'on' : 'off'}"></div>`).join('');
+      return `
+        <tr>
+          <td><span class="team-tag"><span class="team-dot" style="background:${p.awayColor||'#e31837'}"></span>${p.matchup}</span></td>
+          <td style="font-weight:700">${p.pick}</td>
+          <td>${p.line}</td>
+          <td><span class="pick-badge ${p.type}">${p.type}</span></td>
+          <td><div class="confidence">${dots}</div></td>
+          <td><a href="${CONFIG.affiliateLink}" class="btn-pick" target="_blank" rel="noopener">Bet It</a></td>
+        </tr>
+        <tr class="analysis-row">
+          <td colspan="6" style="padding:0 16px 14px;font-size:12px;color:var(--muted);line-height:1.6">${p.analysis}</td>
+        </tr>`;
+    }).join('');
+    statusEl.innerHTML = `<span class="live-badge"><span class="live-dot"></span> ${data.week}</span>`;
+    statusEl.className = 'feed-status live';
+    updatedEl.textContent = `Picks generated ${fmtDate(data.generated)} · Updated weekly by AI`;
+  } catch {
+    tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:28px;color:var(--muted)">Picks loading — check back shortly.</td></tr>`;
+    statusEl.textContent = 'Updating…';
+  }
+}
+
+// ═══════════════════════════════════════════════
+//  NEWSLETTER SIGNUP → Make Webhook
+// ═══════════════════════════════════════════════
+document.getElementById('signup-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const email = document.getElementById('signup-email').value.trim();
+  const btn   = document.getElementById('signup-btn');
+  const succ  = document.getElementById('form-success');
+  btn.textContent = 'Subscribing…';
+  btn.disabled = true;
+
+  try {
+    if (CONFIG.makeWebhookUrl !== 'YOUR_MAKE_WEBHOOK_URL') {
+      await fetch(CONFIG.makeWebhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, source: 'nfltrending.com', timestamp: new Date().toISOString() })
+      });
+    }
+    btn.style.display = 'none';
+    document.getElementById('signup-email').style.display = 'none';
+    succ.style.display = 'block';
+  } catch {
+    btn.textContent = 'Subscribe Free';
+    btn.disabled = false;
+    alert('Something went wrong. Please try again.');
+  }
+});
+
+// ═══════════════════════════════════════════════
+//  COINSALSA — Crypto news + Instagram post
+// ═══════════════════════════════════════════════
+const CRYPTO_FEEDS = [
+  { url: 'https://www.coindesk.com/arc/outboundfeeds/rss/', label: 'CoinDesk' },
+  { url: 'https://cointelegraph.com/rss',                   label: 'CoinTelegraph' },
+  { url: 'https://decrypt.co/feed',                         label: 'Decrypt' },
+];
+const CRYPTO_EMOJIS = ['₿','🚀','💎','📈','🔥','⚡','🌶️','💰'];
+const CRYPTO_CATS   = ['Bitcoin','Altcoins','DeFi','Markets','NFTs','Analysis','Breaking','Ethereum'];
+
+function buildCryptoCard(item, big) {
+  const card = document.createElement('div');
+  card.className = 'cs-card' + (big ? ' big' : '');
+  const thumb = item.thumbnail?.startsWith('http')
+    ? `<img class="cs-card-thumb" src="${item.thumbnail}" alt="" loading="lazy"
+         onerror="this.outerHTML='<div class=\\'cs-card-thumb-placeholder\\'>${rand(CRYPTO_EMOJIS)}</div>'">`
+    : `<div class="cs-card-thumb-placeholder">${rand(CRYPTO_EMOJIS)}</div>`;
+  const desc = big ? `<p>${trunc(item.description || '', 160)}</p>` : '';
+  card.innerHTML = `
+    ${thumb}
+    <div class="cs-card-body">
+      <div class="cs-cat">${rand(CRYPTO_CATS)}</div>
+      <h3>${item.title || 'Crypto Update'}</h3>
+      ${desc}
+      <div class="cs-meta">${item.feed || 'CoinSalsa'} · ${timeAgo(item.pubDate)}</div>
+    </div>`;
+  card.onclick = () => window.open(item.link || 'YOUR_COINSALSA_INSTAGRAM_URL', '_blank', 'noopener');
+  return card;
+}
+
+async function loadCryptoNews() {
+  const grid = document.getElementById('cs-news-grid');
+  const all = [];
+  for (const feed of CRYPTO_FEEDS) {
+    try {
+      const r = await fetch(`${RSS2JSON}${encodeURIComponent(feed.url)}&count=6`);
+      if (!r.ok) continue;
+      const d = await r.json();
+      if (d.status === 'ok' && d.items?.length) {
+        d.items.forEach(i => { i.feed = feed.label; });
+        all.push(...d.items);
+      }
+    } catch {}
+  }
+  if (!all.length) { renderFallbackCrypto(); return; }
+  all.sort((a,b) => new Date(b.pubDate) - new Date(a.pubDate));
+  const seen = new Set();
+  const unique = all.filter(i => { const k = i.title.slice(0,40).toLowerCase(); if(seen.has(k)) return false; seen.add(k); return true; });
+  grid.innerHTML = '';
+  unique.slice(0, 4).forEach((item, i) => grid.appendChild(buildCryptoCard(item, i === 0)));
+}
+
+function renderFallbackCrypto() {
+  const now = Date.now();
+  const items = [
+    { title:'Bitcoin Holds $95K as Institutional Demand Hits Record Highs', description:'On-chain data shows long-term holders accumulating aggressively. Analysts see $120K as next major target before year end.', link:'YOUR_COINSALSA_INSTAGRAM_URL', pubDate:new Date(now-1800000).toISOString(), feed:'CoinSalsa', thumbnail:'' },
+    { title:'Ethereum ETF Inflows Surge — Is a $5K ETH Back on the Table?', link:'YOUR_COINSALSA_INSTAGRAM_URL', pubDate:new Date(now-3600000).toISOString(), feed:'CoinSalsa', thumbnail:'' },
+    { title:'5 Altcoins Primed for a Bull Run This Quarter', link:'YOUR_COINSALSA_INSTAGRAM_URL', pubDate:new Date(now-7200000).toISOString(), feed:'CoinSalsa', thumbnail:'' },
+    { title:'DeFi TVL Crosses $200B — What It Means for Your Portfolio', link:'YOUR_COINSALSA_INSTAGRAM_URL', pubDate:new Date(now-10800000).toISOString(), feed:'CoinSalsa', thumbnail:'' },
+  ];
+  const grid = document.getElementById('cs-news-grid');
+  grid.innerHTML = '';
+  items.forEach((item, i) => grid.appendChild(buildCryptoCard(item, i === 0)));
+}
+
+// Load latest Instagram post from coinsalsa.json (updated by Make Scenario C)
+async function loadCoinSalsaPost() {
+  const postEl   = document.getElementById('cs-ig-post');
+  const updatedEl = document.getElementById('cs-ig-updated');
+  try {
+    const r = await fetch('/coinsalsa.json?v=' + Date.now());
+    if (!r.ok) throw new Error();
+    const data = await r.json();
+    if (data.postUrl) {
+      // Use Instagram oEmbed to render the post
+      const oe = await fetch(`https://graph.facebook.com/v18.0/instagram_oembed?url=${encodeURIComponent(data.postUrl)}&maxwidth=300&omitscript=true`);
+      if (oe.ok) {
+        const oed = await oe.json();
+        postEl.innerHTML = `<div style="padding:8px;width:100%">${oed.html}</div>`;
+        // Load Instagram embed script
+        if (!document.getElementById('ig-embed-script')) {
+          const s = document.createElement('script');
+          s.id = 'ig-embed-script';
+          s.src = 'https://www.instagram.com/embed.js';
+          s.async = true;
+          document.body.appendChild(s);
+          s.onload = () => window.instgrm?.Embeds?.process();
+        } else {
+          window.instgrm?.Embeds?.process();
+        }
+      } else {
+        // oEmbed failed — show link fallback
+        postEl.innerHTML = `<a href="${data.postUrl}" target="_blank" rel="noopener" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:32px;text-align:center;text-decoration:none"><div style="font-size:48px;margin-bottom:12px">🌶️</div><p style="color:#e8ecf3;font-size:14px;font-weight:600;margin-bottom:6px">Latest from @CoinSalsa</p><p style="color:#8a97aa;font-size:12px">Tap to view on Instagram</p></a>`;
+      }
+      updatedEl.textContent = 'Posted ' + timeAgo(data.postedAt);
+    }
+  } catch {
+    // Silently stay on placeholder — Make hasn't run yet or file doesn't exist
+    postEl.innerHTML = `<a href="YOUR_COINSALSA_INSTAGRAM_URL" target="_blank" rel="noopener" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:32px;text-align:center;text-decoration:none"><div style="font-size:48px;margin-bottom:12px">🌶️</div><p style="color:#e8ecf3;font-size:14px;font-weight:600;margin-bottom:8px">Follow @CoinSalsa</p><p style="color:#8a97aa;font-size:12px;line-height:1.6">Crypto news, picks &amp; analysis<br>on Instagram</p></a>`;
+  }
+}
+
+// ═══════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════
+loadNews();
+loadOdds();
+loadPicks();
+loadCryptoNews();
+loadCoinSalsaPost();
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+{
+  "generated": "2026-07-22T09:00:00Z",
+  "week": "Week 1 — 2026 NFL Season",
+  "picks": [
+    {
+      "matchup": "Chiefs vs Ravens",
+      "pick": "Chiefs -3.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "analysis": "Kansas City's home-field advantage and Mahomes' consistency against Baltimore make this a strong lean. Sharp money has moved this line from -2.5.",
+      "home": "Ravens",
+      "away": "Chiefs",
+      "homeColor": "#241773",
+      "awayColor": "#e31837"
+    },
+    {
+      "matchup": "Eagles vs Cowboys",
+      "pick": "Over 48",
+      "line": "-115",
+      "type": "over",
+      "confidence": 3,
+      "analysis": "Both offenses upgraded in the offseason. Expect a shootout with two of the NFL's best QBs healthy heading into Week 1.",
+      "home": "Cowboys",
+      "away": "Eagles",
+      "homeColor": "#003594",
+      "awayColor": "#004c97"
+    },
+    {
+      "matchup": "49ers vs Rams",
+      "pick": "49ers +1.5",
+      "line": "-105",
+      "type": "spread",
+      "confidence": 5,
+      "analysis": "Best value on the board this week. San Francisco owns the all-time series edge and returns a healthy backfield. Fade the Rams at home early in the season.",
+      "home": "Rams",
+      "away": "49ers",
+      "homeColor": "#003594",
+      "awayColor": "#aa0000"
+    },
+    {
+      "matchup": "Bills vs Dolphins",
+      "pick": "Under 51.5",
+      "line": "-110",
+      "type": "under",
+      "confidence": 3,
+      "analysis": "Early-season offenses tend to be sluggish. Buffalo's defense is elite and Miami's new OC is still installing the system. Under has hit in 6 of last 8 Bills-Dolphins openers.",
+      "home": "Bills",
+      "away": "Dolphins",
+      "homeColor": "#00338d",
+      "awayColor": "#008e97"
+    },
+    {
+      "matchup": "Cowboys vs Eagles",
+      "pick": "Cowboys ML +100",
+      "line": "+100",
+      "type": "moneyline",
+      "confidence": 2,
+      "analysis": "Contrarian value play. Philly is overvalued in early markets. Getting Cowboys at even money in a divisional game is worth a small unit.",
+      "home": "Cowboys",
+      "away": "Eagles",
+      "homeColor": "#003594",
+      "awayColor": "#004c97"
+    }
+  ]
+}
