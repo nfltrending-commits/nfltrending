@@ -303,8 +303,38 @@
       .offer-ribbon-inner{flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px}
       .offer-ribbon-right{width:100%;justify-content:space-between}
     }
+    /* ── INFO MODAL ── */
+    .info-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:500;align-items:center;justify-content:center;padding:20px}
+    .info-modal-overlay.open{display:flex}
+    .info-modal-box{background:var(--navy2);border:1px solid var(--border);border-radius:14px;max-width:600px;width:100%;max-height:80vh;overflow-y:auto;position:relative}
+    .info-modal-head{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--navy2);z-index:1}
+    .info-modal-head h2{font-size:17px;font-weight:800}
+    .info-modal-close{background:none;border:none;color:var(--muted);font-size:22px;cursor:pointer;line-height:1;padding:2px 6px;border-radius:4px;transition:color .2s}
+    .info-modal-close:hover{color:#fff}
+    .info-modal-body{padding:22px;font-size:14px;color:var(--muted);line-height:1.8}
+    .info-modal-body h3{font-size:14px;font-weight:700;color:var(--text);margin:16px 0 6px}
+    .info-modal-body h3:first-child{margin-top:0}
+    .info-modal-body p{margin-bottom:12px}
+    .info-modal-body ul{padding-left:18px;margin-bottom:12px}
+    .info-modal-body ul li{margin-bottom:6px}
+    .info-modal-body a{color:#00c896;text-decoration:underline}
+    /* ── HAMBURGER / MOBILE NAV ── */
+    .nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;background:none;border:none;padding:6px;margin-left:8px}
+    .nav-hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:transform .25s,opacity .25s}
+    .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-hamburger.open span:nth-child(2){opacity:0}
+    .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .nav-mobile{display:none;position:absolute;top:60px;left:0;right:0;background:rgba(10,14,26,.98);border-bottom:1px solid var(--border);padding:8px 20px 16px;backdrop-filter:blur(12px);z-index:99}
+    .nav-mobile.open{display:block}
+    .nav-mobile ul{list-style:none;display:flex;flex-direction:column}
+    .nav-mobile ul li a{display:block;padding:13px 0;font-size:15px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border);transition:color .2s}
+    .nav-mobile ul li:last-child a{border-bottom:none}
+    .nav-mobile ul li a:hover{color:#fff}
+    /* ── RIBBON SHORT TEXT ── */
+    .ribbon-short{display:none}
     @media(max-width:768px){
       .nav-links{display:none}
+      .nav-hamburger{display:flex}
       .hero{padding:48px 20px 40px}
       .news-grid{grid-template-columns:1fr}
       .news-card.featured{grid-column:span 1}
@@ -322,6 +352,8 @@
       .cs-news-grid{grid-template-columns:1fr}
       .cs-card.big{grid-column:span 1}
       .cs-header{flex-direction:column;align-items:flex-start}
+      .ribbon-long{display:none}
+      .ribbon-short{display:inline}
     }
   </style>
 </head>
@@ -340,8 +372,22 @@
       <li><a href="#crypto" style="display:inline-flex;align-items:center;gap:6px"><img src="/coinsalsa-logo.svg" alt="CoinSalsa" style="width:20px;height:20px;border-radius:50%;flex-shrink:0"><span style="color:#e85500;font-weight:600">CoinSalsa</span></a></li>
     </ul>
     <a href="https://www.mybookie.ag/?affid=1108" class="nav-cta" target="_blank" rel="noopener">Claim Bonus →</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-mobile" id="nav-mobile">
+  <ul>
+    <li><a href="#news" onclick="closeNavMenu()">News</a></li>
+    <li><a href="#odds" onclick="closeNavMenu()">Odds</a></li>
+    <li><a href="#picks" onclick="closeNavMenu()">Picks</a></li>
+    <li><a href="#teams" onclick="closeNavMenu()">Teams</a></li>
+    <li><a href="#newsletter" onclick="closeNavMenu()">Newsletter</a></li>
+    <li><a href="#crypto" onclick="closeNavMenu()" style="color:#e85500">CoinSalsa</a></li>
+    <li><a href="https://www.mybookie.ag/?affid=1108" target="_blank" rel="noopener" style="color:var(--gold)" onclick="closeNavMenu()">🏈 Claim Bonus</a></li>
+  </ul>
+</div>
 
 <!-- LIVE TICKER -->
 <div class="ticker">
@@ -368,7 +414,7 @@
   <div style="max-width:1200px;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
     <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0">
       <span style="background:var(--red);color:#fff;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:3px 9px;border-radius:4px;white-space:nowrap;flex-shrink:0">🏈 Welcome Offer</span>
-      <span style="font-size:13px;color:var(--text);line-height:1.4"><strong>Up to $500 Bet Back Bonus + $25 Casino Credit</strong> — 100% refund in Free Play if your first bet loses</span>
+      <span style="font-size:13px;color:var(--text);line-height:1.4"><span class="ribbon-long"><strong>Up to $500 Bet Back Bonus + $25 Casino Credit</strong> — 100% refund in Free Play if your first bet loses</span><span class="ribbon-short"><strong>$500 Bet Back + $25 Casino Credit</strong></span></span>
     </div>
     <a href="https://www.mybookie.ag/?affid=1108" style="background:var(--red);color:#fff;font-size:12px;font-weight:800;padding:8px 18px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;flex-shrink:0;transition:opacity .2s" target="_blank" rel="noopener">Claim Now →</a>
   </div>
@@ -609,27 +655,38 @@
           <li><a href="https://www.mybookie.ag/?affid=1108" target="_blank" rel="noopener">Top Sportsbooks</a></li>
           <li><a href="#odds">Live Odds</a></li>
           <li><a href="#picks">Parlay Picks</a></li>
-          <li><a href="#">Betting Lingo</a></li>
-          <li><a href="#">Responsible Gaming</a></li>
+          <li><a href="#" onclick="openInfoModal('lingo');return false">Betting Lingo</a></li>
+          <li><a href="#" onclick="openInfoModal('rg');return false">Responsible Gaming</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Advertise</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#" onclick="openInfoModal('about');return false">About Us</a></li>
+          <li><a href="mailto:nfltrending@gmail.com">Contact</a></li>
+          <li><a href="mailto:nfltrending@gmail.com?subject=Advertise%20on%20NFLTrending.com">Advertise</a></li>
+          <li><a href="#" onclick="openInfoModal('privacy');return false">Privacy Policy</a></li>
+          <li><a href="#" onclick="openInfoModal('terms');return false">Terms of Use</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>NFLTrending.com is intended for users 21 years and older. This site contains sports betting information and affiliate links to licensed sportsbooks. Gambling involves risk. Please gamble responsibly. If you have a gambling problem, call <strong>1-800-GAMBLER</strong>. NFLTrending.com is not affiliated with the NFL, any NFL team, or any official league entity. Odds sourced from The Odds API. News sourced from public RSS feeds. Picks are for entertainment purposes only.</p>
-      <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Sitemap</a><a href="#">Contact</a></div>
+      <div class="footer-links"><a href="#" onclick="openInfoModal('privacy');return false">Privacy</a><a href="#" onclick="openInfoModal('terms');return false">Terms</a><a href="mailto:nfltrending@gmail.com">Contact</a></div>
     </div>
   </div>
 </footer>
+
+<!-- INFO MODAL -->
+<div class="info-modal-overlay" id="info-modal-overlay" onclick="if(event.target===this)closeInfoModal()">
+  <div class="info-modal-box">
+    <div class="info-modal-head">
+      <h2 id="info-modal-title"></h2>
+      <button class="info-modal-close" onclick="closeInfoModal()">✕</button>
+    </div>
+    <div class="info-modal-body" id="info-modal-body"></div>
+  </div>
+</div>
 
 <script>
 // ═══════════════════════════════════════════════
@@ -675,8 +732,9 @@ function proxyImg(url) {
   if (!url) return null;
   if (url.indexOf('//') === 0) url = 'https:' + url;
   if (url.indexOf('http') !== 0) return null;
-  // ESPN CDN images load without proxy
+  // These CDNs load fine without a proxy
   if (url.indexOf('espncdn.com') !== -1 || url.indexOf('a.espn.com') !== -1) return url;
+  if (url.indexOf('cryptocompare.com') !== -1 || url.indexOf('images.cryptocompare.com') !== -1) return url;
   return 'https://images.weserv.nl/?url=' + encodeURIComponent(url) + '&w=640&output=webp&q=80';
 }
 function extractImage(item) {
@@ -1162,6 +1220,101 @@ async function loadCoinSalsaPost() {
     ]});
   }
 }
+
+// ═══════════════════════════════════════════════
+//  HAMBURGER NAV
+// ═══════════════════════════════════════════════
+(function() {
+  var btn  = document.getElementById('nav-hamburger');
+  var menu = document.getElementById('nav-mobile');
+  if (btn && menu) {
+    btn.addEventListener('click', function() {
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+  }
+})();
+function closeNavMenu() {
+  var btn  = document.getElementById('nav-hamburger');
+  var menu = document.getElementById('nav-mobile');
+  if (btn)  btn.classList.remove('open');
+  if (menu) menu.classList.remove('open');
+}
+
+// ═══════════════════════════════════════════════
+//  INFO MODALS
+// ═══════════════════════════════════════════════
+var INFO_CONTENT = {
+  lingo: {
+    title: 'Betting Lingo',
+    body: '<h3>Point Spread</h3><p>The margin of victory a team must win by for a bet to pay out. A -7 spread means the favorite must win by more than 7 points.</p>' +
+          '<h3>Moneyline</h3><p>A straight bet on which team wins. Odds like -150 mean you bet $150 to win $100; +130 means a $100 bet wins $130.</p>' +
+          '<h3>Over/Under (Total)</h3><p>A bet on whether the combined score of both teams will be over or under a set number.</p>' +
+          '<h3>Parlay</h3><p>Combining 2 or more bets into one. All selections must win for the parlay to pay out — higher risk, higher reward.</p>' +
+          '<h3>Juice / Vig</h3><p>The sportsbook\'s cut. Standard juice is -110, meaning you must bet $110 to win $100.</p>' +
+          '<h3>ATS (Against the Spread)</h3><p>A team\'s record when accounting for the point spread, not just wins and losses.</p>' +
+          '<h3>Public Money vs. Sharp Money</h3><p>Public money is casual bettors. Sharp money is professional bettors. Line movement often follows sharp action.</p>' +
+          '<h3>Prop Bet</h3><p>A bet on a specific outcome within a game — like a player\'s rushing yards or passing touchdowns.</p>' +
+          '<h3>Teaser</h3><p>A parlay where you adjust point spreads in your favor in exchange for lower odds.</p>' +
+          '<h3>Futures</h3><p>Bets placed on outcomes further out — like which team wins the Super Bowl before the season starts.</p>'
+  },
+  rg: {
+    title: 'Responsible Gaming',
+    body: '<p>NFLTrending.com is committed to promoting responsible gambling. Sports betting is entertainment — treat it that way.</p>' +
+          '<h3>Set Limits</h3><p>Only bet what you can afford to lose. Set a weekly or monthly budget and stick to it regardless of wins or losses.</p>' +
+          '<h3>Know the Signs</h3><ul><li>Chasing losses</li><li>Betting more than you intended</li><li>Hiding gambling from family or friends</li><li>Gambling interfering with work or relationships</li><li>Feeling anxious or irritable when not betting</li></ul>' +
+          '<h3>Take Breaks</h3><p>Step away after a big win or loss. Emotional betting leads to poor decisions.</p>' +
+          '<h3>Use Sportsbook Tools</h3><p>Most licensed sportsbooks offer deposit limits, loss limits, cooling-off periods, and self-exclusion. Use them proactively, not reactively.</p>' +
+          '<h3>Get Help</h3><p>If gambling is affecting your life, help is available 24/7:<br><strong>National Problem Gambling Helpline: 1-800-GAMBLER (1-800-426-2537)</strong><br><a href="https://www.ncpgambling.org" target="_blank" rel="noopener">ncpgambling.org</a></p>' +
+          '<p>You must be 21+ to bet legally in most US states. Check your local laws before wagering.</p>'
+  },
+  about: {
+    title: 'About NFLTrending.com',
+    body: '<p>NFLTrending.com is your go-to destination for NFL news, expert picks, live betting odds, and season analysis — updated automatically so you\'re always ahead of the action.</p>' +
+          '<h3>What We Cover</h3><ul><li>Breaking NFL news from top sources</li><li>Injury reports & roster moves</li><li>Expert picks with analysis</li><li>Live odds from major sportsbooks</li><li>Super Bowl futures & team rankings</li><li>Crypto & sports investing via <a href="#crypto">CoinSalsa</a></li></ul>' +
+          '<h3>Our Mission</h3><p>Give every fan and bettor the information edge they need — presented clearly, updated in real time, and completely free.</p>' +
+          '<h3>Contact Us</h3><p>Questions, feedback, or partnership inquiries: <a href="mailto:nfltrending@gmail.com">nfltrending@gmail.com</a></p>'
+  },
+  privacy: {
+    title: 'Privacy Policy',
+    body: '<p><em>Last updated: July 2026</em></p>' +
+          '<h3>Information We Collect</h3><p>NFLTrending.com does not require registration or collect personal information to browse the site. If you sign up for our newsletter, we collect your email address only to send NFL updates. We do not sell or share your email with third parties.</p>' +
+          '<h3>Cookies & Analytics</h3><p>We may use cookies and analytics tools (such as Google Analytics) to understand how visitors use the site. This data is aggregated and not tied to individuals. You can disable cookies in your browser settings.</p>' +
+          '<h3>Affiliate Links</h3><p>This site contains affiliate links to licensed sportsbooks. When you click these links, the sportsbook may set their own cookies per their privacy policy. NFLTrending.com earns a commission if you sign up, at no extra cost to you.</p>' +
+          '<h3>Third-Party Content</h3><p>News and odds are sourced from third-party APIs. We do not control the content or privacy practices of those providers.</p>' +
+          '<h3>Contact</h3><p>Privacy questions: <a href="mailto:nfltrending@gmail.com">nfltrending@gmail.com</a></p>'
+  },
+  terms: {
+    title: 'Terms of Use',
+    body: '<p><em>Last updated: July 2026</em></p>' +
+          '<h3>For Entertainment Only</h3><p>Content on NFLTrending.com, including picks and analysis, is for informational and entertainment purposes only. Nothing on this site constitutes professional betting advice.</p>' +
+          '<h3>Age Requirement</h3><p>This site is intended for users 21 years of age or older. Sports betting is illegal in some jurisdictions — it is your responsibility to know your local laws before wagering.</p>' +
+          '<h3>Affiliate Disclosure</h3><p>NFLTrending.com earns commission from sportsbook affiliate links. We only recommend licensed, regulated sportsbooks. Our editorial content is not influenced by these relationships.</p>' +
+          '<h3>No Warranties</h3><p>We make no guarantees about the accuracy, completeness, or timeliness of information on this site. Use at your own risk.</p>' +
+          '<h3>Intellectual Property</h3><p>All original content, design, and code on NFLTrending.com is owned by NFLTrending.com. Third-party content (news, logos, odds) belongs to their respective owners.</p>' +
+          '<h3>Contact</h3><p>Terms questions: <a href="mailto:nfltrending@gmail.com">nfltrending@gmail.com</a></p>'
+  }
+};
+
+function openInfoModal(key) {
+  var overlay = document.getElementById('info-modal-overlay');
+  var title   = document.getElementById('info-modal-title');
+  var body    = document.getElementById('info-modal-body');
+  var info    = INFO_CONTENT[key];
+  if (!info || !overlay) return;
+  title.textContent = info.title;
+  body.innerHTML    = info.body;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeInfoModal() {
+  var overlay = document.getElementById('info-modal-overlay');
+  if (overlay) overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeInfoModal();
+});
 
 // ═══════════════════════════════════════════════
 //  INIT
