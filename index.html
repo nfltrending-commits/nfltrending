@@ -338,7 +338,7 @@
     .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
     .nav-hamburger.open span:nth-child(2){opacity:0}
     .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-    .nav-mobile{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(10,14,26,.98);border-bottom:1px solid var(--border);padding:8px 20px 16px;backdrop-filter:blur(12px);z-index:99}
+    .nav-mobile{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(10,14,26,.98);border-bottom:1px solid var(--border);padding:8px 20px 16px;backdrop-filter:blur(12px);z-index:200}
     .nav-mobile.open{display:block}
     .nav-mobile ul{list-style:none;display:flex;flex-direction:column}
     .nav-mobile ul li a{display:block;padding:13px 0;font-size:15px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border);transition:color .2s}
@@ -383,9 +383,8 @@
       <li><a href="#picks">Picks</a></li>
       <li><a href="#teams">Teams</a></li>
       <li><a href="#newsletter">Newsletter</a></li>
-      <li><a href="#crypto" style="display:inline-flex;align-items:center;gap:6px"><img src="/coinsalsa-logo.svg" alt="CoinSalsa" style="width:20px;height:20px;border-radius:50%;flex-shrink:0"><span style="color:#e85500;font-weight:600">CoinSalsa</span></a></li>
+      <li><a href="#crypto" style="display:inline-flex;align-items:center;gap:6px"><img src="/coinsalsa-logo.svg" alt="CoinSalsa" style="width:20px;height:20px;border-radius:50%;flex-shrink:0"><span style="font-weight:600"><span style="color:#fff">coin</span><span style="color:#e85500">salsa</span></span></a></li>
     </ul>
-    <a href="https://www.mybookie.ag/?affid=1108" class="nav-cta" target="_blank" rel="noopener">Claim Bonus →</a>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -398,8 +397,7 @@
     <li><a href="#picks" onclick="closeNavMenu()">Picks</a></li>
     <li><a href="#teams" onclick="closeNavMenu()">Teams</a></li>
     <li><a href="#newsletter" onclick="closeNavMenu()">Newsletter</a></li>
-    <li><a href="#crypto" onclick="closeNavMenu()" style="color:#e85500">CoinSalsa</a></li>
-    <li><a href="https://www.mybookie.ag/?affid=1108" target="_blank" rel="noopener" style="color:var(--gold)" onclick="closeNavMenu()">🏈 Claim Bonus</a></li>
+    <li><a href="#crypto" onclick="closeNavMenu()" style="display:inline-flex;align-items:center;gap:8px"><img src="/coinsalsa-logo.svg" alt="CoinSalsa" style="width:22px;height:22px;border-radius:50%;flex-shrink:0"><span style="font-weight:600"><span style="color:#fff">coin</span><span style="color:#e85500">salsa</span></span></a></li>
   </ul>
 </div>
 
@@ -422,15 +420,6 @@
     </div>
   </div>
 </section>
-
-<!-- COMPACT OFFER STRIP -->
-<div class="offer-strip">
-  <div class="offer-strip-inner">
-    <span class="offer-strip-badge">🏈 Welcome Offer</span>
-    <span class="offer-strip-text"><strong>Up to $500 Bet Back Bonus + $25 Casino Credit</strong> — 100% refund in Free Play if your first bet loses</span>
-    <a href="https://www.mybookie.ag/?affid=1108" class="offer-strip-btn" target="_blank" rel="noopener">Claim Now →</a>
-  </div>
-</div>
 
 <!-- NEWS + SIDEBAR -->
 <section class="section" id="news">
@@ -646,7 +635,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="logo"><span style="color:var(--red)">NFL</span>Trending<span style="color:var(--gold)">.</span></div>
+        <div class="logo"><span style="color:var(--red)">NFL</span>Trending<span style="color:var(--gold)">.com</span></div>
         <p>Your edge for every NFL season. Expert picks, live odds, injury intel, and the best sportsbook offers — trusted by over 40,000 fans since 2018.</p>
       </div>
       <div class="footer-col">
