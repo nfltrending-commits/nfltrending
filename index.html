@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NFLTrending | 2026 Season News, Picks & Live Odds</title>
+  <title>NFLTrending.com | 2026 Season News, Picks & Live Odds</title>
   <meta name="description" content="Your #1 source for NFL trending news, injury reports, expert picks, live betting odds, and 2026 season analysis." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -40,14 +40,14 @@
     @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
     /* ── HERO ── */
-    .hero{background:linear-gradient(135deg,#0a0e1a 0%,#14203a 50%,#1a0a0f 100%);border-bottom:1px solid var(--border);padding:70px 20px 60px;position:relative;overflow:hidden}
-    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(212,0,26,.18) 0%,transparent 65%);pointer-events:none}
-    .hero-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 380px;gap:50px;align-items:center}
+    .hero{background:linear-gradient(135deg,#0a0e1a 0%,#14203a 50%,#1a0a0f 100%);border-bottom:1px solid var(--border);padding:60px 20px 52px;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(212,0,26,.15) 0%,transparent 65%);pointer-events:none}
+    .hero-inner{max-width:860px;margin:auto;text-align:center}
     .hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(212,0,26,.15);border:1px solid rgba(212,0,26,.3);color:var(--red);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:5px 12px;border-radius:20px;margin-bottom:18px}
-    .hero h1{font-size:clamp(32px,5vw,54px);font-weight:900;line-height:1.1;letter-spacing:-1px;margin-bottom:20px}
+    .hero h1{font-size:clamp(34px,5.5vw,58px);font-weight:900;line-height:1.1;letter-spacing:-1.5px;margin-bottom:18px}
     .hero h1 em{color:var(--red);font-style:normal}
-    .hero p{color:var(--muted);font-size:16px;max-width:520px;margin-bottom:32px}
-    .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+    .hero p{color:var(--muted);font-size:16px;max-width:580px;margin:0 auto 32px}
+    .hero-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
     .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-size:15px;font-weight:700;padding:14px 28px;border-radius:8px;transition:background .2s,transform .15s,box-shadow .2s}
     .btn-primary:hover{background:var(--red-dk);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,0,26,.4)}
     .btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--border);color:var(--text);font-size:15px;font-weight:600;padding:14px 24px;border-radius:8px;transition:border-color .2s,background .2s}
@@ -174,7 +174,7 @@
     .teams-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .team-card{background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;transition:transform .2s,border-color .2s;cursor:pointer}
     .team-card:hover{transform:translateY(-3px);border-color:var(--navy4)}
-    .team-emoji{font-size:36px;margin-bottom:10px}
+    .team-logo{width:64px;height:64px;object-fit:contain;margin:0 auto 10px;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}
     .team-name{font-size:13px;font-weight:700;margin-bottom:4px}
     .team-record{font-size:12px;color:var(--muted);margin-bottom:10px}
     .team-odds-pill{display:inline-block;background:var(--navy3);border:1px solid var(--border);font-size:12px;font-weight:700;color:var(--gold);padding:4px 12px;border-radius:20px}
@@ -262,11 +262,31 @@
       .cs-news-grid{grid-template-columns:repeat(2,1fr)}
       .cs-card.big{grid-column:span 2}
     }
+    /* OFFER RIBBONS */
+    .offer-ribbon{background:linear-gradient(90deg,#a80015 0%,#d4001a 60%,#b8001a 100%);padding:0}
+
+    .offer-ribbon-inner{max-width:1200px;margin:auto;padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .offer-ribbon-left{display:flex;align-items:center;gap:12px;flex:1;min-width:0}
+    .offer-ribbon-badge{background:rgba(255,255,255,.2);color:#fff;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:3px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0}
+
+
+    .offer-ribbon-text{font-size:13px;color:rgba(255,255,255,.95);line-height:1.4}
+    .offer-ribbon-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+    .offer-ribbon-code{font-size:12px;color:rgba(255,255,255,.8);white-space:nowrap}
+    .offer-ribbon-code strong{color:#fff;background:rgba(0,0,0,.25);padding:2px 7px;border-radius:4px}
+    .offer-ribbon-cta{background:#fff;color:var(--red);font-size:12px;font-weight:800;padding:8px 16px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;transition:opacity .2s}
+
+    .offer-ribbon-cta:hover{opacity:.9}
+    @media(max-width:600px){
+      .offer-ribbon-inner{flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px}
+      .offer-ribbon-right{width:100%;justify-content:space-between}
+    }
     @media(max-width:768px){
       .nav-links{display:none}
       .hero{padding:48px 20px 40px}
       .news-grid{grid-template-columns:1fr}
       .news-card.featured{grid-column:span 1}
+      .news-layout{grid-template-columns:1fr!important}
       .betting-banner{flex-direction:column;text-align:center;padding:28px 22px}
       .betting-banner p{margin:auto}
       .footer-top{grid-template-columns:1fr}
@@ -276,6 +296,7 @@
       .email-form{flex-direction:column}
       .picks-table{overflow-x:auto}
       .picks-table table{min-width:600px}
+      .dual-offers{grid-template-columns:1fr!important}
       .cs-news-grid{grid-template-columns:1fr}
       .cs-card.big{grid-column:span 1}
       .cs-header{flex-direction:column;align-items:flex-start}
@@ -310,39 +331,31 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div>
-      <div class="hero-tag">🏈 2026 NFL Season</div>
-      <h1>Your Edge for the <em>2026 Season</em> Starts Here</h1>
-      <p>Live NFL news, real-time odds from every major sportsbook, and AI-powered expert picks — all updated automatically, every day.</p>
-      <div class="hero-btns">
-        <a href="#picks" class="btn-primary">🏆 View This Week's Picks</a>
-        <a href="#news" class="btn-secondary">📰 Latest News</a>
-      </div>
-    </div>
-    <div>
-      <div class="offer-card">
-        <div class="offer-badge">⚡ Limited Time</div>
-        <h3>Welcome Offer — New Users</h3>
-        <div class="offer-amount">$1,000</div>
-        <div class="offer-sub">Bet Credit Bonus on First Deposit</div>
-        <ul class="offer-features">
-          <li>No rollover requirements</li>
-          <li>Live in-game betting available</li>
-          <li>Same-game parlays on every matchup</li>
-          <li>Instant withdrawals via PayPal & Venmo</li>
-          <li>NFL-exclusive boosts every week</li>
-        </ul>
-        <a href="https://www.mybookie.ag/?affid=1108" class="offer-claim" target="_blank" rel="noopener">Claim Your Bonus Now →</a>
-        <p class="offer-disclaimer">21+ only. Terms apply. Gambling problem? Call 1-800-GAMBLER.</p>
-      </div>
+    <div class="hero-tag">🏈 2026 NFL Season</div>
+    <h1>Your Edge for the <em>2026 Season</em><br>Starts Here</h1>
+    <p>Live NFL news, real-time odds from every major sportsbook, and AI-powered expert picks — all updated automatically, every day.</p>
+    <div class="hero-btns">
+      <a href="#picks" class="btn-primary">🏆 View This Week's Picks</a>
+      <a href="#news" class="btn-secondary">📰 Latest News</a>
     </div>
   </div>
 </section>
 
+<!-- COMPACT OFFER STRIP -->
+<div style="background:var(--navy2);border-bottom:1px solid var(--border);padding:10px 0">
+  <div style="max-width:1200px;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0">
+      <span style="background:var(--red);color:#fff;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:3px 9px;border-radius:4px;white-space:nowrap;flex-shrink:0">🏈 Welcome Offer</span>
+      <span style="font-size:13px;color:var(--text);line-height:1.4"><strong>Up to $500 Bet Back Bonus + $25 Casino Credit</strong> — 100% refund in Free Play if your first bet loses</span>
+    </div>
+    <a href="https://www.mybookie.ag/?affid=1108" style="background:var(--red);color:#fff;font-size:12px;font-weight:800;padding:8px 18px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;flex-shrink:0;transition:opacity .2s" target="_blank" rel="noopener">Claim Now →</a>
+  </div>
+</div>
+
 <!-- NEWS + SIDEBAR -->
 <section class="section" id="news">
   <div class="container">
-    <div class="two-col">
+    <div class="news-layout" style="display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:start">
       <div>
         <div class="section-header">
           <div class="section-title">🔥 Trending Now</div>
@@ -357,7 +370,6 @@
           <div class="news-card"><div class="skel-thumb skeleton"></div><div class="skel-body"><div class="skel-line s skeleton" style="margin-bottom:12px"></div><div class="skel-line l skeleton"></div></div></div>
         </div>
       </div>
-
       <!-- SIDEBAR -->
       <div>
         <div class="sidebar-widget">
@@ -369,7 +381,6 @@
             <div class="hot-item"><div class="hot-num">04</div><div><div class="skel-line m skeleton" style="margin-bottom:6px"></div><div class="skel-line s skeleton"></div></div></div>
           </div>
         </div>
-
         <!-- LIVE ODDS SIDEBAR -->
         <div class="sidebar-widget" id="odds">
           <div class="widget-header">
@@ -385,21 +396,44 @@
   </div>
 </section>
 
-<!-- BETTING BANNER -->
-<section style="padding:0 0 56px">
+<!-- DUAL OFFER CARDS -->
+<section style="padding:0 0 48px">
   <div class="container">
-    <div class="betting-banner">
-      <div class="bleft">
-        <div class="tag">⚡ Exclusive Partner Offer</div>
-        <h2>Ready to Back Your <span>Picks</span> With Real Money?</h2>
-        <p>Join thousands of NFL fans already betting smarter this season. Sharpest lines, fastest payouts, and the best welcome bonus in the game.</p>
+    <div class="dual-offers" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+
+      <!-- CARD 1: $1,000 Sportsbook Welcome -->
+      <div style="background:linear-gradient(135deg,var(--navy2),#0d1a2a);border:1px solid rgba(212,0,26,.25);border-radius:var(--radius);padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),#ff4d63)"></div>
+        <div style="flex:1;min-width:180px">
+          <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(212,0,26,.12);border:1px solid rgba(212,0,26,.3);color:var(--red);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:20px;margin-bottom:12px">🏈 Welcome Offer</div>
+          <h3 style="font-size:20px;font-weight:800;margin-bottom:8px">Up to $500 Bet Back Bonus + $25 Casino Credit</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6">Bet NFL action worry-free. If your bet hits, you win. If it misses, get a 100% refund of up to $500 in Free Play. Plus, $25 Casino Credit is yours instantly on signup. Opt-in via Bet Slip after depositing.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:10px;flex-shrink:0">
+          <div style="text-align:center;font-size:11px;color:var(--muted)">Bet Back Bonus</div>
+          <div style="color:#fff;font-size:36px;font-weight:900;letter-spacing:-1px;line-height:1">$500</div>
+          <div style="color:var(--gold);font-size:13px;font-weight:700">+ $25 Casino Credit</div>
+          <a href="https://www.mybookie.ag/?affid=1108" target="_blank" rel="noopener" style="background:var(--red);color:#fff;font-size:13px;font-weight:800;padding:12px 24px;border-radius:7px;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap">Claim Bonus →</a>
+          <p style="font-size:10px;color:var(--muted);text-align:center">21+ only · First deposit · Terms apply</p>
+        </div>
       </div>
-      <div class="bright">
-        <div class="amount"><small>Up to</small> $1K</div>
-        <div class="blabel">in bet credits on signup</div>
-        <a href="https://www.mybookie.ag/?affid=1108" class="btn-gold" target="_blank" rel="noopener">🏆 Claim Bonus Now</a>
-        <p style="font-size:10px;color:var(--muted);margin-top:10px">21+ | Terms apply | Gamble responsibly</p>
+
+      <!-- CARD 2: Casino 150% Match -->
+      <div style="background:linear-gradient(135deg,var(--navy2),#1a1a0a);border:1px solid rgba(245,166,35,.25);border-radius:var(--radius);padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),#ffc653)"></div>
+        <div style="flex:1;min-width:180px">
+          <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(245,166,35,.12);border:1px solid rgba(245,166,35,.3);color:var(--gold);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:20px;margin-bottom:12px">🎰 Casino Welcome Offer</div>
+          <h3 style="font-size:20px;font-weight:800;margin-bottom:8px">150% Casino Match — Up to $750</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6">Deposit $500, play with $1,250. Every dollar matched 1.5x on your first deposit. Min. deposit $45 · 40x rollover · Expires in 2 weeks.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:10px;flex-shrink:0">
+          <div style="text-align:center;font-size:11px;color:var(--muted)">Use promo code</div>
+          <div style="background:rgba(245,166,35,.15);border:1px solid rgba(245,166,35,.4);color:var(--gold);font-size:18px;font-weight:900;letter-spacing:2px;padding:8px 20px;border-radius:8px">MYB150</div>
+          <a href="https://www.mybookie.ag/?affid=1108" target="_blank" rel="noopener" style="background:var(--gold);color:#0a0e1a;font-size:13px;font-weight:800;padding:12px 24px;border-radius:7px;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap">Claim Casino Bonus →</a>
+          <p style="font-size:10px;color:var(--muted);text-align:center">21+ only · First deposit · Terms apply</p>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -436,14 +470,14 @@
       <a href="https://www.mybookie.ag/?affid=1108" class="view-all" target="_blank" rel="noopener">Bet Futures →</a>
     </div>
     <div class="teams-grid">
-      <div class="team-card"><div class="team-emoji">🏈</div><div class="team-name">Kansas City Chiefs</div><div class="team-record">Preseason Favorite</div><div class="team-odds-pill">+320</div></div>
-      <div class="team-card"><div class="team-emoji">🦅</div><div class="team-name">Philadelphia Eagles</div><div class="team-record">NFC Contender</div><div class="team-odds-pill">+550</div></div>
-      <div class="team-card"><div class="team-emoji">⚡</div><div class="team-name">Baltimore Ravens</div><div class="team-record">AFC Dark Horse</div><div class="team-odds-pill">+650</div></div>
-      <div class="team-card"><div class="team-emoji">🌉</div><div class="team-name">San Francisco 49ers</div><div class="team-record">NFC West Titans</div><div class="team-odds-pill">+700</div></div>
-      <div class="team-card"><div class="team-emoji">🐃</div><div class="team-name">Buffalo Bills</div><div class="team-record">AFC Powerhouse</div><div class="team-odds-pill">+750</div></div>
-      <div class="team-card"><div class="team-emoji">⭐</div><div class="team-name">Dallas Cowboys</div><div class="team-record">NFC East Rival</div><div class="team-odds-pill">+900</div></div>
-      <div class="team-card"><div class="team-emoji">🐬</div><div class="team-name">Miami Dolphins</div><div class="team-record">Sleeper Pick</div><div class="team-odds-pill">+1200</div></div>
-      <div class="team-card"><div class="team-emoji">🐏</div><div class="team-name">LA Rams</div><div class="team-record">Wild Card Threat</div><div class="team-odds-pill">+1400</div></div>
+      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/kc.png" alt="Chiefs" loading="lazy"><div class="team-name">Kansas City Chiefs</div><div class="team-record">Preseason Favorite</div><div class="team-odds-pill">+320</div></div>
+      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" alt="Eagles" loading="lazy"><div class="team-name">Philadelphia Eagles</div><div class="team-record">NFC Contender</div><div class="team-odds-pill">+550</div></div>
+      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/bal.png" alt="Ravens" loading="lazy"><div class="team-name">Baltimore Ravens</div><div class="team-record">AFC Dark Horse</div><div class="team-odds-pill">+650</div></div>
+      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/sf.png" alt="49ers" loading="lazy"><div class="team-name">San Francisco 49ers</div><div class="team-record">NFC West Titans</div><div class="team-odds-pill">+700</div></div>
+      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" alt="Bills" loading="lazy"><div class="team-name">Buffalo Bills</div><div class="team-record">AFC Powerhouse</div><div class="team-odds-pill">+750</div></div>
+      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png" alt="Cowboys" loading="lazy"><div class="team-name">Dallas Cowboys</div><div class="team-record">NFC East Rival</div><div class="team-odds-pill">+900</div></div>
+      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/mia.png" alt="Dolphins" loading="lazy"><div class="team-name">Miami Dolphins</div><div class="team-record">Sleeper Pick</div><div class="team-odds-pill">+1200</div></div>
+      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/lar.png" alt="Rams" loading="lazy"><div class="team-name">LA Rams</div><div class="team-record">Wild Card Threat</div><div class="team-odds-pill">+1400</div></div>
     </div>
   </div>
 </section>
@@ -492,7 +526,7 @@
         </div>
         <div class="cs-ig-footer">
           <span class="cs-ig-stats" id="cs-ig-updated">Updated weekly</span>
-          <a href="YOUR_COINSALSA_INSTAGRAM_URL" class="cs-ig-cta" target="_blank" rel="noopener">
+          <a href="https://www.instagram.com/coinsalsa/" class="cs-ig-cta" target="_blank" rel="noopener">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             Follow Us
           </a>
@@ -604,14 +638,31 @@ function fmtDate(iso) {
 // ═══════════════════════════════════════════════
 //  NEWS FEED
 // ═══════════════════════════════════════════════
+function extractImage(item) {
+  if (item.thumbnail?.startsWith('http')) return item.thumbnail;
+  if (item.enclosures?.length) {
+    const enc = item.enclosures.find(e => e.type?.startsWith('image/') || e.url?.match(/\.(jpg|jpeg|png|webp|gif)/i));
+    if (enc?.url?.startsWith('http')) return enc.url;
+  }
+  if (item.content) {
+    const m = item.content.match(/<img[^>]+src=["']([^"']+)["']/i);
+    if (m?.[1]?.startsWith('http')) return m[1];
+  }
+  return null;
+}
+
 function buildNewsCard(item, featured) {
   const card = document.createElement('div');
   card.className = 'news-card' + (featured ? ' featured' : '');
-  const thumb = item.thumbnail?.startsWith('http')
-    ? `<img class="news-thumb" src="${item.thumbnail}" alt="" loading="lazy"
+  const imgSrc = extractImage(item);
+  const thumb = imgSrc
+    ? `<img class="news-thumb" src="${imgSrc}" alt="" loading="lazy"
          onerror="this.outerHTML='<div class=\\'news-thumb-placeholder\\'>${rand(EMOJIS)}</div>'">`
     : `<div class="news-thumb-placeholder">${rand(EMOJIS)}</div>`;
-  const desc = featured ? `<p>${trunc(item.description || item.content || '', 180)}</p>` : '';
+  const rawDesc = item.description || item.content || '';
+  const cleanDesc = rawDesc.replace(/<[^>]*>/g, '').trim();
+  const descLen = featured ? 200 : 100;
+  const desc = cleanDesc ? `<p>${trunc(cleanDesc, descLen)}</p>` : '';
   card.innerHTML = `
     ${thumb}
     <div class="news-body">
@@ -830,11 +881,15 @@ const CRYPTO_CATS   = ['Bitcoin','Altcoins','DeFi','Markets','NFTs','Analysis','
 function buildCryptoCard(item, big) {
   const card = document.createElement('div');
   card.className = 'cs-card' + (big ? ' big' : '');
-  const thumb = item.thumbnail?.startsWith('http')
-    ? `<img class="cs-card-thumb" src="${item.thumbnail}" alt="" loading="lazy"
+  const imgSrc = extractImage(item);
+  const thumb = imgSrc
+    ? `<img class="cs-card-thumb" src="${imgSrc}" alt="" loading="lazy"
          onerror="this.outerHTML='<div class=\\'cs-card-thumb-placeholder\\'>${rand(CRYPTO_EMOJIS)}</div>'">`
     : `<div class="cs-card-thumb-placeholder">${rand(CRYPTO_EMOJIS)}</div>`;
-  const desc = big ? `<p>${trunc(item.description || '', 160)}</p>` : '';
+  const rawDesc = item.description || item.content || '';
+  const cleanDesc = rawDesc.replace(/<[^>]*>/g, '').trim();
+  const descLen = big ? 180 : 100;
+  const desc = cleanDesc ? `<p>${trunc(cleanDesc, descLen)}</p>` : '';
   card.innerHTML = `
     ${thumb}
     <div class="cs-card-body">
@@ -843,7 +898,7 @@ function buildCryptoCard(item, big) {
       ${desc}
       <div class="cs-meta">${item.feed || 'CoinSalsa'} · ${timeAgo(item.pubDate)}</div>
     </div>`;
-  card.onclick = () => window.open(item.link || 'YOUR_COINSALSA_INSTAGRAM_URL', '_blank', 'noopener');
+  card.onclick = () => window.open(item.link || 'https://www.instagram.com/coinsalsa', '_blank', 'noopener');
   return card;
 }
 
@@ -915,7 +970,7 @@ async function loadCoinSalsaPost() {
     }
   } catch {
     // Silently stay on placeholder — Make hasn't run yet or file doesn't exist
-    postEl.innerHTML = `<a href="YOUR_COINSALSA_INSTAGRAM_URL" target="_blank" rel="noopener" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:32px;text-align:center;text-decoration:none"><div style="font-size:48px;margin-bottom:12px">🌶️</div><p style="color:#e8ecf3;font-size:14px;font-weight:600;margin-bottom:8px">Follow @CoinSalsa</p><p style="color:#8a97aa;font-size:12px;line-height:1.6">Crypto news, picks &amp; analysis<br>on Instagram</p></a>`;
+    postEl.innerHTML = `<a href="https://www.instagram.com/coinsalsa/" target="_blank" rel="noopener" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:32px;text-align:center;text-decoration:none"><div style="font-size:48px;margin-bottom:12px">🌶️</div><p style="color:#e8ecf3;font-size:14px;font-weight:600;margin-bottom:8px">Follow @CoinSalsa</p><p style="color:#8a97aa;font-size:12px;line-height:1.6">Crypto news, picks &amp; analysis<br>on Instagram</p></a>`;
   }
 }
 
