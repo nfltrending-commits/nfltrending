@@ -214,7 +214,7 @@
     .cs-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px}
     .cs-brand{display:flex;align-items:center;gap:12px}
     .cs-logo{font-size:22px;font-weight:900;letter-spacing:-.5px}
-    .cs-logo .cs{color:#00c896}.cs-logo .salsa{color:#fff}.cs-logo .dot{color:var(--gold)}
+    .cs-logo .cs{color:#fff}.cs-logo .salsa{color:#e85500}
     .cs-tagline{font-size:12px;color:var(--muted);border-left:2px solid var(--border);padding-left:12px}
     .cs-ig-btn{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#f77737);color:#fff;font-size:12px;font-weight:700;padding:8px 16px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px;transition:opacity .2s,transform .15s;flex-shrink:0}
     .cs-ig-btn:hover{opacity:.9;transform:translateY(-1px)}
@@ -248,6 +248,28 @@
     .cs-ig-cta:hover{opacity:.9}
     /* Divider */
     .cs-divider{height:1px;background:linear-gradient(90deg,transparent,#00c896,transparent);margin:0 0 40px;opacity:.3}
+
+    /* ── COINSALSA COIN ICON ── */
+    .cs-coin{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#00d9a6,#008f6e);border-radius:50%;flex-shrink:0;line-height:1}
+    .cs-coin-xs{width:18px;height:18px;font-size:10px}
+    .cs-coin-sm{width:28px;height:28px;font-size:14px}
+    .cs-coin-md{width:38px;height:38px;font-size:20px;box-shadow:0 0 0 2px rgba(0,200,150,.25)}
+    .cs-coin-lg{width:46px;height:46px;font-size:24px;box-shadow:0 0 0 3px rgba(0,200,150,.2)}
+
+    /* ── X/SOCIAL POST CARD ── */
+    .cs-x-feed{display:flex;flex-direction:column}
+    .cs-x-post{display:block;padding:16px;border-bottom:1px solid var(--border);text-decoration:none;color:inherit;transition:background .15s;cursor:pointer}
+    .cs-x-post:last-child{border-bottom:none;padding-bottom:20px}
+    .cs-x-post:hover{background:rgba(255,255,255,.03)}
+    .cs-x-text{font-size:14px;line-height:1.7;color:var(--text);margin-bottom:10px;white-space:pre-wrap;word-break:break-word}
+    .cs-x-img{width:100%;border-radius:10px;overflow:hidden;margin-bottom:10px;background:var(--navy3)}
+    .cs-x-img img{width:100%;display:block;object-fit:cover;max-height:260px}
+    .cs-x-meta{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
+    .cs-x-metrics{display:inline-flex;gap:14px;font-size:12px;color:var(--muted)}
+    .cs-x-metric{display:inline-flex;align-items:center;gap:4px}
+    .cs-x-time{font-size:11px;color:var(--muted)}
+    /* kill 1:1 constraint when used as X feed */
+    #cs-ig-post.cs-x-feed{aspect-ratio:unset;background:transparent;display:flex;align-items:stretch;justify-content:unset;min-height:80px}
 
     /* RESPONSIVE */
     @media(max-width:1024px){
@@ -315,7 +337,7 @@
       <li><a href="#picks">Picks</a></li>
       <li><a href="#teams">Teams</a></li>
       <li><a href="#newsletter">Newsletter</a></li>
-      <li><a href="#crypto" style="color:#00c896">🌶️ CoinSalsa</a></li>
+      <li><a href="#crypto" style="display:inline-flex;align-items:center;gap:6px"><img src="/coinsalsa-logo.svg" alt="CoinSalsa" style="width:20px;height:20px;border-radius:50%;flex-shrink:0"><span style="color:#e85500;font-weight:600">CoinSalsa</span></a></li>
     </ul>
     <a href="https://www.mybookie.ag/?affid=1108" class="nav-cta" target="_blank" rel="noopener">Claim Bonus →</a>
   </div>
@@ -488,11 +510,14 @@
     <div class="cs-divider"></div>
     <div class="cs-header">
       <div class="cs-brand">
-        <div class="cs-logo"><span class="cs">Coin</span><span class="salsa">Salsa</span><span class="dot">.</span></div>
-        <div class="cs-tagline">Live crypto news & analysis<br>from our sister brand</div>
+        <img src="/coinsalsa-logo.svg" alt="CoinSalsa" style="width:56px;height:56px;border-radius:50%;flex-shrink:0">
+        <div>
+          <div class="cs-logo"><span class="cs">coin</span><span class="salsa">salsa</span></div>
+          <div class="cs-tagline">crypto · RWA · lifestyle · <a href="https://x.com/coinsalsa" target="_blank" rel="noopener" style="color:var(--muted);text-decoration:none">@coinsalsa</a></div>
+        </div>
       </div>
-      <a href="https://www.instagram.com/coinsalsa/" class="cs-ig-btn" target="_blank" rel="noopener">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      <a href="https://x.com/coinsalsa" class="cs-ig-btn" target="_blank" rel="noopener" style="background:#000;border:1px solid rgba(255,255,255,.15)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.743l7.73-8.835L1.254 2.25H8.08l4.259 5.631L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
         Follow @CoinSalsa
       </a>
     </div>
@@ -509,26 +534,34 @@
         </div>
       </div>
 
-      <!-- Instagram widget -->
+      <!-- X / Social post widget -->
       <div class="cs-ig-widget">
         <div class="cs-ig-header">
-          <div class="cs-ig-avatar">🌶️</div>
+          <img src="/coinsalsa-logo.svg" alt="CoinSalsa" style="width:38px;height:38px;border-radius:50%;flex-shrink:0">
           <div>
-            <div class="cs-ig-handle">@CoinSalsa</div>
-            <div class="cs-ig-sub">Crypto news & picks</div>
+            <div class="cs-ig-handle" style="font-size:13px;font-weight:700">coinsalsa</div>
+            <div class="cs-ig-sub">@coinsalsa · crypto picks</div>
           </div>
+          <!-- X logo -->
+          <svg style="margin-left:auto;fill:rgba(255,255,255,.55);flex-shrink:0" width="16" height="16" viewBox="0 0 24 24">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.743l7.73-8.835L1.254 2.25H8.08l4.259 5.631L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
+          </svg>
         </div>
-        <div id="cs-ig-post" class="cs-ig-post">
-          <div class="cs-ig-placeholder">
-            <div class="emoji">🌶️</div>
-            <p>Loading latest post from<br><strong>@CoinSalsa</strong></p>
+        <div id="cs-ig-post" class="cs-ig-post cs-x-feed">
+          <!-- Loading skeleton -->
+          <div style="padding:16px">
+            <div class="skel-line m skeleton" style="margin-bottom:10px"></div>
+            <div class="skel-line l skeleton" style="margin-bottom:8px"></div>
+            <div class="skel-line s skeleton"></div>
           </div>
         </div>
         <div class="cs-ig-footer">
           <span class="cs-ig-stats" id="cs-ig-updated">Updated weekly</span>
-          <a href="https://www.instagram.com/coinsalsa/" class="cs-ig-cta" target="_blank" rel="noopener">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            Follow Us
+          <a href="https://x.com/coinsalsa" class="cs-ig-cta" target="_blank" rel="noopener">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.743l7.73-8.835L1.254 2.25H8.08l4.259 5.631L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
+            </svg>
+            Follow on X
           </a>
         </div>
       </div>
@@ -1021,23 +1054,31 @@ function buildCryptoCard(item, big) {
 
 async function loadCryptoNews() {
   var grid = document.getElementById('cs-news-grid');
-  var all  = [];
-  await Promise.allSettled(CRYPTO_FEEDS.map(async function(feed) {
-    try {
-      var items = await fetchRSSXML(feed.url, feed.label);
-      all = all.concat(items);
-    } catch(e) {}
-  }));
-  if (!all.length) { renderFallbackCrypto(); return; }
-  all.sort(function(a,b) { return new Date(b.pubDate) - new Date(a.pubDate); });
-  var seen   = new Set();
-  var unique = all.filter(function(i) {
-    var k = (i.title||'').slice(0,40).toLowerCase();
-    if (seen.has(k)) return false;
-    seen.add(k); return true;
-  });
-  grid.innerHTML = '';
-  unique.slice(0, 4).forEach(function(item, i) { grid.appendChild(buildCryptoCard(item, i === 0)); });
+  try {
+    // CryptoCompare public JSON API — real images, no CORS proxy needed
+    var r = await safeFetch('https://min-api.cryptocompare.com/data/v2/news/?lang=EN&sortOrder=latest&limit=10');
+    if (!r.ok) throw new Error('CryptoCompare API error');
+    var data = await r.json();
+    var articles = data.Data || [];
+    if (!articles.length) throw new Error('empty');
+    var items = articles.map(function(a) {
+      return {
+        title:       a.title || '',
+        link:        a.url || a.guid || '',
+        pubDate:     new Date((a.published_on || 0) * 1000).toISOString(),
+        thumbnail:   a.imageurl || null,
+        description: (a.body || '').slice(0, 300),
+        content:     a.body || '',
+        feed:        (a.source_info && a.source_info.name) || a.source || 'Crypto',
+        author:      (a.source_info && a.source_info.name) || a.source || 'Crypto',
+        enclosures:  []
+      };
+    });
+    grid.innerHTML = '';
+    items.slice(0, 4).forEach(function(item, i) { grid.appendChild(buildCryptoCard(item, i === 0)); });
+  } catch(e) {
+    renderFallbackCrypto();
+  }
 }
 
 function renderFallbackCrypto() {
@@ -1054,34 +1095,71 @@ function renderFallbackCrypto() {
   items.forEach(function(item, i) { grid.appendChild(buildCryptoCard(item, i === 0)); });
 }
 
-// Load latest Instagram post from /coinsalsa.json (updated by Make Scenario C)
+// Load CoinSalsa posts from /coinsalsa.json — renders as X-style post cards (up to 2)
 async function loadCoinSalsaPost() {
   var postEl    = document.getElementById('cs-ig-post');
   var updatedEl = document.getElementById('cs-ig-updated');
-  function renderPost(url, caption, postedAt) {
-    var cap = caption || 'Latest from @CoinSalsa 🌶️';
-    postEl.innerHTML =
-      '<a href="' + url + '" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:14px;padding:20px;text-decoration:none">' +
-        '<div style="display:flex;align-items:center;gap:8px">' +
-          '<div style="width:7px;height:7px;border-radius:50%;background:#00c896;flex-shrink:0"></div>' +
-          '<span style="font-size:11px;color:#8a97aa;text-transform:uppercase;letter-spacing:.5px;font-weight:600">Latest Post</span>' +
-        '</div>' +
-        '<p style="color:#e8ecf3;font-size:14px;line-height:1.65;font-weight:500;flex:1">' + cap + '</p>' +
-        '<div style="background:linear-gradient(90deg,#833ab4,#fd1d1d,#f77737);border-radius:7px;padding:10px 16px;text-align:center;color:#fff;font-size:13px;font-weight:800;letter-spacing:.3px">' +
-          'View Post on Instagram →' +
-        '</div>' +
-        '<p style="font-size:11px;color:#8a97aa;text-align:center">@CoinSalsa · Crypto news &amp; picks</p>' +
-      '</a>';
-    if (postedAt) updatedEl.textContent = 'Posted ' + timeAgo(postedAt);
+
+  function renderPost(p) {
+    var url      = p.postUrl || 'https://x.com/coinsalsa';
+    var text     = p.text || p.caption || '';
+    var likes    = p.likes   || 0;
+    var reposts  = p.reposts || 0;
+    var postedAt = p.postedAt || null;
+
+    var linkedText = text
+      .replace(/#(\w+)/g, '<span style="color:#e85500">#$1</span>')
+      .replace(/@(\w+)/g, '<span style="color:#e85500">@$1</span>');
+
+    var metricsHtml = '';
+    if (likes || reposts) {
+      metricsHtml = '<span class="cs-x-metrics">' +
+        '<span class="cs-x-metric"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> ' + likes + '</span>' +
+        '<span class="cs-x-metric"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg> ' + reposts + '</span>' +
+      '</span>';
+    }
+
+    var timeHtml = postedAt ? '<span class="cs-x-time">' + timeAgo(postedAt) + '</span>' : '';
+    var metaRow = (metricsHtml || timeHtml)
+      ? '<div class="cs-x-meta">' + metricsHtml + timeHtml + '</div>'
+      : '';
+
+    return '<a href="' + url + '" target="_blank" rel="noopener" class="cs-x-post">' +
+      '<div class="cs-x-text">' + linkedText + '</div>' +
+      metaRow +
+    '</a>';
   }
+
+  function renderPosts(data) {
+    var posts = Array.isArray(data.posts) ? data.posts : [data];
+    posts = posts.slice(0, 2);
+    var html = '';
+    posts.forEach(function(p) { html += renderPost(p); });
+    postEl.innerHTML = html;
+    var latest = posts[0];
+    if (latest && latest.postedAt && updatedEl) {
+      updatedEl.textContent = 'Latest · ' + timeAgo(latest.postedAt);
+    }
+  }
+
   try {
     var r = await safeFetch('/coinsalsa.json?v=' + Date.now());
     if (!r.ok) throw new Error();
     var data = await r.json();
-    if (data.postUrl) renderPost(data.postUrl, data.caption, data.postedAt);
-    else throw new Error();
+    renderPosts(data);
   } catch(e) {
-    renderPost('https://www.instagram.com/coinsalsa/', 'Follow @CoinSalsa for live crypto news, picks, and analysis 🌶️', null);
+    renderPosts({ posts: [
+      {
+        postUrl: 'https://x.com/coinsalsa',
+        text: '🌶️ @CoinSalsa — Your edge in crypto.\n\nWeekly picks, live market calls, and coin analysis you can actually act on. Follow for the next play.',
+        likes: 0, reposts: 0, postedAt: null
+      },
+      {
+        postUrl: 'https://x.com/coinsalsa',
+        text: '#Bitcoin holding above key support. #Altcoins showing early momentum. Our next pick drops this week.\n\nFollow @CoinSalsa for the signal. 🌶️\n\n#Crypto #BTC #RWA',
+        likes: 0, reposts: 0, postedAt: null
+      }
+    ]});
   }
 }
 
