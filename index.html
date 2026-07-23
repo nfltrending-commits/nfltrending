@@ -219,16 +219,18 @@
     .cs-ig-btn{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#f77737);color:#fff;font-size:12px;font-weight:700;padding:8px 16px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px;transition:opacity .2s,transform .15s;flex-shrink:0}
     .cs-ig-btn:hover{opacity:.9;transform:translateY(-1px)}
     .cs-grid{display:grid;grid-template-columns:1fr 300px;gap:24px;align-items:start}
-    .cs-news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .cs-news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
     .cs-card{background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s;display:flex;flex-direction:column}
     .cs-card:hover{transform:translateY(-4px);border-color:#0d3d2e;box-shadow:0 12px 28px rgba(0,200,150,.08)}
     .cs-card.big{grid-column:span 2}
-    .cs-card-thumb{width:100%;aspect-ratio:16/9;object-fit:cover;background:linear-gradient(135deg,#071a14,#0d3d2e)}
-    .cs-card-thumb-placeholder{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#071a14,#0d3d2e);display:flex;align-items:center;justify-content:center;font-size:40px}
+    .cs-card-thumb{width:100%;aspect-ratio:16/9;object-fit:cover;background:linear-gradient(135deg,#0d1f18,#1a3a28)}
+    .cs-card-thumb-placeholder{width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,#0d1205,#1a1a00);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .cs-card-thumb-placeholder::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(232,85,0,.18),transparent 60%),radial-gradient(ellipse at 70% 50%,rgba(0,80,200,.12),transparent 60%)}
     .cs-card-body{padding:16px;flex:1;display:flex;flex-direction:column}
-    .cs-cat{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#00c896;margin-bottom:6px}
-    .cs-card h3{font-size:14px;font-weight:700;line-height:1.4;margin-bottom:8px;flex:1}
-    .cs-card.big h3{font-size:16px}
+    .cs-post-header{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+    .cs-post-text{font-size:13px;line-height:1.7;color:var(--text);flex:1;white-space:pre-wrap;word-break:break-word}
+    .cs-post-metrics{display:flex;gap:14px;font-size:11px;color:var(--muted);margin-top:10px}
+    .cs-post-time{font-size:11px;color:var(--muted);margin-left:auto}
     .cs-card p{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px}
     .cs-meta{font-size:11px;color:var(--muted);margin-top:auto}
     /* Instagram widget */
@@ -282,7 +284,6 @@
       .two-col{grid-template-columns:1fr}
       .cs-grid{grid-template-columns:1fr}
       .cs-news-grid{grid-template-columns:repeat(2,1fr)}
-      .cs-card.big{grid-column:span 2}
     }
     /* OFFER RIBBONS */
     .offer-ribbon{background:linear-gradient(90deg,#a80015 0%,#d4001a 60%,#b8001a 100%);padding:0}
@@ -302,6 +303,19 @@
     @media(max-width:600px){
       .offer-ribbon-inner{flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px}
       .offer-ribbon-right{width:100%;justify-content:space-between}
+    }
+    /* ── OFFER STRIP ── */
+    .offer-strip{background:var(--navy2);border-bottom:1px solid var(--border)}
+    .offer-strip-inner{max-width:1200px;margin:auto;padding:10px 20px;display:flex;align-items:center;gap:12px}
+    .offer-strip-badge{background:var(--red);color:#fff;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:4px;white-space:nowrap;flex-shrink:0}
+    .offer-strip-text{font-size:13px;color:var(--text);line-height:1.4;flex:1;min-width:0}
+    .offer-strip-btn{background:var(--red);color:#fff;font-size:12px;font-weight:800;padding:8px 18px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;flex-shrink:0;transition:opacity .2s}
+    .offer-strip-btn:hover{opacity:.88}
+    @media(max-width:600px){
+      .offer-strip-text{display:none}
+      .offer-strip-inner{justify-content:space-between}
+      .offer-strip-badge{font-size:11px;padding:6px 12px}
+      .offer-strip-btn{font-size:12px;padding:8px 16px}
     }
     /* ── INFO MODAL ── */
     .info-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:500;align-items:center;justify-content:center;padding:20px}
@@ -324,7 +338,7 @@
     .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
     .nav-hamburger.open span:nth-child(2){opacity:0}
     .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-    .nav-mobile{display:none;position:absolute;top:60px;left:0;right:0;background:rgba(10,14,26,.98);border-bottom:1px solid var(--border);padding:8px 20px 16px;backdrop-filter:blur(12px);z-index:99}
+    .nav-mobile{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(10,14,26,.98);border-bottom:1px solid var(--border);padding:8px 20px 16px;backdrop-filter:blur(12px);z-index:99}
     .nav-mobile.open{display:block}
     .nav-mobile ul{list-style:none;display:flex;flex-direction:column}
     .nav-mobile ul li a{display:block;padding:13px 0;font-size:15px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border);transition:color .2s}
@@ -410,13 +424,11 @@
 </section>
 
 <!-- COMPACT OFFER STRIP -->
-<div style="background:var(--navy2);border-bottom:1px solid var(--border);padding:10px 0">
-  <div style="max-width:1200px;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
-    <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0">
-      <span style="background:var(--red);color:#fff;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:3px 9px;border-radius:4px;white-space:nowrap;flex-shrink:0">🏈 Welcome Offer</span>
-      <span style="font-size:13px;color:var(--text);line-height:1.4"><span class="ribbon-long"><strong>Up to $500 Bet Back Bonus + $25 Casino Credit</strong> — 100% refund in Free Play if your first bet loses</span><span class="ribbon-short"><strong>$500 Bet Back + $25 Casino Credit</strong></span></span>
-    </div>
-    <a href="https://www.mybookie.ag/?affid=1108" style="background:var(--red);color:#fff;font-size:12px;font-weight:800;padding:8px 18px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;flex-shrink:0;transition:opacity .2s" target="_blank" rel="noopener">Claim Now →</a>
+<div class="offer-strip">
+  <div class="offer-strip-inner">
+    <span class="offer-strip-badge">🏈 Welcome Offer</span>
+    <span class="offer-strip-text"><strong>Up to $500 Bet Back Bonus + $25 Casino Credit</strong> — 100% refund in Free Play if your first bet loses</span>
+    <a href="https://www.mybookie.ag/?affid=1108" class="offer-strip-btn" target="_blank" rel="noopener">Claim Now →</a>
   </div>
 </div>
 
@@ -573,10 +585,8 @@
       <div>
         <div class="cs-news-grid" id="cs-news-grid">
           <!-- skeletons -->
-          <div class="cs-card big"><div class="cs-card-thumb-placeholder skeleton" style="background:linear-gradient(135deg,#071a14,#0d3d2e)"></div><div class="cs-card-body"><div class="skel-line s skeleton" style="margin-bottom:10px"></div><div class="skel-line l skeleton"></div><div class="skel-line m skeleton"></div></div></div>
-          <div class="cs-card"><div class="cs-card-thumb-placeholder skeleton" style="background:linear-gradient(135deg,#071a14,#0d3d2e)"></div><div class="cs-card-body"><div class="skel-line s skeleton" style="margin-bottom:10px"></div><div class="skel-line l skeleton"></div></div></div>
-          <div class="cs-card"><div class="cs-card-thumb-placeholder skeleton" style="background:linear-gradient(135deg,#071a14,#0d3d2e)"></div><div class="cs-card-body"><div class="skel-line s skeleton" style="margin-bottom:10px"></div><div class="skel-line l skeleton"></div></div></div>
-          <div class="cs-card"><div class="cs-card-thumb-placeholder skeleton" style="background:linear-gradient(135deg,#071a14,#0d3d2e)"></div><div class="cs-card-body"><div class="skel-line s skeleton" style="margin-bottom:10px"></div><div class="skel-line l skeleton"></div></div></div>
+          <div class="cs-card"><div class="cs-card-thumb-placeholder skeleton"></div><div class="cs-card-body"><div class="skel-line s skeleton" style="margin-bottom:10px"></div><div class="skel-line l skeleton" style="margin-bottom:8px"></div><div class="skel-line m skeleton"></div></div></div>
+          <div class="cs-card"><div class="cs-card-thumb-placeholder skeleton"></div><div class="cs-card-body"><div class="skel-line s skeleton" style="margin-bottom:10px"></div><div class="skel-line l skeleton" style="margin-bottom:8px"></div><div class="skel-line m skeleton"></div></div></div>
         </div>
       </div>
 
@@ -1085,139 +1095,60 @@ async function fetchRSSXML(feedUrl, label) {
   return result;
 }
 
-function buildCryptoCard(item, big) {
-  var card = document.createElement('div');
-  card.className = 'cs-card' + (big ? ' big' : '');
-  var imgSrc = extractImage(item);
-  var emoji  = rand(CRYPTO_EMOJIS);
-  var thumb  = imgSrc
-    ? '<img class="cs-card-thumb" src="' + imgSrc + '" alt="" loading="lazy" onerror="this.outerHTML=\'<div class=&quot;cs-card-thumb-placeholder&quot;>' + emoji + '</div>\'">'
-    : '<div class="cs-card-thumb-placeholder">' + emoji + '</div>';
-  var rawDesc   = item.description || item.content || '';
-  var cleanDesc = rawDesc.replace(/<[^>]*>/g, '').trim();
-  var descLen   = big ? 180 : 100;
-  var desc      = cleanDesc ? '<p>' + trunc(cleanDesc, descLen) + '</p>' : '';
-  card.innerHTML =
-    thumb +
-    '<div class="cs-card-body">' +
-      '<div class="cs-cat">' + rand(CRYPTO_CATS) + '</div>' +
-      '<h3>' + (item.title || 'Crypto Update') + '</h3>' +
-      desc +
-      '<div class="cs-meta">' + (item.feed || 'CoinSalsa') + ' · ' + timeAgo(item.pubDate) + '</div>' +
-    '</div>';
-  var cardLink = item.link || 'https://www.instagram.com/coinsalsa/';
-  card.onclick = function() { window.open(cardLink, '_blank', 'noopener'); };
-  return card;
+// Load Twitter widget.js once
+function loadTwitterJS() {
+  if (document.getElementById('twitter-wjs')) { if (window.twttr) window.twttr.widgets.load(); return; }
+  var s = document.createElement('script');
+  s.id = 'twitter-wjs'; s.async = true; s.src = 'https://platform.twitter.com/widgets.js';
+  document.body.appendChild(s);
 }
 
+// Render a tweet embed wrapper
+function tweetEmbed(url) {
+  var wrap = document.createElement('div');
+  wrap.style.cssText = 'background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;min-height:120px';
+  wrap.innerHTML = '<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="' + url + '"></a></blockquote>';
+  return wrap;
+}
+
+// Load last 2 CoinSalsa posts as real embedded tweets
 async function loadCryptoNews() {
   var grid = document.getElementById('cs-news-grid');
   try {
-    // CryptoCompare public JSON API — real images, no CORS proxy needed
-    var r = await safeFetch('https://min-api.cryptocompare.com/data/v2/news/?lang=EN&sortOrder=latest&limit=10');
-    if (!r.ok) throw new Error('CryptoCompare API error');
-    var data = await r.json();
-    var articles = data.Data || [];
-    if (!articles.length) throw new Error('empty');
-    var items = articles.map(function(a) {
-      return {
-        title:       a.title || '',
-        link:        a.url || a.guid || '',
-        pubDate:     new Date((a.published_on || 0) * 1000).toISOString(),
-        thumbnail:   a.imageurl || null,
-        description: (a.body || '').slice(0, 300),
-        content:     a.body || '',
-        feed:        (a.source_info && a.source_info.name) || a.source || 'Crypto',
-        author:      (a.source_info && a.source_info.name) || a.source || 'Crypto',
-        enclosures:  []
-      };
-    });
+    var r = await safeFetch('/coinsalsa.json?v=' + Date.now());
+    if (!r.ok) throw new Error();
+    var data  = await r.json();
+    var posts = Array.isArray(data.posts) ? data.posts : [data];
+    if (!posts.length) throw new Error('empty');
     grid.innerHTML = '';
-    items.slice(0, 4).forEach(function(item, i) { grid.appendChild(buildCryptoCard(item, i === 0)); });
+    posts.slice(0, 2).forEach(function(post) {
+      grid.appendChild(tweetEmbed(post.postUrl || 'https://x.com/coinsalsa'));
+    });
+    loadTwitterJS();
   } catch(e) {
-    renderFallbackCrypto();
+    grid.innerHTML = '<div style="grid-column:span 2;text-align:center;padding:32px;color:var(--muted)"><img src="/coinsalsa-logo.svg" style="width:48px;height:48px;border-radius:50%;margin:0 auto 12px;display:block"><p>Follow <a href="https://x.com/coinsalsa" style="color:#e85500" target="_blank">@coinsalsa</a> on X for the latest crypto picks.</p></div>';
   }
 }
 
-function renderFallbackCrypto() {
-  var now    = Date.now();
-  var csLink = 'https://www.instagram.com/coinsalsa/';
-  var items  = [
-    { title:'Bitcoin Holds $95K as Institutional Demand Hits Record Highs', description:'On-chain data shows long-term holders accumulating aggressively. Analysts see $120K as next major target before year end.', link:csLink, pubDate:new Date(now-1800000).toISOString(), feed:'CoinSalsa', thumbnail:'https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=640&q=80' },
-    { title:'Ethereum ETF Inflows Surge — Is a $5K ETH Back on the Table?', description:'Institutional money is flowing into crypto ETFs at a record pace. Here is what it means for prices this quarter.', link:csLink, pubDate:new Date(now-3600000).toISOString(), feed:'CoinSalsa', thumbnail:'https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=640&q=80' },
-    { title:'5 Altcoins Primed for a Bull Run This Quarter', description:'These under-the-radar picks have strong fundamentals and low market caps — prime setups for the next leg up.', link:csLink, pubDate:new Date(now-7200000).toISOString(), feed:'CoinSalsa', thumbnail:'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=640&q=80' },
-    { title:'DeFi TVL Crosses $200B — What It Means for Your Portfolio', description:'Total value locked in DeFi protocols hits a new milestone. We break down the best yield opportunities right now.', link:csLink, pubDate:new Date(now-10800000).toISOString(), feed:'CoinSalsa', thumbnail:'https://images.unsplash.com/photo-1605792657660-596af9009e82?w=640&q=80' },
-  ];
-  var grid = document.getElementById('cs-news-grid');
-  grid.innerHTML = '';
-  items.forEach(function(item, i) { grid.appendChild(buildCryptoCard(item, i === 0)); });
-}
-
-// Load CoinSalsa posts from /coinsalsa.json — renders as X-style post cards (up to 2)
+// Load CoinSalsa posts as real embedded tweets in the side widget
 async function loadCoinSalsaPost() {
   var postEl    = document.getElementById('cs-ig-post');
   var updatedEl = document.getElementById('cs-ig-updated');
-
-  function renderPost(p) {
-    var url      = p.postUrl || 'https://x.com/coinsalsa';
-    var text     = p.text || p.caption || '';
-    var likes    = p.likes   || 0;
-    var reposts  = p.reposts || 0;
-    var postedAt = p.postedAt || null;
-
-    var linkedText = text
-      .replace(/#(\w+)/g, '<span style="color:#e85500">#$1</span>')
-      .replace(/@(\w+)/g, '<span style="color:#e85500">@$1</span>');
-
-    var metricsHtml = '';
-    if (likes || reposts) {
-      metricsHtml = '<span class="cs-x-metrics">' +
-        '<span class="cs-x-metric"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> ' + likes + '</span>' +
-        '<span class="cs-x-metric"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg> ' + reposts + '</span>' +
-      '</span>';
-    }
-
-    var timeHtml = postedAt ? '<span class="cs-x-time">' + timeAgo(postedAt) + '</span>' : '';
-    var metaRow = (metricsHtml || timeHtml)
-      ? '<div class="cs-x-meta">' + metricsHtml + timeHtml + '</div>'
-      : '';
-
-    return '<a href="' + url + '" target="_blank" rel="noopener" class="cs-x-post">' +
-      '<div class="cs-x-text">' + linkedText + '</div>' +
-      metaRow +
-    '</a>';
-  }
-
-  function renderPosts(data) {
-    var posts = Array.isArray(data.posts) ? data.posts : [data];
-    posts = posts.slice(0, 2);
-    var html = '';
-    posts.forEach(function(p) { html += renderPost(p); });
-    postEl.innerHTML = html;
-    var latest = posts[0];
-    if (latest && latest.postedAt && updatedEl) {
-      updatedEl.textContent = 'Latest · ' + timeAgo(latest.postedAt);
-    }
-  }
-
   try {
     var r = await safeFetch('/coinsalsa.json?v=' + Date.now());
     if (!r.ok) throw new Error();
-    var data = await r.json();
-    renderPosts(data);
+    var data  = await r.json();
+    var posts = Array.isArray(data.posts) ? data.posts : [data];
+    if (!posts.length) throw new Error('empty');
+    postEl.innerHTML = '';
+    posts.slice(0, 2).forEach(function(post) {
+      var url = post.postUrl || 'https://x.com/coinsalsa';
+      postEl.innerHTML += '<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="' + url + '"></a></blockquote>';
+    });
+    if (updatedEl) updatedEl.textContent = 'Latest posts';
+    loadTwitterJS();
   } catch(e) {
-    renderPosts({ posts: [
-      {
-        postUrl: 'https://x.com/coinsalsa',
-        text: '🌶️ @CoinSalsa — Your edge in crypto.\n\nWeekly picks, live market calls, and coin analysis you can actually act on. Follow for the next play.',
-        likes: 0, reposts: 0, postedAt: null
-      },
-      {
-        postUrl: 'https://x.com/coinsalsa',
-        text: '#Bitcoin holding above key support. #Altcoins showing early momentum. Our next pick drops this week.\n\nFollow @CoinSalsa for the signal. 🌶️\n\n#Crypto #BTC #RWA',
-        likes: 0, reposts: 0, postedAt: null
-      }
-    ]});
+    postEl.innerHTML = '<div style="padding:20px;text-align:center;color:var(--muted);font-size:13px">Follow <a href="https://x.com/coinsalsa" style="color:#e85500" target="_blank">@coinsalsa</a> for weekly crypto picks.</div>';
   }
 }
 
