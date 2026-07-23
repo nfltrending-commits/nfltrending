@@ -1,19 +1,8 @@
 {
   "posts": [
-    {
-      "postUrl": "https://x.com/coinsalsa",
-      "text": "🌶️ @CoinSalsa is LIVE.\n\nCrypto picks, coin calls, and market analysis every week. Follow us for the edge your portfolio needs.\n\n#Bitcoin #Crypto #BTC #Altcoins",
-      "likes": 0,
-      "reposts": 0,
-      "postedAt": "2026-07-23T09:00:00Z"
-    },
-    {
-      "postUrl": "https://x.com/coinsalsa",
-      "text": "#Bitcoin holding above key support. #Altcoins showing early momentum. Our next pick drops this week.\n\nFollow @CoinSalsa for the signal. 🌶️\n\n#Crypto #BTC #RWA",
-      "likes": 0,
-      "reposts": 0,
-      "postedAt": "2026-07-22T09:00:00Z"
-    }
+    { "postUrl": "https://x.com/coinsalsa/status/2080272540706967980" },
+    { "postUrl": "https://x.com/coinsalsa/status/2080091319775400413" }
   ],
   "updatedAt": "2026-07-23T09:00:00Z"
 }
+
