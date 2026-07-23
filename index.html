@@ -611,12 +611,69 @@ const CONFIG = {
 // ═══════════════════════════════════════════════
 //  UTILITIES
 // ═══════════════════════════════════════════════
-const RSS2JSON = 'https://api.rss2json.com/v1/api.json?rss_url=';
 const FEEDS = [
   { url: 'https://www.espn.com/espn/rss/nfl/news',            label: 'ESPN' },
   { url: 'https://www.cbssports.com/rss/headlines/nfl/',       label: 'CBS Sports' },
-  { url: 'https://news.google.com/rss/search?q=NFL+2026&hl=en-US&gl=US&ceid=US:en', label: 'Google News' },
+  { url: 'https://sports.yahoo.com/nfl/rss.xml',              label: 'Yahoo Sports' },
 ];
+const MEDIA_NS   = 'http://search.yahoo.com/mrss/';
+const CONTENT_NS = 'http://purl.org/rss/1.0/modules/content/';
+const PROXIES    = [
+  u => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
+  u => `https://corsproxy.io/?${encodeURIComponent(u)}`,
+];
+
+async function fetchRSSXML(feedUrl, label) {
+  let text = '';
+  for (const proxy of PROXIES) {
+    try {
+      const r = await fetch(proxy(feedUrl), { signal: AbortSignal.timeout(9000) });
+      if (r.ok) { text = await r.text(); break; }
+    } catch {}
+  }
+  if (!text) throw new Error('all proxies failed');
+  const doc = new DOMParser().parseFromString(text, 'application/xml');
+  if (doc.querySelector('parsererror')) throw new Error('XML parse error');
+  return [...doc.querySelectorAll('item')].slice(0, 10).map(el => {
+    const txt = s => { try { return el.querySelector(s)?.textContent?.trim() || ''; } catch { return ''; } };
+    const nsGet = (ns, tag, attr) => {
+      const nodes = el.getElementsByTagNameNS(ns, tag);
+      return nodes.length ? (attr ? nodes[0].getAttribute(attr) || '' : nodes[0].textContent?.trim() || '') : '';
+    };
+    // Image: media:thumbnail → media:content → enclosure → <img> in description/content
+    let thumbnail = nsGet(MEDIA_NS, 'thumbnail', 'url');
+    if (!thumbnail) {
+      const mcs = el.getElementsByTagNameNS(MEDIA_NS, 'content');
+      for (const mc of mcs) {
+        const u = mc.getAttribute('url') || '';
+        const m = mc.getAttribute('medium') || '';
+        const t = mc.getAttribute('type') || '';
+        if (u && (m === 'image' || t.startsWith('image/') || u.match(/\.(jpg|jpeg|png|webp|gif)/i))) { thumbnail = u; break; }
+      }
+    }
+    if (!thumbnail) {
+      const enc = el.querySelector('enclosure');
+      if (enc?.getAttribute('type')?.startsWith('image/')) thumbnail = enc.getAttribute('url') || '';
+    }
+    const desc    = txt('description');
+    const encoded = nsGet(CONTENT_NS, 'encoded', null) || nsGet(CONTENT_NS, 'encoded');
+    const html    = encoded || desc;
+    if (!thumbnail) {
+      const m = html.match(/<img[^>]+src=["']([^"']+)["']/i);
+      if (m?.[1]) thumbnail = m[1];
+    }
+    return {
+      title: txt('title'),
+      link: txt('link') || txt('guid'),
+      pubDate: txt('pubDate') || new Date().toISOString(),
+      thumbnail,
+      description: desc.replace(/<[^>]*>/g,'').replace(/&[^;]+;/g,' ').trim(),
+      content: html,
+      feed: label,
+      enclosures: []
+    };
+  });
+}
 const EMOJIS = ['🏈','🏟️','⚡','🔥','💰','🎯','📋','🏆'];
 const CATS   = ['Breaking','Analysis','Picks','Injury','Rumors','Betting','Preview','Report'];
 
@@ -710,21 +767,16 @@ function renderTicker(items) {
 async function loadNews() {
   const statusEl = document.getElementById('news-status');
   const all = [];
-  for (const feed of FEEDS) {
+  await Promise.allSettled(FEEDS.map(async feed => {
     try {
-      const r = await fetch(`${RSS2JSON}${encodeURIComponent(feed.url)}&count=10`);
-      if (!r.ok) continue;
-      const d = await r.json();
-      if (d.status === 'ok' && d.items?.length) {
-        d.items.forEach(i => { i.feed = feed.label; });
-        all.push(...d.items);
-      }
+      const items = await fetchRSSXML(feed.url, feed.label);
+      all.push(...items);
     } catch {}
-  }
+  }));
   if (!all.length) { renderFallbackNews(); return; }
   all.sort((a,b) => new Date(b.pubDate) - new Date(a.pubDate));
   const seen = new Set();
-  const unique = all.filter(i => { const k = i.title.slice(0,40).toLowerCase(); if(seen.has(k)) return false; seen.add(k); return true; });
+  const unique = all.filter(i => { const k = (i.title||'').slice(0,40).toLowerCase(); if(seen.has(k)) return false; seen.add(k); return true; });
   renderNews(unique);
   renderHotTopics(unique.slice(5));
   renderTicker(unique);
@@ -735,11 +787,11 @@ async function loadNews() {
 function renderFallbackNews() {
   const now = Date.now();
   const items = [
-    { title:"Chiefs' Dynasty Machine Rolls Into 2026 — Can Anyone Dethrone Kansas City?", description:"Patrick Mahomes and the Chiefs open as odds-on favorites again. We break down what changed, who's hunting them, and where the best betting value lies.", link:CONFIG.affiliateLink, pubDate:new Date(now-1800000).toISOString(), feed:'NFLTrending', thumbnail:'' },
-    { title:"Ravens WR Corps in Question — Injury Report Rattles Preseason Oddsmakers", description:"Baltimore's receiving group took a hit in camp. Here's what it means for Lamar's numbers and your parlays.", link:CONFIG.affiliateLink, pubDate:new Date(now-3600000).toISOString(), feed:'NFLTrending', thumbnail:'' },
-    { title:"5 Bold Predictions for the 2026 NFL Season That Will Make You Money", description:"Contrarian takes with genuine value — including an NFC sleeper at 40/1 that sharp bettors are quietly loading up on.", link:CONFIG.affiliateLink, pubDate:new Date(now-7200000).toISOString(), feed:'NFLTrending', thumbnail:'' },
-    { title:"Top Sportsbooks Ranked for the 2026 NFL Season", description:"We reviewed 14 platforms. Here's where the best odds, bonuses, and promos actually are.", link:CONFIG.affiliateLink, pubDate:new Date(now-10800000).toISOString(), feed:'NFLTrending', thumbnail:'' },
-    { title:"Eagles QB Battle Heats Up in Training Camp — What It Means for Week 1", description:"The depth chart is murky heading into preseason. A late decision could swing the entire NFC East.", link:CONFIG.affiliateLink, pubDate:new Date(now-14400000).toISOString(), feed:'NFLTrending', thumbnail:'' },
+    { title:"Chiefs' Dynasty Machine Rolls Into 2026 — Can Anyone Dethrone Kansas City?", description:"Patrick Mahomes and the Chiefs open as odds-on favorites again. We break down what changed, who's hunting them, and where the best betting value lies.", link:CONFIG.affiliateLink, pubDate:new Date(now-1800000).toISOString(), feed:'NFLTrending', thumbnail:'https://images.unsplash.com/photo-1566577739112-5180d4bf9390?w=640&q=80' },
+    { title:"Ravens WR Corps in Question — Injury Report Rattles Preseason Oddsmakers", description:"Baltimore's receiving group took a hit in camp. Here's what it means for Lamar's numbers and your parlays.", link:CONFIG.affiliateLink, pubDate:new Date(now-3600000).toISOString(), feed:'NFLTrending', thumbnail:'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=640&q=80' },
+    { title:"5 Bold Predictions for the 2026 NFL Season That Will Make You Money", description:"Contrarian takes with genuine value — including an NFC sleeper at 40/1 that sharp bettors are quietly loading up on.", link:CONFIG.affiliateLink, pubDate:new Date(now-7200000).toISOString(), feed:'NFLTrending', thumbnail:'https://images.unsplash.com/photo-1575361204480-aadea25e6e68?w=640&q=80' },
+    { title:"Top Sportsbooks Ranked for the 2026 NFL Season", description:"We reviewed 14 platforms. Here's where the best odds, bonuses, and promos actually are.", link:CONFIG.affiliateLink, pubDate:new Date(now-10800000).toISOString(), feed:'NFLTrending', thumbnail:'https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=640&q=80' },
+    { title:"Eagles QB Battle Heats Up in Training Camp — What It Means for Week 1", description:"The depth chart is murky heading into preseason. A late decision could swing the entire NFC East.", link:CONFIG.affiliateLink, pubDate:new Date(now-14400000).toISOString(), feed:'NFLTrending', thumbnail:'https://images.unsplash.com/photo-1611627474557-bf426bc688bc?w=640&q=80' },
   ];
   renderNews(items); renderHotTopics(items.slice(1)); renderTicker(items);
   document.getElementById('news-status').textContent = '📡 Curated content';
@@ -911,32 +963,28 @@ function buildCryptoCard(item, big) {
 async function loadCryptoNews() {
   const grid = document.getElementById('cs-news-grid');
   const all = [];
-  for (const feed of CRYPTO_FEEDS) {
+  await Promise.allSettled(CRYPTO_FEEDS.map(async feed => {
     try {
-      const r = await fetch(`${RSS2JSON}${encodeURIComponent(feed.url)}&count=6`);
-      if (!r.ok) continue;
-      const d = await r.json();
-      if (d.status === 'ok' && d.items?.length) {
-        d.items.forEach(i => { i.feed = feed.label; });
-        all.push(...d.items);
-      }
+      const items = await fetchRSSXML(feed.url, feed.label);
+      all.push(...items);
     } catch {}
-  }
+  }));
   if (!all.length) { renderFallbackCrypto(); return; }
   all.sort((a,b) => new Date(b.pubDate) - new Date(a.pubDate));
   const seen = new Set();
-  const unique = all.filter(i => { const k = i.title.slice(0,40).toLowerCase(); if(seen.has(k)) return false; seen.add(k); return true; });
+  const unique = all.filter(i => { const k = (i.title||'').slice(0,40).toLowerCase(); if(seen.has(k)) return false; seen.add(k); return true; });
   grid.innerHTML = '';
   unique.slice(0, 4).forEach((item, i) => grid.appendChild(buildCryptoCard(item, i === 0)));
 }
 
 function renderFallbackCrypto() {
   const now = Date.now();
+  const csLink = 'https://www.instagram.com/coinsalsa/';
   const items = [
-    { title:'Bitcoin Holds $95K as Institutional Demand Hits Record Highs', description:'On-chain data shows long-term holders accumulating aggressively. Analysts see $120K as next major target before year end.', link:'YOUR_COINSALSA_INSTAGRAM_URL', pubDate:new Date(now-1800000).toISOString(), feed:'CoinSalsa', thumbnail:'' },
-    { title:'Ethereum ETF Inflows Surge — Is a $5K ETH Back on the Table?', link:'YOUR_COINSALSA_INSTAGRAM_URL', pubDate:new Date(now-3600000).toISOString(), feed:'CoinSalsa', thumbnail:'' },
-    { title:'5 Altcoins Primed for a Bull Run This Quarter', link:'YOUR_COINSALSA_INSTAGRAM_URL', pubDate:new Date(now-7200000).toISOString(), feed:'CoinSalsa', thumbnail:'' },
-    { title:'DeFi TVL Crosses $200B — What It Means for Your Portfolio', link:'YOUR_COINSALSA_INSTAGRAM_URL', pubDate:new Date(now-10800000).toISOString(), feed:'CoinSalsa', thumbnail:'' },
+    { title:'Bitcoin Holds $95K as Institutional Demand Hits Record Highs', description:'On-chain data shows long-term holders accumulating aggressively. Analysts see $120K as next major target before year end.', link:csLink, pubDate:new Date(now-1800000).toISOString(), feed:'CoinSalsa', thumbnail:'https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=640&q=80' },
+    { title:'Ethereum ETF Inflows Surge — Is a $5K ETH Back on the Table?', description:'Institutional money is flowing into crypto ETFs at a record pace. Here is what it means for prices this quarter.', link:csLink, pubDate:new Date(now-3600000).toISOString(), feed:'CoinSalsa', thumbnail:'https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=640&q=80' },
+    { title:'5 Altcoins Primed for a Bull Run This Quarter', description:'These under-the-radar picks have strong fundamentals and low market caps — prime setups for the next leg up.', link:csLink, pubDate:new Date(now-7200000).toISOString(), feed:'CoinSalsa', thumbnail:'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=640&q=80' },
+    { title:'DeFi TVL Crosses $200B — What It Means for Your Portfolio', description:'Total value locked in DeFi protocols hits a new milestone. We break down the best yield opportunities right now.', link:csLink, pubDate:new Date(now-10800000).toISOString(), feed:'CoinSalsa', thumbnail:'https://images.unsplash.com/photo-1605792657660-596af9009e82?w=640&q=80' },
   ];
   const grid = document.getElementById('cs-news-grid');
   grid.innerHTML = '';
