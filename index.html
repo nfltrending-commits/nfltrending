@@ -491,7 +491,7 @@
         <div class="cs-logo"><span class="cs">Coin</span><span class="salsa">Salsa</span><span class="dot">.</span></div>
         <div class="cs-tagline">Live crypto news & analysis<br>from our sister brand</div>
       </div>
-      <a href="YOUR_COINSALSA_INSTAGRAM_URL" class="cs-ig-btn" target="_blank" rel="noopener">
+      <a href="https://www.instagram.com/coinsalsa/" class="cs-ig-btn" target="_blank" rel="noopener">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
         Follow @CoinSalsa
       </a>
@@ -600,193 +600,164 @@
 
 <script>
 // ═══════════════════════════════════════════════
-//  CONFIG — fill these in before deploying
+//  CONFIG
 // ═══════════════════════════════════════════════
 const CONFIG = {
   affiliateLink:  'https://www.mybookie.ag/?affid=1108',
   oddsApiKey:     'f70349f8d948e94299c459c081fc3b32',
-  makeWebhookUrl: 'YOUR_MAKE_WEBHOOK_URL',      // from Make Scenario B
+  makeWebhookUrl: 'YOUR_MAKE_WEBHOOK_URL',
 };
 
 // ═══════════════════════════════════════════════
 //  UTILITIES
 // ═══════════════════════════════════════════════
-const FEEDS = [
-  { url: 'https://www.espn.com/espn/rss/nfl/news',            label: 'ESPN' },
-  { url: 'https://www.cbssports.com/rss/headlines/nfl/',       label: 'CBS Sports' },
-  { url: 'https://sports.yahoo.com/nfl/rss.xml',              label: 'Yahoo Sports' },
-];
-const MEDIA_NS   = 'http://search.yahoo.com/mrss/';
-const CONTENT_NS = 'http://purl.org/rss/1.0/modules/content/';
-const PROXIES    = [
-  u => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
-  u => `https://corsproxy.io/?${encodeURIComponent(u)}`,
-];
-
-async function fetchRSSXML(feedUrl, label) {
-  let text = '';
-  for (const proxy of PROXIES) {
-    try {
-      const r = await fetch(proxy(feedUrl), { signal: AbortSignal.timeout(9000) });
-      if (r.ok) { text = await r.text(); break; }
-    } catch {}
-  }
-  if (!text) throw new Error('all proxies failed');
-  const doc = new DOMParser().parseFromString(text, 'application/xml');
-  if (doc.querySelector('parsererror')) throw new Error('XML parse error');
-  return [...doc.querySelectorAll('item')].slice(0, 10).map(el => {
-    const txt = s => { try { return el.querySelector(s)?.textContent?.trim() || ''; } catch { return ''; } };
-    const nsGet = (ns, tag, attr) => {
-      const nodes = el.getElementsByTagNameNS(ns, tag);
-      return nodes.length ? (attr ? nodes[0].getAttribute(attr) || '' : nodes[0].textContent?.trim() || '') : '';
-    };
-    // Image: media:thumbnail → media:content → enclosure → <img> in description/content
-    let thumbnail = nsGet(MEDIA_NS, 'thumbnail', 'url');
-    if (!thumbnail) {
-      const mcs = el.getElementsByTagNameNS(MEDIA_NS, 'content');
-      for (const mc of mcs) {
-        const u = mc.getAttribute('url') || '';
-        const m = mc.getAttribute('medium') || '';
-        const t = mc.getAttribute('type') || '';
-        if (u && (m === 'image' || t.startsWith('image/') || u.match(/\.(jpg|jpeg|png|webp|gif)/i))) { thumbnail = u; break; }
-      }
-    }
-    if (!thumbnail) {
-      const enc = el.querySelector('enclosure');
-      if (enc?.getAttribute('type')?.startsWith('image/')) thumbnail = enc.getAttribute('url') || '';
-    }
-    const desc    = txt('description');
-    const encoded = nsGet(CONTENT_NS, 'encoded', null) || nsGet(CONTENT_NS, 'encoded');
-    const html    = encoded || desc;
-    if (!thumbnail) {
-      const m = html.match(/<img[^>]+src=["']([^"']+)["']/i);
-      if (m?.[1]) thumbnail = m[1];
-    }
-    return {
-      title: txt('title'),
-      link: txt('link') || txt('guid'),
-      pubDate: txt('pubDate') || new Date().toISOString(),
-      thumbnail,
-      description: desc.replace(/<[^>]*>/g,'').replace(/&[^;]+;/g,' ').trim(),
-      content: html,
-      feed: label,
-      enclosures: []
-    };
-  });
-}
 const EMOJIS = ['🏈','🏟️','⚡','🔥','💰','🎯','📋','🏆'];
 const CATS   = ['Breaking','Analysis','Picks','Injury','Rumors','Betting','Preview','Report'];
-
-const rand   = arr => arr[Math.floor(Math.random() * arr.length)];
-const strip  = h  => (h || '').replace(/<[^>]*>/g,'').replace(/&[^;]+;/g,' ').trim();
-const trunc  = (s, n) => { const c = strip(s); return c.length > n ? c.slice(0,n).trim()+'…' : c; };
+const rand   = function(arr) { return arr[Math.floor(Math.random() * arr.length)]; };
+const strip  = function(h)   { return (h || '').replace(/<[^>]*>/g,'').replace(/&[^;]+;/g,' ').trim(); };
+const trunc  = function(s, n){ var c = strip(s); return c.length > n ? c.slice(0,n).trim()+'…' : c; };
 
 function timeAgo(d) {
-  const m = Math.floor((Date.now() - new Date(d)) / 60000);
-  if (m < 60)  return m + 'm ago';
+  var m = Math.floor((Date.now() - new Date(d)) / 60000);
+  if (m < 60)   return m + 'm ago';
   if (m < 1440) return Math.floor(m/60) + 'h ago';
   return Math.floor(m/1440) + 'd ago';
 }
-
 function fmtDate(iso) {
   return new Date(iso).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
 }
 
+// Safe fetch with timeout — works in all modern browsers (no AbortSignal.timeout needed)
+function safeFetch(url, timeoutMs) {
+  timeoutMs = timeoutMs || 9000;
+  var ctrl  = new AbortController();
+  var timer = setTimeout(function() { ctrl.abort(); }, timeoutMs);
+  return fetch(url, { signal: ctrl.signal }).finally(function() { clearTimeout(timer); });
+}
+
 // ═══════════════════════════════════════════════
-//  NEWS FEED
+//  IMAGE HELPERS
 // ═══════════════════════════════════════════════
 function proxyImg(url) {
   if (!url) return null;
-  if (url.startsWith('//')) url = 'https:' + url;
-  if (!url.startsWith('http')) return null;
-  return `https://images.weserv.nl/?url=${encodeURIComponent(url)}&w=640&output=webp&q=80`;
+  if (url.indexOf('//') === 0) url = 'https:' + url;
+  if (url.indexOf('http') !== 0) return null;
+  // ESPN CDN images load without proxy
+  if (url.indexOf('espncdn.com') !== -1 || url.indexOf('a.espn.com') !== -1) return url;
+  return 'https://images.weserv.nl/?url=' + encodeURIComponent(url) + '&w=640&output=webp&q=80';
 }
 function extractImage(item) {
   if (item.thumbnail && item.thumbnail.length > 10) return proxyImg(item.thumbnail);
-  if (item.enclosures?.length) {
-    const enc = item.enclosures.find(e => e.type?.startsWith('image/') || e.url?.match(/\.(jpg|jpeg|png|webp|gif)/i));
-    if (enc?.url) return proxyImg(enc.url);
+  if (item.enclosures && item.enclosures.length) {
+    for (var i = 0; i < item.enclosures.length; i++) {
+      var e = item.enclosures[i];
+      if ((e.type && e.type.indexOf('image/') === 0) || (e.url && /\.(jpg|jpeg|png|webp|gif)/i.test(e.url))) {
+        if (e.url) return proxyImg(e.url);
+      }
+    }
   }
   if (item.content) {
-    const m = item.content.match(/<img[^>]+src=["']([^"']+)["']/i);
-    if (m?.[1]) return proxyImg(m[1]);
+    var m = item.content.match(/<img[^>]+src=["']([^"']+)["']/i);
+    if (m && m[1]) return proxyImg(m[1]);
   }
   return null;
 }
 
+// ═══════════════════════════════════════════════
+//  NEWS — ESPN public JSON API (no CORS proxy)
+// ═══════════════════════════════════════════════
+async function loadESPNNews() {
+  var r = await safeFetch('https://site.api.espn.com/apis/site/v2/sports/football/nfl/news?limit=20');
+  if (!r.ok) throw new Error('ESPN API error');
+  var data = await r.json();
+  var articles = data.articles || [];
+  if (!articles.length) throw new Error('empty');
+  return articles.map(function(a) {
+    var imgUrl = (a.images && a.images[0]) ? a.images[0].url : null;
+    var link   = (a.links && a.links.web) ? a.links.web.href : (a.links && a.links.mobile ? a.links.mobile.href : '');
+    return {
+      title:       a.headline || a.title || '',
+      link:        link,
+      pubDate:     a.published || new Date().toISOString(),
+      thumbnail:   imgUrl,
+      description: a.description || '',
+      content:     a.description || '',
+      feed:        'ESPN',
+      author:      a.byline || 'ESPN',
+      enclosures:  []
+    };
+  });
+}
+
 function buildNewsCard(item, featured) {
-  const card = document.createElement('div');
+  var card = document.createElement('div');
   card.className = 'news-card' + (featured ? ' featured' : '');
-  const imgSrc = extractImage(item);
-  const thumb = imgSrc
-    ? `<img class="news-thumb" src="${imgSrc}" alt="" loading="lazy"
-         onerror="this.outerHTML='<div class=\\'news-thumb-placeholder\\'>${rand(EMOJIS)}</div>'">`
-    : `<div class="news-thumb-placeholder">${rand(EMOJIS)}</div>`;
-  const rawDesc = item.description || item.content || '';
-  const cleanDesc = rawDesc.replace(/<[^>]*>/g, '').trim();
-  const descLen = featured ? 200 : 100;
-  const desc = cleanDesc ? `<p>${trunc(cleanDesc, descLen)}</p>` : '';
-  card.innerHTML = `
-    ${thumb}
-    <div class="news-body">
-      <div class="news-cat">${rand(CATS)}</div>
-      <h3>${item.title || 'NFL Update'}</h3>
-      ${desc}
-      <div class="news-meta">
-        <span class="author">${item.author || item.feed || 'NFL Staff'}</span>
-        <span class="dot">·</span>
-        <span>${timeAgo(item.pubDate)}</span>
-      </div>
-    </div>`;
-  card.onclick = () => window.open(item.link || CONFIG.affiliateLink, '_blank', 'noopener');
+  var imgSrc = extractImage(item);
+  var emoji  = rand(EMOJIS);
+  var thumb  = imgSrc
+    ? '<img class="news-thumb" src="' + imgSrc + '" alt="" loading="lazy" onerror="this.outerHTML=\'<div class=&quot;news-thumb-placeholder&quot;>' + emoji + '</div>\'">'
+    : '<div class="news-thumb-placeholder">' + emoji + '</div>';
+  var rawDesc  = item.description || item.content || '';
+  var cleanDesc = rawDesc.replace(/<[^>]*>/g, '').trim();
+  var descLen   = featured ? 200 : 100;
+  var desc      = cleanDesc ? '<p>' + trunc(cleanDesc, descLen) + '</p>' : '';
+  card.innerHTML =
+    thumb +
+    '<div class="news-body">' +
+      '<div class="news-cat">' + rand(CATS) + '</div>' +
+      '<h3>' + (item.title || 'NFL Update') + '</h3>' +
+      desc +
+      '<div class="news-meta">' +
+        '<span class="author">' + (item.author || item.feed || 'NFL Staff') + '</span>' +
+        '<span class="dot">·</span>' +
+        '<span>' + timeAgo(item.pubDate) + '</span>' +
+      '</div>' +
+    '</div>';
+  var articleLink = item.link || CONFIG.affiliateLink;
+  card.onclick = function() { window.open(articleLink, '_blank', 'noopener'); };
   return card;
 }
 
 function renderNews(items) {
-  const grid = document.getElementById('news-grid');
+  var grid = document.getElementById('news-grid');
   grid.innerHTML = '';
-  items.slice(0, 5).forEach((item, i) => grid.appendChild(buildNewsCard(item, i === 0)));
+  items.slice(0, 5).forEach(function(item, i) { grid.appendChild(buildNewsCard(item, i === 0)); });
 }
 
 function renderHotTopics(items) {
-  document.getElementById('hot-topics').innerHTML = items.slice(0, 4).map((item, i) => `
-    <a href="${item.link || CONFIG.affiliateLink}" target="_blank" rel="noopener" class="hot-item" style="text-decoration:none">
-      <div class="hot-num">0${i+1}</div>
-      <div><h4>${trunc(item.title, 72)}</h4><span>${item.feed || 'NFL News'} · ${timeAgo(item.pubDate)}</span></div>
-    </a>`).join('');
+  document.getElementById('hot-topics').innerHTML = items.slice(0, 4).map(function(item, i) {
+    return '<a href="' + (item.link || CONFIG.affiliateLink) + '" target="_blank" rel="noopener" class="hot-item" style="text-decoration:none">' +
+      '<div class="hot-num">0' + (i+1) + '</div>' +
+      '<div><h4>' + trunc(item.title, 72) + '</h4><span>' + (item.feed || 'NFL News') + ' · ' + timeAgo(item.pubDate) + '</span></div>' +
+    '</a>';
+  }).join('');
 }
 
 function renderTicker(items) {
-  const headlines = items.slice(0, 8).map(i =>
-    `<span class="ticker-item">🏈 ${trunc(i.title,80)}<span class="ticker-sep"> | </span></span>`
-  ).join('');
-  const track = document.getElementById('ticker-track');
+  var headlines = items.slice(0, 8).map(function(item) {
+    return '<span class="ticker-item">🏈 ' + trunc(item.title, 80) + '<span class="ticker-sep"> | </span></span>';
+  }).join('');
+  var track = document.getElementById('ticker-track');
   track.innerHTML = headlines + headlines;
 }
 
 async function loadNews() {
-  const statusEl = document.getElementById('news-status');
-  const all = [];
-  await Promise.allSettled(FEEDS.map(async feed => {
-    try {
-      const items = await fetchRSSXML(feed.url, feed.label);
-      all.push(...items);
-    } catch {}
-  }));
-  if (!all.length) { renderFallbackNews(); return; }
-  all.sort((a,b) => new Date(b.pubDate) - new Date(a.pubDate));
-  const seen = new Set();
-  const unique = all.filter(i => { const k = (i.title||'').slice(0,40).toLowerCase(); if(seen.has(k)) return false; seen.add(k); return true; });
-  renderNews(unique);
-  renderHotTopics(unique.slice(5));
-  renderTicker(unique);
-  statusEl.innerHTML = '<span class="live-badge"><span class="live-dot"></span> Live</span> Updated just now';
-  statusEl.className = 'feed-status live';
+  var statusEl = document.getElementById('news-status');
+  try {
+    var items = await loadESPNNews();
+    renderNews(items);
+    renderHotTopics(items.slice(5));
+    renderTicker(items);
+    statusEl.innerHTML = '<span class="live-badge"><span class="live-dot"></span> Live</span> Updated just now';
+    statusEl.className = 'feed-status live';
+  } catch(err) {
+    renderFallbackNews();
+  }
 }
 
 function renderFallbackNews() {
-  const now = Date.now();
-  const items = [
+  var now = Date.now();
+  var items = [
     { title:"Chiefs' Dynasty Machine Rolls Into 2026 — Can Anyone Dethrone Kansas City?", description:"Patrick Mahomes and the Chiefs open as odds-on favorites again. We break down what changed, who's hunting them, and where the best betting value lies.", link:CONFIG.affiliateLink, pubDate:new Date(now-1800000).toISOString(), feed:'NFLTrending', thumbnail:'https://images.unsplash.com/photo-1566577739112-5180d4bf9390?w=640&q=80' },
     { title:"Ravens WR Corps in Question — Injury Report Rattles Preseason Oddsmakers", description:"Baltimore's receiving group took a hit in camp. Here's what it means for Lamar's numbers and your parlays.", link:CONFIG.affiliateLink, pubDate:new Date(now-3600000).toISOString(), feed:'NFLTrending', thumbnail:'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=640&q=80' },
     { title:"5 Bold Predictions for the 2026 NFL Season That Will Make You Money", description:"Contrarian takes with genuine value — including an NFC sleeper at 40/1 that sharp bettors are quietly loading up on.", link:CONFIG.affiliateLink, pubDate:new Date(now-7200000).toISOString(), feed:'NFLTrending', thumbnail:'https://images.unsplash.com/photo-1575361204480-aadea25e6e68?w=640&q=80' },
@@ -801,97 +772,97 @@ function renderFallbackNews() {
 //  LIVE ODDS  (The Odds API)
 // ═══════════════════════════════════════════════
 async function loadOdds() {
-  const widget  = document.getElementById('odds-widget');
-  const statusEl = document.getElementById('odds-status');
+  var widget   = document.getElementById('odds-widget');
+  var statusEl = document.getElementById('odds-status');
   if (!CONFIG.oddsApiKey) {
     widget.innerHTML = buildStaticOdds();
     statusEl.textContent = 'Sample odds';
     return;
   }
   try {
-    const url = `https://api.the-odds-api.com/v4/sports/americanfootball_nfl/odds/?apiKey=${CONFIG.oddsApiKey}&regions=us&markets=h2h,spreads,totals&oddsFormat=american&daysFrom=3`;
-    const r = await fetch(url);
+    var url = 'https://api.the-odds-api.com/v4/sports/americanfootball_nfl/odds/?apiKey=' + CONFIG.oddsApiKey + '&regions=us&markets=h2h,spreads,totals&oddsFormat=american&daysFrom=3';
+    var r = await safeFetch(url);
     if (!r.ok) throw new Error('API error');
-    const games = await r.json();
+    var games = await r.json();
     if (!games.length) { widget.innerHTML = '<div class="odds-status">No games scheduled this week.</div>'; return; }
-    widget.innerHTML = games.slice(0,4).map(g => {
-      const home = g.home_team, away = g.away_team;
-      const bm = g.bookmakers?.[0];
-      const spread = bm?.markets?.find(m=>m.key==='spreads')?.outcomes;
-      const total  = bm?.markets?.find(m=>m.key==='totals')?.outcomes;
-      const h2h    = bm?.markets?.find(m=>m.key==='h2h')?.outcomes;
-      const sp = spread?.find(o=>o.name===home);
-      const tot = total?.find(o=>o.name==='Over');
-      const ml = h2h?.find(o=>o.name===home);
-      const fmt = n => n > 0 ? '+'+n : n;
-      return `<div class="odds-game">
-        <div class="odds-teams"><span class="odds-team">${away}</span><span class="odds-time">vs</span><span class="odds-team">${home}</span></div>
-        <div class="odds-row">
-          ${sp  ? `<a href="${CONFIG.affiliateLink}" target="_blank" rel="noopener" class="odds-chip"><div class="type">Spread</div><div class="val">${sp.point>0?'+':''}${sp.point}</div></a>` : ''}
-          ${tot ? `<a href="${CONFIG.affiliateLink}" target="_blank" rel="noopener" class="odds-chip"><div class="type">Total</div><div class="val">${tot.point}</div></a>` : ''}
-          ${ml  ? `<a href="${CONFIG.affiliateLink}" target="_blank" rel="noopener" class="odds-chip"><div class="type">ML</div><div class="val">${fmt(ml.price)}</div></a>` : ''}
-        </div>
-      </div>`;
+    widget.innerHTML = games.slice(0,4).map(function(g) {
+      var home = g.home_team, away = g.away_team;
+      var bm     = g.bookmakers && g.bookmakers[0];
+      var mkts   = bm && bm.markets ? bm.markets : [];
+      var spreadM = mkts.find(function(m){return m.key==='spreads';});
+      var totalM  = mkts.find(function(m){return m.key==='totals';});
+      var h2hM    = mkts.find(function(m){return m.key==='h2h';});
+      var sp  = spreadM && spreadM.outcomes && spreadM.outcomes.find(function(o){return o.name===home;});
+      var tot = totalM  && totalM.outcomes  && totalM.outcomes.find(function(o){return o.name==='Over';});
+      var ml  = h2hM    && h2hM.outcomes    && h2hM.outcomes.find(function(o){return o.name===home;});
+      var fmt = function(n) { return n > 0 ? '+'+n : ''+n; };
+      return '<div class="odds-game">' +
+        '<div class="odds-teams"><span class="odds-team">' + away + '</span><span class="odds-time">vs</span><span class="odds-team">' + home + '</span></div>' +
+        '<div class="odds-row">' +
+        (sp  ? '<a href="' + CONFIG.affiliateLink + '" target="_blank" rel="noopener" class="odds-chip"><div class="type">Spread</div><div class="val">' + (sp.point > 0 ? '+' : '') + sp.point + '</div></a>' : '') +
+        (tot ? '<a href="' + CONFIG.affiliateLink + '" target="_blank" rel="noopener" class="odds-chip"><div class="type">Total</div><div class="val">' + tot.point + '</div></a>' : '') +
+        (ml  ? '<a href="' + CONFIG.affiliateLink + '" target="_blank" rel="noopener" class="odds-chip"><div class="type">ML</div><div class="val">' + fmt(ml.price) + '</div></a>' : '') +
+        '</div></div>';
     }).join('');
     statusEl.innerHTML = '<span style="color:var(--green)">● Live</span>';
-    // Add bet CTA
-    widget.innerHTML += `<div style="margin-top:14px;text-align:center"><a href="${CONFIG.affiliateLink}" class="btn-primary" style="font-size:13px;padding:10px 20px;justify-content:center" target="_blank" rel="noopener">Bet These Games →</a></div>`;
-  } catch {
+    widget.innerHTML += '<div style="margin-top:14px;text-align:center"><a href="' + CONFIG.affiliateLink + '" class="btn-primary" style="font-size:13px;padding:10px 20px;justify-content:center" target="_blank" rel="noopener">Bet These Games →</a></div>';
+  } catch(e) {
     widget.innerHTML = buildStaticOdds();
     statusEl.textContent = 'Sample odds';
   }
 }
 
 function buildStaticOdds() {
-  const games = [
+  var games = [
     { away:'Chiefs', home:'Ravens', spread:'-3.5', total:'52.5', ml:'-175' },
     { away:'Eagles', home:'Cowboys', spread:'-2',  total:'48',   ml:'-120' },
     { away:'49ers',  home:'Rams',    spread:'+1.5', total:'46',   ml:'+105' },
   ];
-  return games.map(g => `
-    <div class="odds-game">
-      <div class="odds-teams"><span class="odds-team">${g.away}</span><span class="odds-time">vs</span><span class="odds-team">${g.home}</span></div>
-      <div class="odds-row">
-        <a href="${CONFIG.affiliateLink}" target="_blank" rel="noopener" class="odds-chip"><div class="type">Spread</div><div class="val">${g.spread}</div></a>
-        <a href="${CONFIG.affiliateLink}" target="_blank" rel="noopener" class="odds-chip"><div class="type">Total</div><div class="val">${g.total}</div></a>
-        <a href="${CONFIG.affiliateLink}" target="_blank" rel="noopener" class="odds-chip"><div class="type">ML</div><div class="val">${g.ml}</div></a>
-      </div>
-    </div>`).join('') +
-    `<div style="margin-top:14px;text-align:center"><a href="${CONFIG.affiliateLink}" class="btn-primary" style="font-size:13px;padding:10px 20px;justify-content:center" target="_blank" rel="noopener">Bet These Games →</a></div>`;
+  return games.map(function(g) {
+    return '<div class="odds-game">' +
+      '<div class="odds-teams"><span class="odds-team">' + g.away + '</span><span class="odds-time">vs</span><span class="odds-team">' + g.home + '</span></div>' +
+      '<div class="odds-row">' +
+      '<a href="' + CONFIG.affiliateLink + '" target="_blank" rel="noopener" class="odds-chip"><div class="type">Spread</div><div class="val">' + g.spread + '</div></a>' +
+      '<a href="' + CONFIG.affiliateLink + '" target="_blank" rel="noopener" class="odds-chip"><div class="type">Total</div><div class="val">' + g.total + '</div></a>' +
+      '<a href="' + CONFIG.affiliateLink + '" target="_blank" rel="noopener" class="odds-chip"><div class="type">ML</div><div class="val">' + g.ml + '</div></a>' +
+      '</div></div>';
+  }).join('') +
+  '<div style="margin-top:14px;text-align:center"><a href="' + CONFIG.affiliateLink + '" class="btn-primary" style="font-size:13px;padding:10px 20px;justify-content:center" target="_blank" rel="noopener">Bet These Games →</a></div>';
 }
 
 // ═══════════════════════════════════════════════
 //  EXPERT PICKS  (from /picks.json — updated by Make)
 // ═══════════════════════════════════════════════
 async function loadPicks() {
-  const statusEl = document.getElementById('picks-status');
-  const tbody = document.getElementById('picks-body');
-  const updatedEl = document.getElementById('picks-updated');
+  var statusEl  = document.getElementById('picks-status');
+  var tbody     = document.getElementById('picks-body');
+  var updatedEl = document.getElementById('picks-updated');
   try {
-    const r = await fetch('/picks.json?v=' + Date.now());
+    var r = await safeFetch('/picks.json?v=' + Date.now());
     if (!r.ok) throw new Error();
-    const data = await r.json();
-    tbody.innerHTML = data.picks.map(p => {
-      const dots = Array.from({length:5},(_,i) =>
-        `<div class="conf-dot ${i < p.confidence ? 'on' : 'off'}"></div>`).join('');
-      return `
-        <tr>
-          <td><span class="team-tag"><span class="team-dot" style="background:${p.awayColor||'#e31837'}"></span>${p.matchup}</span></td>
-          <td style="font-weight:700">${p.pick}</td>
-          <td>${p.line}</td>
-          <td><span class="pick-badge ${p.type}">${p.type}</span></td>
-          <td><div class="confidence">${dots}</div></td>
-          <td><a href="${CONFIG.affiliateLink}" class="btn-pick" target="_blank" rel="noopener">Bet It</a></td>
-        </tr>
-        <tr class="analysis-row">
-          <td colspan="6" style="padding:0 16px 14px;font-size:12px;color:var(--muted);line-height:1.6">${p.analysis}</td>
-        </tr>`;
+    var data = await r.json();
+    tbody.innerHTML = data.picks.map(function(p) {
+      var dots = '';
+      for (var i = 0; i < 5; i++) {
+        dots += '<div class="conf-dot ' + (i < p.confidence ? 'on' : 'off') + '"></div>';
+      }
+      return '<tr>' +
+        '<td><span class="team-tag"><span class="team-dot" style="background:' + (p.awayColor||'#e31837') + '"></span>' + p.matchup + '</span></td>' +
+        '<td style="font-weight:700">' + p.pick + '</td>' +
+        '<td>' + p.line + '</td>' +
+        '<td><span class="pick-badge ' + p.type + '">' + p.type + '</span></td>' +
+        '<td><div class="confidence">' + dots + '</div></td>' +
+        '<td><a href="' + CONFIG.affiliateLink + '" class="btn-pick" target="_blank" rel="noopener">Bet It</a></td>' +
+        '</tr>' +
+        '<tr class="analysis-row">' +
+        '<td colspan="6" style="padding:0 16px 14px;font-size:12px;color:var(--muted);line-height:1.6">' + p.analysis + '</td>' +
+        '</tr>';
     }).join('');
-    statusEl.innerHTML = `<span class="live-badge"><span class="live-dot"></span> ${data.week}</span>`;
+    statusEl.innerHTML = '<span class="live-badge"><span class="live-dot"></span> ' + data.week + '</span>';
     statusEl.className = 'feed-status live';
-    updatedEl.textContent = `Picks generated ${fmtDate(data.generated)} · Updated weekly by AI`;
-  } catch {
-    tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:28px;color:var(--muted)">Picks loading — check back shortly.</td></tr>`;
+    updatedEl.textContent = 'Picks generated ' + fmtDate(data.generated) + ' · Updated weekly by AI';
+  } catch(e) {
+    tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:28px;color:var(--muted)">Picks loading — check back shortly.</td></tr>';
     statusEl.textContent = 'Updating…';
   }
 }
@@ -901,124 +872,215 @@ async function loadPicks() {
 // ═══════════════════════════════════════════════
 document.getElementById('signup-form').addEventListener('submit', async function(e) {
   e.preventDefault();
-  const email = document.getElementById('signup-email').value.trim();
-  const btn   = document.getElementById('signup-btn');
-  const succ  = document.getElementById('form-success');
+  var email = document.getElementById('signup-email').value.trim();
+  var btn   = document.getElementById('signup-btn');
+  var succ  = document.getElementById('form-success');
   btn.textContent = 'Subscribing…';
   btn.disabled = true;
-
   try {
     if (CONFIG.makeWebhookUrl !== 'YOUR_MAKE_WEBHOOK_URL') {
       await fetch(CONFIG.makeWebhookUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'nfltrending.com', timestamp: new Date().toISOString() })
+        body: JSON.stringify({ email: email, source: 'nfltrending.com', timestamp: new Date().toISOString() })
       });
     }
     btn.style.display = 'none';
     document.getElementById('signup-email').style.display = 'none';
     succ.style.display = 'block';
-  } catch {
+  } catch(err) {
     btn.textContent = 'Subscribe Free';
     btn.disabled = false;
-    alert('Something went wrong. Please try again.');
   }
 });
 
 // ═══════════════════════════════════════════════
-//  COINSALSA — Crypto news + Instagram post
+//  COINSALSA — Crypto news (RSS) + Instagram post
 // ═══════════════════════════════════════════════
-const CRYPTO_FEEDS = [
+var CRYPTO_FEEDS = [
   { url: 'https://www.coindesk.com/arc/outboundfeeds/rss/', label: 'CoinDesk' },
   { url: 'https://cointelegraph.com/rss',                   label: 'CoinTelegraph' },
   { url: 'https://decrypt.co/feed',                         label: 'Decrypt' },
 ];
-const CRYPTO_EMOJIS = ['₿','🚀','💎','📈','🔥','⚡','🌶️','💰'];
-const CRYPTO_CATS   = ['Bitcoin','Altcoins','DeFi','Markets','NFTs','Analysis','Breaking','Ethereum'];
+var CRYPTO_EMOJIS = ['₿','🚀','💎','📈','🔥','⚡','🌶️','💰'];
+var CRYPTO_CATS   = ['Bitcoin','Altcoins','DeFi','Markets','NFTs','Analysis','Breaking','Ethereum'];
+var MEDIA_NS      = 'http://search.yahoo.com/mrss/';
+var CONTENT_NS    = 'http://purl.org/rss/1.0/modules/content/';
+var PROXIES       = [
+  function(u) { return 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u); },
+  function(u) { return 'https://corsproxy.io/?' + encodeURIComponent(u); },
+];
+
+async function fetchRSSXML(feedUrl, label) {
+  var text = '';
+  for (var pi = 0; pi < PROXIES.length; pi++) {
+    try {
+      var r = await safeFetch(PROXIES[pi](feedUrl), 9000);
+      if (r && r.ok) { text = await r.text(); break; }
+    } catch(e) { /* try next proxy */ }
+  }
+  if (!text) throw new Error('all proxies failed');
+  var doc = new DOMParser().parseFromString(text, 'application/xml');
+  if (doc.querySelector('parsererror')) throw new Error('XML parse error');
+  var items  = doc.querySelectorAll('item');
+  var result = [];
+  for (var idx = 0; idx < Math.min(items.length, 10); idx++) {
+    var el = items[idx];
+    var getEl = function(sel) {
+      try { var n = el.querySelector(sel); return n ? (n.textContent || '').trim() : ''; } catch(e) { return ''; }
+    };
+    var nsGet = function(ns, tag, wantAttr) {
+      try {
+        var nodes = el.getElementsByTagNameNS(ns, tag);
+        if (!nodes.length) return '';
+        return wantAttr ? (nodes[0].getAttribute(wantAttr) || '') : ((nodes[0].textContent || '').trim());
+      } catch(e) { return ''; }
+    };
+    // Robust link extraction: text content first, then href attribute, then guid
+    var link = '';
+    try {
+      var linkEl = el.querySelector('link');
+      if (linkEl) {
+        link = (linkEl.textContent || '').trim() || linkEl.getAttribute('href') || '';
+      }
+      if (!link) {
+        var guidEl = el.querySelector('guid');
+        if (guidEl && guidEl.getAttribute('isPermaLink') !== 'false') {
+          var g = (guidEl.textContent || '').trim();
+          if (g && g.indexOf('http') === 0) link = g;
+        }
+      }
+    } catch(e) {}
+    // Image extraction
+    var thumbnail = nsGet(MEDIA_NS, 'thumbnail', 'url');
+    if (!thumbnail) {
+      try {
+        var mcs = el.getElementsByTagNameNS(MEDIA_NS, 'content');
+        for (var j = 0; j < mcs.length; j++) {
+          var u = mcs[j].getAttribute('url') || '';
+          var med = mcs[j].getAttribute('medium') || '';
+          var tp  = mcs[j].getAttribute('type') || '';
+          if (u && (med === 'image' || tp.indexOf('image/') === 0 || /\.(jpg|jpeg|png|webp|gif)/i.test(u))) {
+            thumbnail = u; break;
+          }
+        }
+      } catch(e) {}
+    }
+    if (!thumbnail) {
+      try {
+        var enc = el.querySelector('enclosure');
+        var encType = enc ? enc.getAttribute('type') : '';
+        if (encType && encType.indexOf('image/') === 0) thumbnail = enc.getAttribute('url') || '';
+      } catch(e) {}
+    }
+    var desc    = getEl('description');
+    var encoded = nsGet(CONTENT_NS, 'encoded', '');
+    var html    = encoded || desc;
+    if (!thumbnail) {
+      var imgM = html.match(/<img[^>]+src=["']([^"']+)["']/i);
+      if (imgM && imgM[1]) thumbnail = imgM[1];
+    }
+    result.push({
+      title:       getEl('title'),
+      link:        link,
+      pubDate:     getEl('pubDate') || new Date().toISOString(),
+      thumbnail:   thumbnail,
+      description: desc.replace(/<[^>]*>/g,'').replace(/&[^;]+;/g,' ').trim(),
+      content:     html,
+      feed:        label,
+      enclosures:  []
+    });
+  }
+  return result;
+}
 
 function buildCryptoCard(item, big) {
-  const card = document.createElement('div');
+  var card = document.createElement('div');
   card.className = 'cs-card' + (big ? ' big' : '');
-  const imgSrc = extractImage(item);
-  const thumb = imgSrc
-    ? `<img class="cs-card-thumb" src="${imgSrc}" alt="" loading="lazy"
-         onerror="this.outerHTML='<div class=\\'cs-card-thumb-placeholder\\'>${rand(CRYPTO_EMOJIS)}</div>'">`
-    : `<div class="cs-card-thumb-placeholder">${rand(CRYPTO_EMOJIS)}</div>`;
-  const rawDesc = item.description || item.content || '';
-  const cleanDesc = rawDesc.replace(/<[^>]*>/g, '').trim();
-  const descLen = big ? 180 : 100;
-  const desc = cleanDesc ? `<p>${trunc(cleanDesc, descLen)}</p>` : '';
-  card.innerHTML = `
-    ${thumb}
-    <div class="cs-card-body">
-      <div class="cs-cat">${rand(CRYPTO_CATS)}</div>
-      <h3>${item.title || 'Crypto Update'}</h3>
-      ${desc}
-      <div class="cs-meta">${item.feed || 'CoinSalsa'} · ${timeAgo(item.pubDate)}</div>
-    </div>`;
-  card.onclick = () => window.open(item.link || 'https://www.instagram.com/coinsalsa', '_blank', 'noopener');
+  var imgSrc = extractImage(item);
+  var emoji  = rand(CRYPTO_EMOJIS);
+  var thumb  = imgSrc
+    ? '<img class="cs-card-thumb" src="' + imgSrc + '" alt="" loading="lazy" onerror="this.outerHTML=\'<div class=&quot;cs-card-thumb-placeholder&quot;>' + emoji + '</div>\'">'
+    : '<div class="cs-card-thumb-placeholder">' + emoji + '</div>';
+  var rawDesc   = item.description || item.content || '';
+  var cleanDesc = rawDesc.replace(/<[^>]*>/g, '').trim();
+  var descLen   = big ? 180 : 100;
+  var desc      = cleanDesc ? '<p>' + trunc(cleanDesc, descLen) + '</p>' : '';
+  card.innerHTML =
+    thumb +
+    '<div class="cs-card-body">' +
+      '<div class="cs-cat">' + rand(CRYPTO_CATS) + '</div>' +
+      '<h3>' + (item.title || 'Crypto Update') + '</h3>' +
+      desc +
+      '<div class="cs-meta">' + (item.feed || 'CoinSalsa') + ' · ' + timeAgo(item.pubDate) + '</div>' +
+    '</div>';
+  var cardLink = item.link || 'https://www.instagram.com/coinsalsa/';
+  card.onclick = function() { window.open(cardLink, '_blank', 'noopener'); };
   return card;
 }
 
 async function loadCryptoNews() {
-  const grid = document.getElementById('cs-news-grid');
-  const all = [];
-  await Promise.allSettled(CRYPTO_FEEDS.map(async feed => {
+  var grid = document.getElementById('cs-news-grid');
+  var all  = [];
+  await Promise.allSettled(CRYPTO_FEEDS.map(async function(feed) {
     try {
-      const items = await fetchRSSXML(feed.url, feed.label);
-      all.push(...items);
-    } catch {}
+      var items = await fetchRSSXML(feed.url, feed.label);
+      all = all.concat(items);
+    } catch(e) {}
   }));
   if (!all.length) { renderFallbackCrypto(); return; }
-  all.sort((a,b) => new Date(b.pubDate) - new Date(a.pubDate));
-  const seen = new Set();
-  const unique = all.filter(i => { const k = (i.title||'').slice(0,40).toLowerCase(); if(seen.has(k)) return false; seen.add(k); return true; });
+  all.sort(function(a,b) { return new Date(b.pubDate) - new Date(a.pubDate); });
+  var seen   = new Set();
+  var unique = all.filter(function(i) {
+    var k = (i.title||'').slice(0,40).toLowerCase();
+    if (seen.has(k)) return false;
+    seen.add(k); return true;
+  });
   grid.innerHTML = '';
-  unique.slice(0, 4).forEach((item, i) => grid.appendChild(buildCryptoCard(item, i === 0)));
+  unique.slice(0, 4).forEach(function(item, i) { grid.appendChild(buildCryptoCard(item, i === 0)); });
 }
 
 function renderFallbackCrypto() {
-  const now = Date.now();
-  const csLink = 'https://www.instagram.com/coinsalsa/';
-  const items = [
+  var now    = Date.now();
+  var csLink = 'https://www.instagram.com/coinsalsa/';
+  var items  = [
     { title:'Bitcoin Holds $95K as Institutional Demand Hits Record Highs', description:'On-chain data shows long-term holders accumulating aggressively. Analysts see $120K as next major target before year end.', link:csLink, pubDate:new Date(now-1800000).toISOString(), feed:'CoinSalsa', thumbnail:'https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=640&q=80' },
     { title:'Ethereum ETF Inflows Surge — Is a $5K ETH Back on the Table?', description:'Institutional money is flowing into crypto ETFs at a record pace. Here is what it means for prices this quarter.', link:csLink, pubDate:new Date(now-3600000).toISOString(), feed:'CoinSalsa', thumbnail:'https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=640&q=80' },
     { title:'5 Altcoins Primed for a Bull Run This Quarter', description:'These under-the-radar picks have strong fundamentals and low market caps — prime setups for the next leg up.', link:csLink, pubDate:new Date(now-7200000).toISOString(), feed:'CoinSalsa', thumbnail:'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=640&q=80' },
     { title:'DeFi TVL Crosses $200B — What It Means for Your Portfolio', description:'Total value locked in DeFi protocols hits a new milestone. We break down the best yield opportunities right now.', link:csLink, pubDate:new Date(now-10800000).toISOString(), feed:'CoinSalsa', thumbnail:'https://images.unsplash.com/photo-1605792657660-596af9009e82?w=640&q=80' },
   ];
-  const grid = document.getElementById('cs-news-grid');
+  var grid = document.getElementById('cs-news-grid');
   grid.innerHTML = '';
-  items.forEach((item, i) => grid.appendChild(buildCryptoCard(item, i === 0)));
+  items.forEach(function(item, i) { grid.appendChild(buildCryptoCard(item, i === 0)); });
 }
 
-// Load latest Instagram post from coinsalsa.json (updated by Make Scenario C)
+// Load latest Instagram post from /coinsalsa.json (updated by Make Scenario C)
 async function loadCoinSalsaPost() {
-  const postEl    = document.getElementById('cs-ig-post');
-  const updatedEl = document.getElementById('cs-ig-updated');
+  var postEl    = document.getElementById('cs-ig-post');
+  var updatedEl = document.getElementById('cs-ig-updated');
   function renderPost(url, caption, postedAt) {
-    const cap = caption || 'Latest from @CoinSalsa 🌶️';
-    postEl.innerHTML = `
-      <a href="${url}" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:14px;padding:20px;text-decoration:none">
-        <div style="display:flex;align-items:center;gap:8px">
-          <div style="width:7px;height:7px;border-radius:50%;background:#00c896;flex-shrink:0"></div>
-          <span style="font-size:11px;color:#8a97aa;text-transform:uppercase;letter-spacing:.5px;font-weight:600">Latest Post</span>
-        </div>
-        <p style="color:#e8ecf3;font-size:14px;line-height:1.65;font-weight:500;flex:1">${cap}</p>
-        <div style="background:linear-gradient(90deg,#833ab4,#fd1d1d,#f77737);border-radius:7px;padding:10px 16px;text-align:center;color:#fff;font-size:13px;font-weight:800;letter-spacing:.3px">
-          View Post on Instagram →
-        </div>
-        <p style="font-size:11px;color:#8a97aa;text-align:center">@CoinSalsa · Crypto news &amp; picks</p>
-      </a>`;
+    var cap = caption || 'Latest from @CoinSalsa 🌶️';
+    postEl.innerHTML =
+      '<a href="' + url + '" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:14px;padding:20px;text-decoration:none">' +
+        '<div style="display:flex;align-items:center;gap:8px">' +
+          '<div style="width:7px;height:7px;border-radius:50%;background:#00c896;flex-shrink:0"></div>' +
+          '<span style="font-size:11px;color:#8a97aa;text-transform:uppercase;letter-spacing:.5px;font-weight:600">Latest Post</span>' +
+        '</div>' +
+        '<p style="color:#e8ecf3;font-size:14px;line-height:1.65;font-weight:500;flex:1">' + cap + '</p>' +
+        '<div style="background:linear-gradient(90deg,#833ab4,#fd1d1d,#f77737);border-radius:7px;padding:10px 16px;text-align:center;color:#fff;font-size:13px;font-weight:800;letter-spacing:.3px">' +
+          'View Post on Instagram →' +
+        '</div>' +
+        '<p style="font-size:11px;color:#8a97aa;text-align:center">@CoinSalsa · Crypto news &amp; picks</p>' +
+      '</a>';
     if (postedAt) updatedEl.textContent = 'Posted ' + timeAgo(postedAt);
   }
   try {
-    const r = await fetch('/coinsalsa.json?v=' + Date.now());
+    var r = await safeFetch('/coinsalsa.json?v=' + Date.now());
     if (!r.ok) throw new Error();
-    const data = await r.json();
-    if (data.postUrl) {
-      renderPost(data.postUrl, data.caption, data.postedAt);
-    }
-  } catch {
+    var data = await r.json();
+    if (data.postUrl) renderPost(data.postUrl, data.caption, data.postedAt);
+    else throw new Error();
+  } catch(e) {
     renderPost('https://www.instagram.com/coinsalsa/', 'Follow @CoinSalsa for live crypto news, picks, and analysis 🌶️', null);
   }
 }
