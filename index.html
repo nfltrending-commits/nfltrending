@@ -308,7 +308,7 @@
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
-    <div class="nav-logo"><span class="r">NFL</span>Trending<span class="g">.</span></div>
+    <div class="nav-logo"><span class="r">NFL</span>Trending<span class="g">.com</span></div>
     <ul class="nav-links">
       <li><a href="#news">News</a></li>
       <li><a href="#odds">Odds</a></li>
@@ -638,15 +638,21 @@ function fmtDate(iso) {
 // ═══════════════════════════════════════════════
 //  NEWS FEED
 // ═══════════════════════════════════════════════
+function proxyImg(url) {
+  if (!url) return null;
+  if (url.startsWith('//')) url = 'https:' + url;
+  if (!url.startsWith('http')) return null;
+  return `https://images.weserv.nl/?url=${encodeURIComponent(url)}&w=640&output=webp&q=80`;
+}
 function extractImage(item) {
-  if (item.thumbnail?.startsWith('http')) return item.thumbnail;
+  if (item.thumbnail && item.thumbnail.length > 10) return proxyImg(item.thumbnail);
   if (item.enclosures?.length) {
     const enc = item.enclosures.find(e => e.type?.startsWith('image/') || e.url?.match(/\.(jpg|jpeg|png|webp|gif)/i));
-    if (enc?.url?.startsWith('http')) return enc.url;
+    if (enc?.url) return proxyImg(enc.url);
   }
   if (item.content) {
     const m = item.content.match(/<img[^>]+src=["']([^"']+)["']/i);
-    if (m?.[1]?.startsWith('http')) return m[1];
+    if (m?.[1]) return proxyImg(m[1]);
   }
   return null;
 }
@@ -939,38 +945,33 @@ function renderFallbackCrypto() {
 
 // Load latest Instagram post from coinsalsa.json (updated by Make Scenario C)
 async function loadCoinSalsaPost() {
-  const postEl   = document.getElementById('cs-ig-post');
+  const postEl    = document.getElementById('cs-ig-post');
   const updatedEl = document.getElementById('cs-ig-updated');
+  function renderPost(url, caption, postedAt) {
+    const cap = caption || 'Latest from @CoinSalsa 🌶️';
+    postEl.innerHTML = `
+      <a href="${url}" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:14px;padding:20px;text-decoration:none">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="width:7px;height:7px;border-radius:50%;background:#00c896;flex-shrink:0"></div>
+          <span style="font-size:11px;color:#8a97aa;text-transform:uppercase;letter-spacing:.5px;font-weight:600">Latest Post</span>
+        </div>
+        <p style="color:#e8ecf3;font-size:14px;line-height:1.65;font-weight:500;flex:1">${cap}</p>
+        <div style="background:linear-gradient(90deg,#833ab4,#fd1d1d,#f77737);border-radius:7px;padding:10px 16px;text-align:center;color:#fff;font-size:13px;font-weight:800;letter-spacing:.3px">
+          View Post on Instagram →
+        </div>
+        <p style="font-size:11px;color:#8a97aa;text-align:center">@CoinSalsa · Crypto news &amp; picks</p>
+      </a>`;
+    if (postedAt) updatedEl.textContent = 'Posted ' + timeAgo(postedAt);
+  }
   try {
     const r = await fetch('/coinsalsa.json?v=' + Date.now());
     if (!r.ok) throw new Error();
     const data = await r.json();
     if (data.postUrl) {
-      // Use Instagram oEmbed to render the post
-      const oe = await fetch(`https://graph.facebook.com/v18.0/instagram_oembed?url=${encodeURIComponent(data.postUrl)}&maxwidth=300&omitscript=true`);
-      if (oe.ok) {
-        const oed = await oe.json();
-        postEl.innerHTML = `<div style="padding:8px;width:100%">${oed.html}</div>`;
-        // Load Instagram embed script
-        if (!document.getElementById('ig-embed-script')) {
-          const s = document.createElement('script');
-          s.id = 'ig-embed-script';
-          s.src = 'https://www.instagram.com/embed.js';
-          s.async = true;
-          document.body.appendChild(s);
-          s.onload = () => window.instgrm?.Embeds?.process();
-        } else {
-          window.instgrm?.Embeds?.process();
-        }
-      } else {
-        // oEmbed failed — show link fallback
-        postEl.innerHTML = `<a href="${data.postUrl}" target="_blank" rel="noopener" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:32px;text-align:center;text-decoration:none"><div style="font-size:48px;margin-bottom:12px">🌶️</div><p style="color:#e8ecf3;font-size:14px;font-weight:600;margin-bottom:6px">Latest from @CoinSalsa</p><p style="color:#8a97aa;font-size:12px">Tap to view on Instagram</p></a>`;
-      }
-      updatedEl.textContent = 'Posted ' + timeAgo(data.postedAt);
+      renderPost(data.postUrl, data.caption, data.postedAt);
     }
   } catch {
-    // Silently stay on placeholder — Make hasn't run yet or file doesn't exist
-    postEl.innerHTML = `<a href="https://www.instagram.com/coinsalsa/" target="_blank" rel="noopener" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:32px;text-align:center;text-decoration:none"><div style="font-size:48px;margin-bottom:12px">🌶️</div><p style="color:#e8ecf3;font-size:14px;font-weight:600;margin-bottom:8px">Follow @CoinSalsa</p><p style="color:#8a97aa;font-size:12px;line-height:1.6">Crypto news, picks &amp; analysis<br>on Instagram</p></a>`;
+    renderPost('https://www.instagram.com/coinsalsa/', 'Follow @CoinSalsa for live crypto news, picks, and analysis 🌶️', null);
   }
 }
 
