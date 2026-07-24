@@ -617,9 +617,12 @@
     <div class="newsletter">
       <h2>📬 Stay Ahead of the Line</h2>
       <p>Get injury alerts, sharp movement tips, and AI-powered picks delivered every Monday morning — free. Used by 40,000+ NFL bettors.</p>
-      <form class="email-form" id="signup-form">
-        <input type="email" id="signup-email" placeholder="Enter your email address" required />
-        <button type="submit" id="signup-btn">Subscribe Free</button>
+      <form id="signup-form" style="display:flex;flex-direction:column;gap:10px;max-width:480px;margin:auto">
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <input type="text" id="signup-name" placeholder="First name (optional)" style="flex:1;min-width:140px;background:var(--navy);border:1px solid var(--border);color:var(--text);font-family:'Inter',sans-serif;font-size:14px;padding:12px 16px;border-radius:8px;outline:none;transition:border-color .2s" />
+          <input type="email" id="signup-email" placeholder="Enter your email address" required style="flex:2;min-width:200px;background:var(--navy);border:1px solid var(--border);color:var(--text);font-family:'Inter',sans-serif;font-size:14px;padding:12px 16px;border-radius:8px;outline:none;transition:border-color .2s" />
+        </div>
+        <button type="submit" id="signup-btn" style="width:100%;background:var(--red);color:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:700;padding:12px 22px;border:none;border-radius:8px;cursor:pointer;transition:background .2s">Subscribe Free</button>
       </form>
       <p class="newsletter-fine">No spam. One-click unsubscribe anytime. We never share your email.</p>
       <p class="form-success" id="form-success">✓ You're in! Check your inbox for a welcome email.</p>
@@ -659,8 +662,8 @@
         <h4>Company</h4>
         <ul>
           <li><a href="#" onclick="openInfoModal('about');return false">About Us</a></li>
-          <li><a href="mailto:nfltrending@gmail.com">Contact</a></li>
-          <li><a href="mailto:nfltrending@gmail.com?subject=Advertise%20on%20NFLTrending.com">Advertise</a></li>
+          <li><a href="mailto:insider@nfltrending.com">Contact</a></li>
+          <li><a href="mailto:insider@nfltrending.com?subject=Advertise%20on%20NFLTrending.com">Advertise</a></li>
           <li><a href="#" onclick="openInfoModal('privacy');return false">Privacy Policy</a></li>
           <li><a href="#" onclick="openInfoModal('terms');return false">Terms of Use</a></li>
         </ul>
@@ -668,7 +671,7 @@
     </div>
     <div class="footer-bottom">
       <p>NFLTrending.com is intended for users 21 years and older. This site contains sports betting information and affiliate links to licensed sportsbooks. Gambling involves risk. Please gamble responsibly. If you have a gambling problem, call <strong>1-800-GAMBLER</strong>. NFLTrending.com is not affiliated with the NFL, any NFL team, or any official league entity. Odds sourced from The Odds API. News sourced from public RSS feeds. Picks are for entertainment purposes only.</p>
-      <div class="footer-links"><a href="#" onclick="openInfoModal('privacy');return false">Privacy</a><a href="#" onclick="openInfoModal('terms');return false">Terms</a><a href="mailto:nfltrending@gmail.com">Contact</a></div>
+      <div class="footer-links"><a href="#" onclick="openInfoModal('privacy');return false">Privacy</a><a href="#" onclick="openInfoModal('terms');return false">Terms</a><a href="mailto:insider@nfltrending.com">Contact</a></div>
     </div>
   </div>
 </footer>
@@ -691,7 +694,7 @@
 const CONFIG = {
   affiliateLink:  'https://www.mybookie.ag/?affid=1108',
   oddsApiKey:     'f70349f8d948e94299c459c081fc3b32',
-  makeWebhookUrl: 'YOUR_MAKE_WEBHOOK_URL',
+  makeWebhookUrl: 'https://hook.us2.make.com/ka6qd88xkam2tbkgr1o8gox30rq0sfc3',
 };
 
 // ═══════════════════════════════════════════════
@@ -960,6 +963,7 @@ async function loadPicks() {
 document.getElementById('signup-form').addEventListener('submit', async function(e) {
   e.preventDefault();
   var email = document.getElementById('signup-email').value.trim();
+  var name  = (document.getElementById('signup-name').value || '').trim();
   var btn   = document.getElementById('signup-btn');
   var succ  = document.getElementById('form-success');
   btn.textContent = 'Subscribing…';
@@ -969,11 +973,12 @@ document.getElementById('signup-form').addEventListener('submit', async function
       await fetch(CONFIG.makeWebhookUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email, source: 'nfltrending.com', timestamp: new Date().toISOString() })
+        body: JSON.stringify({ name: name, email: email, source: 'nfltrending.com', timestamp: new Date().toISOString() })
       });
     }
     btn.style.display = 'none';
     document.getElementById('signup-email').style.display = 'none';
+    document.getElementById('signup-name').style.display = 'none';
     succ.style.display = 'block';
   } catch(err) {
     btn.textContent = 'Subscribe Free';
@@ -1194,7 +1199,7 @@ var INFO_CONTENT = {
     body: '<p>NFLTrending.com is your go-to destination for NFL news, expert picks, live betting odds, and season analysis — updated automatically so you\'re always ahead of the action.</p>' +
           '<h3>What We Cover</h3><ul><li>Breaking NFL news from top sources</li><li>Injury reports & roster moves</li><li>Expert picks with analysis</li><li>Live odds from major sportsbooks</li><li>Super Bowl futures & team rankings</li><li>Crypto & sports investing via <a href="#crypto">CoinSalsa</a></li></ul>' +
           '<h3>Our Mission</h3><p>Give every fan and bettor the information edge they need — presented clearly, updated in real time, and completely free.</p>' +
-          '<h3>Contact Us</h3><p>Questions, feedback, or partnership inquiries: <a href="mailto:nfltrending@gmail.com">nfltrending@gmail.com</a></p>'
+          '<h3>Contact Us</h3><p>Questions, feedback, or partnership inquiries: <a href="mailto:insider@nfltrending.com">insider@nfltrending.com</a></p>'
   },
   privacy: {
     title: 'Privacy Policy',
@@ -1203,7 +1208,7 @@ var INFO_CONTENT = {
           '<h3>Cookies & Analytics</h3><p>We may use cookies and analytics tools (such as Google Analytics) to understand how visitors use the site. This data is aggregated and not tied to individuals. You can disable cookies in your browser settings.</p>' +
           '<h3>Affiliate Links</h3><p>This site contains affiliate links to licensed sportsbooks. When you click these links, the sportsbook may set their own cookies per their privacy policy. NFLTrending.com earns a commission if you sign up, at no extra cost to you.</p>' +
           '<h3>Third-Party Content</h3><p>News and odds are sourced from third-party APIs. We do not control the content or privacy practices of those providers.</p>' +
-          '<h3>Contact</h3><p>Privacy questions: <a href="mailto:nfltrending@gmail.com">nfltrending@gmail.com</a></p>'
+          '<h3>Contact</h3><p>Privacy questions: <a href="mailto:insider@nfltrending.com">insider@nfltrending.com</a></p>'
   },
   terms: {
     title: 'Terms of Use',
@@ -1213,7 +1218,7 @@ var INFO_CONTENT = {
           '<h3>Affiliate Disclosure</h3><p>NFLTrending.com earns commission from sportsbook affiliate links. We only recommend licensed, regulated sportsbooks. Our editorial content is not influenced by these relationships.</p>' +
           '<h3>No Warranties</h3><p>We make no guarantees about the accuracy, completeness, or timeliness of information on this site. Use at your own risk.</p>' +
           '<h3>Intellectual Property</h3><p>All original content, design, and code on NFLTrending.com is owned by NFLTrending.com. Third-party content (news, logos, odds) belongs to their respective owners.</p>' +
-          '<h3>Contact</h3><p>Terms questions: <a href="mailto:nfltrending@gmail.com">nfltrending@gmail.com</a></p>'
+          '<h3>Contact</h3><p>Terms questions: <a href="mailto:insider@nfltrending.com">insider@nfltrending.com</a></p>'
   }
 };
 
