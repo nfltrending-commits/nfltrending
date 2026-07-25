@@ -1,1 +1,66 @@
-{"generated":"2026-07-25T00:56:06.361Z","week":"Preseason Week 1 - 2026 NFL Season","picks":[{"matchup":"Carolina Panthers vs Arizona Cardinals","pick":"Arizona Cardinals -3.5","line":"-110","type":"spread","confidence":4,"analysis":"The Cardinals have a strong roster and home-field advantage. Expect them to cover the spread against the Panthers in this matchup.","home":"Arizona Cardinals","away":"Carolina Panthers","homeColor":"#A50034","awayColor":"#0085CA"},{"matchup":"Carolina Panthers vs Arizona Cardinals","pick":"Over 36.5","line":"-110","type":"totals","confidence":3,"analysis":"Both teams have shown offensive potential in preseason games. The total seems achievable given their scoring capabilities.","home":"Arizona Cardinals","away":"Carolina Panthers","homeColor":"#A50034","awayColor":"#0085CA"},{"matchup":"Carolina Panthers vs Arizona Cardinals","pick":"Arizona Cardinals ML","line":"-110","type":"h2h","confidence":5,"analysis":"The Cardinals are favored to win outright at home. Their depth and skill should lead them to victory against the Panthers.","home":"Arizona Cardinals","away":"Carolina Panthers","homeColor":"#A50034","awayColor":"#0085CA"},{"matchup":"Carolina Panthers vs Arizona Cardinals","pick":"Carolina Panthers +3.5","line":"-110","type":"spread","confidence":2,"analysis":"The Panthers could surprise with a close game. Their young talent may keep them competitive against the Cardinals.","home":"Arizona Cardinals","away":"Carolina Panthers","homeColor":"#A50034","awayColor":"#0085CA"},{"matchup":"Carolina Panthers vs Arizona Cardinals","pick":"Under 36.5","line":"-110","type":"totals","confidence":3,"analysis":"Both teams may struggle to find rhythm in the preseason. A lower-scoring game is likely as they test their lineups.","home":"Arizona Cardinals","away":"Carolina Panthers","homeColor":"#A50034","awayColor":"#0085CA"}]}
+{
+  "generated": "2026-07-25T00:59:29.739Z",
+  "week": "Preseason Week 1 - 2026 NFL Season",
+  "picks": [
+    {
+      "matchup": "Carolina Panthers vs Arizona Cardinals",
+      "pick": "Carolina Panthers -3.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "analysis": "The Panthers have a strong roster and should dominate the line of scrimmage. Arizona's defense may struggle to contain their running game.",
+      "home": "Arizona Cardinals",
+      "away": "Carolina Panthers",
+      "homeColor": "#A50034",
+      "awayColor": "#0085CA"
+    },
+    {
+      "matchup": "Carolina Panthers vs Arizona Cardinals",
+      "pick": "Over 36.5",
+      "line": "-110",
+      "type": "totals",
+      "confidence": 3,
+      "analysis": "Both teams have explosive offensive capabilities that can lead to a high-scoring game. Expect both quarterbacks to take advantage of the preseason defenses.",
+      "home": "Arizona Cardinals",
+      "away": "Carolina Panthers",
+      "homeColor": "#A50034",
+      "awayColor": "#0085CA"
+    },
+    {
+      "matchup": "Carolina Panthers vs Arizona Cardinals",
+      "pick": "Arizona Cardinals ML",
+      "line": "-110",
+      "type": "h2h",
+      "confidence": 2,
+      "analysis": "The Cardinals, playing at home, could pull off an upset with their talented receiving corps. Carolina may not field their starters for long, giving Arizona an edge.",
+      "home": "Arizona Cardinals",
+      "away": "Carolina Panthers",
+      "homeColor": "#A50034",
+      "awayColor": "#0085CA"
+    },
+    {
+      "matchup": "Carolina Panthers vs Arizona Cardinals",
+      "pick": "Carolina Panthers -3.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "analysis": "The Panthers have a strong roster and should dominate the line of scrimmage. Arizona's defense may struggle to contain their running game.",
+      "home": "Arizona Cardinals",
+      "away": "Carolina Panthers",
+      "homeColor": "#A50034",
+      "awayColor": "#0085CA"
+    },
+    {
+      "matchup": "Carolina Panthers vs Arizona Cardinals",
+      "pick": "Over 36.5",
+      "line": "-110",
+      "type": "totals",
+      "confidence": 3,
+      "analysis": "Both teams have explosive offensive capabilities that can lead to a high-scoring game. Expect both quarterbacks to take advantage of the preseason defenses.",
+      "home": "Arizona Cardinals",
+      "away": "Carolina Panthers",
+      "homeColor": "#A50034",
+      "awayColor": "#0085CA"
+    }
+  ]
+}
