@@ -889,7 +889,7 @@ async function loadOdds() {
     if (!games.length) { widget.innerHTML = '<div class="odds-status">No games scheduled this week.</div>'; return; }
     widget.innerHTML = games.slice(0,6).map(function(g) {
       var home = g.home_team, away = g.away_team;
-      var bm = (g.bookmakers && g.bookmakers.find(function(b){return b.key==='betmgm';})) || (g.bookmakers && g.bookmakers[0]);
+      var bm = (g.bookmakers && g.bookmakers.find(function(b){return b.key==='mybookieag';})) || (g.bookmakers && g.bookmakers[0]);
       var mkts = bm && bm.markets ? bm.markets : [];
       var spreadM = mkts.find(function(m){return m.key==='spreads';});
       var totalM  = mkts.find(function(m){return m.key==='totals';});
