@@ -172,6 +172,16 @@
     .pick-analysis{font-size:12px;color:var(--muted);line-height:1.5;padding:0 16px 14px;display:none}
     .picks-table tr.expanded .pick-analysis{display:block}
 
+    /* MOBILE PICK CARDS */
+    .picks-cards{display:none}
+    .pick-card-m{background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);padding:16px;border-left:3px solid var(--red)}
+    .pick-card-m .pcm-matchup{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+    .pick-card-m .pcm-pick{font-size:17px;font-weight:800;color:#fff;margin-bottom:10px;line-height:1.2}
+    .pick-card-m .pcm-meta{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+    .pick-card-m .pcm-line{font-size:14px;font-weight:700;color:var(--text)}
+    .pick-card-m .pcm-analysis{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:12px}
+    .pick-card-m .pcm-btn{display:block;text-align:center;background:var(--red);color:#fff;font-size:13px;font-weight:700;padding:10px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px}
+
     /* BETTING BANNER */
     .betting-banner{background:linear-gradient(135deg,#14203a,#1a0a0f);border:1px solid rgba(212,0,26,.25);border-radius:14px;padding:36px 40px;display:flex;align-items:center;justify-content:space-between;gap:30px;position:relative;overflow:hidden}
     .betting-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(212,0,26,.12),transparent 60%)}
@@ -377,8 +387,8 @@
       .footer-links{flex-wrap:wrap;gap:14px}
       .teams-grid{grid-template-columns:repeat(2,1fr)}
       .email-form{flex-direction:column}
-      .picks-table{overflow-x:auto}
-      .picks-table table{min-width:600px}
+      .picks-table table{display:none}
+      .picks-cards{display:flex;flex-direction:column;gap:12px}
       .dual-offers{grid-template-columns:1fr!important}
       .cs-news-grid{grid-template-columns:1fr}
       .cs-card.big{grid-column:span 1}
@@ -467,6 +477,7 @@
           <tr><td colspan="5" style="text-align:center;padding:28px;color:var(--muted)">Loading picks…</td></tr>
         </tbody>
       </table>
+      <div class="picks-cards" id="picks-cards"></div>
     </div>
   </div>
 </section>
@@ -955,6 +966,7 @@ function buildStaticOdds() {
 async function loadPicks() {
   var statusEl  = document.getElementById('picks-status');
   var tbody     = document.getElementById('picks-body');
+  var cardsEl   = document.getElementById('picks-cards');
   try {
     var r = await safeFetch('/picks.json?v=' + Date.now());
     if (!r.ok) throw new Error();
@@ -976,10 +988,30 @@ async function loadPicks() {
         '<td colspan="5" style="padding:0 16px 14px;font-size:12px;color:var(--muted);line-height:1.6">' + p.analysis + '</td>' +
         '</tr>';
     }).join('');
+    // Mobile cards
+    cardsEl.innerHTML = data.picks.map(function(p) {
+      var matchup = (p.away && p.home) ? p.away.split(' ').pop() + ' vs ' + p.home.split(' ').pop() : (p.matchup || '');
+      var dots = '';
+      for (var i = 0; i < 5; i++) {
+        dots += '<div class="conf-dot ' + (i < p.confidence ? 'on' : 'off') + '"></div>';
+      }
+      return '<div class="pick-card-m">' +
+        '<div class="pcm-matchup">' + matchup + '</div>' +
+        '<div class="pcm-pick">' + p.pick + '</div>' +
+        '<div class="pcm-meta">' +
+          '<span class="pcm-line">' + p.line + '</span>' +
+          '<span class="pick-badge ' + p.type + '">' + p.type + '</span>' +
+          '<div class="confidence">' + dots + '</div>' +
+        '</div>' +
+        '<div class="pcm-analysis">' + p.analysis + '</div>' +
+        '<a href="' + CONFIG.affiliateLink + '" class="pcm-btn" target="_blank" rel="noopener">Bet It →</a>' +
+        '</div>';
+    }).join('');
     statusEl.innerHTML = '<span class="live-badge"><span class="live-dot"></span> ' + data.week + '</span>';
     statusEl.className = 'feed-status live';
   } catch(e) {
     tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:28px;color:var(--muted)">Picks loading — check back shortly.</td></tr>';
+    cardsEl.innerHTML = '<div style="text-align:center;padding:28px;color:var(--muted)">Picks loading — check back shortly.</div>';
     statusEl.textContent = 'Updating…';
   }
 }
