@@ -155,7 +155,7 @@
     .picks-table{background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
     .picks-table table{width:100%;border-collapse:collapse}
     .picks-table th{background:var(--navy3);padding:12px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);text-align:left;border-bottom:1px solid var(--border)}
-    .picks-table td{padding:14px 16px;font-size:14px;border-bottom:1px solid var(--border);vertical-align:middle}
+    .picks-table td{padding:16px 16px;font-size:15px;border-bottom:1px solid var(--border);vertical-align:middle}
     .picks-table tr:last-child td{border-bottom:none}
     .picks-table tr:hover td{background:rgba(255,255,255,.03)}
     .team-tag{display:inline-flex;align-items:center;gap:6px;font-weight:700}
@@ -979,13 +979,13 @@ async function loadPicks() {
       var matchup = (p.away && p.home) ? p.away.split(' ').pop() + ' vs ' + p.home.split(' ').pop() : (p.matchup || '');
       return '<tr>' +
         '<td><a href="' + CONFIG.affiliateLink + '" class="btn-pick" target="_blank" rel="noopener">Bet It</a></td>' +
-        '<td><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px">' + matchup + '</div><div style="font-weight:700">' + p.pick + '</div></td>' +
+        '<td><div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">' + matchup + '</div><div style="font-weight:700;font-size:16px">' + p.pick + '</div></td>' +
         '<td>' + p.line + '</td>' +
         '<td><span class="pick-badge ' + p.type + '">' + p.type + '</span></td>' +
         '<td><div class="confidence">' + dots + '</div></td>' +
         '</tr>' +
         '<tr class="analysis-row">' +
-        '<td colspan="5" style="padding:0 16px 14px;font-size:12px;color:var(--muted);line-height:1.6">' + p.analysis + '</td>' +
+        '<td colspan="5" style="padding:0 16px 16px;font-size:14px;color:var(--muted);line-height:1.7">' + p.analysis + '</td>' +
         '</tr>';
     }).join('');
     // Mobile cards
