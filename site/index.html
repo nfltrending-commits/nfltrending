@@ -135,12 +135,16 @@
     .hot-item span{font-size:11px;color:var(--muted)}
 
     /* LIVE ODDS */
-    .odds-game{padding:14px 0;border-bottom:1px solid var(--border)}
-    .odds-game:last-child{border-bottom:none;padding-bottom:0}
-    .og-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+    /* ODDS ROTATOR */
+    .odds-rotator{position:relative}
+    .odds-slides{overflow:hidden}
+    .odds-slide{display:none}
+    .odds-slide.active{display:block}
+    .odds-game{padding:0}
+    .og-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
     .og-sport{font-size:10px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.5px}
     .og-time{font-size:10px;color:var(--muted)}
-    .og-table{width:100%;border-collapse:collapse}
+    .og-table{width:100%;border-collapse:collapse;margin-bottom:12px}
     .og-table thead th{color:var(--muted);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.3px;padding:0 4px 6px;text-align:center;border-bottom:1px solid var(--border)}
     .og-table thead th:first-child{text-align:left;padding-left:0}
     .og-team{font-size:12px;font-weight:700;padding:7px 4px 7px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:110px}
@@ -150,6 +154,14 @@
     .oc-main{font-weight:700;font-size:12px;color:var(--text)}
     .oc-sub{color:var(--muted);font-size:10px;margin-top:1px}
     .odds-status{font-size:11px;color:var(--muted);text-align:center;padding:8px 0}
+    .odds-nav{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+    .odds-dots{display:flex;gap:5px;justify-content:center;flex:1}
+    .odds-dot{width:6px;height:6px;border-radius:50%;background:var(--navy4);cursor:pointer;transition:background .2s}
+    .odds-dot.active{background:var(--red)}
+    .odds-arrow{background:var(--navy3);border:1px solid var(--border);color:var(--muted);font-size:14px;width:28px;height:28px;border-radius:5px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s;flex-shrink:0}
+    .odds-arrow:hover{background:var(--navy4);color:#fff}
+    .btn-view-odds{display:block;text-align:center;background:transparent;border:1px solid var(--border);color:var(--text);font-size:12px;font-weight:700;padding:8px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px;transition:background .2s,border-color .2s;text-decoration:none}
+    .btn-view-odds:hover{background:var(--navy3);border-color:var(--red);color:#fff}
 
     /* PICKS TABLE */
     .picks-table{background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
@@ -465,7 +477,7 @@
       <div class="section-title">Expert Picks</div>
       <div style="display:flex;align-items:center;gap:12px">
         <span class="feed-status" id="picks-status">Loading…</span>
-        <a href="https://record.webpartners.co/_xb3kIla32l8_N4b4FXAB62Nd7ZgqdRLk/1/" class="view-all" target="_blank" rel="noopener">Bet These →</a>
+        <a href="https://record.webpartners.co/_xb3kIla32l8_N4b4FXAB62Nd7ZgqdRLk/1/" class="view-all" target="_blank" rel="noopener">View Odds →</a>
       </div>
     </div>
     <div class="picks-table" id="picks-table">
@@ -898,7 +910,12 @@ async function loadOdds() {
     var data = await r.json();
     var games = Array.isArray(data) ? data : (data.games || []);
     if (!games.length) { widget.innerHTML = '<div class="odds-status">No games scheduled this week.</div>'; return; }
-    widget.innerHTML = games.slice(0,6).map(function(g) {
+    var aff = CONFIG.affiliateLink;
+    var fmt = function(n) { return n > 0 ? '+'+n : ''+n; };
+    var cell = function(main, sub) {
+      return '<td class="og-cell"><div class="odds-cell-link"><div class="oc-main">'+main+'</div>'+(sub?'<div class="oc-sub">'+sub+'</div>':'')+'</div></td>';
+    };
+    var slides = games.slice(0,8).map(function(g, idx) {
       var home = g.home_team, away = g.away_team;
       var bm = (g.bookmakers && g.bookmakers.find(function(b){return b.key==='mybookieag';})) || (g.bookmakers && g.bookmakers[0]);
       var mkts = bm && bm.markets ? bm.markets : [];
@@ -911,16 +928,13 @@ async function loadOdds() {
       var homeML  = h2hM && h2hM.outcomes && h2hM.outcomes.find(function(o){return o.name===home;});
       var over    = totalM && totalM.outcomes && totalM.outcomes.find(function(o){return o.name==='Over';});
       var under   = totalM && totalM.outcomes && totalM.outcomes.find(function(o){return o.name==='Under';});
-      var fmt = function(n) { return n > 0 ? '+'+n : ''+n; };
-      var aff = CONFIG.affiliateLink;
       var dt = new Date(g.commence_time);
-      var dateStr = dt.toLocaleDateString('en-US',{month:'short',day:'numeric'}) + ', ' + dt.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
-      var cell = function(main, sub) {
-        return '<td class="og-cell"><a href="'+aff+'" target="_blank" rel="noopener" class="odds-cell-link"><div class="oc-main">'+main+'</div>'+(sub?'<div class="oc-sub">'+sub+'</div>':'')+'</a></td>';
-      };
-      return '<div class="odds-game">' +
-        '<div class="og-header"><span class="og-sport">NFL</span><span class="og-time">'+dateStr+'</span></div>' +
-        '<table class="og-table"><thead><tr><th></th><th>Spread</th><th>Moneyline</th><th>Total</th></tr></thead><tbody>' +
+      var dateStr = dt.toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'America/New_York'}) + ', ' +
+                    dt.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',timeZone:'America/New_York'}) + ' ET';
+      return '<div class="odds-slide'+(idx===0?' active':'')+'">' +
+        '<div class="odds-game">' +
+        '<div class="og-header"><span class="og-sport">NFL · '+(idx+1)+' of '+Math.min(games.length,8)+'</span><span class="og-time">'+dateStr+'</span></div>' +
+        '<table class="og-table"><thead><tr><th></th><th>Spread</th><th>ML</th><th>Total</th></tr></thead><tbody>' +
         '<tr><td class="og-team">'+away+'</td>' +
         (awaySpread ? cell(fmt(awaySpread.point), fmt(awaySpread.price)) : '<td class="og-cell">-</td>') +
         (awayML     ? cell(fmt(awayML.price))    : '<td class="og-cell">-</td>') +
@@ -929,15 +943,43 @@ async function loadOdds() {
         (homeSpread ? cell(fmt(homeSpread.point), fmt(homeSpread.price)) : '<td class="og-cell">-</td>') +
         (homeML     ? cell(fmt(homeML.price))    : '<td class="og-cell">-</td>') +
         (under      ? cell('U '+under.point, fmt(under.price)) : '<td class="og-cell">-</td>') +
-        '</tr></tbody></table></div>';
+        '</tr></tbody></table>' +
+        '<a href="'+aff+'" class="btn-view-odds" target="_blank" rel="noopener">View Odds →</a>' +
+        '</div></div>';
+    });
+    var total = slides.length;
+    var dots = Array.from({length:total}, function(_,i){
+      return '<div class="odds-dot'+(i===0?' active':'')+'" onclick="oddsGoTo('+i+')" data-idx="'+i+'"></div>';
     }).join('');
+    widget.innerHTML = '<div class="odds-rotator">' +
+      '<div class="odds-slides" id="odds-slides">'+slides.join('')+'</div>' +
+      '<div class="odds-nav">' +
+        '<button class="odds-arrow" onclick="oddsStep(-1)">‹</button>' +
+        '<div class="odds-dots">'+dots+'</div>' +
+        '<button class="odds-arrow" onclick="oddsStep(1)">›</button>' +
+      '</div>' +
+    '</div>';
     statusEl.innerHTML = '<span style="color:var(--green)">● Live</span>';
-    widget.innerHTML += '<div style="margin-top:14px;text-align:center"><a href="' + CONFIG.affiliateLink + '" class="btn-primary" style="font-size:13px;padding:10px 20px;justify-content:center" target="_blank" rel="noopener">Bet These Games →</a></div>';
+    // init rotator state
+    window._oddsIdx = 0;
+    window._oddsTotal = total;
   } catch(e) {
     widget.innerHTML = buildStaticOdds();
     statusEl.textContent = 'Sample odds';
   }
 }
+
+function oddsGoTo(idx) {
+  var slides = document.querySelectorAll('.odds-slide');
+  var dots   = document.querySelectorAll('.odds-dot');
+  if (!slides.length) return;
+  slides[window._oddsIdx].classList.remove('active');
+  dots[window._oddsIdx].classList.remove('active');
+  window._oddsIdx = (idx + window._oddsTotal) % window._oddsTotal;
+  slides[window._oddsIdx].classList.add('active');
+  dots[window._oddsIdx].classList.add('active');
+}
+function oddsStep(dir) { oddsGoTo(window._oddsIdx + dir); }
 
 function buildStaticOdds() {
   var games = [
@@ -947,17 +989,26 @@ function buildStaticOdds() {
   ];
   var aff = CONFIG.affiliateLink;
   var cell = function(main, sub) {
-    return '<td class="og-cell"><a href="'+aff+'" target="_blank" rel="noopener" class="odds-cell-link"><div class="oc-main">'+main+'</div>'+(sub?'<div class="oc-sub">'+sub+'</div>':'')+'</a></td>';
+    return '<td class="og-cell"><div class="odds-cell-link"><div class="oc-main">'+main+'</div>'+(sub?'<div class="oc-sub">'+sub+'</div>':'')+'</div></td>';
   };
-  return games.map(function(g) {
-    return '<div class="odds-game">' +
-      '<div class="og-header"><span class="og-sport">NFL</span><span class="og-time">Sample odds</span></div>' +
-      '<table class="og-table"><thead><tr><th></th><th>Spread</th><th>Moneyline</th><th>Total</th></tr></thead><tbody>' +
+  var total = games.length;
+  var slides = games.map(function(g, idx) {
+    return '<div class="odds-slide'+(idx===0?' active':'')+'">' +
+      '<div class="odds-game">' +
+      '<div class="og-header"><span class="og-sport">NFL · '+(idx+1)+' of '+total+'</span><span class="og-time">Sample ET</span></div>' +
+      '<table class="og-table"><thead><tr><th></th><th>Spread</th><th>ML</th><th>Total</th></tr></thead><tbody>' +
       '<tr><td class="og-team">'+g.away+'</td>'+cell(g.awaySpread,g.spPrice)+cell(g.awayML)+cell('O '+g.total,g.ovPrice)+'</tr>' +
       '<tr><td class="og-team">'+g.home+'</td>'+cell(g.homeSpread,g.spPrice)+cell(g.homeML)+cell('U '+g.total,g.unPrice)+'</tr>' +
-      '</tbody></table></div>';
-  }).join('') +
-  '<div style="margin-top:14px;text-align:center"><a href="'+aff+'" class="btn-primary" style="font-size:13px;padding:10px 20px;justify-content:center" target="_blank" rel="noopener">Bet These Games →</a></div>';
+      '</tbody></table>' +
+      '<a href="'+aff+'" class="btn-view-odds" target="_blank" rel="noopener">View Odds →</a>' +
+      '</div></div>';
+  }).join('');
+  var dots = Array.from({length:total}, function(_,i){
+    return '<div class="odds-dot'+(i===0?' active':'')+'" onclick="oddsGoTo('+i+')" data-idx="'+i+'"></div>';
+  }).join('');
+  window._oddsIdx = 0; window._oddsTotal = total;
+  return '<div class="odds-rotator"><div class="odds-slides" id="odds-slides">'+slides+'</div>' +
+    '<div class="odds-nav"><button class="odds-arrow" onclick="oddsStep(-1)">‹</button><div class="odds-dots">'+dots+'</div><button class="odds-arrow" onclick="oddsStep(1)">›</button></div></div>';
 }
 
 // ═══════════════════════════════════════════════
@@ -978,7 +1029,7 @@ async function loadPicks() {
       }
       var matchup = (p.away && p.home) ? p.away.split(' ').pop() + ' vs ' + p.home.split(' ').pop() : (p.matchup || '');
       return '<tr>' +
-        '<td><a href="' + CONFIG.affiliateLink + '" class="btn-pick" target="_blank" rel="noopener">Bet It</a></td>' +
+        '<td><a href="' + CONFIG.affiliateLink + '" class="btn-pick" target="_blank" rel="noopener">View Odds</a></td>' +
         '<td><div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">' + matchup + '</div><div style="font-weight:700;font-size:16px">' + p.pick + '</div></td>' +
         '<td>' + p.line + '</td>' +
         '<td><span class="pick-badge ' + p.type + '">' + p.type + '</span></td>' +
@@ -1003,7 +1054,7 @@ async function loadPicks() {
           '<div class="confidence">' + dots + '</div>' +
         '</div>' +
         '<div class="pcm-analysis">' + p.analysis + '</div>' +
-        '<a href="' + CONFIG.affiliateLink + '" class="pcm-btn" target="_blank" rel="noopener">Bet It →</a>' +
+        '<a href="' + CONFIG.affiliateLink + '" class="pcm-btn" target="_blank" rel="noopener">View Odds →</a>' +
         '</div>';
     }).join('');
     statusEl.innerHTML = '<span class="live-badge"><span class="live-dot"></span> ' + data.week + '</span>';
