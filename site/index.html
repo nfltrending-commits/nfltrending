@@ -426,7 +426,6 @@
       <li><a href="#picks">Picks</a></li>
       <li><a href="#teams">Teams</a></li>
       <li><a href="#newsletter">Newsletter</a></li>
-      <li><a href="#crypto" style="display:inline-flex;align-items:center;gap:6px"><img src="/coinsalsa-logo.png" alt="CoinSalsa" style="width:20px;height:20px;border-radius:50%;flex-shrink:0"><span style="font-weight:600"><span style="color:#fff">coin</span><span style="color:#e85500">salsa</span></span></a></li>
     </ul>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -440,7 +439,6 @@
     <li><a href="#picks" onclick="closeNavMenu()">Picks</a></li>
     <li><a href="#teams" onclick="closeNavMenu()">Teams</a></li>
     <li><a href="#newsletter" onclick="closeNavMenu()">Newsletter</a></li>
-    <li><a href="#crypto" onclick="closeNavMenu()" style="display:inline-flex;align-items:center;gap:8px"><img src="/coinsalsa-logo.png" alt="CoinSalsa" style="width:22px;height:22px;border-radius:50%;flex-shrink:0"><span style="font-weight:600"><span style="color:#fff">coin</span><span style="color:#e85500">salsa</span></span></a></li>
   </ul>
 </div>
 
@@ -487,7 +485,7 @@
     <div class="picks-table" id="picks-table">
       <table>
         <thead>
-          <tr><th>Bet</th><th>Pick</th><th>Line</th><th>Type</th><th>Confidence</th></tr>
+          <tr><th>Bet</th><th>Pick</th><th>Type</th><th>Confidence</th></tr>
         </thead>
         <tbody id="picks-body">
           <tr><td colspan="5" style="text-align:center;padding:28px;color:var(--muted)">Loading picks…</td></tr>
@@ -637,8 +635,8 @@
   </div>
 </section>
 
-<!-- COINSALSA CRYPTO BLOCK -->
-<section class="cs-section" id="crypto">
+<!-- COINSALSA REMOVED -->
+<section class="cs-section" id="crypto" style="display:none">
   <div class="container">
     <div class="cs-divider"></div>
     <div class="cs-header">
@@ -1045,15 +1043,15 @@ async function loadPicks() {
         dots += '<div class="conf-dot ' + (i < p.confidence ? 'on' : 'off') + '"></div>';
       }
       var matchup = (p.away && p.home) ? p.away.split(' ').pop() + ' vs ' + p.home.split(' ').pop() : (p.matchup || '');
+      var pickDisplay = (p.type === 'moneyline') ? p.pick : p.pick + ' <span style="color:var(--muted);font-weight:500">' + p.line + '</span>';
       return '<tr>' +
         '<td><a href="' + CONFIG.affiliateLink + '" class="btn-pick" target="_blank" rel="noopener">View Odds</a></td>' +
-        '<td><div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">' + matchup + '</div><div style="font-weight:700;font-size:16px">' + p.pick + '</div></td>' +
-        '<td>' + p.line + '</td>' +
+        '<td><div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">' + matchup + '</div><div style="font-weight:700;font-size:16px">' + pickDisplay + '</div></td>' +
         '<td><span class="pick-badge ' + p.type + '">' + p.type + '</span></td>' +
         '<td><div class="confidence">' + dots + '</div></td>' +
         '</tr>' +
         '<tr class="analysis-row">' +
-        '<td colspan="5" style="padding:0 16px 16px;font-size:14px;color:var(--muted);line-height:1.7">' + p.analysis + '</td>' +
+        '<td colspan="4" style="padding:0 16px 16px;font-size:14px;color:var(--muted);line-height:1.7">' + p.analysis + '</td>' +
         '</tr>';
     }).join('');
     // Mobile cards
@@ -1063,9 +1061,10 @@ async function loadPicks() {
       for (var i = 0; i < 5; i++) {
         dots += '<div class="conf-dot ' + (i < p.confidence ? 'on' : 'off') + '"></div>';
       }
+      var mobilePickDisplay = (p.type === 'moneyline') ? p.pick : p.pick + ' <span class="pcm-line">' + p.line + '</span>';
       return '<div class="pick-card-m">' +
         '<div class="pcm-matchup">' + matchup + '</div>' +
-        '<div class="pcm-pick">' + p.pick + ' <span class="pcm-line">' + p.line + '</span></div>' +
+        '<div class="pcm-pick">' + mobilePickDisplay + '</div>' +
         '<div class="pcm-meta">' +
           '<span class="pick-badge ' + p.type + '">' + p.type + '</span>' +
           '<div class="confidence">' + dots + '</div>' +
@@ -1377,7 +1376,7 @@ document.addEventListener('keydown', function(e) {
 loadNews();
 loadOdds();
 loadPicks();
-loadCoinSalsaPost();
+// loadCoinSalsaPost(); // disabled
 
 // ── HERO PICKS PREVIEW ──
 (async function() {
