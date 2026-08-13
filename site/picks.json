@@ -1,1 +1,66 @@
-{"generated":"2026-08-13T16:38:46.932Z","week":"Preseason Week 1 - 2026 NFL Season","picks":[{"matchup":"Green Bay Packers vs Pittsburgh Steelers","pick":"Green Bay Packers -2.5","line":"-115","type":"spread","confidence":4,"analysis":"The Packers have been focusing on late-game scenarios in camp, which should give them an edge in close preseason matchups. Jordan Love's chemistry with second-year WR Matthew Golden has been a highlight, providing a reliable target in the passing game. With the Steelers still sorting out their QB rotation, the Packers' preparation and Love's development make them a strong pick.","home":"Pittsburgh Steelers","away":"Green Bay Packers","homeColor":"#FFB612","awayColor":"#203731"},{"matchup":"Indianapolis Colts vs New England Patriots","pick":"New England Patriots +2.5","line":"-105","type":"spread","confidence":4,"analysis":"Patriots rookie tackle Caleb Lomu has impressed in camp, solidifying the offensive line which should help QB Drake Maye against the Colts' pass rush. The Patriots' secondary, led by Christian Gonzalez, has been locking down receivers in practice, which could limit the Colts' passing game. With these camp developments, the Patriots are well-positioned to cover the spread.","home":"New England Patriots","away":"Indianapolis Colts","homeColor":"#002244","awayColor":"#002C5F"},{"matchup":"New York Jets vs Tampa Bay Buccaneers","pick":"Under 35.5","line":"-110","type":"total","confidence":3,"analysis":"Jets' practices have been marred by penalties and protection issues, suggesting their offense might struggle to find rhythm. The Buccaneers are also dealing with QB uncertainties, which could lead to a conservative game plan. With both teams facing offensive challenges, the under looks promising.","home":"New York Jets","away":"Tampa Bay Buccaneers","homeColor":"#125740","awayColor":"#D50A0A"},{"matchup":"Kansas City Chiefs vs Los Angeles Rams","pick":"Kansas City Chiefs -2.5","line":"-110","type":"spread","confidence":4,"analysis":"Chiefs' OT Josh Simmons has been a revelation in camp, providing solid protection for Patrick Mahomes. The Rams' defense has struggled to adjust to new schemes, giving the Chiefs' explosive offense an opportunity to capitalize. With Mahomes' ability to exploit mismatches, the Chiefs are favored to cover.","home":"Kansas City Chiefs","away":"Los Angeles Rams","homeColor":"#E31837","awayColor":"#003594"},{"matchup":"Minnesota Vikings vs New York Giants","pick":"Minnesota Vikings -2.5","line":"-115","type":"spread","confidence":4,"analysis":"Vikings' QB Kyler Murray has been taking more first-team reps, indicating a focus on solidifying the starting lineup. The Giants are still experimenting with their defensive rotations, which could be exploited by Murray's dynamic play. The Vikings' camp focus on QB stability gives them an edge to cover the spread.","home":"New York Giants","away":"Minnesota Vikings","homeColor":"#0B2265","awayColor":"#4F2683"}]}
+{
+  "generated": "2026-08-13T12:00:00Z",
+  "week": "Preseason Week 2 — 2026 NFL Season",
+  "picks": [
+    {
+      "matchup": "Packers vs Steelers",
+      "pick": "Green Bay Packers -2.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "analysis": "The Packers have been focusing on late-game scenarios in camp, which should give them an edge in close preseason matchups. Jordan Love's chemistry with second-year WR Matthew Golden has been a highlight, providing a reliable target in the passing game. With the Steelers still sorting out their QB rotation, the Packers' preparation and Love's development make them a strong pick.",
+      "home": "Steelers",
+      "away": "Packers",
+      "homeColor": "#FFB612",
+      "awayColor": "#203731"
+    },
+    {
+      "matchup": "Colts vs Patriots",
+      "pick": "New England Patriots +2.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "analysis": "Patriots rookie tackle Caleb Lomu has impressed in camp, solidifying the offensive line which should help QB Drake Maye against the Colts' pass rush. The Patriots' secondary, led by Christian Gonzalez, has been locking down receivers in practice, which could limit the Colts' passing game. With these camp developments, the Patriots are well-positioned to cover the spread.",
+      "home": "Patriots",
+      "away": "Colts",
+      "homeColor": "#002244",
+      "awayColor": "#003A70"
+    },
+    {
+      "matchup": "Buccaneers vs Jets",
+      "pick": "Under 35.5",
+      "line": "-110",
+      "type": "under",
+      "confidence": 3,
+      "analysis": "Jets' practices have been marred by penalties and protection issues, suggesting their offense might struggle to find rhythm. The Buccaneers are also dealing with QB uncertainties, which could lead to a conservative game plan. With both teams facing offensive challenges, the under looks promising.",
+      "home": "Jets",
+      "away": "Buccaneers",
+      "homeColor": "#125740",
+      "awayColor": "#D50A0A"
+    },
+    {
+      "matchup": "Rams vs Chiefs",
+      "pick": "Kansas City Chiefs -2.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "analysis": "Chiefs' OT Josh Simmons has been a revelation in camp, providing solid protection for Patrick Mahomes. The Rams' defense has struggled to adjust to new schemes, giving the Chiefs' explosive offense an opportunity to capitalize. With Mahomes' ability to exploit mismatches, the Chiefs are favored to cover.",
+      "home": "Chiefs",
+      "away": "Rams",
+      "homeColor": "#E31837",
+      "awayColor": "#003594"
+    },
+    {
+      "matchup": "Vikings vs Giants",
+      "pick": "Minnesota Vikings -2.5",
+      "line": "-115",
+      "type": "spread",
+      "confidence": 4,
+      "analysis": "Vikings' QB J.J. McCarthy has been taking more first-team reps, indicating a focus on solidifying the starting lineup. The Giants are still experimenting with their defensive rotations, which could be exploited by McCarthy's dynamic play. The Vikings' camp focus on QB stability gives them an edge to cover the spread.",
+      "home": "Giants",
+      "away": "Vikings",
+      "homeColor": "#0B2265",
+      "awayColor": "#4F2683"
+    }
+  ]
+}
