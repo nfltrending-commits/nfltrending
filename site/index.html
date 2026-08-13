@@ -1046,7 +1046,7 @@ async function loadPicks() {
       var pickDisplay = (p.type === 'moneyline') ? p.pick : p.pick + ' <span style="color:var(--muted);font-weight:500">' + p.line + '</span>';
       return '<tr>' +
         '<td><a href="' + CONFIG.affiliateLink + '" class="btn-pick" target="_blank" rel="noopener">View Odds</a></td>' +
-        '<td><div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">' + matchup + '</div><div style="font-weight:700;font-size:16px">' + pickDisplay + '</div></td>' +
+        '<td><div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:2px">' + matchup + '</div>' + (p.game_time ? '<div style="font-size:10px;color:var(--muted);margin-bottom:4px">' + p.game_time + '</div>' : '') + '<div style="font-weight:700;font-size:16px">' + pickDisplay + '</div></td>' +
         '<td><span class="pick-badge ' + p.type + '">' + p.type + '</span></td>' +
         '<td><div class="confidence">' + dots + '</div></td>' +
         '</tr>' +
@@ -1064,6 +1064,7 @@ async function loadPicks() {
       var mobilePickDisplay = (p.type === 'moneyline') ? p.pick : p.pick + ' <span class="pcm-line">' + p.line + '</span>';
       return '<div class="pick-card-m">' +
         '<div class="pcm-matchup">' + matchup + '</div>' +
+        (p.game_time ? '<div style="font-size:10px;color:var(--muted);margin-bottom:6px">' + p.game_time + '</div>' : '') +
         '<div class="pcm-pick">' + mobilePickDisplay + '</div>' +
         '<div class="pcm-meta">' +
           '<span class="pick-badge ' + p.type + '">' + p.type + '</span>' +
