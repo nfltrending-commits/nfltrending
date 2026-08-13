@@ -1,1 +1,71 @@
-{"generated":"2026-08-13T18:18:21.368Z","week":"Preseason Week 2 — 2026 NFL Season","picks":[{"matchup":"Carolina Panthers vs Buffalo Bills","pick":"Buffalo Bills -2.5","line":"-115","type":"spread","confidence":4,"analysis":"With Josh Allen and the Bills' starters set to play in their first game at the new stadium, expect a focused performance. The Bills' offensive line has shown strong cohesion in camp, which will be crucial against a Panthers front missing Nic Scourton due to injury. The continuity in Buffalo's starting lineup gives them an edge in this matchup.","home":"Buffalo Bills","away":"Carolina Panthers","homeColor":"#00338D","awayColor":"#0085CA"},{"matchup":"Dallas Cowboys vs Seattle Seahawks","pick":"Seattle Seahawks -2.5","line":"-110","type":"spread","confidence":4,"analysis":"Seattle's secondary rotation has been a standout in camp, with Devon Witherspoon emerging as a potential starter. The Cowboys' offense, led by Dak Prescott, has struggled with consistency in practice, particularly against aggressive secondaries. Seattle's defensive depth could exploit these issues, especially at home.","home":"Seattle Seahawks","away":"Dallas Cowboys","homeColor":"#002244","awayColor":"#041E42"},{"matchup":"Miami Dolphins vs Washington Commanders","pick":"Miami Dolphins -3.5","line":"-105","type":"spread","confidence":3,"analysis":"Miami's training camp has highlighted Malik Willis's leadership in the offense, which could spell trouble for Washington's defense still adjusting under new schemes. The Dolphins' receiving corps has been dynamic, with De'Von Achane showcasing his speed, likely creating mismatches against Washington's secondary.","home":"Washington Commanders","away":"Miami Dolphins","homeColor":"#773141","awayColor":"#008E97"},{"matchup":"Indianapolis Colts vs New England Patriots","pick":"Indianapolis Colts -2.5","line":"-115","type":"spread","confidence":3,"analysis":"Daniel Jones's return has bolstered the Colts' offense, with the QB showing no signs of last season's injury. The Patriots' defense has struggled to contain mobile quarterbacks in camp, and Jones's dual-threat ability could be a decisive factor. Expect the Colts to capitalize on this matchup advantage.","home":"New England Patriots","away":"Indianapolis Colts","homeColor":"#002244","awayColor":"#002C5F"},{"matchup":"Philadelphia Eagles vs Baltimore Ravens","pick":"Philadelphia Eagles -3.5","line":"-110","type":"spread","confidence":4,"analysis":"The Eagles' camp has been intense, with their defensive line showing dominance, highlighted by the scuffle involving Moro Ojomo. This physicality could overwhelm a Ravens offensive line that has yet to solidify its rotation. Philadelphia's defensive front is primed to control the line of scrimmage in this contest.","home":"Philadelphia Eagles","away":"Baltimore Ravens","homeColor":"#004C54","awayColor":"#241773"}]}
+{
+  "generated": "2026-08-13T17:00:00Z",
+  "week": "Preseason Week 2 — 2026 NFL Season",
+  "picks": [
+    {
+      "matchup": "Ravens vs Eagles",
+      "pick": "Philadelphia Eagles -3.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "analysis": "Lamar Jackson has been ruled out and Baltimore is expected to rest multiple established starters, shifting the personnel advantage decisively to Philadelphia. Jalen Hurts has been sharp in camp building chemistry with Elijah Moore, while the Eagles continue to emphasize their run game and tush push package — a physical identity that dominates when the opposing defense is running backup personnel. Philadelphia's defensive front, led by a dominant Moro Ojomo whose camp intensity has been generating headlines, should impose their will against Baltimore's inexperienced second-unit offensive line. Eagles -3.5 is the clearest value on the board this week.",
+      "home": "Eagles",
+      "away": "Ravens",
+      "homeColor": "#004C54",
+      "awayColor": "#241773",
+      "game_time": "Sat Aug 15 · 7:00 PM ET"
+    },
+    {
+      "matchup": "Panthers vs Bills",
+      "pick": "Buffalo Bills -2.5",
+      "line": "-115",
+      "type": "spread",
+      "confidence": 4,
+      "analysis": "With Josh Allen and the Bills' starters set to play in their first game at the new stadium, expect a focused performance. The Bills' offensive line has shown strong cohesion in camp, which will be crucial against a Panthers front missing Nic Scourton due to injury. The continuity in Buffalo's starting lineup gives them an edge in this matchup.",
+      "home": "Bills",
+      "away": "Panthers",
+      "homeColor": "#00338D",
+      "awayColor": "#0085CA",
+      "game_time": "Sat Aug 15 · 1:00 PM ET"
+    },
+    {
+      "matchup": "Cowboys vs Seahawks",
+      "pick": "Seattle Seahawks -2.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "analysis": "Seattle's secondary rotation has been a standout in camp, with Devon Witherspoon emerging as a potential starter. The Cowboys' offense, led by Dak Prescott, has struggled with consistency in practice, particularly against aggressive secondaries. Seattle's defensive depth could exploit these issues, especially at home.",
+      "home": "Seahawks",
+      "away": "Cowboys",
+      "homeColor": "#002244",
+      "awayColor": "#003594",
+      "game_time": "Sat Aug 15 · 8:00 PM ET"
+    },
+    {
+      "matchup": "Dolphins vs Commanders",
+      "pick": "Miami Dolphins -3.5",
+      "line": "-105",
+      "type": "spread",
+      "confidence": 3,
+      "analysis": "Miami's training camp has highlighted Malik Willis's leadership in the offense, which could spell trouble for Washington's defense still adjusting under new schemes. The Dolphins' receiving corps has been dynamic, with De'Von Achane showcasing his speed, likely creating mismatches against Washington's secondary.",
+      "home": "Commanders",
+      "away": "Dolphins",
+      "homeColor": "#5A1414",
+      "awayColor": "#008E97",
+      "game_time": "Fri Aug 14 · 7:00 PM ET"
+    },
+    {
+      "matchup": "Colts vs Patriots",
+      "pick": "Indianapolis Colts -2.5",
+      "line": "-115",
+      "type": "spread",
+      "confidence": 3,
+      "analysis": "Daniel Jones's return has bolstered the Colts' offense, with the QB showing no signs of last season's injury. The Patriots' defense has struggled to contain mobile quarterbacks in camp, and Jones's dual-threat ability could be a decisive factor. Expect the Colts to capitalize on this matchup advantage.",
+      "home": "Patriots",
+      "away": "Colts",
+      "homeColor": "#002244",
+      "awayColor": "#003A70",
+      "game_time": "Thu Aug 13 · 7:30 PM ET"
+    }
+  ]
+}
