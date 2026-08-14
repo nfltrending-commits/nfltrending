@@ -70,12 +70,11 @@
     .hp-dot.on{background:var(--green)}
     .hp-more{font-size:10px;color:var(--muted);margin-top:6px;text-decoration:underline}
     @media(max-width:480px){
-      .hero-picks{gap:6px}
-      .hero-pick-card{width:calc(50% - 3px);padding:10px 10px}
-      .hp-pick{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+      .hero-picks{gap:8px}
+      .hero-pick-card{width:calc(50% - 4px);padding:12px 12px}
+      .hp-pick{font-size:15px}
       .hp-label{font-size:8px}
       .hp-matchup{font-size:9px}
-      .hp-line{font-size:10px}
       .hp-more{font-size:9px}
     }
     .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-size:15px;font-weight:700;padding:14px 28px;border-radius:8px;transition:background .2s,transform .15s,box-shadow .2s}
@@ -1492,10 +1491,12 @@ loadPicks();
       var dots = '';
       for (var i = 1; i <= 5; i++) dots += '<span class="hp-dot' + (i <= (p.confidence||3) ? ' on' : '') + '"></span>';
       var matchup = (p.away && p.home) ? p.away.split(' ').pop() + ' vs ' + p.home.split(' ').pop() : (p.matchup || '');
+      var pickParts = (p.pick || '').trim().split(' ');
+      var pickShort = pickParts.length >= 2 ? pickParts.slice(-2).join(' ') : (p.pick || '');
       return '<a href="#picks" class="hero-pick-card">' +
         '<div class="hp-label">⭐ Expert Pick</div>' +
         '<div class="hp-matchup">' + matchup + '</div>' +
-        '<div class="hp-pick">' + (p.pick || '') + '</div>' +
+        '<div class="hp-pick">' + pickShort + '</div>' +
         '<div class="hp-line">' + (p.line || '') + ' · ' + (p.type || '') + '</div>' +
         '<div class="hp-conf">' + dots + '</div>' +
         '<div class="hp-more">See full analysis →</div>' +
