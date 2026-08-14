@@ -63,7 +63,7 @@
     .hero-pick-card:hover{border-color:var(--red)}
     .hp-label{font-size:9px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
     .hp-matchup{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
-    .hp-pick{font-size:14px;font-weight:700;color:var(--text)}
+    .hp-pick{font-size:18px;font-weight:800;color:var(--text)}
     .hp-line{font-size:11px;color:var(--gold)}
     .hp-line-inline{font-size:12px;font-weight:500;color:var(--muted);margin-left:4px}
     .hp-conf{display:flex;gap:2px;margin-top:2px}
@@ -73,14 +73,14 @@
     @media(max-width:480px){
       .hero-picks{gap:8px}
       .hero-pick-card{width:calc(50% - 4px);padding:12px 12px}
-      .hp-pick{font-size:15px}
+      .hp-pick{font-size:17px}
       .hp-label{font-size:8px}
       .hp-matchup{font-size:9px}
       .hp-more{font-size:9px}
     }
-    .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-size:15px;font-weight:700;padding:14px 28px;border-radius:8px;transition:background .2s,transform .15s,box-shadow .2s}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-size:14px;font-weight:700;padding:10px 24px;border-radius:8px;transition:background .2s,transform .15s,box-shadow .2s}
     .btn-primary:hover{background:var(--red-dk);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,0,26,.4)}
-    .btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--border);color:var(--text);font-size:15px;font-weight:600;padding:14px 24px;border-radius:8px;transition:border-color .2s,background .2s}
+    .btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--border);color:var(--text);font-size:14px;font-weight:600;padding:10px 20px;border-radius:8px;transition:border-color .2s,background .2s}
     .btn-secondary:hover{border-color:var(--muted);background:var(--navy2)}
 
     /* OFFER CARD */
@@ -523,12 +523,12 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-tag">🏈 2026 NFL Season</div>
+
     <h1>Your Edge for the <em>2026 Season</em><br>Starts Here</h1>
     <p>Live NFL news, real-time odds from every major sportsbook, and AI-powered expert picks — all updated automatically, every day.</p>
     <div class="hero-btns">
       <a href="#picks" class="btn-primary">🏆 View This Week's Picks</a>
-      <a href="#news" class="btn-secondary">📰 Latest News</a>
+      <a href="#news" class="btn-secondary">📡 Live News</a>
     </div>
     <div class="hero-picks" id="hero-picks"></div>
   </div>
