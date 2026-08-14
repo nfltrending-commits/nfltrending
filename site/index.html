@@ -69,7 +69,15 @@
     .hp-dot{width:6px;height:6px;border-radius:50%;background:var(--border)}
     .hp-dot.on{background:var(--green)}
     .hp-more{font-size:10px;color:var(--muted);margin-top:6px;text-decoration:underline}
-    @media(max-width:480px){.hero-picks{gap:8px}.hero-pick-card{width:calc(50% - 4px)}}
+    @media(max-width:480px){
+      .hero-picks{gap:6px}
+      .hero-pick-card{width:calc(50% - 3px);padding:10px 10px}
+      .hp-pick{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+      .hp-label{font-size:8px}
+      .hp-matchup{font-size:9px}
+      .hp-line{font-size:10px}
+      .hp-more{font-size:9px}
+    }
     .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-size:15px;font-weight:700;padding:14px 28px;border-radius:8px;transition:background .2s,transform .15s,box-shadow .2s}
     .btn-primary:hover{background:var(--red-dk);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,0,26,.4)}
     .btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--border);color:var(--text);font-size:15px;font-weight:600;padding:14px 24px;border-radius:8px;transition:border-color .2s,background .2s}
