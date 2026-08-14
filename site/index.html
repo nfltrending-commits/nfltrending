@@ -65,6 +65,7 @@
     .hp-matchup{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
     .hp-pick{font-size:14px;font-weight:700;color:var(--text)}
     .hp-line{font-size:11px;color:var(--gold)}
+    .hp-line-inline{font-size:12px;font-weight:500;color:var(--muted);margin-left:4px}
     .hp-conf{display:flex;gap:2px;margin-top:2px}
     .hp-dot{width:6px;height:6px;border-radius:50%;background:var(--border)}
     .hp-dot.on{background:var(--green)}
@@ -1496,8 +1497,7 @@ loadPicks();
       return '<a href="#picks" class="hero-pick-card">' +
         '<div class="hp-label">⭐ Expert Pick</div>' +
         '<div class="hp-matchup">' + matchup + '</div>' +
-        '<div class="hp-pick">' + pickShort + '</div>' +
-        '<div class="hp-line">' + (p.line || '') + ' · ' + (p.type || '') + '</div>' +
+        '<div class="hp-pick">' + pickShort + (p.line ? ' <span class="hp-line-inline">' + p.line + '</span>' : '') + '</div>' +
         '<div class="hp-conf">' + dots + '</div>' +
         '<div class="hp-more">See full analysis →</div>' +
         '</a>';
