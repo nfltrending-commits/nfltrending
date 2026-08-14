@@ -356,18 +356,72 @@
       .offer-ribbon-inner{flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px}
       .offer-ribbon-right{width:100%;justify-content:space-between}
     }
-    /* ── OFFER STRIP ── */
-    .offer-strip{background:var(--navy2);border-bottom:1px solid var(--border)}
-    .offer-strip-inner{max-width:1200px;margin:auto;padding:10px 20px;display:flex;align-items:center;gap:12px}
-    .offer-strip-badge{background:var(--red);color:#fff;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:4px;white-space:nowrap;flex-shrink:0}
-    .offer-strip-text{font-size:13px;color:var(--text);line-height:1.4;flex:1;min-width:0}
-    .offer-strip-btn{background:var(--red);color:#fff;font-size:12px;font-weight:800;padding:8px 18px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;flex-shrink:0;transition:opacity .2s}
-    .offer-strip-btn:hover{opacity:.88}
-    @media(max-width:600px){
-      .offer-strip-badge{display:none}
-      .offer-strip-inner{justify-content:space-between}
-      .offer-strip-text{font-size:12px}
-      .offer-strip-btn{font-size:12px;padding:8px 16px}
+    /* ── PROMO BANNER ── */
+    .promo-banner{
+      background:linear-gradient(100deg,#0a0e1a 0%,#12141f 30%,#1a0a10 65%,#200a0c 100%);
+      border-bottom:2px solid #d4001a;position:relative;overflow:hidden
+    }
+    /* diagonal field lines */
+    .promo-banner::before{
+      content:'';position:absolute;inset:0;
+      background:repeating-linear-gradient(
+        105deg,transparent,transparent 40px,
+        rgba(255,255,255,.02) 40px,rgba(255,255,255,.02) 42px
+      );pointer-events:none
+    }
+    /* red glow center */
+    .promo-banner::after{
+      content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);
+      width:500px;height:200px;
+      background:radial-gradient(ellipse,rgba(212,0,26,.18) 0%,transparent 70%);
+      pointer-events:none
+    }
+    .promo-banner-inner{
+      max-width:1000px;margin:auto;padding:0 24px;
+      display:flex;align-items:center;justify-content:center;gap:0;
+      position:relative;z-index:1;min-height:80px
+    }
+    /* combined offers */
+    .pb-offers{display:flex;align-items:center;gap:0;flex:1;justify-content:center}
+    /* SPORTS offer */
+    .pb-sports{display:flex;align-items:center;gap:10px;padding:16px 32px 16px 0;position:relative}
+    .pb-sports-badge{position:absolute;top:8px;left:0;font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35)}
+    .pb-sports-num{font-size:54px;font-weight:900;color:#fff;letter-spacing:-3px;line-height:.9;margin-top:8px}
+    .pb-sports-num sup{font-size:20px;letter-spacing:0;vertical-align:super;color:rgba(255,255,255,.7)}
+    .pb-sports-detail{margin-top:8px}
+    .pb-sports-pct{font-size:12px;font-weight:800;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.5px;line-height:1}
+    .pb-sports-label{font-size:17px;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:-.3px;line-height:1.1}
+    /* divider */
+    .pb-divider{width:1px;height:48px;background:rgba(255,255,255,.12);flex-shrink:0;margin:0 28px}
+    /* CASINO offer */
+    .pb-casino{display:flex;align-items:center;gap:10px;padding:16px 0 16px 0;position:relative}
+    .pb-casino-badge{position:absolute;top:8px;left:0;font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);opacity:.55}
+    .pb-casino-num{font-size:54px;font-weight:900;color:var(--gold);letter-spacing:-3px;line-height:.9;margin-top:8px}
+    .pb-casino-num sup{font-size:20px;letter-spacing:0;vertical-align:super}
+    .pb-casino-detail{margin-top:8px}
+    .pb-casino-label{font-size:17px;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:-.3px;line-height:1.1}
+    /* CTA */
+    .pb-cta-wrap{display:flex;flex-direction:column;align-items:center;gap:5px;flex-shrink:0;margin-left:36px}
+    .pb-cta{background:linear-gradient(135deg,#d4001a,#ff1a35);color:#fff;font-size:14px;font-weight:900;padding:14px 28px;border-radius:7px;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;transition:opacity .2s,transform .15s;box-shadow:0 4px 20px rgba(212,0,26,.4)}
+    .pb-cta:hover{opacity:.9;transform:translateY(-1px)}
+    .pb-tcs{font-size:9px;color:rgba(255,255,255,.22);letter-spacing:.5px}
+    @media(max-width:700px){
+      .promo-banner-inner{padding:0 14px;justify-content:space-between}
+      .pb-sports-num{font-size:38px}
+      .pb-casino-num{font-size:38px}
+      .pb-sports-label,.pb-casino-label{font-size:14px}
+      .pb-divider{margin:0 16px;height:38px}
+      .pb-cta-wrap{margin-left:16px}
+      .pb-cta{font-size:12px;padding:11px 16px;letter-spacing:.5px}
+      .pb-sports{padding-right:0}
+    }
+    @media(max-width:480px){
+      .pb-sports-badge,.pb-casino-badge{display:none}
+      .pb-sports-num{font-size:32px}
+      .pb-casino-num{font-size:32px}
+      .pb-sports-pct{display:none}
+      .pb-divider{margin:0 12px}
+      .pb-cta-wrap{margin-left:12px}
     }
     /* ── INFO MODAL ── */
     .info-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:500;align-items:center;justify-content:center;padding:20px}
@@ -472,12 +526,40 @@
   </div>
 </section>
 
-<!-- COMPACT OFFER STRIP -->
-<div class="offer-strip">
-  <div class="offer-strip-inner">
-    <span class="offer-strip-badge">🏈 Welcome Offer</span>
-    <span class="offer-strip-text"><strong>Up to $500 Bet Back Bonus + $25 Casino Credit</strong> — 100% refund in Free Play if your first bet loses</span>
-    <a href="https://record.webpartners.co/_xb3kIla32l8_N4b4FXAB62Nd7ZgqdRLk/1/" class="offer-strip-btn" target="_blank" rel="noopener">Claim Now →</a>
+<!-- PROMO BANNER -->
+<div class="promo-banner">
+  <div class="promo-banner-inner">
+
+    <div class="pb-offers">
+      <!-- Sports Offer -->
+      <div class="pb-sports">
+        <span class="pb-sports-badge">🏈 Sports Welcome</span>
+        <div class="pb-sports-num"><sup>$</sup>500</div>
+        <div class="pb-sports-detail">
+          <div class="pb-sports-pct">100% Bet Back</div>
+          <div class="pb-sports-label">Bonus</div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="pb-divider"></div>
+
+      <!-- Casino Offer -->
+      <div class="pb-casino">
+        <span class="pb-casino-badge">♠ Casino Bonus</span>
+        <div class="pb-casino-num"><sup>$</sup>25</div>
+        <div class="pb-casino-detail">
+          <div class="pb-casino-label">Casino<br>Chip</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="pb-cta-wrap">
+      <a href="https://record.webpartners.co/_xb3kIla32l8_N4b4FXAB62Nd7ZgqdRLk/1/" class="pb-cta" target="_blank" rel="noopener sponsored">Claim Both →</a>
+      <div class="pb-tcs">T&Cs Apply · 21+</div>
+    </div>
+
   </div>
 </div>
 
