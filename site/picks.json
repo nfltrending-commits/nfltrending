@@ -1,1 +1,45 @@
-{"generated":"2026-08-17T00:23:28.839Z","week":"Preseason Week 3 — 2026 NFL Season","picks":[{"matchup":"Away Team vs Home Team","pick":"Home Team -3.5","line":"-110","type":"spread","confidence":4,"analysis":"Home Team has shown strong performance in the preseason. Away Team struggles on the road, making this a favorable matchup for Home Team.","home":"Home Team","away":"Away Team","homeColor":"#FF0000","awayColor":"#0000FF","game_time":"Sat Aug 16 · 1:00 PM ET"}]}
+{
+  "generated": "2026-08-17T00:38:16.598Z",
+  "week": "Regular Season Week 1 — 2026 NFL Season",
+  "picks": [
+    {
+      "matchup": "New England Patriots vs Buffalo Bills",
+      "pick": "Buffalo Bills -3",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "analysis": "The Bills have a solid home advantage and a strong team. Expect them to cover the spread against a struggling Patriots team.",
+      "home": "Buffalo Bills",
+      "away": "New England Patriots",
+      "homeColor": "#171b37",
+      "awayColor": "#002244",
+      "game_time": "Sun Sep 10 · 1:00 PM ET"
+    },
+    {
+      "matchup": "Tennessee Titans vs New York Jets",
+      "pick": "Tennessee Titans +105",
+      "line": "105",
+      "type": "moneyline",
+      "confidence": 3,
+      "analysis": "The Titans have shown promise in their preseason games, and they are facing a Jets team that has been inconsistent. Look for the Titans to pull off the upset.",
+      "home": "New York Jets",
+      "away": "Tennessee Titans",
+      "homeColor": "#0c6c7c",
+      "awayColor": "#4b92db",
+      "game_time": "Sun Sep 10 · 1:00 PM ET"
+    },
+    {
+      "matchup": "Atlanta Falcons vs Carolina Panthers",
+      "pick": "Over 47.5",
+      "line": "-110",
+      "type": "total",
+      "confidence": 4,
+      "analysis": "Both teams have powerful offenses that have a high likelihood of scoring. Expect a shootout that goes over the total.",
+      "home": "Carolina Panthers",
+      "away": "Atlanta Falcons",
+      "homeColor": "#0085CA",
+      "awayColor": "#A500B2",
+      "game_time": "Sun Sep 10 · 1:00 PM ET"
+    }
+  ]
+}
