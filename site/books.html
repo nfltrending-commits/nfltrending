@@ -28,7 +28,7 @@
 
     .nav{position:sticky;top:0;z-index:100;background:rgba(10,14,26,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 20px}
     .nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:60px}
-    .nav-logo{font-size:22px;font-weight:900;letter-spacing:-.5px}
+    .nav-logo{font-size:22px;font-weight:900;letter-spacing:-.5px;text-decoration:none;cursor:pointer}
     .nav-logo .r{color:var(--red)}.nav-logo .g{color:var(--gold)}
     .nav-back{font-size:13px;color:var(--muted);font-weight:600;transition:color .2s}
     .nav-back:hover{color:#fff}
@@ -84,6 +84,12 @@
     .pros li.vpn-item{color:var(--muted)}
 
     /* CTAs */
+    .loyalty-box{background:linear-gradient(135deg,rgba(245,166,35,.1),rgba(212,0,26,.07));border:1px solid rgba(245,166,35,.3);border-radius:8px;padding:12px 16px;margin-bottom:16px;display:flex;align-items:flex-start;gap:12px}
+    .loyalty-icon{font-size:22px;flex-shrink:0;line-height:1.2}
+    .loyalty-title{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold);margin-bottom:4px;display:flex;align-items:center;gap:6px}
+    .loyalty-title span{background:rgba(245,166,35,.2);border:1px solid rgba(245,166,35,.4);border-radius:20px;padding:1px 8px;font-size:9px}
+    .loyalty-desc{font-size:12px;color:var(--text);line-height:1.5}
+    .loyalty-desc strong{color:#fff}
     .card-cta{display:inline-block;background:linear-gradient(135deg,var(--red),#ff2d47);color:#fff;font-size:13px;font-weight:900;padding:11px 26px;border-radius:8px;text-transform:uppercase;letter-spacing:1px;box-shadow:0 4px 16px rgba(212,0,26,.3);transition:opacity .2s,transform .15s}
     .card-cta:hover{opacity:.9;transform:translateY(-1px)}
     .card-cta.outline{background:transparent;border:1px solid rgba(212,0,26,.35);color:var(--red);box-shadow:none}
@@ -130,7 +136,7 @@
 
 <nav class="nav">
   <div class="nav-inner">
-    <div class="nav-logo"><span class="r">NFL</span>Trending<span class="g">.com</span></div>
+    <a href="https://nfltrending.com/" class="nav-logo"><span class="r">NFL</span>Trending<span class="g">.com</span></a>
     <a href="/" class="nav-back">← Back to Site</a>
   </div>
 </nav>
@@ -171,6 +177,13 @@
           <li>Fast crypto payouts · live betting · mobile-optimized</li>
           <li>Use promo code <strong>MB100BB</strong> at deposit</li>
         </ul>
+        <div class="loyalty-box">
+          <div class="loyalty-icon">💎</div>
+          <div>
+            <div class="loyalty-title">MyBookie+ <span>Loyalty Program</span></div>
+            <div class="loyalty-desc"><strong>Weekly rakeback paid out via Telegram</strong> — the longer you play, the more you earn back. Industry-leading ongoing rewards on top of already the best welcome bonuses on this list.</div>
+          </div>
+        </div>
         <a href="https://record.webpartners.co/_xb3kIla32l-x_bpT0hXbLgh5iMOf8Ph-/1/" class="card-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','book_click',{book:'mybookie'})">Claim Bonus →</a>
         <div class="cta-note">Opens MyBookie.ag · 21+ · Terms apply</div>
       </div>
