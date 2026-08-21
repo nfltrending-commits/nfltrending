@@ -13,7 +13,6 @@
     gtag('js', new Date());
     gtag('config', 'G-M5SHDWJ50J');
   </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
@@ -29,7 +28,6 @@
     body{font-family:'Inter',sans-serif;background:var(--navy);color:var(--text);line-height:1.6;font-size:15px}
     a{color:inherit;text-decoration:none}
     img{display:block;max-width:100%}
-
     /* ── NAV ── */
     .nav{position:sticky;top:0;z-index:100;background:rgba(10,14,26,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 20px}
     .nav-inner{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:60px;gap:20px}
@@ -40,14 +38,12 @@
     .nav-links a:hover{color:#fff}
     .nav-cta{background:var(--red);color:#fff;font-size:13px;font-weight:700;padding:9px 18px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;transition:background .2s,transform .15s;flex-shrink:0}
     .nav-cta:hover{background:var(--red-dk);transform:translateY(-1px)}
-
     /* ── TICKER ── */
     .ticker{background:var(--red);padding:8px 0;overflow:hidden;white-space:nowrap}
     .ticker-track{display:inline-flex;gap:60px;animation:ticker 32s linear infinite}
     .ticker-item{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#fff;display:inline-flex;align-items:center;gap:8px}
     .ticker-sep{color:rgba(255,255,255,.4)}
     @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
     /* ── HERO ── */
     .hero{background:linear-gradient(135deg,#0a0e1a 0%,#14203a 50%,#1a0a0f 100%);border-bottom:1px solid var(--border);padding:36px 20px 32px;position:relative;overflow:hidden}
     .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(212,0,26,.15) 0%,transparent 65%);pointer-events:none}
@@ -57,6 +53,14 @@
     .hero h1 em{color:var(--red);font-style:normal}
     .hero p{color:var(--muted);font-size:16px;max-width:580px;margin:0 auto 32px}
     .hero-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    /* ── HERO CTA PILLS ── */
+    .hero-pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;padding:11px 22px;border-radius:8px;text-transform:uppercase;letter-spacing:.6px;transition:all .2s;border:1px solid transparent}
+    .hero-pill.picks{background:var(--red);color:#fff;box-shadow:0 4px 18px rgba(212,0,26,.35)}
+    .hero-pill.picks:hover{background:var(--red-dk);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,0,26,.45)}
+    .hero-pill.news{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15);color:var(--text)}
+    .hero-pill.news:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);transform:translateY(-2px)}
+    .hero-pill.reviews{background:rgba(245,166,35,.12);border-color:rgba(245,166,35,.35);color:var(--gold)}
+    .hero-pill.reviews:hover{background:rgba(245,166,35,.2);border-color:rgba(245,166,35,.55);transform:translateY(-2px)}
     /* ── HERO PICKS PREVIEW ── */
     .hero-picks{margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:nowrap}
     .hero-pick-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:12px 16px;display:flex;flex-direction:column;align-items:flex-start;gap:4px;width:220px;flex-shrink:0;transition:border-color .2s;text-decoration:none}
@@ -82,7 +86,48 @@
     .btn-primary:hover{background:var(--red-dk);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,0,26,.4)}
     .btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--border);color:var(--text);font-size:14px;font-weight:600;padding:10px 20px;border-radius:8px;transition:border-color .2s,background .2s}
     .btn-secondary:hover{border-color:var(--muted);background:var(--navy2)}
-
+    /* ── MYBOOKIE 728x90 BANNER STRIP ── */
+    .mb-728-strip{background:#080c18;padding:14px 20px;text-align:center;border-bottom:1px solid var(--border)}
+    /* ── PROMO BANNER ── */
+    .promo-banner{background:linear-gradient(100deg,#0a0e1a 0%,#12141f 30%,#1a0a10 65%,#200a0c 100%);border-bottom:2px solid #d4001a;position:relative;overflow:hidden}
+    .promo-banner::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(105deg,transparent,transparent 40px,rgba(255,255,255,.02) 40px,rgba(255,255,255,.02) 42px);pointer-events:none}
+    .promo-banner::after{content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:500px;height:200px;background:radial-gradient(ellipse,rgba(212,0,26,.18) 0%,transparent 70%);pointer-events:none}
+    .promo-banner-inner{max-width:1000px;margin:auto;padding:0 24px;display:flex;align-items:center;justify-content:center;gap:0;position:relative;z-index:1;min-height:80px}
+    .pb-offers{display:flex;align-items:center;gap:0;flex:1;justify-content:center}
+    .pb-sports{display:flex;align-items:center;gap:10px;padding:16px 32px 16px 0;position:relative}
+    .pb-sports-badge{position:absolute;top:8px;left:0;font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35)}
+    .pb-sports-num{font-size:54px;font-weight:900;color:#fff;letter-spacing:-3px;line-height:.9;margin-top:8px}
+    .pb-sports-num sup{font-size:20px;letter-spacing:0;vertical-align:super;color:rgba(255,255,255,.7)}
+    .pb-sports-detail{margin-top:8px}
+    .pb-sports-pct{font-size:12px;font-weight:800;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.5px;line-height:1}
+    .pb-sports-label{font-size:17px;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:-.3px;line-height:1.1}
+    .pb-divider{width:1px;height:48px;background:rgba(255,255,255,.12);flex-shrink:0;margin:0 28px}
+    .pb-casino{display:flex;align-items:center;gap:10px;padding:16px 0 16px 0;position:relative}
+    .pb-casino-badge{position:absolute;top:8px;left:0;font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);opacity:.55}
+    .pb-casino-num{font-size:54px;font-weight:900;color:var(--gold);letter-spacing:-3px;line-height:.9;margin-top:8px}
+    .pb-casino-num sup{font-size:20px;letter-spacing:0;vertical-align:super}
+    .pb-casino-detail{margin-top:8px}
+    .pb-casino-label{font-size:17px;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:-.3px;line-height:1.1}
+    .pb-cta-wrap{display:flex;flex-direction:column;align-items:center;gap:5px;flex-shrink:0;margin-left:36px}
+    .pb-cta{background:linear-gradient(135deg,#d4001a,#ff1a35);color:#fff;font-size:14px;font-weight:900;padding:14px 28px;border-radius:7px;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;transition:opacity .2s,transform .15s;box-shadow:0 4px 20px rgba(212,0,26,.4)}
+    .pb-cta:hover{opacity:.9;transform:translateY(-1px)}
+    .pb-tcs{font-size:9px;color:rgba(255,255,255,.22);letter-spacing:.5px}
+    @media(max-width:700px){
+      .promo-banner-inner{padding:0 14px;justify-content:space-between}
+      .pb-sports-num{font-size:38px}.pb-casino-num{font-size:38px}
+      .pb-sports-label,.pb-casino-label{font-size:14px}
+      .pb-divider{margin:0 16px;height:38px}
+      .pb-cta-wrap{margin-left:16px}
+      .pb-cta{font-size:12px;padding:11px 16px;letter-spacing:.5px}
+      .pb-sports{padding-right:0}
+    }
+    @media(max-width:480px){
+      .pb-sports-badge,.pb-casino-badge{display:none}
+      .pb-sports-num{font-size:32px}.pb-casino-num{font-size:32px}
+      .pb-sports-pct{display:none}
+      .pb-divider{margin:0 12px}
+      .pb-cta-wrap{margin-left:12px}
+    }
     /* OFFER CARD */
     .offer-card{background:var(--navy2);border:1px solid var(--border);border-radius:14px;padding:28px;position:relative;overflow:hidden}
     .offer-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),var(--gold))}
@@ -97,7 +142,6 @@
     .offer-claim{display:block;text-align:center;background:linear-gradient(135deg,var(--red),#ff2d47);color:#fff;font-size:15px;font-weight:800;padding:14px;border-radius:8px;text-transform:uppercase;letter-spacing:.5px;transition:opacity .2s,transform .15s,box-shadow .2s}
     .offer-claim:hover{opacity:.92;transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,0,26,.45)}
     .offer-disclaimer{text-align:center;font-size:10px;color:var(--muted);margin-top:10px}
-
     /* LAYOUT */
     .container{max-width:1200px;margin:auto;padding:0 20px}
     .section{padding:56px 0}
@@ -107,7 +151,6 @@
     .view-all{font-size:12px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.5px;border:1px solid rgba(212,0,26,.3);padding:6px 14px;border-radius:6px;transition:background .2s}
     .view-all:hover{background:rgba(212,0,26,.1)}
     .two-col{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:start}
-
     /* SKELETON */
     .skeleton{background:linear-gradient(90deg,var(--navy3) 25%,var(--navy4) 50%,var(--navy3) 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:4px}
     @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
@@ -115,7 +158,6 @@
     .skel-line{height:14px;margin-bottom:8px}
     .skel-line.s{width:55%}.skel-line.m{width:80%}.skel-line.l{width:100%}
     .skel-body{padding:18px}
-
     /* NEWS GRID */
     .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
     .news-card{background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s;cursor:pointer;display:flex;flex-direction:column}
@@ -131,14 +173,12 @@
     .news-meta{display:flex;align-items:center;gap:12px;font-size:11px;color:var(--muted);margin-top:auto}
     .news-meta .author{font-weight:600;color:var(--text)}
     .news-meta .dot{opacity:.4}
-
     /* LIVE BADGE */
     .live-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(212,0,26,.15);border:1px solid rgba(212,0,26,.3);color:var(--red);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:3px 8px;border-radius:4px}
     .live-dot{width:6px;height:6px;border-radius:50%;background:var(--red);animation:pulse 1.5s ease-in-out infinite}
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
     .feed-status{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:6px}
     .feed-status.live{color:var(--green)}
-
     /* SIDEBAR */
     .sidebar-widget{background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:20px}
     .sidebar-widget:last-child{margin-bottom:0}
@@ -150,7 +190,6 @@
     .hot-num{font-size:22px;font-weight:900;color:var(--border);line-height:1;flex-shrink:0;width:28px}
     .hot-item h4{font-size:13px;font-weight:600;line-height:1.4;margin-bottom:4px}
     .hot-item span{font-size:11px;color:var(--muted)}
-
     /* LIVE ODDS */
     /* ODDS ROTATOR */
     .odds-rotator{position:relative}
@@ -179,7 +218,6 @@
     .odds-arrow:hover{background:var(--navy4);color:#fff}
     .btn-view-odds{display:block;text-align:center;background:transparent;border:1px solid var(--border);color:var(--text);font-size:12px;font-weight:700;padding:8px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px;transition:background .2s,border-color .2s;text-decoration:none}
     .btn-view-odds:hover{background:var(--navy3);border-color:var(--red);color:#fff}
-
     /* PICKS TABLE */
     .picks-table{background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
     .picks-table table{width:100%;border-collapse:collapse}
@@ -200,11 +238,9 @@
     .btn-pick:hover{background:var(--red-dk)}
     .pick-analysis{font-size:12px;color:var(--muted);line-height:1.5;padding:0 16px 14px;display:none}
     .picks-table tr.expanded .pick-analysis{display:block}
-
     /* MOBILE BANNER STRIP */
     .mb-mobile-strip{display:none;text-align:center;padding:12px 0;background:var(--navy2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
     @media(max-width:768px){.mb-mobile-strip{display:block}}
-
     /* MOBILE PICK CARDS */
     .picks-cards{display:none}
     .pick-card-m{background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);padding:16px;border-left:3px solid var(--red)}
@@ -214,7 +250,6 @@
     .pick-card-m .pcm-meta{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
     .pick-card-m .pcm-analysis{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:12px}
     .pick-card-m .pcm-btn{display:block;text-align:center;background:var(--red);color:#fff;font-size:13px;font-weight:700;padding:10px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px}
-
     /* BETTING BANNER */
     .betting-banner{background:linear-gradient(135deg,#14203a,#1a0a0f);border:1px solid rgba(212,0,26,.25);border-radius:14px;padding:36px 40px;display:flex;align-items:center;justify-content:space-between;gap:30px;position:relative;overflow:hidden}
     .betting-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(212,0,26,.12),transparent 60%)}
@@ -229,7 +264,6 @@
     .betting-banner .blabel{font-size:13px;color:var(--muted);margin-bottom:18px}
     .btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#000;font-size:14px;font-weight:800;padding:13px 26px;border-radius:8px;text-transform:uppercase;transition:filter .2s,transform .15s}
     .btn-gold:hover{filter:brightness(1.1);transform:translateY(-2px)}
-
     /* TEAMS */
     .teams-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .team-card{background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;transition:transform .2s,border-color .2s;cursor:pointer}
@@ -238,7 +272,6 @@
     .team-name{font-size:13px;font-weight:700;margin-bottom:4px}
     .team-record{font-size:12px;color:var(--muted);margin-bottom:10px}
     .team-odds-pill{display:inline-block;background:var(--navy3);border:1px solid var(--border);font-size:12px;font-weight:700;color:var(--gold);padding:4px 12px;border-radius:20px}
-
     /* NEWSLETTER */
     .newsletter{background:var(--navy2);border:1px solid var(--border);border-radius:14px;padding:44px;text-align:center}
     .newsletter h2{font-size:28px;font-weight:900;margin-bottom:10px}
@@ -251,7 +284,6 @@
     .email-form button:hover{background:var(--red-dk)}
     .newsletter-fine{font-size:11px;color:var(--muted);margin-top:12px}
     .form-success{display:none;color:var(--green);font-size:14px;font-weight:600;margin-top:14px}
-
     /* FOOTER */
     .footer{background:var(--navy2);border-top:1px solid var(--border);padding:48px 20px 28px}
     .footer-inner{max-width:1200px;margin:auto}
@@ -268,7 +300,6 @@
     .footer-links{display:flex;gap:20px;flex-shrink:0}
     .footer-links a{font-size:12px;color:var(--muted);transition:color .2s}
     .footer-links a:hover{color:var(--text)}
-
     /* ── COINSALSA BLOCK ── */
     .cs-section{padding:56px 0;background:linear-gradient(180deg,var(--navy) 0%,#071a14 100%)}
     .cs-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px}
@@ -310,14 +341,12 @@
     .cs-ig-cta:hover{opacity:.9}
     /* Divider */
     .cs-divider{height:1px;background:linear-gradient(90deg,transparent,#00c896,transparent);margin:0 0 40px;opacity:.3}
-
     /* ── COINSALSA COIN ICON ── */
     .cs-coin{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#00d9a6,#008f6e);border-radius:50%;flex-shrink:0;line-height:1}
     .cs-coin-xs{width:18px;height:18px;font-size:10px}
     .cs-coin-sm{width:28px;height:28px;font-size:14px}
     .cs-coin-md{width:38px;height:38px;font-size:20px;box-shadow:0 0 0 2px rgba(0,200,150,.25)}
     .cs-coin-lg{width:46px;height:46px;font-size:24px;box-shadow:0 0 0 3px rgba(0,200,150,.2)}
-
     /* ── X/SOCIAL POST CARD ── */
     .cs-x-feed{display:flex;flex-direction:column}
     .cs-x-post{display:block;padding:16px;border-bottom:1px solid var(--border);text-decoration:none;color:inherit;transition:background .15s;cursor:pointer}
@@ -332,104 +361,20 @@
     .cs-x-time{font-size:11px;color:var(--muted)}
     /* kill 1:1 constraint when used as X feed */
     #cs-ig-post.cs-x-feed{aspect-ratio:unset;background:transparent;display:flex;align-items:stretch;justify-content:unset;min-height:80px}
-
-    /* RESPONSIVE */
-    @media(max-width:1024px){
-      .hero-inner{grid-template-columns:1fr}
-      .offer-card{max-width:440px}
-      .news-grid{grid-template-columns:repeat(2,1fr)}
-      .news-card.featured{grid-column:span 2}
-      .footer-top{grid-template-columns:1fr 1fr}
-      .teams-grid{grid-template-columns:repeat(2,1fr)}
-      .two-col{grid-template-columns:1fr}
-      .cs-grid{grid-template-columns:1fr}
-      .cs-news-grid{grid-template-columns:repeat(2,1fr)}
-    }
     /* OFFER RIBBONS */
     .offer-ribbon{background:linear-gradient(90deg,#a80015 0%,#d4001a 60%,#b8001a 100%);padding:0}
-
     .offer-ribbon-inner{max-width:1200px;margin:auto;padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
     .offer-ribbon-left{display:flex;align-items:center;gap:12px;flex:1;min-width:0}
     .offer-ribbon-badge{background:rgba(255,255,255,.2);color:#fff;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:3px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0}
-
-
     .offer-ribbon-text{font-size:13px;color:rgba(255,255,255,.95);line-height:1.4}
     .offer-ribbon-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
     .offer-ribbon-code{font-size:12px;color:rgba(255,255,255,.8);white-space:nowrap}
     .offer-ribbon-code strong{color:#fff;background:rgba(0,0,0,.25);padding:2px 7px;border-radius:4px}
     .offer-ribbon-cta{background:#fff;color:var(--red);font-size:12px;font-weight:800;padding:8px 16px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;transition:opacity .2s}
-
     .offer-ribbon-cta:hover{opacity:.9}
     @media(max-width:600px){
       .offer-ribbon-inner{flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px}
       .offer-ribbon-right{width:100%;justify-content:space-between}
-    }
-    /* ── PROMO BANNER ── */
-    .promo-banner{
-      background:linear-gradient(100deg,#0a0e1a 0%,#12141f 30%,#1a0a10 65%,#200a0c 100%);
-      border-bottom:2px solid #d4001a;position:relative;overflow:hidden
-    }
-    /* diagonal field lines */
-    .promo-banner::before{
-      content:'';position:absolute;inset:0;
-      background:repeating-linear-gradient(
-        105deg,transparent,transparent 40px,
-        rgba(255,255,255,.02) 40px,rgba(255,255,255,.02) 42px
-      );pointer-events:none
-    }
-    /* red glow center */
-    .promo-banner::after{
-      content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);
-      width:500px;height:200px;
-      background:radial-gradient(ellipse,rgba(212,0,26,.18) 0%,transparent 70%);
-      pointer-events:none
-    }
-    .promo-banner-inner{
-      max-width:1000px;margin:auto;padding:0 24px;
-      display:flex;align-items:center;justify-content:center;gap:0;
-      position:relative;z-index:1;min-height:80px
-    }
-    /* combined offers */
-    .pb-offers{display:flex;align-items:center;gap:0;flex:1;justify-content:center}
-    /* SPORTS offer */
-    .pb-sports{display:flex;align-items:center;gap:10px;padding:16px 32px 16px 0;position:relative}
-    .pb-sports-badge{position:absolute;top:8px;left:0;font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35)}
-    .pb-sports-num{font-size:54px;font-weight:900;color:#fff;letter-spacing:-3px;line-height:.9;margin-top:8px}
-    .pb-sports-num sup{font-size:20px;letter-spacing:0;vertical-align:super;color:rgba(255,255,255,.7)}
-    .pb-sports-detail{margin-top:8px}
-    .pb-sports-pct{font-size:12px;font-weight:800;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.5px;line-height:1}
-    .pb-sports-label{font-size:17px;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:-.3px;line-height:1.1}
-    /* divider */
-    .pb-divider{width:1px;height:48px;background:rgba(255,255,255,.12);flex-shrink:0;margin:0 28px}
-    /* CASINO offer */
-    .pb-casino{display:flex;align-items:center;gap:10px;padding:16px 0 16px 0;position:relative}
-    .pb-casino-badge{position:absolute;top:8px;left:0;font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);opacity:.55}
-    .pb-casino-num{font-size:54px;font-weight:900;color:var(--gold);letter-spacing:-3px;line-height:.9;margin-top:8px}
-    .pb-casino-num sup{font-size:20px;letter-spacing:0;vertical-align:super}
-    .pb-casino-detail{margin-top:8px}
-    .pb-casino-label{font-size:17px;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:-.3px;line-height:1.1}
-    /* CTA */
-    .pb-cta-wrap{display:flex;flex-direction:column;align-items:center;gap:5px;flex-shrink:0;margin-left:36px}
-    .pb-cta{background:linear-gradient(135deg,#d4001a,#ff1a35);color:#fff;font-size:14px;font-weight:900;padding:14px 28px;border-radius:7px;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;transition:opacity .2s,transform .15s;box-shadow:0 4px 20px rgba(212,0,26,.4)}
-    .pb-cta:hover{opacity:.9;transform:translateY(-1px)}
-    .pb-tcs{font-size:9px;color:rgba(255,255,255,.22);letter-spacing:.5px}
-    @media(max-width:700px){
-      .promo-banner-inner{padding:0 14px;justify-content:space-between}
-      .pb-sports-num{font-size:38px}
-      .pb-casino-num{font-size:38px}
-      .pb-sports-label,.pb-casino-label{font-size:14px}
-      .pb-divider{margin:0 16px;height:38px}
-      .pb-cta-wrap{margin-left:16px}
-      .pb-cta{font-size:12px;padding:11px 16px;letter-spacing:.5px}
-      .pb-sports{padding-right:0}
-    }
-    @media(max-width:480px){
-      .pb-sports-badge,.pb-casino-badge{display:none}
-      .pb-sports-num{font-size:32px}
-      .pb-casino-num{font-size:32px}
-      .pb-sports-pct{display:none}
-      .pb-divider{margin:0 12px}
-      .pb-cta-wrap{margin-left:12px}
     }
     /* ── INFO MODAL ── */
     .info-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:500;align-items:center;justify-content:center;padding:20px}
@@ -460,6 +405,18 @@
     .nav-mobile ul li a:hover{color:#fff}
     /* ── RIBBON SHORT TEXT ── */
     .ribbon-short{display:none}
+    /* ── RESPONSIVE ── */
+    @media(max-width:1024px){
+      .hero-inner{grid-template-columns:1fr}
+      .offer-card{max-width:440px}
+      .news-grid{grid-template-columns:repeat(2,1fr)}
+      .news-card.featured{grid-column:span 2}
+      .footer-top{grid-template-columns:1fr 1fr}
+      .teams-grid{grid-template-columns:repeat(2,1fr)}
+      .two-col{grid-template-columns:1fr}
+      .cs-grid{grid-template-columns:1fr}
+      .cs-news-grid{grid-template-columns:repeat(2,1fr)}
+    }
     @media(max-width:768px){
       .nav-links{display:none}
       .nav-hamburger{display:flex}
@@ -482,15 +439,15 @@
       .cs-header{flex-direction:column;align-items:flex-start}
       .ribbon-long{display:none}
       .ribbon-short{display:inline}
+      .mb-728-strip{padding:10px 12px}
     }
   </style>
 </head>
 <body>
-
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
-    <div class="nav-logo"><span class="r">NFL</span>Trending<span class="g">.com</span></div>
+    <a href="https://nfltrending.com/" class="nav-logo"><span class="r">NFL</span>Trending<span class="g">.com</span></a>
     <ul class="nav-links">
       <li><a href="#news">News</a></li>
       <li><a href="#odds">Odds</a></li>
@@ -514,32 +471,28 @@
     <li><a href="#newsletter" onclick="closeNavMenu()">Newsletter</a></li>
   </ul>
 </div>
-
 <!-- LIVE TICKER -->
 <div class="ticker">
   <div class="ticker-track" id="ticker-track">
     <span class="ticker-item">🏈 Loading latest NFL headlines…</span>
   </div>
 </div>
-
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-
     <h1>Your Edge for the <em>2026 Season</em><br>Starts Here</h1>
     <p>Live NFL news, real-time odds from every major sportsbook, and AI-powered expert picks — all updated automatically, every day.</p>
     <div class="hero-btns">
-      <a href="#picks" class="btn-primary">🏆 View This Week's Picks</a>
-      <a href="#news" class="btn-secondary">📡 Live News</a>
+      <a href="#picks" class="hero-pill picks" onclick="gtag('event','hero_cta',{label:'picks'})">🏆 Picks</a>
+      <a href="#news"  class="hero-pill news"  onclick="gtag('event','hero_cta',{label:'news'})">📡 News</a>
+      <a href="/books" class="hero-pill reviews" onclick="gtag('event','hero_cta',{label:'reviews'})">⭐ Reviews</a>
     </div>
     <div class="hero-picks" id="hero-picks"></div>
   </div>
 </section>
-
 <!-- PROMO BANNER -->
 <div class="promo-banner">
   <div class="promo-banner-inner">
-
     <div class="pb-offers">
       <!-- Sports Offer -->
       <div class="pb-sports">
@@ -550,10 +503,8 @@
           <div class="pb-sports-label">Bonus</div>
         </div>
       </div>
-
       <!-- Divider -->
       <div class="pb-divider"></div>
-
       <!-- Casino Offer -->
       <div class="pb-casino">
         <span class="pb-casino-badge">♠ Casino Bonus</span>
@@ -563,16 +514,13 @@
         </div>
       </div>
     </div>
-
     <!-- CTA -->
     <div class="pb-cta-wrap">
       <a href="https://record.webpartners.co/_xb3kIla32l8_N4b4FXAB62Nd7ZgqdRLk/1/" class="pb-cta" target="_blank" rel="noopener sponsored">Claim Both →</a>
       <div class="pb-tcs">T&Cs Apply · 21+</div>
     </div>
-
   </div>
 </div>
-
 <!-- EXPERT PICKS (from picks.json, updated by Make) -->
 <section class="section" id="picks" style="padding-top:0">
   <div class="container">
@@ -596,14 +544,12 @@
     </div>
   </div>
 </section>
-
 <!-- MYBOOKIE 320x50 MOBILE BANNER -->
 <div class="mb-mobile-strip">
   <a href="https://record.webpartners.co/_xb3kIla32l9NbfPWE_rGVfkD5jhK-ogA/1/" target="_blank" rel="noopener sponsored">
     <img src="https://media.webpartners.co/uploads/MB-BRACKETCONTEST-320x50.jpg" width="320" height="50" alt="MyBookie Offer" style="border:none;max-width:100%;height:auto;display:block;margin:0 auto"/>
   </a>
 </div>
-
 <!-- NEWS + SIDEBAR -->
 <section class="section" id="news">
   <div class="container">
@@ -653,12 +599,10 @@
     </div>
   </div>
 </section>
-
 <!-- DUAL OFFER CARDS -->
 <section style="padding:0 0 48px">
   <div class="container">
     <div class="dual-offers" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
-
       <!-- CARD 1: $500 Bet Back Welcome -->
       <div style="background:linear-gradient(135deg,var(--navy2),#0d1a2a);border:1px solid rgba(212,0,26,.25);border-radius:var(--radius);padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;position:relative;overflow:hidden">
         <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),#ff4d63)"></div>
@@ -675,7 +619,6 @@
           <p style="font-size:10px;color:var(--muted);text-align:center">21+ only · First deposit · Terms apply</p>
         </div>
       </div>
-
       <!-- CARD 2: Casino 150% Match -->
       <div style="background:linear-gradient(135deg,var(--navy2),#1a1a0a);border:1px solid rgba(245,166,35,.25);border-radius:var(--radius);padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;position:relative;overflow:hidden">
         <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),#ffc653)"></div>
@@ -691,11 +634,9 @@
           <p style="font-size:10px;color:var(--muted);text-align:center">21+ only · First deposit · Terms apply</p>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
 <!-- TEAMS -->
 <section class="section" id="teams" style="padding-top:0">
   <div class="container">
@@ -715,7 +656,6 @@
     </div>
   </div>
 </section>
-
 <!-- NEWSLETTER -->
 <section class="section" id="newsletter" style="padding-top:0">
   <div class="container">
@@ -735,7 +675,6 @@
     </div>
   </div>
 </section>
-
 <!-- COINSALSA REMOVED -->
 <section class="cs-section" id="crypto" style="display:none">
   <div class="container">
@@ -753,8 +692,6 @@
         Follow @CoinSalsa
       </a>
     </div>
-
-    <!-- X / Social post widget — two latest CoinSalsa posts -->
     <div class="cs-ig-widget" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0;max-width:900px">
       <div class="cs-ig-header" style="grid-column:1/-1">
         <img src="/coinsalsa-logo.png" alt="CoinSalsa" style="width:38px;height:38px;border-radius:50%;flex-shrink:0">
@@ -767,7 +704,6 @@
         </svg>
       </div>
       <div id="cs-ig-post" class="cs-ig-post cs-x-feed" style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0;align-items:start">
-        <!-- Loading skeleton -->
         <div style="padding:16px">
           <div class="skel-line m skeleton" style="margin-bottom:10px"></div>
           <div class="skel-line l skeleton" style="margin-bottom:8px"></div>
@@ -786,13 +722,12 @@
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="logo"><span style="color:var(--red)">NFL</span>Trending<span style="color:var(--gold)">.com</span></div>
+        <a href="https://nfltrending.com/" class="logo"><span style="color:var(--red)">NFL</span>Trending<span style="color:var(--gold)">.com</span></a>
         <p>Your edge for every NFL season. Expert picks, live odds, injury intel, and the best sportsbook offers — trusted by over 40,000 fans since 2018.</p>
       </div>
       <div class="footer-col">
@@ -832,7 +767,6 @@
     </div>
   </div>
 </footer>
-
 <!-- INFO MODAL -->
 <div class="info-modal-overlay" id="info-modal-overlay" onclick="if(event.target===this)closeInfoModal()">
   <div class="info-modal-box">
@@ -843,7 +777,6 @@
     <div class="info-modal-body" id="info-modal-body"></div>
   </div>
 </div>
-
 <script>
 // ═══════════════════════════════════════════════
 //  CONFIG
@@ -852,7 +785,6 @@ const CONFIG = {
   affiliateLink:  'https://record.webpartners.co/_xb3kIla32l8_N4b4FXAB62Nd7ZgqdRLk/1/',
   makeWebhookUrl: 'https://hook.us2.make.com/ka6qd88xkam2tbkgr1o8gox30rq0sfc3',
 };
-
 // ═══════════════════════════════════════════════
 //  UTILITIES
 // ═══════════════════════════════════════════════
@@ -861,25 +793,18 @@ const CATS   = ['Breaking','Analysis','Picks','Injury','Rumors','Betting','Previ
 const rand   = function(arr) { return arr[Math.floor(Math.random() * arr.length)]; };
 const strip  = function(h)   { return (h || '').replace(/<[^>]*>/g,'').replace(/&[^;]+;/g,' ').trim(); };
 const trunc  = function(s, n){ var c = strip(s); return c.length > n ? c.slice(0,n).trim()+'…' : c; };
-
 function timeAgo(d) {
   var m = Math.floor((Date.now() - new Date(d)) / 60000);
   if (m < 60)   return m + 'm ago';
   if (m < 1440) return Math.floor(m/60) + 'h ago';
   return Math.floor(m/1440) + 'd ago';
 }
-function fmtDate(iso) {
-  return new Date(iso).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
-}
-
-// Safe fetch with timeout — works in all modern browsers (no AbortSignal.timeout needed)
 function safeFetch(url, timeoutMs) {
   timeoutMs = timeoutMs || 9000;
   var ctrl  = new AbortController();
   var timer = setTimeout(function() { ctrl.abort(); }, timeoutMs);
   return fetch(url, { signal: ctrl.signal }).finally(function() { clearTimeout(timer); });
 }
-
 // ═══════════════════════════════════════════════
 //  IMAGE HELPERS
 // ═══════════════════════════════════════════════
@@ -887,7 +812,6 @@ function proxyImg(url) {
   if (!url) return null;
   if (url.indexOf('//') === 0) url = 'https:' + url;
   if (url.indexOf('http') !== 0) return null;
-  // These CDNs load fine without a proxy
   if (url.indexOf('espncdn.com') !== -1 || url.indexOf('a.espn.com') !== -1) return url;
   if (url.indexOf('cryptocompare.com') !== -1 || url.indexOf('images.cryptocompare.com') !== -1) return url;
   return 'https://images.weserv.nl/?url=' + encodeURIComponent(url) + '&w=640&output=webp&q=80';
@@ -908,9 +832,8 @@ function extractImage(item) {
   }
   return null;
 }
-
 // ═══════════════════════════════════════════════
-//  NEWS — ESPN public JSON API (no CORS proxy)
+//  NEWS
 // ═══════════════════════════════════════════════
 async function loadESPNNews() {
   var r = await safeFetch('https://site.api.espn.com/apis/site/v2/sports/football/nfl/news?limit=20');
@@ -921,20 +844,9 @@ async function loadESPNNews() {
   return articles.map(function(a) {
     var imgUrl = (a.images && a.images[0]) ? a.images[0].url : null;
     var link   = (a.links && a.links.web) ? a.links.web.href : (a.links && a.links.mobile ? a.links.mobile.href : '');
-    return {
-      title:       a.headline || a.title || '',
-      link:        link,
-      pubDate:     a.published || new Date().toISOString(),
-      thumbnail:   imgUrl,
-      description: a.description || '',
-      content:     a.description || '',
-      feed:        'ESPN',
-      author:      a.byline || 'ESPN',
-      enclosures:  []
-    };
+    return { title:a.headline||a.title||'', link:link, pubDate:a.published||new Date().toISOString(), thumbnail:imgUrl, description:a.description||'', content:a.description||'', feed:'ESPN', author:a.byline||'ESPN', enclosures:[] };
   });
 }
-
 function buildNewsCard(item, featured) {
   var card = document.createElement('div');
   card.className = 'news-card' + (featured ? ' featured' : '');
@@ -943,33 +855,25 @@ function buildNewsCard(item, featured) {
   var thumb  = imgSrc
     ? '<img class="news-thumb" src="' + imgSrc + '" alt="" loading="lazy" onerror="this.outerHTML=\'<div class=&quot;news-thumb-placeholder&quot;>' + emoji + '</div>\'">'
     : '<div class="news-thumb-placeholder">' + emoji + '</div>';
-  var rawDesc  = item.description || item.content || '';
+  var rawDesc   = item.description || item.content || '';
   var cleanDesc = rawDesc.replace(/<[^>]*>/g, '').trim();
-  var descLen   = featured ? 200 : 100;
-  var desc      = cleanDesc ? '<p>' + trunc(cleanDesc, descLen) + '</p>' : '';
-  card.innerHTML =
-    thumb +
+  var desc      = cleanDesc ? '<p>' + trunc(cleanDesc, featured ? 200 : 100) + '</p>' : '';
+  card.innerHTML = thumb +
     '<div class="news-body">' +
       '<div class="news-cat">' + rand(CATS) + '</div>' +
       '<h3>' + (item.title || 'NFL Update') + '</h3>' +
       desc +
-      '<div class="news-meta">' +
-        '<span class="author">' + (item.author || item.feed || 'NFL Staff') + '</span>' +
-        '<span class="dot">·</span>' +
-        '<span>' + timeAgo(item.pubDate) + '</span>' +
-      '</div>' +
+      '<div class="news-meta"><span class="author">' + (item.author || item.feed || 'NFL Staff') + '</span><span class="dot">·</span><span>' + timeAgo(item.pubDate) + '</span></div>' +
     '</div>';
   var articleLink = item.link || CONFIG.affiliateLink;
   card.onclick = function() { window.open(articleLink, '_blank', 'noopener'); };
   return card;
 }
-
 function renderNews(items) {
   var grid = document.getElementById('news-grid');
   grid.innerHTML = '';
   items.slice(0, 5).forEach(function(item, i) { grid.appendChild(buildNewsCard(item, i === 0)); });
 }
-
 function renderHotTopics(items) {
   document.getElementById('hot-topics').innerHTML = items.slice(0, 4).map(function(item, i) {
     return '<a href="' + (item.link || CONFIG.affiliateLink) + '" target="_blank" rel="noopener" class="hot-item" style="text-decoration:none">' +
@@ -978,7 +882,6 @@ function renderHotTopics(items) {
     '</a>';
   }).join('');
 }
-
 function renderTicker(items) {
   var headlines = items.slice(0, 8).map(function(item) {
     return '<span class="ticker-item">🏈 ' + trunc(item.title, 80) + '<span class="ticker-sep"> | </span></span>';
@@ -986,7 +889,6 @@ function renderTicker(items) {
   var track = document.getElementById('ticker-track');
   track.innerHTML = headlines + headlines;
 }
-
 async function loadNews() {
   var statusEl = document.getElementById('news-status');
   try {
@@ -1000,7 +902,6 @@ async function loadNews() {
     renderFallbackNews();
   }
 }
-
 function renderFallbackNews() {
   var now = Date.now();
   var items = [
@@ -1013,9 +914,8 @@ function renderFallbackNews() {
   renderNews(items); renderHotTopics(items.slice(1)); renderTicker(items);
   document.getElementById('news-status').textContent = '📡 Curated content';
 }
-
 // ═══════════════════════════════════════════════
-//  LIVE ODDS  (from /odds.json — updated by Make)
+//  LIVE ODDS
 // ═══════════════════════════════════════════════
 async function loadOdds() {
   var widget   = document.getElementById('odds-widget');
@@ -1069,22 +969,15 @@ async function loadOdds() {
     }).join('');
     widget.innerHTML = '<div class="odds-rotator">' +
       '<div class="odds-slides" id="odds-slides">'+slides.join('')+'</div>' +
-      '<div class="odds-nav">' +
-        '<button class="odds-arrow" onclick="oddsStep(-1)">‹</button>' +
-        '<div class="odds-dots">'+dots+'</div>' +
-        '<button class="odds-arrow" onclick="oddsStep(1)">›</button>' +
-      '</div>' +
+      '<div class="odds-nav"><button class="odds-arrow" onclick="oddsStep(-1)">‹</button><div class="odds-dots">'+dots+'</div><button class="odds-arrow" onclick="oddsStep(1)">›</button></div>' +
     '</div>';
     statusEl.innerHTML = '<span style="color:var(--green)">● Live</span>';
-    // init rotator state
-    window._oddsIdx = 0;
-    window._oddsTotal = total;
+    window._oddsIdx = 0; window._oddsTotal = total;
   } catch(e) {
     widget.innerHTML = buildStaticOdds();
     statusEl.textContent = 'Sample odds';
   }
 }
-
 function oddsGoTo(idx) {
   var slides = document.querySelectorAll('.odds-slide');
   var dots   = document.querySelectorAll('.odds-dot');
@@ -1096,7 +989,6 @@ function oddsGoTo(idx) {
   dots[window._oddsIdx].classList.add('active');
 }
 function oddsStep(dir) { oddsGoTo(window._oddsIdx + dir); }
-
 function buildStaticOdds() {
   var games = [
     { away:'Chiefs',  home:'Ravens', awaySpread:'+3.5', homeSpread:'-3.5', spPrice:'-110', awayML:'+155', homeML:'-185', total:'52.5', ovPrice:'-110', unPrice:'-110' },
@@ -1126,18 +1018,14 @@ function buildStaticOdds() {
   return '<div class="odds-rotator"><div class="odds-slides" id="odds-slides">'+slides+'</div>' +
     '<div class="odds-nav"><button class="odds-arrow" onclick="oddsStep(-1)">‹</button><div class="odds-dots">'+dots+'</div><button class="odds-arrow" onclick="oddsStep(1)">›</button></div></div>';
 }
-
 // ═══════════════════════════════════════════════
-//  EXPERT PICKS  (from /picks.json — updated by Make)
+//  EXPERT PICKS
 // ═══════════════════════════════════════════════
 async function loadPicks() {
   var statusEl  = document.getElementById('picks-status');
   var tbody     = document.getElementById('picks-body');
   var cardsEl   = document.getElementById('picks-cards');
   try {
-    // Build game time lookup from odds.json (browser converts UTC→ET correctly)
-    // Stores both full name key AND last-word (nickname) key so it matches
-    // regardless of whether picks.json uses "Las Vegas Raiders" or "Raiders"
     var oddsLookup = {};
     try {
       var or = await safeFetch('/odds.json?v=' + Date.now());
@@ -1151,10 +1039,8 @@ async function loadPicks() {
           var dd  = dt.toLocaleDateString('en-US',{day:'numeric',timeZone:'America/New_York'});
           var tm  = dt.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',timeZone:'America/New_York'});
           var formatted = day + ' ' + mon + ' ' + dd + ' · ' + tm + ' ET';
-          // Full name key: "las vegas raiders vs houston texans"
           var fullKey = (g.away_team + ' vs ' + g.home_team).toLowerCase();
           oddsLookup[fullKey] = formatted;
-          // Nickname key: "raiders vs texans" (last word of each team name)
           var nickKey = (g.away_team.split(' ').pop() + ' vs ' + g.home_team.split(' ').pop()).toLowerCase();
           oddsLookup[nickKey] = formatted;
         });
@@ -1165,11 +1051,9 @@ async function loadPicks() {
     var data = await r.json();
     tbody.innerHTML = data.picks.map(function(p) {
       var dots = '';
-      for (var i = 0; i < 5; i++) {
-        dots += '<div class="conf-dot ' + (i < p.confidence ? 'on' : 'off') + '"></div>';
-      }
-      var matchup = (p.away && p.home) ? p.away.split(' ').pop() + ' vs ' + p.home.split(' ').pop() : (p.matchup || '');
-      var gameKey = ((p.away || '') + ' vs ' + (p.home || '')).toLowerCase();
+      for (var i = 0; i < 5; i++) { dots += '<div class="conf-dot ' + (i < p.confidence ? 'on' : 'off') + '"></div>'; }
+      var matchup  = (p.away && p.home) ? p.away.split(' ').pop() + ' vs ' + p.home.split(' ').pop() : (p.matchup || '');
+      var gameKey  = ((p.away || '') + ' vs ' + (p.home || '')).toLowerCase();
       var gameTime = oddsLookup[gameKey] || p.game_time || '';
       var pickDisplay = (p.type === 'moneyline') ? p.pick : p.pick + ' <span style="color:var(--muted);font-weight:500">' + p.line + '</span>';
       return '<tr>' +
@@ -1178,28 +1062,20 @@ async function loadPicks() {
         '<td><span class="pick-badge ' + p.type + '">' + p.type + '</span></td>' +
         '<td><div class="confidence">' + dots + '</div></td>' +
         '</tr>' +
-        '<tr class="analysis-row">' +
-        '<td colspan="4" style="padding:0 16px 16px;font-size:14px;color:var(--muted);line-height:1.7">' + p.analysis + '</td>' +
-        '</tr>';
+        '<tr class="analysis-row"><td colspan="4" style="padding:0 16px 16px;font-size:14px;color:var(--muted);line-height:1.7">' + p.analysis + '</td></tr>';
     }).join('');
-    // Mobile cards
     cardsEl.innerHTML = data.picks.map(function(p) {
-      var matchup = (p.away && p.home) ? p.away.split(' ').pop() + ' vs ' + p.home.split(' ').pop() : (p.matchup || '');
+      var matchup  = (p.away && p.home) ? p.away.split(' ').pop() + ' vs ' + p.home.split(' ').pop() : (p.matchup || '');
       var gameKeyM = ((p.away || '') + ' vs ' + (p.home || '')).toLowerCase();
       var gameTimeM = oddsLookup[gameKeyM] || p.game_time || '';
       var dots = '';
-      for (var i = 0; i < 5; i++) {
-        dots += '<div class="conf-dot ' + (i < p.confidence ? 'on' : 'off') + '"></div>';
-      }
+      for (var i = 0; i < 5; i++) { dots += '<div class="conf-dot ' + (i < p.confidence ? 'on' : 'off') + '"></div>'; }
       var mobilePickDisplay = (p.type === 'moneyline') ? p.pick : p.pick + ' <span class="pcm-line">' + p.line + '</span>';
       return '<div class="pick-card-m">' +
         '<div class="pcm-matchup">' + matchup + '</div>' +
         (gameTimeM ? '<div style="font-size:10px;color:var(--muted);margin-bottom:6px">' + gameTimeM + '</div>' : '') +
         '<div class="pcm-pick">' + mobilePickDisplay + '</div>' +
-        '<div class="pcm-meta">' +
-          '<span class="pick-badge ' + p.type + '">' + p.type + '</span>' +
-          '<div class="confidence">' + dots + '</div>' +
-        '</div>' +
+        '<div class="pcm-meta"><span class="pick-badge ' + p.type + '">' + p.type + '</span><div class="confidence">' + dots + '</div></div>' +
         '<div class="pcm-analysis">' + p.analysis + '</div>' +
         '<a href="' + CONFIG.affiliateLink + '" class="pcm-btn" target="_blank" rel="noopener">View Odds →</a>' +
         '</div>';
@@ -1212,9 +1088,8 @@ async function loadPicks() {
     statusEl.textContent = 'Updating…';
   }
 }
-
 // ═══════════════════════════════════════════════
-//  NEWSLETTER SIGNUP → Make Webhook
+//  NEWSLETTER SIGNUP
 // ═══════════════════════════════════════════════
 document.getElementById('signup-form').addEventListener('submit', async function(e) {
   e.preventDefault();
@@ -1230,7 +1105,7 @@ document.getElementById('signup-form').addEventListener('submit', async function
       await fetch(CONFIG.makeWebhookUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: name, email: email, phone: phone, source: 'email-signup', timestamp: new Date().toISOString() })
+        body: JSON.stringify({ name:name, email:email, phone:phone, source:'email-signup', timestamp:new Date().toISOString() })
       });
     }
     btn.style.display = 'none';
@@ -1243,169 +1118,6 @@ document.getElementById('signup-form').addEventListener('submit', async function
     btn.disabled = false;
   }
 });
-
-
-// ═══════════════════════════════════════════════
-//  COINSALSA — Crypto news (RSS) + Instagram post
-// ═══════════════════════════════════════════════
-var CRYPTO_FEEDS = [
-  { url: 'https://www.coindesk.com/arc/outboundfeeds/rss/', label: 'CoinDesk' },
-  { url: 'https://cointelegraph.com/rss',                   label: 'CoinTelegraph' },
-  { url: 'https://decrypt.co/feed',                         label: 'Decrypt' },
-];
-var CRYPTO_EMOJIS = ['₿','🚀','💎','📈','🔥','⚡','🌶️','💰'];
-var CRYPTO_CATS   = ['Bitcoin','Altcoins','DeFi','Markets','NFTs','Analysis','Breaking','Ethereum'];
-var MEDIA_NS      = 'http://search.yahoo.com/mrss/';
-var CONTENT_NS    = 'http://purl.org/rss/1.0/modules/content/';
-var PROXIES       = [
-  function(u) { return 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u); },
-  function(u) { return 'https://corsproxy.io/?' + encodeURIComponent(u); },
-];
-
-async function fetchRSSXML(feedUrl, label) {
-  var text = '';
-  for (var pi = 0; pi < PROXIES.length; pi++) {
-    try {
-      var r = await safeFetch(PROXIES[pi](feedUrl), 9000);
-      if (r && r.ok) { text = await r.text(); break; }
-    } catch(e) { /* try next proxy */ }
-  }
-  if (!text) throw new Error('all proxies failed');
-  var doc = new DOMParser().parseFromString(text, 'application/xml');
-  if (doc.querySelector('parsererror')) throw new Error('XML parse error');
-  var items  = doc.querySelectorAll('item');
-  var result = [];
-  for (var idx = 0; idx < Math.min(items.length, 10); idx++) {
-    var el = items[idx];
-    var getEl = function(sel) {
-      try { var n = el.querySelector(sel); return n ? (n.textContent || '').trim() : ''; } catch(e) { return ''; }
-    };
-    var nsGet = function(ns, tag, wantAttr) {
-      try {
-        var nodes = el.getElementsByTagNameNS(ns, tag);
-        if (!nodes.length) return '';
-        return wantAttr ? (nodes[0].getAttribute(wantAttr) || '') : ((nodes[0].textContent || '').trim());
-      } catch(e) { return ''; }
-    };
-    // Robust link extraction: text content first, then href attribute, then guid
-    var link = '';
-    try {
-      var linkEl = el.querySelector('link');
-      if (linkEl) {
-        link = (linkEl.textContent || '').trim() || linkEl.getAttribute('href') || '';
-      }
-      if (!link) {
-        var guidEl = el.querySelector('guid');
-        if (guidEl && guidEl.getAttribute('isPermaLink') !== 'false') {
-          var g = (guidEl.textContent || '').trim();
-          if (g && g.indexOf('http') === 0) link = g;
-        }
-      }
-    } catch(e) {}
-    // Image extraction
-    var thumbnail = nsGet(MEDIA_NS, 'thumbnail', 'url');
-    if (!thumbnail) {
-      try {
-        var mcs = el.getElementsByTagNameNS(MEDIA_NS, 'content');
-        for (var j = 0; j < mcs.length; j++) {
-          var u = mcs[j].getAttribute('url') || '';
-          var med = mcs[j].getAttribute('medium') || '';
-          var tp  = mcs[j].getAttribute('type') || '';
-          if (u && (med === 'image' || tp.indexOf('image/') === 0 || /\.(jpg|jpeg|png|webp|gif)/i.test(u))) {
-            thumbnail = u; break;
-          }
-        }
-      } catch(e) {}
-    }
-    if (!thumbnail) {
-      try {
-        var enc = el.querySelector('enclosure');
-        var encType = enc ? enc.getAttribute('type') : '';
-        if (encType && encType.indexOf('image/') === 0) thumbnail = enc.getAttribute('url') || '';
-      } catch(e) {}
-    }
-    var desc    = getEl('description');
-    var encoded = nsGet(CONTENT_NS, 'encoded', '');
-    var html    = encoded || desc;
-    if (!thumbnail) {
-      var imgM = html.match(/<img[^>]+src=["']([^"']+)["']/i);
-      if (imgM && imgM[1]) thumbnail = imgM[1];
-    }
-    result.push({
-      title:       getEl('title'),
-      link:        link,
-      pubDate:     getEl('pubDate') || new Date().toISOString(),
-      thumbnail:   thumbnail,
-      description: desc.replace(/<[^>]*>/g,'').replace(/&[^;]+;/g,' ').trim(),
-      content:     html,
-      feed:        label,
-      enclosures:  []
-    });
-  }
-  return result;
-}
-
-// Load Twitter widget.js once
-function loadTwitterJS() {
-  if (document.getElementById('twitter-wjs')) { if (window.twttr) window.twttr.widgets.load(); return; }
-  var s = document.createElement('script');
-  s.id = 'twitter-wjs'; s.async = true; s.src = 'https://platform.twitter.com/widgets.js';
-  document.body.appendChild(s);
-}
-
-// Render a tweet embed wrapper
-function tweetEmbed(url) {
-  var wrap = document.createElement('div');
-  wrap.style.cssText = 'background:var(--navy2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;min-height:120px';
-  wrap.innerHTML = '<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="' + url + '"></a></blockquote>';
-  return wrap;
-}
-
-// Load last 2 CoinSalsa posts as real embedded tweets
-async function loadCryptoNews() {
-  var grid = document.getElementById('cs-news-grid');
-  try {
-    var r = await safeFetch('/coinsalsa.json?v=' + Date.now());
-    if (!r.ok) throw new Error();
-    var data  = await r.json();
-    var posts = Array.isArray(data.posts) ? data.posts : [data];
-    if (!posts.length) throw new Error('empty');
-    grid.innerHTML = '';
-    posts.slice(0, 2).forEach(function(post) {
-      grid.appendChild(tweetEmbed(post.postUrl || 'https://x.com/coinsalsa'));
-    });
-    loadTwitterJS();
-  } catch(e) {
-    grid.innerHTML = '<div style="grid-column:span 2;text-align:center;padding:32px;color:var(--muted)"><img src="/coinsalsa-logo.png" style="width:48px;height:48px;border-radius:50%;margin:0 auto 12px;display:block"><p>Follow <a href="https://x.com/coinsalsa" style="color:#e85500" target="_blank">@coinsalsa</a> on X for the latest crypto picks.</p></div>';
-  }
-}
-
-// Load CoinSalsa posts as side-by-side embedded tweets
-async function loadCoinSalsaPost() {
-  var postEl    = document.getElementById('cs-ig-post');
-  var updatedEl = document.getElementById('cs-ig-updated');
-  try {
-    var r = await safeFetch('/coinsalsa.json?v=' + Date.now());
-    if (!r.ok) throw new Error();
-    var data  = await r.json();
-    var posts = Array.isArray(data.posts) ? data.posts : [data];
-    if (!posts.length) throw new Error('empty');
-    postEl.innerHTML = '';
-    // Each tweet goes in its own wrapper cell so the grid lays them side by side
-    posts.slice(0, 2).forEach(function(post) {
-      var url = post.postUrl || 'https://x.com/coinsalsa';
-      var cell = document.createElement('div');
-      cell.style.cssText = 'min-width:0;padding:8px';
-      cell.innerHTML = '<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="' + url + '"></a></blockquote>';
-      postEl.appendChild(cell);
-    });
-    if (updatedEl) updatedEl.textContent = 'Latest posts';
-    loadTwitterJS();
-  } catch(e) {
-    postEl.innerHTML = '<div style="grid-column:1/-1;padding:20px;text-align:center;color:var(--muted);font-size:13px">Follow <a href="https://x.com/coinsalsa" style="color:#e85500" target="_blank">@coinsalsa</a> for weekly crypto picks.</div>';
-  }
-}
-
 // ═══════════════════════════════════════════════
 //  HAMBURGER NAV
 // ═══════════════════════════════════════════════
@@ -1425,62 +1137,31 @@ function closeNavMenu() {
   if (btn)  btn.classList.remove('open');
   if (menu) menu.classList.remove('open');
 }
-
 // ═══════════════════════════════════════════════
 //  INFO MODALS
 // ═══════════════════════════════════════════════
 var INFO_CONTENT = {
   lingo: {
     title: 'Betting Lingo',
-    body: '<h3>Point Spread</h3><p>The margin of victory a team must win by for a bet to pay out. A -7 spread means the favorite must win by more than 7 points.</p>' +
-          '<h3>Moneyline</h3><p>A straight bet on which team wins. Odds like -150 mean you bet $150 to win $100; +130 means a $100 bet wins $130.</p>' +
-          '<h3>Over/Under (Total)</h3><p>A bet on whether the combined score of both teams will be over or under a set number.</p>' +
-          '<h3>Parlay</h3><p>Combining 2 or more bets into one. All selections must win for the parlay to pay out — higher risk, higher reward.</p>' +
-          '<h3>Juice / Vig</h3><p>The sportsbook\'s cut. Standard juice is -110, meaning you must bet $110 to win $100.</p>' +
-          '<h3>ATS (Against the Spread)</h3><p>A team\'s record when accounting for the point spread, not just wins and losses.</p>' +
-          '<h3>Public Money vs. Sharp Money</h3><p>Public money is casual bettors. Sharp money is professional bettors. Line movement often follows sharp action.</p>' +
-          '<h3>Prop Bet</h3><p>A bet on a specific outcome within a game — like a player\'s rushing yards or passing touchdowns.</p>' +
-          '<h3>Teaser</h3><p>A parlay where you adjust point spreads in your favor in exchange for lower odds.</p>' +
-          '<h3>Futures</h3><p>Bets placed on outcomes further out — like which team wins the Super Bowl before the season starts.</p>'
+    body: '<h3>Point Spread</h3><p>The margin of victory a team must win by for a bet to pay out. A -7 spread means the favorite must win by more than 7 points.</p><h3>Moneyline</h3><p>A straight bet on which team wins. Odds like -150 mean you bet $150 to win $100; +130 means a $100 bet wins $130.</p><h3>Over/Under (Total)</h3><p>A bet on whether the combined score of both teams will be over or under a set number.</p><h3>Parlay</h3><p>Combining 2 or more bets into one. All selections must win for the parlay to pay out — higher risk, higher reward.</p><h3>Juice / Vig</h3><p>The sportsbook\'s cut. Standard juice is -110, meaning you must bet $110 to win $100.</p><h3>ATS (Against the Spread)</h3><p>A team\'s record when accounting for the point spread, not just wins and losses.</p><h3>Public Money vs. Sharp Money</h3><p>Public money is casual bettors. Sharp money is professional bettors. Line movement often follows sharp action.</p><h3>Prop Bet</h3><p>A bet on a specific outcome within a game — like a player\'s rushing yards or passing touchdowns.</p><h3>Teaser</h3><p>A parlay where you adjust point spreads in your favor in exchange for lower odds.</p><h3>Futures</h3><p>Bets placed on outcomes further out — like which team wins the Super Bowl before the season starts.</p>'
   },
   rg: {
     title: 'Responsible Gaming',
-    body: '<p>NFLTrending.com is committed to promoting responsible gambling. Sports betting is entertainment — treat it that way.</p>' +
-          '<h3>Set Limits</h3><p>Only bet what you can afford to lose. Set a weekly or monthly budget and stick to it regardless of wins or losses.</p>' +
-          '<h3>Know the Signs</h3><ul><li>Chasing losses</li><li>Betting more than you intended</li><li>Hiding gambling from family or friends</li><li>Gambling interfering with work or relationships</li><li>Feeling anxious or irritable when not betting</li></ul>' +
-          '<h3>Take Breaks</h3><p>Step away after a big win or loss. Emotional betting leads to poor decisions.</p>' +
-          '<h3>Use Sportsbook Tools</h3><p>Most licensed sportsbooks offer deposit limits, loss limits, cooling-off periods, and self-exclusion. Use them proactively, not reactively.</p>' +
-          '<h3>Get Help</h3><p>If gambling is affecting your life, help is available 24/7:<br><strong>National Problem Gambling Helpline: 1-800-GAMBLER (1-800-426-2537)</strong><br><a href="https://www.ncpgambling.org" target="_blank" rel="noopener">ncpgambling.org</a></p>' +
-          '<p>You must be 21+ to bet legally in most US states. Check your local laws before wagering.</p>'
+    body: '<p>NFLTrending.com is committed to promoting responsible gambling. Sports betting is entertainment — treat it that way.</p><h3>Set Limits</h3><p>Only bet what you can afford to lose. Set a weekly or monthly budget and stick to it regardless of wins or losses.</p><h3>Know the Signs</h3><ul><li>Chasing losses</li><li>Betting more than you intended</li><li>Hiding gambling from family or friends</li><li>Gambling interfering with work or relationships</li><li>Feeling anxious or irritable when not betting</li></ul><h3>Take Breaks</h3><p>Step away after a big win or loss. Emotional betting leads to poor decisions.</p><h3>Use Sportsbook Tools</h3><p>Most licensed sportsbooks offer deposit limits, loss limits, cooling-off periods, and self-exclusion. Use them proactively, not reactively.</p><h3>Get Help</h3><p>If gambling is affecting your life, help is available 24/7:<br><strong>National Problem Gambling Helpline: 1-800-GAMBLER (1-800-426-2537)</strong><br><a href="https://www.ncpgambling.org" target="_blank" rel="noopener">ncpgambling.org</a></p><p>You must be 21+ to bet legally in most US states. Check your local laws before wagering.</p>'
   },
   about: {
     title: 'About NFLTrending.com',
-    body: '<p>NFLTrending.com is your go-to destination for NFL news, expert picks, live betting odds, and season analysis — updated automatically so you\'re always ahead of the action.</p>' +
-          '<h3>What We Cover</h3><ul><li>Breaking NFL news from top sources</li><li>Injury reports & roster moves</li><li>Expert picks with analysis</li><li>Live odds from major sportsbooks</li><li>Super Bowl futures & team rankings</li><li>Crypto & sports investing via <a href="#crypto">CoinSalsa</a></li></ul>' +
-          '<h3>Our Mission</h3><p>Give every fan and bettor the information edge they need — presented clearly, updated in real time, and completely free.</p>' +
-          '<h3>Contact Us</h3><p>Questions, feedback, or partnership inquiries: <a href="mailto:insider@nfltrending.com">insider@nfltrending.com</a></p>'
+    body: '<p>NFLTrending.com is your go-to destination for NFL news, expert picks, live betting odds, and season analysis — updated automatically so you\'re always ahead of the action.</p><h3>What We Cover</h3><ul><li>Breaking NFL news from top sources</li><li>Injury reports & roster moves</li><li>Expert picks with analysis</li><li>Live odds from major sportsbooks</li><li>Super Bowl futures & team rankings</li></ul><h3>Our Mission</h3><p>Give every fan and bettor the information edge they need — presented clearly, updated in real time, and completely free.</p><h3>Contact Us</h3><p>Questions, feedback, or partnership inquiries: <a href="mailto:insider@nfltrending.com">insider@nfltrending.com</a></p>'
   },
   privacy: {
     title: 'Privacy Policy',
-    body: '<p><em>Last updated: July 2026</em></p>' +
-          '<h3>Information We Collect</h3><p>NFLTrending.com does not require registration or collect personal information to browse the site. If you sign up for our newsletter, we collect your email address only to send NFL updates. We do not sell or share your email with third parties.</p>' +
-          '<h3>Cookies & Analytics</h3><p>We may use cookies and analytics tools (such as Google Analytics) to understand how visitors use the site. This data is aggregated and not tied to individuals. You can disable cookies in your browser settings.</p>' +
-          '<h3>Affiliate Links</h3><p>This site contains affiliate links to licensed sportsbooks. When you click these links, the sportsbook may set their own cookies per their privacy policy. NFLTrending.com earns a commission if you sign up, at no extra cost to you.</p>' +
-          '<h3>Third-Party Content</h3><p>News and odds are sourced from third-party APIs. We do not control the content or privacy practices of those providers.</p>' +
-          '<h3>Contact</h3><p>Privacy questions: <a href="mailto:insider@nfltrending.com">insider@nfltrending.com</a></p>'
+    body: '<p><em>Last updated: July 2026</em></p><h3>Information We Collect</h3><p>NFLTrending.com does not require registration or collect personal information to browse the site. If you sign up for our newsletter, we collect your email address only to send NFL updates. We do not sell or share your email with third parties.</p><h3>Cookies & Analytics</h3><p>We may use cookies and analytics tools (such as Google Analytics) to understand how visitors use the site. This data is aggregated and not tied to individuals. You can disable cookies in your browser settings.</p><h3>Affiliate Links</h3><p>This site contains affiliate links to licensed sportsbooks. When you click these links, the sportsbook may set their own cookies per their privacy policy. NFLTrending.com earns a commission if you sign up, at no extra cost to you.</p><h3>Third-Party Content</h3><p>News and odds are sourced from third-party APIs. We do not control the content or privacy practices of those providers.</p><h3>Contact</h3><p>Privacy questions: <a href="mailto:insider@nfltrending.com">insider@nfltrending.com</a></p>'
   },
   terms: {
     title: 'Terms of Use',
-    body: '<p><em>Last updated: July 2026</em></p>' +
-          '<h3>For Entertainment Only</h3><p>Content on NFLTrending.com, including picks and analysis, is for informational and entertainment purposes only. Nothing on this site constitutes professional betting advice.</p>' +
-          '<h3>Age Requirement</h3><p>This site is intended for users 21 years of age or older. Sports betting is illegal in some jurisdictions — it is your responsibility to know your local laws before wagering.</p>' +
-          '<h3>Affiliate Disclosure</h3><p>NFLTrending.com earns commission from sportsbook affiliate links. We only recommend licensed, regulated sportsbooks. Our editorial content is not influenced by these relationships.</p>' +
-          '<h3>No Warranties</h3><p>We make no guarantees about the accuracy, completeness, or timeliness of information on this site. Use at your own risk.</p>' +
-          '<h3>Intellectual Property</h3><p>All original content, design, and code on NFLTrending.com is owned by NFLTrending.com. Third-party content (news, logos, odds) belongs to their respective owners.</p>' +
-          '<h3>Contact</h3><p>Terms questions: <a href="mailto:insider@nfltrending.com">insider@nfltrending.com</a></p>'
+    body: '<p><em>Last updated: July 2026</em></p><h3>For Entertainment Only</h3><p>Content on NFLTrending.com, including picks and analysis, is for informational and entertainment purposes only. Nothing on this site constitutes professional betting advice.</p><h3>Age Requirement</h3><p>This site is intended for users 21 years of age or older. Sports betting is illegal in some jurisdictions — it is your responsibility to know your local laws before wagering.</p><h3>Affiliate Disclosure</h3><p>NFLTrending.com earns commission from sportsbook affiliate links. We only recommend licensed, regulated sportsbooks. Our editorial content is not influenced by these relationships.</p><h3>No Warranties</h3><p>We make no guarantees about the accuracy, completeness, or timeliness of information on this site. Use at your own risk.</p><h3>Intellectual Property</h3><p>All original content, design, and code on NFLTrending.com is owned by NFLTrending.com. Third-party content (news, logos, odds) belongs to their respective owners.</p><h3>Contact</h3><p>Terms questions: <a href="mailto:insider@nfltrending.com">insider@nfltrending.com</a></p>'
   }
 };
-
 function openInfoModal(key) {
   var overlay = document.getElementById('info-modal-overlay');
   var title   = document.getElementById('info-modal-title');
@@ -1497,18 +1178,13 @@ function closeInfoModal() {
   if (overlay) overlay.classList.remove('open');
   document.body.style.overflow = '';
 }
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeInfoModal();
-});
-
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeInfoModal(); });
 // ═══════════════════════════════════════════════
 //  INIT
 // ═══════════════════════════════════════════════
 loadNews();
 loadOdds();
 loadPicks();
-// loadCoinSalsaPost(); // disabled
-
 // ── HERO PICKS PREVIEW ──
 (async function() {
   var el = document.getElementById('hero-picks');
@@ -1522,7 +1198,7 @@ loadPicks();
     el.innerHTML = picks.map(function(p) {
       var dots = '';
       for (var i = 1; i <= 5; i++) dots += '<span class="hp-dot' + (i <= (p.confidence||3) ? ' on' : '') + '"></span>';
-      var matchup = (p.away && p.home) ? p.away.split(' ').pop() + ' vs ' + p.home.split(' ').pop() : (p.matchup || '');
+      var matchup   = (p.away && p.home) ? p.away.split(' ').pop() + ' vs ' + p.home.split(' ').pop() : (p.matchup || '');
       var pickParts = (p.pick || '').trim().split(' ');
       var pickShort = pickParts.length >= 2 ? pickParts.slice(-2).join(' ') : (p.pick || '');
       return '<a href="#picks" class="hero-pick-card">' +
