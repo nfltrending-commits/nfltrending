@@ -3,108 +3,6 @@
   "week": "Preseason Week 3 — 2026 NFL Season",
   "picks": [
     {
-      "matchup": "Los Angeles Rams vs Los Angeles Chargers",
-      "pick": "Los Angeles Chargers -4.5",
-      "line": "-110",
-      "type": "spread",
-      "confidence": 4,
-      "buzz_score": 5,
-      "analysis": "The biggest story of Preseason Week 3: Justin Herbert makes his first-ever preseason appearance at SoFi Stadium. Drafted in the COVID year of 2020, Herbert has never once suited up for an exhibition game — and it was Herbert himself who walked up to Jim Harbaugh and asked to play, saying he needed to feel a live pass rush. Harbaugh is going with his offensive starters while sitting Derwin James Jr. and Khalil Mack on defense. A fired-up Herbert running a live first-team offense against a Rams unit unlikely to counter with full starters makes the Chargers' 4.5-point cushion very manageable.",
-      "home": "Los Angeles Chargers",
-      "away": "Los Angeles Rams",
-      "homeColor": "#0080C6",
-      "awayColor": "#003594",
-      "current_context": {
-        "key_news": [
-          "Justin Herbert making his first-ever preseason appearance — never played in a preseason game since being drafted during COVID 2020",
-          "Herbert personally requested to play, told Harbaugh he wanted to feel real pass-rush pressure"
-        ],
-        "injuries": [
-          "Derwin James Jr. sitting out (Chargers)",
-          "Khalil Mack sitting out (Chargers)"
-        ],
-        "starter_status": [
-          "Justin Herbert confirmed starting for Chargers",
-          "Chargers offensive starters expected to play; key defensive starters resting"
-        ],
-        "coaching_notes": [
-          "Jim Harbaugh fully supportive of Herbert's request to make preseason debut",
-          "Harbaugh protecting top defensive players while unleashing the first-team offense"
-        ],
-        "situational_edge": [
-          "Herbert's first live preseason action creates high motivation to perform",
-          "Chargers home at SoFi Stadium",
-          "Rams unlikely to deploy full defensive lineup in response"
-        ]
-      }
-    },
-    {
-      "matchup": "Chicago Bears vs Tennessee Titans",
-      "pick": "Tennessee Titans -3.5",
-      "line": "-110",
-      "type": "spread",
-      "confidence": 3,
-      "buzz_score": 4,
-      "analysis": "Caleb Williams looked rough in Preseason Week 2 against the Bengals — just 2-of-5 for 27 yards with a 58.8 passer rating on a single drive. Ben Johnson has since signaled he will limit Williams' exposure in Week 3, preferring to give him joint-practice reps against the Titans on Thursday rather than game action Saturday, leaving backup Case Keenum to carry the bulk of the load. Robert Saleh's Titans at home against a Bears team operating primarily with backups is the definition of a comfortable cover.",
-      "home": "Tennessee Titans",
-      "away": "Chicago Bears",
-      "homeColor": "#4B92DB",
-      "awayColor": "#0B162A",
-      "current_context": {
-        "key_news": [
-          "Caleb Williams went 2-of-5, 27 yards, 58.8 passer rating in Preseason Week 2 vs Bengals",
-          "Ben Johnson plans to limit Williams in Week 3 — prefers joint-practice reps over game reps to manage injury risk"
-        ],
-        "injuries": [],
-        "starter_status": [
-          "Caleb Williams expected to sit or play minimally Saturday",
-          "Case Keenum expected to start and handle most of the game for Chicago"
-        ],
-        "coaching_notes": [
-          "Ben Johnson prioritizing Williams' safety over preseason reps",
-          "Robert Saleh focused on Titans roster evaluation at home"
-        ],
-        "situational_edge": [
-          "Bears going with backups — significant talent drop-off",
-          "Titans at home with a full roster competing for spots"
-        ]
-      }
-    },
-    {
-      "matchup": "New York Giants vs New York Jets",
-      "pick": "New York Giants -3.5",
-      "line": "-110",
-      "type": "spread",
-      "confidence": 3,
-      "buzz_score": 4,
-      "analysis": "John Harbaugh's Giants arrive at MetLife riding a dominant 26-3 preseason dismantling of Miami, with coaches singling out sixth-round rookie OL J.C. Davis for playing a complete game at left tackle and grading out well. WR Malik Nabers shedding his red non-contact jersey is described as 'a possibility' this week, adding intrigue to the crosstown rivalry. Aaron Glenn's Jets have been playing all available personnel for evaluation throughout the preseason — a strategy that works for roster-building but leaves them short against a more structured Giants squad that looks further along in installing Harbaugh's culture.",
-      "home": "New York Jets",
-      "away": "New York Giants",
-      "homeColor": "#125740",
-      "awayColor": "#0B2265",
-      "current_context": {
-        "key_news": [
-          "Giants beat Miami 26-3 in Preseason Week 2",
-          "Malik Nabers shedding red non-contact jersey is 'a possibility' this week per Giants staff"
-        ],
-        "injuries": [
-          "OL Joshua Ezeudu day-to-day with leg injury (Giants)",
-          "OL Francis Mauigoa expected to return to practice this week (Giants)"
-        ],
-        "starter_status": [
-          "Nabers' return unclear but not required before Week 1 opener"
-        ],
-        "coaching_notes": [
-          "John Harbaugh praised rookie J.C. Davis for full game at LT vs Miami — 'a lot of plus plays, graded out well'",
-          "Aaron Glenn has played all available Jets players throughout preseason for evaluation purposes"
-        ],
-        "situational_edge": [
-          "Giants coming off dominant 26-3 win with strong momentum",
-          "Giants appear more cohesive and further along culturally under Harbaugh"
-        ]
-      }
-    },
-    {
       "matchup": "San Francisco 49ers vs Las Vegas Raiders",
       "pick": "Las Vegas Raiders -2.5",
       "line": "-110",
@@ -137,6 +35,42 @@
         "situational_edge": [
           "Raiders at home in a showcase game for Kubiak's first year",
           "49ers are road preseason underdogs unlikely to push starters deep into the game"
+        ]
+      }
+    },
+    {
+      "matchup": "Los Angeles Rams vs Los Angeles Chargers",
+      "pick": "Los Angeles Chargers -4.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "buzz_score": 5,
+      "analysis": "The biggest story of Preseason Week 3: Justin Herbert makes his first-ever preseason appearance at SoFi Stadium. Drafted in the COVID year of 2020, Herbert has never once suited up for an exhibition game — and it was Herbert himself who walked up to Jim Harbaugh and asked to play, saying he needed to feel a live pass rush. Harbaugh is going with his offensive starters while sitting Derwin James Jr. and Khalil Mack on defense. A fired-up Herbert running a live first-team offense against a Rams unit unlikely to counter with full starters makes the Chargers' 4.5-point cushion very manageable.",
+      "home": "Los Angeles Chargers",
+      "away": "Los Angeles Rams",
+      "homeColor": "#0080C6",
+      "awayColor": "#003594",
+      "current_context": {
+        "key_news": [
+          "Justin Herbert making his first-ever preseason appearance — never played in a preseason game since being drafted during COVID 2020",
+          "Herbert personally requested to play, told Harbaugh he wanted to feel real pass-rush pressure"
+        ],
+        "injuries": [
+          "Derwin James Jr. sitting out (Chargers)",
+          "Khalil Mack sitting out (Chargers)"
+        ],
+        "starter_status": [
+          "Justin Herbert confirmed starting for Chargers",
+          "Chargers offensive starters expected to play; key defensive starters resting"
+        ],
+        "coaching_notes": [
+          "Jim Harbaugh fully supportive of Herbert's request to make preseason debut",
+          "Harbaugh protecting top defensive players while unleashing the first-team offense"
+        ],
+        "situational_edge": [
+          "Herbert's first live preseason action creates high motivation to perform",
+          "Chargers home at SoFi Stadium",
+          "Rams unlikely to deploy full defensive lineup in response"
         ]
       }
     },
@@ -181,6 +115,40 @@
       }
     },
     {
+      "matchup": "New York Giants vs New York Jets",
+      "pick": "New York Giants -3.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 3,
+      "buzz_score": 4,
+      "analysis": "John Harbaugh's Giants arrive at MetLife riding a dominant 26-3 preseason dismantling of Miami, with coaches singling out sixth-round rookie OL J.C. Davis for playing a complete game at left tackle and grading out well. WR Malik Nabers shedding his red non-contact jersey is described as 'a possibility' this week, adding intrigue to the crosstown rivalry. Aaron Glenn's Jets have been playing all available personnel for evaluation throughout the preseason — a strategy that works for roster-building but leaves them short against a more structured Giants squad that looks further along in installing Harbaugh's culture.",
+      "home": "New York Jets",
+      "away": "New York Giants",
+      "homeColor": "#125740",
+      "awayColor": "#0B2265",
+      "current_context": {
+        "key_news": [
+          "Giants beat Miami 26-3 in Preseason Week 2",
+          "Malik Nabers shedding red non-contact jersey is 'a possibility' this week per Giants staff"
+        ],
+        "injuries": [
+          "OL Joshua Ezeudu day-to-day with leg injury (Giants)",
+          "OL Francis Mauigoa expected to return to practice this week (Giants)"
+        ],
+        "starter_status": [
+          "Nabers' return unclear but not required before Week 1 opener"
+        ],
+        "coaching_notes": [
+          "John Harbaugh praised rookie J.C. Davis for full game at LT vs Miami — 'a lot of plus plays, graded out well'",
+          "Aaron Glenn has played all available Jets players throughout preseason for evaluation purposes"
+        ],
+        "situational_edge": [
+          "Giants coming off dominant 26-3 win with strong momentum",
+          "Giants appear more cohesive and further along culturally under Harbaugh"
+        ]
+      }
+    },
+    {
       "matchup": "Cincinnati Bengals vs Philadelphia Eagles",
       "pick": "Philadelphia Eagles -2.5",
       "line": "-110",
@@ -208,6 +176,38 @@
           "Eagles at home",
           "Bengals likely going with backups — significant talent drop-off from Week 1 starter usage",
           "Philadelphia has familiarity edge from earlier preseason meeting"
+        ]
+      }
+    },
+    {
+      "matchup": "Chicago Bears vs Tennessee Titans",
+      "pick": "Tennessee Titans -3.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 3,
+      "buzz_score": 4,
+      "analysis": "Caleb Williams looked rough in Preseason Week 2 against the Bengals — just 2-of-5 for 27 yards with a 58.8 passer rating on a single drive. Ben Johnson has since signaled he will limit Williams' exposure in Week 3, preferring to give him joint-practice reps against the Titans on Thursday rather than game action Saturday, leaving backup Case Keenum to carry the bulk of the load. Robert Saleh's Titans at home against a Bears team operating primarily with backups is the definition of a comfortable cover.",
+      "home": "Tennessee Titans",
+      "away": "Chicago Bears",
+      "homeColor": "#4B92DB",
+      "awayColor": "#0B162A",
+      "current_context": {
+        "key_news": [
+          "Caleb Williams went 2-of-5, 27 yards, 58.8 passer rating in Preseason Week 2 vs Bengals",
+          "Ben Johnson plans to limit Williams in Week 3 — prefers joint-practice reps over game reps to manage injury risk"
+        ],
+        "injuries": [],
+        "starter_status": [
+          "Caleb Williams expected to sit or play minimally Saturday",
+          "Case Keenum expected to start and handle most of the game for Chicago"
+        ],
+        "coaching_notes": [
+          "Ben Johnson prioritizing Williams' safety over preseason reps",
+          "Robert Saleh focused on Titans roster evaluation at home"
+        ],
+        "situational_edge": [
+          "Bears going with backups — significant talent drop-off",
+          "Titans at home with a full roster competing for spots"
         ]
       }
     }
