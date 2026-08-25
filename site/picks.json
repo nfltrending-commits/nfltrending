@@ -1,1 +1,215 @@
-{"generated":"2026-08-25T00:17:38.927Z","week":"Preseason Week 3 — 2026 NFL Season","picks":[{"matchup":"San Francisco 49ers vs Las Vegas Raiders","pick":"Las Vegas Raiders -2.5","line":"-110","type":"spread","confidence":4,"buzz_score":5,"analysis":"The Las Vegas Raiders, led by Klint Kubiak, host the San Francisco 49ers. Despite no specific news updates on the rosters, the Raiders have shown solid preseason play, and coach Kubiak may be looking to solidify his roster before the regular season. Las Vegas being favored by 2.5 points is reflective of home-field advantage and likely depth testing by San Francisco.","home":"Las Vegas Raiders","away":"San Francisco 49ers","homeColor":"#000000","awayColor":"#AA0000","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Los Angeles Rams vs Los Angeles Chargers","pick":"Los Angeles Chargers -4.5","line":"-110","type":"spread","confidence":4,"buzz_score":5,"analysis":"The Los Angeles Chargers, coached by Jim Harbaugh, are favored by 4.5 points against the Los Angeles Rams in this all-LA matchup. Preseason games are crucial for Harbaugh to test his roster depth against a Rams team led by Sean McVay. Chargers' stronger depth and focus on game plan consistency give them an edge in this contest.","home":"Los Angeles Rams","away":"Los Angeles Chargers","homeColor":"#002244","awayColor":"#0073C5","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Philadelphia Eagles vs Cincinnati Bengals","pick":"Philadelphia Eagles -2.5","line":"-110","type":"spread","confidence":4,"buzz_score":4,"analysis":"Nick Sirianni's Philadelphia Eagles, favored by 2.5 points, face the Cincinnati Bengals. Although no player-specific news is available, the Eagles have shown a stronger roster depth in past preseasons. This spread reflects market confidence in Philadelphia's ability to control the game tempo, even as Bengals coach Zac Taylor evaluates his young players.","home":"Philadelphia Eagles","away":"Cincinnati Bengals","homeColor":"#004C54","awayColor":"#FB4F14","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"New York Jets vs New York Giants","pick":"New York Giants -3.5","line":"-110","type":"spread","confidence":3,"buzz_score":4,"analysis":"The New York Giants, under John Harbaugh, take on the New York Jets. The Giants are favored by 3.5 points, a testament to Harbaugh's coaching reputation and potential game plan strategy. With roster spots up for grabs in both camps, the Giants' stability offers them a slight edge.","home":"New York Giants","away":"New York Jets","homeColor":"#0B2265","awayColor":"#125740","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Baltimore Ravens vs Washington Commanders","pick":"Washington Commanders +3.5","line":"-110","type":"spread","confidence":3,"buzz_score":3,"analysis":"With preseason strategies in mind, Dan Quinn's Washington Commanders are +3.5 underdogs against the Jesse Minter-led Baltimore Ravens. While neither team's current form is confirmed, this spread indicates respect for Washington’s depth and potential to keep games close, especially as the Ravens deal with potential lineup issues.","home":"Baltimore Ravens","away":"Washington Commanders","homeColor":"#241773","awayColor":"#773141","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Tennessee Titans vs Chicago Bears","pick":"Tennessee Titans -3.5","line":"-110","type":"spread","confidence":3,"buzz_score":3,"analysis":"Robert Saleh's Tennessee Titans host the Chicago Bears. With a focus on defensive performance and roster cohesion, the Titans -3.5 line suggests their confidence in controlling the tempo at home. Ben Johnson's Bears might trial a few positional battles, making the Titans the safer pick.","home":"Tennessee Titans","away":"Chicago Bears","homeColor":"#4B92DB","awayColor":"#051C2C","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}}]}
+{
+  "generated": "2026-08-25T12:00:00Z",
+  "week": "Preseason Week 3 — 2026 NFL Season",
+  "picks": [
+    {
+      "matchup": "Los Angeles Rams vs Los Angeles Chargers",
+      "pick": "Los Angeles Chargers -4.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "buzz_score": 5,
+      "analysis": "The biggest story of Preseason Week 3: Justin Herbert makes his first-ever preseason appearance at SoFi Stadium. Drafted in the COVID year of 2020, Herbert has never once suited up for an exhibition game — and it was Herbert himself who walked up to Jim Harbaugh and asked to play, saying he needed to feel a live pass rush. Harbaugh is going with his offensive starters while sitting Derwin James Jr. and Khalil Mack on defense. A fired-up Herbert running a live first-team offense against a Rams unit unlikely to counter with full starters makes the Chargers' 4.5-point cushion very manageable.",
+      "home": "Los Angeles Chargers",
+      "away": "Los Angeles Rams",
+      "homeColor": "#0080C6",
+      "awayColor": "#003594",
+      "current_context": {
+        "key_news": [
+          "Justin Herbert making his first-ever preseason appearance — never played in a preseason game since being drafted during COVID 2020",
+          "Herbert personally requested to play, told Harbaugh he wanted to feel real pass-rush pressure"
+        ],
+        "injuries": [
+          "Derwin James Jr. sitting out (Chargers)",
+          "Khalil Mack sitting out (Chargers)"
+        ],
+        "starter_status": [
+          "Justin Herbert confirmed starting for Chargers",
+          "Chargers offensive starters expected to play; key defensive starters resting"
+        ],
+        "coaching_notes": [
+          "Jim Harbaugh fully supportive of Herbert's request to make preseason debut",
+          "Harbaugh protecting top defensive players while unleashing the first-team offense"
+        ],
+        "situational_edge": [
+          "Herbert's first live preseason action creates high motivation to perform",
+          "Chargers home at SoFi Stadium",
+          "Rams unlikely to deploy full defensive lineup in response"
+        ]
+      }
+    },
+    {
+      "matchup": "Chicago Bears vs Tennessee Titans",
+      "pick": "Tennessee Titans -3.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 3,
+      "buzz_score": 4,
+      "analysis": "Caleb Williams looked rough in Preseason Week 2 against the Bengals — just 2-of-5 for 27 yards with a 58.8 passer rating on a single drive. Ben Johnson has since signaled he will limit Williams' exposure in Week 3, preferring to give him joint-practice reps against the Titans on Thursday rather than game action Saturday, leaving backup Case Keenum to carry the bulk of the load. Robert Saleh's Titans at home against a Bears team operating primarily with backups is the definition of a comfortable cover.",
+      "home": "Tennessee Titans",
+      "away": "Chicago Bears",
+      "homeColor": "#4B92DB",
+      "awayColor": "#0B162A",
+      "current_context": {
+        "key_news": [
+          "Caleb Williams went 2-of-5, 27 yards, 58.8 passer rating in Preseason Week 2 vs Bengals",
+          "Ben Johnson plans to limit Williams in Week 3 — prefers joint-practice reps over game reps to manage injury risk"
+        ],
+        "injuries": [],
+        "starter_status": [
+          "Caleb Williams expected to sit or play minimally Saturday",
+          "Case Keenum expected to start and handle most of the game for Chicago"
+        ],
+        "coaching_notes": [
+          "Ben Johnson prioritizing Williams' safety over preseason reps",
+          "Robert Saleh focused on Titans roster evaluation at home"
+        ],
+        "situational_edge": [
+          "Bears going with backups — significant talent drop-off",
+          "Titans at home with a full roster competing for spots"
+        ]
+      }
+    },
+    {
+      "matchup": "New York Giants vs New York Jets",
+      "pick": "New York Giants -3.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 3,
+      "buzz_score": 4,
+      "analysis": "John Harbaugh's Giants arrive at MetLife riding a dominant 26-3 preseason dismantling of Miami, with coaches singling out sixth-round rookie OL J.C. Davis for playing a complete game at left tackle and grading out well. WR Malik Nabers shedding his red non-contact jersey is described as 'a possibility' this week, adding intrigue to the crosstown rivalry. Aaron Glenn's Jets have been playing all available personnel for evaluation throughout the preseason — a strategy that works for roster-building but leaves them short against a more structured Giants squad that looks further along in installing Harbaugh's culture.",
+      "home": "New York Jets",
+      "away": "New York Giants",
+      "homeColor": "#125740",
+      "awayColor": "#0B2265",
+      "current_context": {
+        "key_news": [
+          "Giants beat Miami 26-3 in Preseason Week 2",
+          "Malik Nabers shedding red non-contact jersey is 'a possibility' this week per Giants staff"
+        ],
+        "injuries": [
+          "OL Joshua Ezeudu day-to-day with leg injury (Giants)",
+          "OL Francis Mauigoa expected to return to practice this week (Giants)"
+        ],
+        "starter_status": [
+          "Nabers' return unclear but not required before Week 1 opener"
+        ],
+        "coaching_notes": [
+          "John Harbaugh praised rookie J.C. Davis for full game at LT vs Miami — 'a lot of plus plays, graded out well'",
+          "Aaron Glenn has played all available Jets players throughout preseason for evaluation purposes"
+        ],
+        "situational_edge": [
+          "Giants coming off dominant 26-3 win with strong momentum",
+          "Giants appear more cohesive and further along culturally under Harbaugh"
+        ]
+      }
+    },
+    {
+      "matchup": "San Francisco 49ers vs Las Vegas Raiders",
+      "pick": "Las Vegas Raiders -2.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 3,
+      "buzz_score": 3,
+      "analysis": "Klint Kubiak's Raiders host the 49ers in a meaningful home showcase for a franchise in the first year of a new era. Las Vegas will be without starting RG Jackson Powers-Johnson (ankle, confirmed out Thursday) and WR Dont'e Thornton, who has missed over a week of practice and also won't play. Caleb Rogers steps in at guard and Noah Brown gets elevated WR reps. The depth concerns are real — this mirrors Powers-Johnson's injury-plagued 2025 — but the 49ers are a road preseason visitor unlikely to extend their starters far, and the Raiders' home edge at -2.5 is enough in this spot.",
+      "home": "Las Vegas Raiders",
+      "away": "San Francisco 49ers",
+      "homeColor": "#A5ACAF",
+      "awayColor": "#AA0000",
+      "current_context": {
+        "key_news": [
+          "Jackson Powers-Johnson (RG) confirmed out Thursday with ankle injury — mirrors his injury-limited 2025 season",
+          "WR Dont'e Thornton out Thursday after missing over a week of practice"
+        ],
+        "injuries": [
+          "Jackson Powers-Johnson (RG) — out, ankle",
+          "Dont'e Thornton (WR) — out"
+        ],
+        "starter_status": [
+          "Caleb Rogers elevated to starting RG",
+          "Noah Brown (recently signed veteran) in line for increased WR snaps",
+          "Third-round pick Trey Zuhn provides OL depth"
+        ],
+        "coaching_notes": [
+          "Klint Kubiak confirmed Powers-Johnson will not play Thursday",
+          "Kubiak in inaugural season — home game carries added motivation"
+        ],
+        "situational_edge": [
+          "Raiders at home in a showcase game for Kubiak's first year",
+          "49ers are road preseason underdogs unlikely to push starters deep into the game"
+        ]
+      }
+    },
+    {
+      "matchup": "Washington Commanders vs Baltimore Ravens",
+      "pick": "Washington Commanders +3.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 3,
+      "buzz_score": 3,
+      "analysis": "Dan Quinn's Commanders head into Baltimore with a battered roster: DT Daron Payne is out, DT Johnny Newton has a long-term injury, C Nick Allegretti remains sidelined with a calf issue forcing rookie Matt Gulbin into center reps, RB Jerome Ford was released with an injury settlement, and RB Rachaad White is limited. The Ravens have their own OL instability — starting center Danny Pinter suffered a season-ending training camp injury and veteran Ethan Pocic has been elevated to first-team center. With both teams patchwork up front and the Ravens likely managing Lamar Jackson's workload, taking Washington at +3.5 offers real value.",
+      "home": "Baltimore Ravens",
+      "away": "Washington Commanders",
+      "homeColor": "#241773",
+      "awayColor": "#5A1414",
+      "current_context": {
+        "key_news": [
+          "Ravens C Danny Pinter suffered season-ending injury in training camp; Ethan Pocic elevated to first-team center",
+          "Commanders missing Daron Payne (DT) and Johnny Newton (DT, long-term) — significant defensive line attrition"
+        ],
+        "injuries": [
+          "Daron Payne (DT) — out (Commanders)",
+          "Johnny Newton (DT) — long-term injury (Commanders)",
+          "Nick Allegretti (C) — sidelined with calf (Commanders)",
+          "Jerome Ford (RB) — released with injury settlement (Commanders)",
+          "Bill Croskey-Merritt — won't play Friday (Commanders)",
+          "Rachaad White (RB) — limited, hamstring tweak (Commanders)",
+          "Danny Pinter (C) — season-ending injury (Ravens)"
+        ],
+        "starter_status": [
+          "Ethan Pocic getting first-team center reps for Ravens going forward",
+          "Rookie Matt Gulbin getting starting center reps for Commanders"
+        ],
+        "coaching_notes": [
+          "Jesse Minter confirmed Pocic will handle center duties for Baltimore",
+          "Dan Quinn managing heavy injury attrition at DT and C heading into the regular season"
+        ],
+        "situational_edge": [
+          "Both teams have offensive line uncertainty — 3.5 points of cushion valuable for the underdog",
+          "Ravens likely protecting Lamar Jackson with regular season approaching"
+        ]
+      }
+    },
+    {
+      "matchup": "Cincinnati Bengals vs Philadelphia Eagles",
+      "pick": "Philadelphia Eagles -2.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 3,
+      "buzz_score": 2,
+      "analysis": "Nick Sirianni's Eagles host the Bengals at home. The Bengals played Joe Burrow and their starters in their preseason opener earlier this month, and by Week 3 Zac Taylor will be protecting his veterans as the regular season approaches — expect backups to carry the bulk of Cincinnati's offensive load. Philadelphia at home with their own deeper roster, the crowd behind them, and the advantage of familiarity from the earlier meeting gives the Eagles the edge at -2.5.",
+      "home": "Philadelphia Eagles",
+      "away": "Cincinnati Bengals",
+      "homeColor": "#004C54",
+      "awayColor": "#FB4F14",
+      "current_context": {
+        "key_news": [
+          "Bengals played Joe Burrow and starters in their preseason opener earlier this month"
+        ],
+        "injuries": [],
+        "starter_status": [
+          "Joe Burrow and Bengals starters expected to rest in Week 3 after playing Week 1"
+        ],
+        "coaching_notes": [
+          "Zac Taylor known to protect veterans in late preseason after early starter usage",
+          "Nick Sirianni's Eagles at home with full crowd support"
+        ],
+        "situational_edge": [
+          "Eagles at home",
+          "Bengals likely going with backups — significant talent drop-off from Week 1 starter usage",
+          "Philadelphia has familiarity edge from earlier preseason meeting"
+        ]
+      }
+    }
+  ]
+}
