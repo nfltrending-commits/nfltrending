@@ -9,17 +9,16 @@
       "type": "spread",
       "confidence": 4,
       "buzz_score": 5,
-      "analysis": "Las Vegas closes the preseason at home with a meaningful opportunity for Klint Kubiak's new-look Raiders, but the key edge is the matchup of depth and quarterback usage. Kirk Cousins has played only one series this preseason, while Fernando Mendoza and Aidan O'Connell are expected to handle significant work again. San Francisco is dealing with a long list of skill-position injuries, including George Kittle, Christian McCaffrey and Mike Evans, making its reserve corps more important than usual. The Raiders do have their own injury concerns with Jackson Powers-Johnson and Dont'e Thornton out, but at -2.5 the combination of home field, deeper offensive options and a more compelling QB rotation gives Las Vegas the edge.",
+      "analysis": "Las Vegas gets a favorable preseason setup at home against a San Francisco team dealing with significant depth concerns. Jackson Powers-Johnson and Dont'e Thornton are out for the Raiders, but the 49ers have their own issues with multiple key offensive players unavailable. The bigger angle is quarterback depth: Las Vegas can lean on Fernando Mendoza and Aidan O'Connell for meaningful work, while San Francisco's rotation is being affected by injuries across its skill positions. At only -2.5, the Raiders don't need a dominant performance to cover, and home field gives Las Vegas the edge in a game likely to be decided by the depth players.",
       "home": "Las Vegas Raiders",
       "away": "San Francisco 49ers",
       "homeColor": "#A5ACAF",
       "awayColor": "#AA0000",
       "current_context": {
         "key_news": [
-          "Kirk Cousins has played only one series this preseason, with Fernando Mendoza and Aidan O'Connell expected to receive significant work",
-          "San Francisco has multiple skill-position injuries, including George Kittle, Christian McCaffrey and Mike Evans",
           "Jackson Powers-Johnson is out Thursday with an ankle injury",
-          "Dont'e Thornton is also out after missing more than a week of practice"
+          "Dont'e Thornton is also out after missing more than a week of practice",
+          "San Francisco has multiple offensive skill-position injuries"
         ],
         "injuries": [
           "Jackson Powers-Johnson (RG) — out, ankle",
@@ -27,19 +26,18 @@
           "Multiple 49ers skill-position players dealing with injuries"
         ],
         "starter_status": [
-          "Kirk Cousins has received extremely limited preseason action",
           "Fernando Mendoza expected to receive significant work",
           "Aidan O'Connell expected to receive significant work",
-          "Brock Purdy's participation remains uncertain"
+          "San Francisco expected to rely heavily on its depth"
         ],
         "coaching_notes": [
           "Klint Kubiak confirmed Powers-Johnson will not play",
-          "Kyle Shanahan has additional incentive to protect depth players because of the 49ers' injury situation"
+          "Both teams are using the game primarily for roster evaluation"
         ],
         "situational_edge": [
-          "Raiders are home",
-          "San Francisco's injuries make its depth especially important",
-          "Raiders have multiple QBs expected to receive meaningful preseason reps"
+          "Raiders are at home",
+          "49ers' injury situation puts additional pressure on their depth",
+          "Only 2.5 points are required to cover"
         ]
       }
     },
@@ -50,7 +48,7 @@
       "type": "spread",
       "confidence": 5,
       "buzz_score": 5,
-      "analysis": "The headline game of Preseason Week 3 belongs to Justin Herbert, who is set to make his first-ever preseason appearance after never playing an exhibition game since entering the NFL in 2020. Herbert personally asked Jim Harbaugh for the opportunity, and the Chargers are expected to put their first-team offense on the field while resting key defensive players such as Derwin James Jr. and Khalil Mack. Herbert's appearance is expected to be brief, but even a short first-team stint creates a major early-game talent advantage over a Rams team that traditionally does not play its starters in preseason. With Los Angeles also playing at SoFi, the Chargers have enough early-game firepower to justify laying 4.5 points.",
+      "analysis": "This is the headline matchup of the preseason finale because Justin Herbert is finally playing in a preseason game. Herbert personally asked Jim Harbaugh for the opportunity after never appearing in an exhibition game since entering the NFL in 2020, and the Chargers are expected to put their first-team offense on the field. His appearance may be brief, but that is all the Chargers need to create an early advantage against a Rams team expected to rely heavily on its backup rotation. The Chargers are also at home, and with the number sitting at only -4.5, a strong first-team drive from Herbert could put Los Angeles in position to cover before the deeper rotations take over.",
       "home": "Los Angeles Chargers",
       "away": "Los Angeles Rams",
       "homeColor": "#0080C6",
@@ -59,27 +57,26 @@
         "key_news": [
           "Justin Herbert is making his first-ever preseason appearance",
           "Herbert personally requested the opportunity to play",
-          "Sean McVay traditionally keeps Rams starters out of preseason games"
+          "Rams are expected to rely heavily on backups"
         ],
         "injuries": [
           "Derwin James Jr. sitting out",
           "Khalil Mack sitting out",
-          "Chargers have offensive-line concerns, including the loss of center Tyler Biadasz"
+          "Chargers have offensive-line concerns"
         ],
         "starter_status": [
           "Justin Herbert confirmed to start",
           "Chargers offensive starters expected to play",
-          "Herbert's playing time is expected to be limited",
-          "Key Chargers defensive starters are resting"
+          "Herbert's playing time expected to be limited"
         ],
         "coaching_notes": [
-          "Jim Harbaugh supported Herbert's request to play",
-          "Harbaugh is prioritizing first-team offensive reps while protecting key defensive players"
+          "Jim Harbaugh is prioritizing first-team offensive reps",
+          "Key defensive starters are being protected"
         ],
         "situational_edge": [
-          "Chargers are at home at SoFi Stadium",
-          "Chargers have a significant early-game QB advantage if Herbert plays",
-          "Rams are expected to rely heavily on their backup quarterbacks"
+          "Chargers are at SoFi Stadium",
+          "Herbert creates a major early-game QB advantage",
+          "MyBookie line is only Chargers -4.5"
         ]
       }
     },
@@ -90,39 +87,37 @@
       "type": "spread",
       "confidence": 4,
       "buzz_score": 4,
-      "analysis": "The points are the story here. Washington is dealing with significant defensive-line and offensive-line injuries, but Baltimore has its own major personnel question after losing starting center Danny Pinter for the season. More importantly, both teams are expected to limit their starting quarterbacks: Jayden Daniels has played only one preseason snap and is likely to get his meaningful preparation through joint practices, while Lamar Jackson has not played a preseason game since 2021 and is not expected to need extensive exhibition work. That makes this matchup much more about backup depth than the headline quarterbacks. With 3.5 points available and both offenses potentially operating without their regular starters, Washington has enough cushion to make the underdog side attractive.",
+      "analysis": "The three-and-a-half points make Washington attractive in a game where both teams could be without their starting quarterbacks for most of the action. Jayden Daniels has barely played this preseason and is expected to get more meaningful work through joint practices, while Lamar Jackson is also unlikely to see an extended preseason workload. That shifts the game toward backup depth, where the Commanders have enough offensive talent to stay within the number. Washington has significant injuries of its own, but Baltimore is also replacing season-ending center injury victim Danny Pinter with Ethan Pocic. With both teams managing their starters and both offensive lines dealing with disruption, taking the full 3.5 points offers the better side.",
       "home": "Baltimore Ravens",
       "away": "Washington Commanders",
       "homeColor": "#241773",
       "awayColor": "#5A1414",
       "current_context": {
         "key_news": [
-          "Jayden Daniels has played only one preseason snap",
-          "Dan Quinn indicated joint practices will provide additional starter work for Daniels and Washington's first team",
-          "Lamar Jackson has not played a preseason game since 2021",
-          "Danny Pinter suffered a season-ending injury and Ethan Pocic has moved into the Ravens' starting center role"
+          "Jayden Daniels has seen extremely limited preseason action",
+          "Lamar Jackson is unlikely to receive an extended preseason workload",
+          "Danny Pinter is out for the season and Ethan Pocic has taken over at center"
         ],
         "injuries": [
-          "Daron Payne (DT) — out",
-          "Johnny Newton (DT) — long-term injury",
-          "Nick Allegretti (C) — sidelined with calf issue",
-          "Danny Pinter (C) — season-ending injury",
-          "Rachaad White (RB) — limited"
+          "Daron Payne — out",
+          "Johnny Newton — long-term injury",
+          "Nick Allegretti — sidelined",
+          "Danny Pinter — season-ending injury",
+          "Rachaad White — limited"
         ],
         "starter_status": [
-          "Jayden Daniels is unlikely to play significant preseason snaps",
-          "Athan Kaliakmanis and Sam Hartman are competing for Washington's backup role",
-          "Lamar Jackson is not expected to receive extensive preseason action",
-          "Tyler Huntley and Joe Fagnano are expected to handle significant Baltimore QB work"
+          "Daniels unlikely to play significant snaps",
+          "Lamar Jackson unlikely to play significant snaps",
+          "Backup QBs expected to handle most of the game"
         ],
         "coaching_notes": [
-          "Dan Quinn is using joint practices to give Washington starters meaningful work",
-          "Jesse Minter has Baltimore's depth chart largely settled heading into the finale"
+          "Washington is using joint practices to prepare its starters",
+          "Baltimore is managing its roster with the regular season approaching"
         ],
         "situational_edge": [
-          "Both teams may be without their starting quarterbacks for most or all of the game",
+          "Both teams could be playing backup quarterbacks",
           "Washington receives a full 3.5 points",
-          "Both teams have offensive-line concerns, reducing the importance of the starting-QB matchup"
+          "Both teams have offensive-line uncertainty"
         ]
       }
     },
@@ -133,34 +128,33 @@
       "type": "spread",
       "confidence": 4,
       "buzz_score": 4,
-      "analysis": "The Giants enter the preseason finale with real momentum after dismantling Miami 26-3, and John Harbaugh has already shown a willingness to use meaningful preseason reps to accelerate his first-team offense and evaluate young players. Sixth-round rookie J.C. Davis was given a full game at left tackle against Miami and graded well, while the Giants expect several injured young players to return to practice this week. Malik Nabers potentially shedding his red non-contact jersey adds another intriguing storyline, although his participation is not necessary for the regular season. With the Giants looking more cohesive and the Jets continuing to spread reps across their available roster, New York has the stronger setup to cover 3.5 points.",
+      "analysis": "The Giants enter the preseason finale with momentum after crushing Miami 26-3, and the strongest part of the story is the development of their young depth. Sixth-round rookie J.C. Davis played the entire game at left tackle against Miami and earned strong marks from the coaching staff, while the Giants continue to build continuity under John Harbaugh. Malik Nabers potentially returning to practice adds another layer of intrigue, although his game participation remains uncertain. The Jets have emphasized evaluating virtually their entire available roster throughout the preseason, while the Giants appear to have a more settled rotation. At -3.5, New York has enough structural advantages to justify laying the points.",
       "home": "New York Jets",
       "away": "New York Giants",
       "homeColor": "#125740",
       "awayColor": "#0B2265",
       "current_context": {
         "key_news": [
-          "Giants defeated Miami 26-3 in Preseason Week 2",
-          "Sixth-round rookie J.C. Davis played the entire game at left tackle and graded well",
-          "Malik Nabers could potentially shed his red non-contact jersey this week"
+          "Giants defeated Miami 26-3",
+          "J.C. Davis played a full game at left tackle and impressed coaches",
+          "Malik Nabers could potentially return to practice"
         ],
         "injuries": [
-          "Joshua Ezeudu is day-to-day with a leg injury",
-          "Francis Mauigoa is expected to return to practice"
+          "Joshua Ezeudu — day-to-day",
+          "Francis Mauigoa — expected back at practice"
         ],
         "starter_status": [
           "Malik Nabers' participation remains uncertain",
-          "Giants have shown willingness to give young players extensive preseason reps"
+          "Giants continue to give significant reps to young players"
         ],
         "coaching_notes": [
-          "John Harbaugh praised J.C. Davis after his full-game performance against Miami",
-          "Harbaugh has used preseason games to accelerate first-team cohesion",
-          "Aaron Glenn has emphasized evaluating available Jets players throughout the preseason"
+          "John Harbaugh praised J.C. Davis' performance",
+          "Aaron Glenn has emphasized broad roster evaluation"
         ],
         "situational_edge": [
-          "Giants enter off a dominant 26-3 victory",
-          "Giants have shown strong development from young depth players",
-          "Giants appear to have a more defined preseason rotation than the Jets"
+          "Giants enter after a 26-3 win",
+          "Giants' young depth has performed well",
+          "Giants are laying only 3.5 points"
         ]
       }
     },
@@ -171,29 +165,29 @@
       "type": "spread",
       "confidence": 3,
       "buzz_score": 3,
-      "analysis": "Philadelphia gets the home-field edge against a Cincinnati team expected to shift heavily toward its backup rotation after giving Joe Burrow and its starters preseason work earlier in the schedule. The Eagles' advantage is less about the preseason records and more about the expected personnel gap once Cincinnati's veteran core leaves the field. At only -2.5, Philadelphia does not need a dominant performance to cash the ticket, but this remains a lower-confidence play because preseason rotations can change quickly and the available quarterback information is less definitive than in the other games on this slate.",
+      "analysis": "Philadelphia gets a favorable home setup against a Cincinnati team expected to protect its veteran core after using Joe Burrow and other starters earlier in the preseason. That should create a meaningful talent gap once the Bengals move deeper into their rotation. The Eagles only need to win by three points to cover the -2.5, making the number more attractive than a larger preseason spread. The main concern is that late-preseason rotations can change quickly, so this remains a lower-confidence play than the Chargers, Raiders or Commanders.",
       "home": "Philadelphia Eagles",
       "away": "Cincinnati Bengals",
       "homeColor": "#004C54",
       "awayColor": "#FB4F14",
       "current_context": {
         "key_news": [
-          "Cincinnati used Joe Burrow and its starters earlier in the preseason",
-          "The Bengals are approaching the regular season and are expected to shift more heavily toward reserves"
+          "Cincinnati used Joe Burrow and veterans earlier in the preseason",
+          "Bengals expected to rely more heavily on backups"
         ],
         "injuries": [],
         "starter_status": [
-          "Joe Burrow and key Bengals veterans are expected to see limited or no preseason action",
-          "Cincinnati's backup rotation should receive significant work"
+          "Joe Burrow and key Bengals veterans expected to see limited or no action",
+          "Cincinnati backup rotation expected to receive significant work"
         ],
         "coaching_notes": [
-          "Zac Taylor has already used his veteran starters earlier in the preseason",
-          "Philadelphia is at home for the preseason finale"
+          "Zac Taylor has already given veterans preseason work",
+          "Philadelphia hosts the game"
         ],
         "situational_edge": [
-          "Eagles have home-field advantage",
-          "Cincinnati's expected move toward backups creates a potential talent gap",
-          "The 2.5-point line gives Philadelphia some protection compared with a larger spread"
+          "Eagles have home field",
+          "Bengals could experience a significant drop-off once backups take over",
+          "Philadelphia only needs to win by three to cover"
         ]
       }
     },
@@ -204,32 +198,32 @@
       "type": "spread",
       "confidence": 4,
       "buzz_score": 4,
-      "analysis": "The biggest edge for Tennessee is likely to come from quarterback usage. Caleb Williams has already seen preseason action, but Ben Johnson is prioritizing joint-practice work and limiting Williams' exhibition exposure as the Bears prepare for the regular season. That leaves Chicago relying heavily on its backup quarterbacks, while Tyson Bagent's injury further complicates the depth chart. Tennessee gets the benefit of home field against a Bears offense that could spend most of the game with reserves. At -3.5, the Titans have a strong setup to control the game through the deeper portion of their roster.",
+      "analysis": "The strongest angle in this matchup is Chicago's quarterback situation. Ben Johnson is prioritizing joint-practice work for Caleb Williams rather than maximizing his preseason game reps, meaning the Bears are expected to lean heavily on their backups. Tyson Bagent's injury further reduces Chicago's flexibility at quarterback. Tennessee gets the home-field advantage against a Bears offense that could spend most of the game operating without its starting QB, while the Titans can continue evaluating their own depth. At -3.5, Tennessee has a favorable setup to control the game once the second units take over.",
       "home": "Tennessee Titans",
       "away": "Chicago Bears",
       "homeColor": "#4B92DB",
       "awayColor": "#0B162A",
       "current_context": {
         "key_news": [
-          "Ben Johnson is prioritizing joint-practice work for Caleb Williams rather than maximizing preseason game reps",
-          "Caleb Williams has already received preseason game action",
+          "Ben Johnson is prioritizing joint-practice work for Caleb Williams",
+          "Williams is expected to receive limited preseason exposure",
           "Tyson Bagent is dealing with a week-to-week injury"
         ],
         "injuries": [
           "Tyson Bagent — week-to-week"
         ],
         "starter_status": [
-          "Caleb Williams is expected to receive limited preseason exposure",
-          "Case Keenum and other backup quarterbacks are expected to handle significant work"
+          "Caleb Williams expected to play limited or no meaningful snaps",
+          "Case Keenum expected to receive significant work"
         ],
         "coaching_notes": [
-          "Ben Johnson is prioritizing Williams' health and joint-practice work",
-          "Robert Saleh is using the preseason finale to complete Tennessee's roster evaluation"
+          "Ben Johnson is prioritizing Williams' health",
+          "Robert Saleh is using the finale for roster evaluation"
         ],
         "situational_edge": [
           "Titans are at home",
-          "Chicago could spend most of the game with backup quarterbacks",
-          "Bagent's injury reduces Chicago's QB depth flexibility"
+          "Bears could rely heavily on backups",
+          "Chicago's QB depth is compromised"
         ]
       }
     }
