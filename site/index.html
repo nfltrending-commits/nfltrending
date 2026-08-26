@@ -109,8 +109,10 @@
     .pb-casino-detail{margin-top:8px}
     .pb-casino-label{font-size:17px;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:-.3px;line-height:1.1}
     .pb-cta-wrap{display:flex;flex-direction:column;align-items:center;gap:5px;flex-shrink:0;margin-left:36px}
-    .pb-cta{background:linear-gradient(135deg,#d4001a,#ff1a35);color:#fff;font-size:14px;font-weight:900;padding:14px 28px;border-radius:7px;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;transition:opacity .2s,transform .15s;box-shadow:0 4px 20px rgba(212,0,26,.4)}
+    .pb-cta{display:flex;flex-direction:column;align-items:center;gap:2px;background:linear-gradient(135deg,#d4001a,#ff1a35);color:#fff;padding:12px 28px;border-radius:7px;white-space:nowrap;transition:opacity .2s,transform .15s;box-shadow:0 4px 20px rgba(212,0,26,.4)}
     .pb-cta:hover{opacity:.9;transform:translateY(-1px)}
+    .pb-code-label{font-size:9px;font-weight:700;opacity:.7;letter-spacing:2px;text-transform:uppercase}
+    .pb-code-text{font-size:18px;font-weight:900;letter-spacing:3px;color:#fff;line-height:1.1}
     .pb-tcs{font-size:9px;color:rgba(255,255,255,.22);letter-spacing:.5px}
     @media(max-width:700px){
       .promo-banner-inner{padding:0 14px;justify-content:space-between}
@@ -118,7 +120,8 @@
       .pb-sports-label,.pb-casino-label{font-size:14px}
       .pb-divider{margin:0 16px;height:38px}
       .pb-cta-wrap{margin-left:16px}
-      .pb-cta{font-size:12px;padding:11px 16px;letter-spacing:.5px}
+      .pb-cta{padding:10px 14px}
+      .pb-code-text{font-size:15px;letter-spacing:2px}
       .pb-sports{padding-right:0}
     }
     @media(max-width:480px){
@@ -126,7 +129,10 @@
       .pb-sports-num{font-size:32px}.pb-casino-num{font-size:32px}
       .pb-sports-pct{display:none}
       .pb-divider{margin:0 12px}
-      .pb-cta-wrap{margin-left:12px}
+      .pb-cta-wrap{margin-left:10px}
+      .pb-cta{padding:9px 12px}
+      .pb-code-label{font-size:8px;letter-spacing:1.5px}
+      .pb-code-text{font-size:13px;letter-spacing:1.5px}
     }
     /* OFFER CARD */
     .offer-card{background:var(--navy2);border:1px solid var(--border);border-radius:14px;padding:28px;position:relative;overflow:hidden}
@@ -516,9 +522,9 @@
     </div>
     <!-- CTA -->
     <div class="pb-cta-wrap">
-      <a href="https://record.webpartners.co/_xb3kIla32l8_N4b4FXAB62Nd7ZgqdRLk/1/" class="pb-cta" target="_blank" rel="noopener sponsored" style="display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 28px">
-        <span style="font-size:9px;font-weight:700;opacity:.7;letter-spacing:2px;text-transform:uppercase">Use Code</span>
-        <span style="font-size:18px;font-weight:900;letter-spacing:3px;color:#fff">NFLTREND</span>
+      <a href="https://record.webpartners.co/_xb3kIla32l8_N4b4FXAB62Nd7ZgqdRLk/1/" class="pb-cta" target="_blank" rel="noopener sponsored">
+        <span class="pb-code-label">Use Code</span>
+        <span class="pb-code-text">NFLTREND</span>
       </a>
     </div>
   </div>
