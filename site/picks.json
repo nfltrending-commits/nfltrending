@@ -4,7 +4,7 @@
   "picks": [
     {
       "matchup": "San Francisco 49ers vs Las Vegas Raiders",
-      "pick": "Las Vegas Raiders -2.5",
+      "pick": "Las Vegas Raiders -3",
       "line": "-110",
       "type": "spread",
       "confidence": 4,
@@ -43,7 +43,7 @@
     },
     {
       "matchup": "Los Angeles Rams vs Los Angeles Chargers",
-      "pick": "Los Angeles Chargers -4.5",
+      "pick": "Los Angeles Chargers -3.5",
       "line": "-110",
       "type": "spread",
       "confidence": 5,
@@ -193,7 +193,7 @@
     },
     {
       "matchup": "Chicago Bears vs Tennessee Titans",
-      "pick": "Tennessee Titans -3.5",
+      "pick": "Tennessee Titans -2.5",
       "line": "-110",
       "type": "spread",
       "confidence": 4,
