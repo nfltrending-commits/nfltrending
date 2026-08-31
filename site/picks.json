@@ -1,1 +1,229 @@
-{"generated":"2026-08-31T16:27:48.433Z","week":"Preseason Week 3 — 2026 NFL Season","picks":[{"matchup":"New England Patriots vs Seattle Seahawks","pick":"Seattle Seahawks -3.5","line":"-110","type":"spread","confidence":4,"buzz_score":5,"analysis":"The Seattle Seahawks are favored at home against the New England Patriots. With Mike Macdonald leading a robust defense, the Seahawks might leverage their home-field advantage effectively. New England is under new head coach Mike Vrabel, who may take time to instill his system.","home":"Seattle Seahawks","away":"New England Patriots","homeColor":"#002244","awayColor":"#C60800","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Baltimore Ravens vs Indianapolis Colts","pick":"Baltimore Ravens -3.5","line":"-110","type":"spread","confidence":4,"buzz_score":4,"analysis":"Baltimore has installed Jesse Minter as head coach, noted for his defensive acumen. They are slight road favorites against the Indianapolis Colts, currently in their first year under Shane Steichen. The Colts may face challenges in adapting to a new system.","home":"Indianapolis Colts","away":"Baltimore Ravens","homeColor":"#003DA5","awayColor":"#241773","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Las Vegas Raiders vs Miami Dolphins","pick":"Las Vegas Raiders -3.5","line":"-110","type":"spread","confidence":3,"buzz_score":3,"analysis":"Klint Kubiak's Raiders are favored to win at home against the Dolphins. The Dolphins, coached by Jeff Hafley, are in a competitive AFC East which may translate into a focus on regular season matchups rather than early preseason games.","home":"Las Vegas Raiders","away":"Miami Dolphins","homeColor":"#000000","awayColor":"#0091A3","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Kansas City Chiefs vs Denver Broncos","pick":"Kansas City Chiefs -2.5","line":"-110","type":"spread","confidence":4,"buzz_score":4,"analysis":"The Chiefs, led by veteran coach Andy Reid, often perform well against divisional rivals. Facing them in Week 1, Sean Payton's Broncos might prioritize evaluating new personnel over immediate results, offering the Chiefs a slight edge at home.","home":"Kansas City Chiefs","away":"Denver Broncos","homeColor":"#E31837","awayColor":"#002244","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Pittsburgh Steelers vs Atlanta Falcons","pick":"Pittsburgh Steelers -3","line":"-110","type":"spread","confidence":4,"buzz_score":3,"analysis":"In a match between two new-era head coaches, Mike McCarthy's Steelers are favored at home against Kevin Stefanski's Falcons. Pittsburgh's established culture might give them an early-season edge, despite Atlanta's potential offensive innovations.","home":"Pittsburgh Steelers","away":"Atlanta Falcons","homeColor":"#FFB612","awayColor":"#A71930","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Cincinnati Bengals vs Tampa Bay Buccaneers","pick":"Cincinnati Bengals -4","line":"-110","type":"spread","confidence":3,"buzz_score":3,"analysis":"With Zac Taylor's Bengals facing the Buccaneers at home, Cincinnati might leverage their offensive prowess. Tampa Bay under Todd Bowles may focus on defensive improvements, though it could take time to see results on the field.","home":"Cincinnati Bengals","away":"Tampa Bay Buccaneers","homeColor":"#FFB612","awayColor":"#D60A0B","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}}]}
+{
+"generated": "2026-08-31T16:27:48.433Z",
+"week": "Week 1 — 2026 NFL Season",
+"picks": [
+{
+"matchup": "New England Patriots vs Seattle Seahawks",
+"pick": "New England Patriots +3.5",
+"line": "-110",
+"type": "spread",
+"confidence": 4,
+"buzz_score": 5,
+"analysis": "The better value is on New England at +3.5. Seattle opened around -3.5 and the market has shown some movement toward -4, but the extra half-point matters in a Super Bowl rematch. Drake Maye enters Year 3 with A.J. Brown added to the offense, while Seattle lost Kenneth Walker III and is relying on a thinner backfield around Sam Darnold. The Seahawks have the home-field and defending-champion advantages, but the matchup is closer than the spread suggests. At +3.5, New England has the better price-sensitive angle.",
+"home": "Seattle Seahawks",
+"away": "New England Patriots",
+"homeColor": "#002244",
+"awayColor": "#C60800",
+"current_context": {
+"key_news": [
+"MyBookie board shows Seattle -3.5 at -110.",
+"Seattle opened around -3.5 and some markets have moved toward -4.",
+"New England added A.J. Brown to a Drake Maye-led offense.",
+"Seattle lost Kenneth Walker III and enters the season with Sam Darnold at quarterback."
+],
+"injuries": [
+"Seattle safety Nick Emmanwori remains uncertain for Week 1 after ankle surgery.",
+"New England has several depth injuries but no confirmed major QB1 issue."
+],
+"starter_status": [
+"Drake Maye is New England's QB1.",
+"Sam Darnold is Seattle's QB1."
+],
+"coaching_notes": [
+"Mike Vrabel remains New England's head coach.",
+"Mike Macdonald remains Seattle's head coach."
+],
+"situational_edge": [
+"Seattle has home-field advantage and is the defending Super Bowl champion.",
+"New England gets the key value of +3.5 in a rematch of the Super Bowl."
+]
+}
+},
+{
+"matchup": "Baltimore Ravens vs Indianapolis Colts",
+"pick": "Baltimore Ravens -3.5",
+"line": "-110",
+"type": "spread",
+"confidence": 4,
+"buzz_score": 4,
+"analysis": "Baltimore remains one of the cleaner Week 1 sides. Lamar Jackson enters a new offensive system with the Ravens' core skill talent intact, while Indianapolis opens against a Baltimore defense led by new coordinator Jesse Minter. The Colts will also be without starting corner Cam Taylor-Britt because of suspension, while Charvarius Ward has only recently returned from a back issue. Daniel Jones is expected to start, but Baltimore has the superior quarterback and overall roster profile. Laying -3.5 is still justified.",
+"home": "Indianapolis Colts",
+"away": "Baltimore Ravens",
+"homeColor": "#003DA5",
+"awayColor": "#241773",
+"current_context": {
+"key_news": [
+"MyBookie board shows Baltimore -3.5 at -110.",
+"Baltimore enters the season with Jesse Minter as head coach.",
+"Lamar Jackson remains the Ravens' QB1.",
+"Cam Taylor-Britt is suspended for the season opener."
+],
+"injuries": [
+"Charvarius Ward recently returned to practice after missing time with a back injury.",
+"Daniel Jones is returning from the Achilles injury that ended his 2025 season."
+],
+"starter_status": [
+"Lamar Jackson is Baltimore's QB1.",
+"Daniel Jones is expected to start for Indianapolis."
+],
+"coaching_notes": [
+"Jesse Minter begins his first season as Baltimore head coach.",
+"Shane Steichen remains Indianapolis head coach."
+],
+"situational_edge": [
+"Baltimore faces an Indianapolis secondary missing Cam Taylor-Britt.",
+"The Ravens have the more stable quarterback situation entering Week 1."
+]
+}
+},
+{
+"matchup": "Las Vegas Raiders vs Miami Dolphins",
+"pick": "Las Vegas Raiders -3.5",
+"line": "-110",
+"type": "spread",
+"confidence": 4,
+"buzz_score": 4,
+"analysis": "Las Vegas remains the preferred side at -3.5. The Raiders have the more stable quarterback situation with Kirk Cousins expected to start, while Miami enters a new era with Malik Willis and a new coaching staff. The biggest variable is Ashton Jeanty's ankle, but the Raiders did not place him on injured reserve and remain optimistic about his availability. If Jeanty is active, Las Vegas has enough offensive and quarterback stability to justify laying less than a field goal-plus at home.",
+"home": "Las Vegas Raiders",
+"away": "Miami Dolphins",
+"homeColor": "#000000",
+"awayColor": "#0091A3",
+"current_context": {
+"key_news": [
+"MyBookie board shows Las Vegas -3.5 at -110.",
+"The broader market has moved between Raiders -3.5 and -4.",
+"Kirk Cousins is expected to lead Las Vegas at quarterback.",
+"Miami enters the season with Malik Willis and a new coaching staff."
+],
+"injuries": [
+"Ashton Jeanty's ankle is the main Las Vegas injury variable.",
+"Jeanty was not placed on injured reserve and remains expected to have a chance to play."
+],
+"starter_status": [
+"Kirk Cousins is expected to start for Las Vegas.",
+"Malik Willis is expected to start for Miami."
+],
+"coaching_notes": [
+"Klint Kubiak begins his first season as Raiders head coach.",
+"Jeff Hafley begins his first season as Dolphins head coach."
+],
+"situational_edge": [
+"Las Vegas has home-field advantage.",
+"The Raiders have significantly more quarterback experience and offensive continuity."
+]
+}
+},
+{
+"matchup": "Kansas City Chiefs vs Denver Broncos",
+"pick": "Denver Broncos +2.5",
+"line": "-110",
+"type": "spread",
+"confidence": 3,
+"buzz_score": 5,
+"analysis": "The quarterback uncertainty makes Denver the value side at +2.5. Patrick Mahomes remains on track for Week 1 but has not yet received final medical clearance following his knee injury, and Justin Fields would be the alternative if Mahomes cannot go. Denver returns Bo Nix after his ankle recovery and brings back the defense that helped win the AFC West. Even if Mahomes is cleared, the market is giving Kansas City only 2.5 points at home, leaving Denver with a strong number in a matchup expected to be tight. The injury uncertainty prevents this from being a high-confidence play, but +2.5 is preferable to laying the points.",
+"home": "Kansas City Chiefs",
+"away": "Denver Broncos",
+"homeColor": "#E31837",
+"awayColor": "#002244",
+"current_context": {
+"key_news": [
+"Kansas City opened around -2.5 and the market remains in the -2.5 to -3 range.",
+"Patrick Mahomes has participated in training camp but still requires final medical clearance for game action.",
+"Justin Fields is positioned to start if Mahomes is not cleared.",
+"Denver enters as the defending AFC West champion."
+],
+"injuries": [
+"Patrick Mahomes is still recovering from the knee injury suffered during the 2025 season.",
+"Bo Nix is returning from an ankle injury but has been active during camp."
+],
+"starter_status": [
+"Patrick Mahomes is expected to start if medically cleared.",
+"Justin Fields is the contingency starter for Kansas City.",
+"Bo Nix is Denver's QB1."
+],
+"coaching_notes": [
+"Andy Reid remains Kansas City's head coach.",
+"Sean Payton remains Denver's head coach."
+],
+"situational_edge": [
+"Kansas City has home-field advantage.",
+"Denver has the stronger quarterback-health certainty entering the week."
+]
+}
+},
+{
+"matchup": "Pittsburgh Steelers vs Atlanta Falcons",
+"pick": "Pittsburgh Steelers -3",
+"line": "-110",
+"type": "spread",
+"confidence": 4,
+"buzz_score": 4,
+"analysis": "Pittsburgh remains one of the strongest sides in this group. Aaron Rodgers gives the Steelers a defined QB1 and a veteran capable of operating a new offense immediately, while Atlanta enters Week 1 with genuine uncertainty between Tua Tagovailoa and Michael Penix Jr. Penix is only recently back to full football activity following his ACL recovery, while Tua has struggled to separate himself during camp and preseason. Mike McCarthy's transition in Pittsburgh is therefore less disruptive than Atlanta's unresolved quarterback situation. At -3, the Steelers have the cleaner setup at home.",
+"home": "Pittsburgh Steelers",
+"away": "Atlanta Falcons",
+"homeColor": "#FFB612",
+"awayColor": "#A71930",
+"current_context": {
+"key_news": [
+"MyBookie board shows Pittsburgh -3 at -110.",
+"The broader market remains centered around Steelers -3.",
+"Aaron Rodgers is Pittsburgh's established starting quarterback.",
+"Atlanta's quarterback competition remains unresolved between Tua Tagovailoa and Michael Penix Jr."
+],
+"injuries": [
+"Michael Penix Jr. is returning from ACL surgery and only recently returned to full-team work.",
+"Atlanta's quarterback uncertainty remains the most important personnel variable."
+],
+"starter_status": [
+"Aaron Rodgers is Pittsburgh's QB1.",
+"Atlanta has not established the same level of Week 1 quarterback certainty."
+],
+"coaching_notes": [
+"Mike McCarthy begins his first season as Steelers head coach.",
+"Kevin Stefanski begins his first season as Falcons head coach."
+],
+"situational_edge": [
+"Pittsburgh is at home.",
+"The Steelers have materially greater certainty at quarterback entering Week 1."
+]
+}
+},
+{
+"matchup": "Cincinnati Bengals vs Tampa Bay Buccaneers",
+"pick": "Cincinnati Bengals -4",
+"line": "-110",
+"type": "spread",
+"confidence": 3,
+"buzz_score": 4,
+"analysis": "Cincinnati stays on the preferred side, but the Ja'Marr Chase injury keeps this below the top confidence tier. Chase hyperextended his knee in practice but subsequently said he could have played if there had been a game, making the initial concern appear less severe. Joe Burrow is healthy and Cincinnati still owns the superior quarterback-receiver combination with Chase and Tee Higgins. Tampa Bay has a capable Baker Mayfield-led offense, but Cincinnati's home-field edge and offensive ceiling make -4 playable as long as Chase remains on track for Week 1.",
+"home": "Cincinnati Bengals",
+"away": "Tampa Bay Buccaneers",
+"homeColor": "#FB4F14",
+"awayColor": "#D50A0A",
+"current_context": {
+"key_news": [
+"MyBookie board shows Cincinnati -4 at -110.",
+"Cincinnati finished the preseason unbeaten.",
+"Joe Burrow is healthy and enters the season as the Bengals' QB1.",
+"Ja'Marr Chase downplayed his recent knee injury and indicated he could have played shortly after suffering it."
+],
+"injuries": [
+"Ja'Marr Chase's hyperextended knee remains the primary Cincinnati injury variable.",
+"Chase's comments have reduced concern about a major injury, but his final Week 1 status should still be monitored."
+],
+"starter_status": [
+"Joe Burrow is Cincinnati's QB1.",
+"Baker Mayfield is Tampa Bay's QB1."
+],
+"coaching_notes": [
+"Zac Taylor remains Cincinnati head coach.",
+"Todd Bowles remains Tampa Bay head coach."
+],
+"situational_edge": [
+"Cincinnati has home-field advantage.",
+"The Bengals have the stronger established quarterback and top-end passing-game combination."
+]
+}
+}
+]
+}
