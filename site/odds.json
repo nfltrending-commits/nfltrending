@@ -1,519 +1,514 @@
-{
-  "generated": "2026-08-31T16:27:48.433Z",
-  "week": "Week 1 \u2014 2026 NFL Season",
-  "source": "MyBookie board supplied by user; Broncos-Chiefs completed from current MyBookie listing",
-  "games": [
-    {
-      "week": 1,
-      "season": 2026,
-      "date": "2026-09-09",
-      "time": "8:20 PM",
-      "away": "New England Patriots",
-      "home": "Seattle Seahawks",
-      "spread": {
-        "New England Patriots": {
-          "line": "+3.5",
-          "odds": "-110"
-        },
-        "Seattle Seahawks": {
-          "line": "-3.5",
-          "odds": "-110"
-        }
+[
+  {
+    "week": 1,
+    "season": 2026,
+    "date": "2026-09-09",
+    "time": "8:20 PM",
+    "away": "New England Patriots",
+    "home": "Seattle Seahawks",
+    "spread": {
+      "New England Patriots": {
+        "line": "+3.5",
+        "odds": "-110"
       },
-      "moneyline": {
-        "New England Patriots": "+150",
-        "Seattle Seahawks": "-195"
-      },
-      "total": {
-        "over": {
-          "line": "44",
-          "odds": "-110"
-        },
-        "under": {
-          "line": "44",
-          "odds": "-110"
-        }
+      "Seattle Seahawks": {
+        "line": "-3.5",
+        "odds": "-110"
       }
     },
-    {
-      "week": 1,
-      "season": 2026,
-      "date": "2026-09-10",
-      "time": "8:35 PM",
-      "away": "San Francisco 49ers",
-      "home": "Los Angeles Rams",
-      "spread": {
-        "San Francisco 49ers": {
-          "line": "+3.5",
-          "odds": "-110"
-        },
-        "Los Angeles Rams": {
-          "line": "-3.5",
-          "odds": "-110"
-        }
-      },
-      "moneyline": {
-        "San Francisco 49ers": "+158",
-        "Los Angeles Rams": "-206"
-      },
-      "total": {
-        "over": {
-          "line": "48.5",
-          "odds": "-110"
-        },
-        "under": {
-          "line": "48.5",
-          "odds": "-110"
-        }
-      }
+    "moneyline": {
+      "New England Patriots": "+150",
+      "Seattle Seahawks": "-195"
     },
-    {
-      "week": 1,
-      "season": 2026,
-      "date": "2026-09-13",
-      "time": "1:00 PM",
-      "away": "New Orleans Saints",
-      "home": "Detroit Lions",
-      "spread": {
-        "New Orleans Saints": {
-          "line": "+7",
-          "odds": "-110"
-        },
-        "Detroit Lions": {
-          "line": "-7",
-          "odds": "-110"
-        }
+    "total": {
+      "over": {
+        "line": "44",
+        "odds": "-110"
       },
-      "moneyline": {
-        "New Orleans Saints": "+242",
-        "Detroit Lions": "-330"
-      },
-      "total": {
-        "over": {
-          "line": "50",
-          "odds": "-110"
-        },
-        "under": {
-          "line": "50",
-          "odds": "-110"
-        }
-      }
-    },
-    {
-      "week": 1,
-      "season": 2026,
-      "date": "2026-09-13",
-      "time": "1:00 PM",
-      "away": "Baltimore Ravens",
-      "home": "Indianapolis Colts",
-      "spread": {
-        "Baltimore Ravens": {
-          "line": "-3.5",
-          "odds": "-110"
-        },
-        "Indianapolis Colts": {
-          "line": "+3.5",
-          "odds": "-110"
-        }
-      },
-      "moneyline": {
-        "Baltimore Ravens": "-190",
-        "Indianapolis Colts": "+147"
-      },
-      "total": {
-        "over": {
-          "line": "48",
-          "odds": "-110"
-        },
-        "under": {
-          "line": "48",
-          "odds": "-110"
-        }
-      }
-    },
-    {
-      "week": 1,
-      "season": 2026,
-      "date": "2026-09-13",
-      "time": "1:00 PM",
-      "away": "Cleveland Browns",
-      "home": "Jacksonville Jaguars",
-      "spread": {
-        "Cleveland Browns": {
-          "line": "+8",
-          "odds": "-110"
-        },
-        "Jacksonville Jaguars": {
-          "line": "-8",
-          "odds": "-110"
-        }
-      },
-      "moneyline": {
-        "Cleveland Browns": "+300",
-        "Jacksonville Jaguars": "-429"
-      },
-      "total": {
-        "over": {
-          "line": "40.5",
-          "odds": "-110"
-        },
-        "under": {
-          "line": "40.5",
-          "odds": "-110"
-        }
-      }
-    },
-    {
-      "week": 1,
-      "season": 2026,
-      "date": "2026-09-13",
-      "time": "1:00 PM",
-      "away": "Chicago Bears",
-      "home": "Carolina Panthers",
-      "spread": {
-        "Chicago Bears": {
-          "line": "-3",
-          "odds": "-110"
-        },
-        "Carolina Panthers": {
-          "line": "+3",
-          "odds": "-110"
-        }
-      },
-      "moneyline": {
-        "Chicago Bears": "-159",
-        "Carolina Panthers": "+124"
-      },
-      "total": {
-        "over": {
-          "line": "47.5",
-          "odds": "-110"
-        },
-        "under": {
-          "line": "47.5",
-          "odds": "-110"
-        }
-      }
-    },
-    {
-      "week": 1,
-      "season": 2026,
-      "date": "2026-09-13",
-      "time": "1:00 PM",
-      "away": "Tampa Bay Buccaneers",
-      "home": "Cincinnati Bengals",
-      "spread": {
-        "Tampa Bay Buccaneers": {
-          "line": "+4",
-          "odds": "-110"
-        },
-        "Cincinnati Bengals": {
-          "line": "-4",
-          "odds": "-110"
-        }
-      },
-      "moneyline": {
-        "Tampa Bay Buccaneers": "+163",
-        "Cincinnati Bengals": "-212"
-      },
-      "total": {
-        "over": {
-          "line": "51",
-          "odds": "-110"
-        },
-        "under": {
-          "line": "51",
-          "odds": "-110"
-        }
-      }
-    },
-    {
-      "week": 1,
-      "season": 2026,
-      "date": "2026-09-13",
-      "time": "1:00 PM",
-      "away": "New York Jets",
-      "home": "Tennessee Titans",
-      "spread": {
-        "New York Jets": {
-          "line": "+2.5",
-          "odds": "-110"
-        },
-        "Tennessee Titans": {
-          "line": "-2.5",
-          "odds": "-110"
-        }
-      },
-      "moneyline": {
-        "New York Jets": "+116",
-        "Tennessee Titans": "-148"
-      },
-      "total": {
-        "over": {
-          "line": "39.5",
-          "odds": "-110"
-        },
-        "under": {
-          "line": "39.5",
-          "odds": "-110"
-        }
-      }
-    },
-    {
-      "week": 1,
-      "season": 2026,
-      "date": "2026-09-13",
-      "time": "1:00 PM",
-      "away": "Buffalo Bills",
-      "home": "Houston Texans",
-      "spread": {
-        "Buffalo Bills": {
-          "line": null,
-          "odds": null
-        },
-        "Houston Texans": {
-          "line": null,
-          "odds": null
-        }
-      },
-      "moneyline": {
-        "Buffalo Bills": "-115",
-        "Houston Texans": "-111"
-      },
-      "total": {
-        "over": {
-          "line": "44.5",
-          "odds": "-110"
-        },
-        "under": {
-          "line": "44.5",
-          "odds": "-110"
-        }
-      }
-    },
-    {
-      "week": 1,
-      "season": 2026,
-      "date": "2026-09-13",
-      "time": "1:00 PM",
-      "away": "Atlanta Falcons",
-      "home": "Pittsburgh Steelers",
-      "spread": {
-        "Atlanta Falcons": {
-          "line": "+3",
-          "odds": "-110"
-        },
-        "Pittsburgh Steelers": {
-          "line": "-3",
-          "odds": "-110"
-        }
-      },
-      "moneyline": {
-        "Atlanta Falcons": "+134",
-        "Pittsburgh Steelers": "-172"
-      },
-      "total": {
-        "over": {
-          "line": "42.5",
-          "odds": "-110"
-        },
-        "under": {
-          "line": "42.5",
-          "odds": "-110"
-        }
-      }
-    },
-    {
-      "week": 1,
-      "season": 2026,
-      "date": "2026-09-13",
-      "time": "4:25 PM",
-      "away": "Green Bay Packers",
-      "home": "Minnesota Vikings",
-      "spread": {
-        "Green Bay Packers": {
-          "line": "+1.5",
-          "odds": "-110"
-        },
-        "Minnesota Vikings": {
-          "line": "-1.5",
-          "odds": "-110"
-        }
-      },
-      "moneyline": {
-        "Green Bay Packers": "-103",
-        "Minnesota Vikings": "-123"
-      },
-      "total": {
-        "over": {
-          "line": "45.5",
-          "odds": "-110"
-        },
-        "under": {
-          "line": "45.5",
-          "odds": "-110"
-        }
-      }
-    },
-    {
-      "week": 1,
-      "season": 2026,
-      "date": "2026-09-13",
-      "time": "4:25 PM",
-      "away": "Arizona Cardinals",
-      "home": "Los Angeles Chargers",
-      "spread": {
-        "Arizona Cardinals": {
-          "line": "+10.5",
-          "odds": "-110"
-        },
-        "Los Angeles Chargers": {
-          "line": "-10.5",
-          "odds": "-110"
-        }
-      },
-      "moneyline": {
-        "Arizona Cardinals": "+380",
-        "Los Angeles Chargers": "-575"
-      },
-      "total": {
-        "over": {
-          "line": "47.5",
-          "odds": "-110"
-        },
-        "under": {
-          "line": "47.5",
-          "odds": "-110"
-        }
-      }
-    },
-    {
-      "week": 1,
-      "season": 2026,
-      "date": "2026-09-13",
-      "time": "4:25 PM",
-      "away": "Washington Commanders",
-      "home": "Philadelphia Eagles",
-      "spread": {
-        "Washington Commanders": {
-          "line": "+4.5",
-          "odds": "-110"
-        },
-        "Philadelphia Eagles": {
-          "line": "-4.5",
-          "odds": "-110"
-        }
-      },
-      "moneyline": {
-        "Washington Commanders": "+179",
-        "Philadelphia Eagles": "-234"
-      },
-      "total": {
-        "over": {
-          "line": "46",
-          "odds": "-110"
-        },
-        "under": {
-          "line": "46",
-          "odds": "-110"
-        }
-      }
-    },
-    {
-      "week": 1,
-      "season": 2026,
-      "date": "2026-09-13",
-      "time": "4:25 PM",
-      "away": "Miami Dolphins",
-      "home": "Las Vegas Raiders",
-      "spread": {
-        "Miami Dolphins": {
-          "line": "+3.5",
-          "odds": "-110"
-        },
-        "Las Vegas Raiders": {
-          "line": "-3.5",
-          "odds": "-110"
-        }
-      },
-      "moneyline": {
-        "Miami Dolphins": "+158",
-        "Las Vegas Raiders": "-204"
-      },
-      "total": {
-        "over": {
-          "line": "40.5",
-          "odds": "-110"
-        },
-        "under": {
-          "line": "40.5",
-          "odds": "-110"
-        }
-      }
-    },
-    {
-      "week": 1,
-      "season": 2026,
-      "date": "2026-09-13",
-      "time": "8:20 PM",
-      "away": "Dallas Cowboys",
-      "home": "New York Giants",
-      "spread": {
-        "Dallas Cowboys": {
-          "line": "-2.5",
-          "odds": "-110"
-        },
-        "New York Giants": {
-          "line": "+2.5",
-          "odds": "-110"
-        }
-      },
-      "moneyline": {
-        "Dallas Cowboys": "-167",
-        "New York Giants": "+130"
-      },
-      "total": {
-        "over": {
-          "line": "48.5",
-          "odds": "-110"
-        },
-        "under": {
-          "line": "48.5",
-          "odds": "-110"
-        }
-      }
-    },
-    {
-      "week": 1,
-      "season": 2026,
-      "date": "2026-09-14",
-      "time": "8:15 PM",
-      "away": "Denver Broncos",
-      "home": "Kansas City Chiefs",
-      "spread": {
-        "Denver Broncos": {
-          "line": "+2.5",
-          "odds": "-110"
-        },
-        "Kansas City Chiefs": {
-          "line": "-2.5",
-          "odds": "-110"
-        }
-      },
-      "moneyline": {
-        "Denver Broncos": "+118",
-        "Kansas City Chiefs": "-151"
-      },
-      "total": {
-        "over": {
-          "line": "43",
-          "odds": "-110"
-        },
-        "under": {
-          "line": "43",
-          "odds": "-110"
-        }
+      "under": {
+        "line": "44",
+        "odds": "-110"
       }
     }
-  ]
-}
+  },
+  {
+    "week": 1,
+    "season": 2026,
+    "date": "2026-09-10",
+    "time": "8:35 PM",
+    "away": "San Francisco 49ers",
+    "home": "Los Angeles Rams",
+    "spread": {
+      "San Francisco 49ers": {
+        "line": "+3.5",
+        "odds": "-110"
+      },
+      "Los Angeles Rams": {
+        "line": "-3.5",
+        "odds": "-110"
+      }
+    },
+    "moneyline": {
+      "San Francisco 49ers": "+158",
+      "Los Angeles Rams": "-206"
+    },
+    "total": {
+      "over": {
+        "line": "48.5",
+        "odds": "-110"
+      },
+      "under": {
+        "line": "48.5",
+        "odds": "-110"
+      }
+    }
+  },
+  {
+    "week": 1,
+    "season": 2026,
+    "date": "2026-09-13",
+    "time": "1:00 PM",
+    "away": "New Orleans Saints",
+    "home": "Detroit Lions",
+    "spread": {
+      "New Orleans Saints": {
+        "line": "+7",
+        "odds": "-110"
+      },
+      "Detroit Lions": {
+        "line": "-7",
+        "odds": "-110"
+      }
+    },
+    "moneyline": {
+      "New Orleans Saints": "+242",
+      "Detroit Lions": "-330"
+    },
+    "total": {
+      "over": {
+        "line": "50",
+        "odds": "-110"
+      },
+      "under": {
+        "line": "50",
+        "odds": "-110"
+      }
+    }
+  },
+  {
+    "week": 1,
+    "season": 2026,
+    "date": "2026-09-13",
+    "time": "1:00 PM",
+    "away": "Baltimore Ravens",
+    "home": "Indianapolis Colts",
+    "spread": {
+      "Baltimore Ravens": {
+        "line": "-3.5",
+        "odds": "-110"
+      },
+      "Indianapolis Colts": {
+        "line": "+3.5",
+        "odds": "-110"
+      }
+    },
+    "moneyline": {
+      "Baltimore Ravens": "-190",
+      "Indianapolis Colts": "+147"
+    },
+    "total": {
+      "over": {
+        "line": "48",
+        "odds": "-110"
+      },
+      "under": {
+        "line": "48",
+        "odds": "-110"
+      }
+    }
+  },
+  {
+    "week": 1,
+    "season": 2026,
+    "date": "2026-09-13",
+    "time": "1:00 PM",
+    "away": "Cleveland Browns",
+    "home": "Jacksonville Jaguars",
+    "spread": {
+      "Cleveland Browns": {
+        "line": "+8",
+        "odds": "-110"
+      },
+      "Jacksonville Jaguars": {
+        "line": "-8",
+        "odds": "-110"
+      }
+    },
+    "moneyline": {
+      "Cleveland Browns": "+300",
+      "Jacksonville Jaguars": "-429"
+    },
+    "total": {
+      "over": {
+        "line": "40.5",
+        "odds": "-110"
+      },
+      "under": {
+        "line": "40.5",
+        "odds": "-110"
+      }
+    }
+  },
+  {
+    "week": 1,
+    "season": 2026,
+    "date": "2026-09-13",
+    "time": "1:00 PM",
+    "away": "Chicago Bears",
+    "home": "Carolina Panthers",
+    "spread": {
+      "Chicago Bears": {
+        "line": "-3",
+        "odds": "-110"
+      },
+      "Carolina Panthers": {
+        "line": "+3",
+        "odds": "-110"
+      }
+    },
+    "moneyline": {
+      "Chicago Bears": "-159",
+      "Carolina Panthers": "+124"
+    },
+    "total": {
+      "over": {
+        "line": "47.5",
+        "odds": "-110"
+      },
+      "under": {
+        "line": "47.5",
+        "odds": "-110"
+      }
+    }
+  },
+  {
+    "week": 1,
+    "season": 2026,
+    "date": "2026-09-13",
+    "time": "1:00 PM",
+    "away": "Tampa Bay Buccaneers",
+    "home": "Cincinnati Bengals",
+    "spread": {
+      "Tampa Bay Buccaneers": {
+        "line": "+4",
+        "odds": "-110"
+      },
+      "Cincinnati Bengals": {
+        "line": "-4",
+        "odds": "-110"
+      }
+    },
+    "moneyline": {
+      "Tampa Bay Buccaneers": "+163",
+      "Cincinnati Bengals": "-212"
+    },
+    "total": {
+      "over": {
+        "line": "51",
+        "odds": "-110"
+      },
+      "under": {
+        "line": "51",
+        "odds": "-110"
+      }
+    }
+  },
+  {
+    "week": 1,
+    "season": 2026,
+    "date": "2026-09-13",
+    "time": "1:00 PM",
+    "away": "New York Jets",
+    "home": "Tennessee Titans",
+    "spread": {
+      "New York Jets": {
+        "line": "+2.5",
+        "odds": "-110"
+      },
+      "Tennessee Titans": {
+        "line": "-2.5",
+        "odds": "-110"
+      }
+    },
+    "moneyline": {
+      "New York Jets": "+116",
+      "Tennessee Titans": "-148"
+    },
+    "total": {
+      "over": {
+        "line": "39.5",
+        "odds": "-110"
+      },
+      "under": {
+        "line": "39.5",
+        "odds": "-110"
+      }
+    }
+  },
+  {
+    "week": 1,
+    "season": 2026,
+    "date": "2026-09-13",
+    "time": "1:00 PM",
+    "away": "Buffalo Bills",
+    "home": "Houston Texans",
+    "spread": {
+      "Buffalo Bills": {
+        "line": null,
+        "odds": null
+      },
+      "Houston Texans": {
+        "line": null,
+        "odds": null
+      }
+    },
+    "moneyline": {
+      "Buffalo Bills": "-115",
+      "Houston Texans": "-111"
+    },
+    "total": {
+      "over": {
+        "line": "44.5",
+        "odds": "-110"
+      },
+      "under": {
+        "line": "44.5",
+        "odds": "-110"
+      }
+    }
+  },
+  {
+    "week": 1,
+    "season": 2026,
+    "date": "2026-09-13",
+    "time": "1:00 PM",
+    "away": "Atlanta Falcons",
+    "home": "Pittsburgh Steelers",
+    "spread": {
+      "Atlanta Falcons": {
+        "line": "+3",
+        "odds": "-110"
+      },
+      "Pittsburgh Steelers": {
+        "line": "-3",
+        "odds": "-110"
+      }
+    },
+    "moneyline": {
+      "Atlanta Falcons": "+134",
+      "Pittsburgh Steelers": "-172"
+    },
+    "total": {
+      "over": {
+        "line": "42.5",
+        "odds": "-110"
+      },
+      "under": {
+        "line": "42.5",
+        "odds": "-110"
+      }
+    }
+  },
+  {
+    "week": 1,
+    "season": 2026,
+    "date": "2026-09-13",
+    "time": "4:25 PM",
+    "away": "Green Bay Packers",
+    "home": "Minnesota Vikings",
+    "spread": {
+      "Green Bay Packers": {
+        "line": "+1.5",
+        "odds": "-110"
+      },
+      "Minnesota Vikings": {
+        "line": "-1.5",
+        "odds": "-110"
+      }
+    },
+    "moneyline": {
+      "Green Bay Packers": "-103",
+      "Minnesota Vikings": "-123"
+    },
+    "total": {
+      "over": {
+        "line": "45.5",
+        "odds": "-110"
+      },
+      "under": {
+        "line": "45.5",
+        "odds": "-110"
+      }
+    }
+  },
+  {
+    "week": 1,
+    "season": 2026,
+    "date": "2026-09-13",
+    "time": "4:25 PM",
+    "away": "Arizona Cardinals",
+    "home": "Los Angeles Chargers",
+    "spread": {
+      "Arizona Cardinals": {
+        "line": "+10.5",
+        "odds": "-110"
+      },
+      "Los Angeles Chargers": {
+        "line": "-10.5",
+        "odds": "-110"
+      }
+    },
+    "moneyline": {
+      "Arizona Cardinals": "+380",
+      "Los Angeles Chargers": "-575"
+    },
+    "total": {
+      "over": {
+        "line": "47.5",
+        "odds": "-110"
+      },
+      "under": {
+        "line": "47.5",
+        "odds": "-110"
+      }
+    }
+  },
+  {
+    "week": 1,
+    "season": 2026,
+    "date": "2026-09-13",
+    "time": "4:25 PM",
+    "away": "Washington Commanders",
+    "home": "Philadelphia Eagles",
+    "spread": {
+      "Washington Commanders": {
+        "line": "+4.5",
+        "odds": "-110"
+      },
+      "Philadelphia Eagles": {
+        "line": "-4.5",
+        "odds": "-110"
+      }
+    },
+    "moneyline": {
+      "Washington Commanders": "+179",
+      "Philadelphia Eagles": "-234"
+    },
+    "total": {
+      "over": {
+        "line": "46",
+        "odds": "-110"
+      },
+      "under": {
+        "line": "46",
+        "odds": "-110"
+      }
+    }
+  },
+  {
+    "week": 1,
+    "season": 2026,
+    "date": "2026-09-13",
+    "time": "4:25 PM",
+    "away": "Miami Dolphins",
+    "home": "Las Vegas Raiders",
+    "spread": {
+      "Miami Dolphins": {
+        "line": "+3.5",
+        "odds": "-110"
+      },
+      "Las Vegas Raiders": {
+        "line": "-3.5",
+        "odds": "-110"
+      }
+    },
+    "moneyline": {
+      "Miami Dolphins": "+158",
+      "Las Vegas Raiders": "-204"
+    },
+    "total": {
+      "over": {
+        "line": "40.5",
+        "odds": "-110"
+      },
+      "under": {
+        "line": "40.5",
+        "odds": "-110"
+      }
+    }
+  },
+  {
+    "week": 1,
+    "season": 2026,
+    "date": "2026-09-13",
+    "time": "8:20 PM",
+    "away": "Dallas Cowboys",
+    "home": "New York Giants",
+    "spread": {
+      "Dallas Cowboys": {
+        "line": "-2.5",
+        "odds": "-110"
+      },
+      "New York Giants": {
+        "line": "+2.5",
+        "odds": "-110"
+      }
+    },
+    "moneyline": {
+      "Dallas Cowboys": "-167",
+      "New York Giants": "+130"
+    },
+    "total": {
+      "over": {
+        "line": "48.5",
+        "odds": "-110"
+      },
+      "under": {
+        "line": "48.5",
+        "odds": "-110"
+      }
+    }
+  },
+  {
+    "week": 1,
+    "season": 2026,
+    "date": "2026-09-14",
+    "time": "8:15 PM",
+    "away": "Denver Broncos",
+    "home": "Kansas City Chiefs",
+    "spread": {
+      "Denver Broncos": {
+        "line": "+2.5",
+        "odds": "-110"
+      },
+      "Kansas City Chiefs": {
+        "line": "-2.5",
+        "odds": "-110"
+      }
+    },
+    "moneyline": {
+      "Denver Broncos": "+118",
+      "Kansas City Chiefs": "-151"
+    },
+    "total": {
+      "over": {
+        "line": "43",
+        "odds": "-110"
+      },
+      "under": {
+        "line": "43",
+        "odds": "-110"
+      }
+    }
+  }
+]
