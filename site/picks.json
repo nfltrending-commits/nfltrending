@@ -1,1 +1,106 @@
-{"generated":"2026-09-15T23:58:12.655Z","week":"Preseason Week 3 — 2026 NFL Season","picks":[{"matchup":"New York Jets vs Green Bay Packers","pick":"Green Bay Packers -3.5","line":"-110","type":"spread","confidence":4,"buzz_score":5,"analysis":"The Packers are set to face the Jets at home. With the Packers' defense showing consistent performance against opposing QBs, they are favored by 3.5 points. The Jets' notable coaching change with Aaron Glenn might present some acclimation challenges, giving the Packers a strategic edge in this regular season matchup.","home":"Green Bay Packers","away":"New York Jets","homeColor":"#hex","awayColor":"#hex","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Baltimore Ravens vs New Orleans Saints","pick":"Baltimore Ravens -8.5","line":"-110","type":"spread","confidence":3,"buzz_score":4,"analysis":"The Ravens are facing the Saints at home, with Jesse Minter at the helm as their new head coach. The Saints' struggles are compounded by the current learning curve under Kellen Moore, putting them at a disadvantage. The Ravens are a robust favorite, setting a line at -8.5 points, intensified by their strong opener showing in Week 1.","home":"Baltimore Ravens","away":"New Orleans Saints","homeColor":"#hex","awayColor":"#hex","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Houston Texans vs Cincinnati Bengals","pick":"Houston Texans ML","line":"-155","type":"moneyline","confidence":3,"buzz_score":4,"analysis":"The Texans, under the leadership of DeMeco Ryans, are hosting the Bengals. The Texans open as favorites with a moneyline of -155, building on their defensive prowess. Although the Bengals have Zac Taylor, this game looks poised to showcase the Texans' home-field advantages.","home":"Houston Texans","away":"Cincinnati Bengals","homeColor":"#hex","awayColor":"#hex","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Denver Broncos vs Jacksonville Jaguars","pick":"Jacksonville Jaguars +2.5","line":"-110","type":"spread","confidence":3,"buzz_score":3,"analysis":"The Jaguars visit the Broncos, encountering Sean Payton and his strategic offensive structure at the Broncos. However, the Jaguars, led by Liam Coen, have gained momentum with playmaking capabilities. They are positioned at +2.5, which could capitalize on any openings from the developing Broncos' gameplay harmony.","home":"Denver Broncos","away":"Jacksonville Jaguars","homeColor":"#hex","awayColor":"#hex","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}}]}
+{
+  "generated": "2026-09-15T18:07:00-06:00",
+  "week": "Week 2 \u2014 2026 NFL Season",
+  "picks": [
+    {
+      "matchup": "Detroit Lions vs Buffalo Bills",
+      "pick": "Buffalo Bills -4.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "buzz_score": 5,
+      "analysis": "Thursday night gives us one of Week 2's biggest spots: two 1-0 teams and Buffalo's first regular-season game in the new Highmark Stadium. Buffalo scored 36 in its opener despite possessing the ball for under 24 minutes. Detroit needed overtime to escape New Orleans. The number is meaningful at -4.5, but Buffalo's explosive offense, home-field energy and prime-time stadium debut make the Bills our preferred side.",
+      "home": "Buffalo Bills",
+      "away": "Detroit Lions",
+      "homeColor": "#hex",
+      "awayColor": "#hex",
+      "current_context": {
+        "key_news": [],
+        "injuries": [],
+        "starter_status": [],
+        "coaching_notes": [],
+        "situational_edge": []
+      }
+    },
+    {
+      "matchup": "New York Jets vs Green Bay Packers",
+      "pick": "Green Bay Packers -3.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 3,
+      "buzz_score": 4,
+      "analysis": "Green Bay produced 419 yards in its opener despite losing, while New York comes home after beating Tennessee. The Jets are dealing with a significant secondary absence, with Minkah Fitzpatrick expected to miss time. The hook above a field goal keeps this from being a top-confidence play, but Green Bay's offensive output keeps us on Packers -3.5.",
+      "home": "New York Jets",
+      "away": "Green Bay Packers",
+      "homeColor": "#hex",
+      "awayColor": "#hex",
+      "current_context": {
+        "key_news": [],
+        "injuries": [],
+        "starter_status": [],
+        "coaching_notes": [],
+        "situational_edge": []
+      }
+    },
+    {
+      "matchup": "Baltimore Ravens vs New Orleans Saints",
+      "pick": "Baltimore Ravens -8.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 3,
+      "buzz_score": 4,
+      "analysis": "Baltimore opened with a 41-23 win and more than 500 yards of offense, but New Orleans showed more resistance than this spread suggests in a 31-30 overtime loss to Detroit. Zay Flowers' hamstring situation also deserves monitoring. Baltimore remains the side, but -8.5 is expensive enough to keep this below top confidence.",
+      "home": "Baltimore Ravens",
+      "away": "New Orleans Saints",
+      "homeColor": "#hex",
+      "awayColor": "#hex",
+      "current_context": {
+        "key_news": [],
+        "injuries": [],
+        "starter_status": [],
+        "coaching_notes": [],
+        "situational_edge": []
+      }
+    },
+    {
+      "matchup": "Jacksonville Jaguars vs Denver Broncos",
+      "pick": "Jacksonville Jaguars +2.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "buzz_score": 4,
+      "analysis": "Jacksonville enters Week 2 after Trevor Lawrence threw four touchdown passes in the opener, while Denver is laying 2.5 at home on a shorter turnaround after Monday night. The Jaguars are getting nearly a field goal in a matchup we expect to stay competitive. At +2.5 Jacksonville is our value side; +3 would materially improve the entry.",
+      "home": "Denver Broncos",
+      "away": "Jacksonville Jaguars",
+      "homeColor": "#hex",
+      "awayColor": "#hex",
+      "current_context": {
+        "key_news": [],
+        "injuries": [],
+        "starter_status": [],
+        "coaching_notes": [],
+        "situational_edge": []
+      }
+    },
+    {
+      "matchup": "Cincinnati Bengals vs Houston Texans",
+      "pick": "Cincinnati Bengals +3",
+      "line": "-120",
+      "type": "spread",
+      "confidence": 4,
+      "buzz_score": 4,
+      "analysis": "We are flipping the original Houston moneyline recommendation. Cincinnati enters 1-0 and comparatively healthy, while Houston has multiple linebacker injuries layered on top of players already on injured reserve. Houston still owns a dangerous pass rush, but getting a full field goal with Cincinnati is more attractive than laying -155 on Houston.",
+      "home": "Houston Texans",
+      "away": "Cincinnati Bengals",
+      "homeColor": "#hex",
+      "awayColor": "#hex",
+      "current_context": {
+        "key_news": [],
+        "injuries": [],
+        "starter_status": [],
+        "coaching_notes": [],
+        "situational_edge": []
+      }
+    }
+  ]
+}
