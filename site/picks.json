@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T13:19:00-06:00",
+  "generated": "2026-09-17T14:48:00-06:00",
   "week": "Week 2 — 2026 NFL Season",
   "picks": [
     {
@@ -9,7 +9,7 @@
       "type": "spread",
       "confidence": 4,
       "buzz_score": 5,
-      "analysis": "Our Buffalo position has strengthened since the card was first built. We locked in Bills -4.5, and the market has since moved toward Buffalo, with -5 to -5.5 appearing elsewhere. That gives our published number real value before kickoff. Detroit also enters Thursday night with offensive-line concerns, while Buffalo gets the emotion of its first regular-season game in the new Highmark Stadium. Both teams are 1-0, so this already had prime-time appeal; the line movement gives us an even better angle. We’re staying with Buffalo -4.5, but we’d be more cautious chasing the Bills if the available number climbs beyond our original line.",
+      "analysis": "We locked Buffalo -4.5 earlier in the week, and the current MyBookie market is now Buffalo -5.5 (-110). That full-point move toward our side gives the published NFLTrending number clear closing-line value before kickoff. Detroit also enters Thursday night with offensive-line concerns, while Buffalo gets the emotion of its first regular-season game in the new Highmark Stadium. We are keeping the official NFLTrending pick recorded at Bills -4.5; bettors arriving now should note that the available market is -5.5, a less favorable entry than our published number.",
       "home": "Buffalo Bills",
       "away": "Detroit Lions",
       "homeColor": "#hex",
@@ -20,7 +20,11 @@
         "starter_status": [],
         "coaching_notes": [],
         "situational_edge": []
-      }
+      },
+      "published_pick": "Buffalo Bills -4.5",
+      "published_line": "-110",
+      "current_pick": "Buffalo Bills -5.5",
+      "current_line": "-110"
     },
     {
       "matchup": "New York Jets vs Green Bay Packers",
@@ -29,7 +33,7 @@
       "type": "spread",
       "confidence": 3,
       "buzz_score": 4,
-      "analysis": "We’re still backing Green Bay, with the Jets’ secondary situation reinforcing the matchup angle we identified earlier in the week. The Packers produced 419 yards in their opener, and New York enters this game with important defensive availability concerns. The hesitation remains the number: -3.5 forces Green Bay to clear the key field-goal margin on the road. Packers -3.5 stays on the board, but this is a solid supporting pick rather than one we want to headline.",
+      "analysis": "We’re still backing Green Bay, with the Jets’ secondary situation reinforcing the matchup angle we identified earlier in the week. The Packers produced 419 yards in their opener, and New York enters this game with important defensive availability concerns. The hesitation remains the number: -3.5 forces Green Bay to clear the key field-goal margin on the road. Packers -3.5 stays on the board, and the current MyBookie price has improved to +100, but this is a solid supporting pick rather than one we want to headline.",
       "home": "New York Jets",
       "away": "Green Bay Packers",
       "homeColor": "#hex",
@@ -40,7 +44,11 @@
         "starter_status": [],
         "coaching_notes": [],
         "situational_edge": []
-      }
+      },
+      "published_pick": "Green Bay Packers -3.5",
+      "published_line": "-110",
+      "current_pick": "Green Bay Packers -3.5",
+      "current_line": "+100"
     },
     {
       "matchup": "Baltimore Ravens vs New Orleans Saints",
@@ -60,7 +68,11 @@
         "starter_status": [],
         "coaching_notes": [],
         "situational_edge": []
-      }
+      },
+      "published_pick": "Baltimore Ravens -8.5",
+      "published_line": "-110",
+      "current_pick": "Baltimore Ravens -8.5",
+      "current_line": "-110"
     },
     {
       "matchup": "Jacksonville Jaguars vs Denver Broncos",
@@ -80,7 +92,11 @@
         "starter_status": [],
         "coaching_notes": [],
         "situational_edge": []
-      }
+      },
+      "published_pick": "Jacksonville Jaguars +2.5",
+      "published_line": "-110",
+      "current_pick": "Jacksonville Jaguars +2.5",
+      "current_line": "-110"
     },
     {
       "matchup": "Cincinnati Bengals vs Houston Texans",
@@ -100,7 +116,12 @@
         "starter_status": [],
         "coaching_notes": [],
         "situational_edge": []
-      }
+      },
+      "published_pick": "Cincinnati Bengals +3",
+      "published_line": "-120",
+      "current_pick": "Cincinnati Bengals +3",
+      "current_line": "-120"
     }
-  ]
+  ],
+  "odds_snapshot": "MyBookie lines supplied Sep 17, 2026"
 }
