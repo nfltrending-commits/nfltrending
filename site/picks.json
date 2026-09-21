@@ -1,1 +1,203 @@
-{"generated":"2026-09-21T19:49:37.400Z","week":"Preseason Week 3 — 2026 NFL Season","picks":[{"matchup":"Cleveland Browns vs Carolina Panthers","pick":"Carolina Panthers -3","line":"-110","type":"spread","confidence":4,"buzz_score":5,"analysis":"With the Panthers favored by three points, they look to leverage home field advantage under new head coach Dave Canales. The Panthers have shown resilience after a 2-0 start, while the Browns under Todd Monken deal with potential lineup adjustments as the season progresses. Expect the Panthers to maintain their solid form.","home":"Cleveland Browns","away":"Carolina Panthers","homeColor":"#hex","awayColor":"#hex","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Minnesota Vikings vs Tampa Bay Buccaneers","pick":"Minnesota Vikings","line":"-134","type":"moneyline","confidence":4,"buzz_score":4,"analysis":"Kyler Murray's return adds a significant boost to the Vikings as they prepare to face the Buccaneers. Murray cleared concussion protocol and is set to start, which is vital for their offensive capability. Kevin O'Connell's side will aim to capitalize on their QB's return to clinch the win.","home":"Tampa Bay Buccaneers","away":"Minnesota Vikings","homeColor":"#hex","awayColor":"#hex","current_context":{"key_news":[],"injuries":["Vikings quarterback Kyler Murray has cleared the concussion protocol and will start Sunday's game at the Buccaneers."],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"New Orleans Saints vs Las Vegas Raiders","pick":"Under 43.5","line":"-110","type":"total","confidence":3,"buzz_score":3,"analysis":"With the Raiders focused on consolidating a solid defense, and the Saints facing offensive line issues due to Kelvin Banks' injury, expect a lower-scoring affair. Kellen Moore's tactical adjustments will likely aim to secure a controlled pace, resulting in a total that stays under the line.","home":"New Orleans Saints","away":"Las Vegas Raiders","homeColor":"#hex","awayColor":"#hex","current_context":{"key_news":["Saints left tackle Kelvin Banks Jr. is out indefinitely with a high ankle sprain and needs surgery."],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Los Angeles Rams vs New York Giants","pick":"New York Giants +7","line":"-120","type":"spread","confidence":2,"buzz_score":3,"analysis":"The Giants, under John Harbaugh's tutelage, aim to cover the spread against a formidable Rams front. The Rams may struggle with consistency in this early season matchup, creating a window for the Giants to keep the game competitive and cover the spread. Harbaugh's experience against high-caliber teams provides a strategic edge.","home":"Los Angeles Rams","away":"New York Giants","homeColor":"#hex","awayColor":"#hex","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Buffalo Bills vs Los Angeles Chargers","pick":"Buffalo Bills -7","line":"-110","type":"spread","confidence":3,"buzz_score":2,"analysis":"Buffalo, coming in strong under Joe Brady, is keen to use their outstanding home performance and assertiveness at the line to dominate the Chargers. Despite criticism, the Chargers under coach Jim Harbaugh are yet to find a winning rhythm, making the Bills a solid pick to cover the spread.","home":"Buffalo Bills","away":"Los Angeles Chargers","homeColor":"#hex","awayColor":"#hex","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":["Pat McAfee isn't giving up on the 0-2 Chargers yet"],"situational_edge":[]}}]}
+{
+  "generated": "2026-09-21T13:43:00-06:00",
+  "week": "Week 3 — 2026 NFL Season",
+  "methodology": "Price-first ATS selection. Confidence percentages are internal conviction scores, not literal win probabilities.",
+  "picks": [
+    {
+      "matchup": "Seattle Seahawks vs Washington Commanders",
+      "pick": "Seattle Seahawks -6.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 5,
+      "confidence_pct": 95,
+      "tier": "Tier 1 — Maximum conviction",
+      "buzz_score": 5,
+      "analysis": "Seattle -6.5 is the strongest early Week 3 position on our board. Washington lost starting quarterback Jayden Daniels to a dislocated left elbow in Week 2, materially changing the offensive outlook, while Seattle gets a number that still sits below the key touchdown threshold. The market is broadly around Seahawks -6.5, so MyBookie is not charging an obvious premium. The principal risk is laying nearly a touchdown on the road with several days still left for injury news. At -6.5 we play it; at -7 the value drops and we would reassess rather than chase.",
+      "home": "Washington Commanders",
+      "away": "Seattle Seahawks",
+      "homeColor": "#hex",
+      "awayColor": "#hex",
+      "current_context": {
+        "key_news": [],
+        "injuries": [],
+        "starter_status": [],
+        "coaching_notes": [],
+        "situational_edge": []
+      },
+      "published_pick": "Seattle Seahawks -6.5",
+      "published_line": "-110",
+      "current_pick": "Seattle Seahawks -6.5",
+      "current_line": "-110",
+      "playable_range": "Seattle -6.5 or better; reassess at -7; pass above -7"
+    },
+    {
+      "matchup": "Los Angeles Chargers vs Buffalo Bills",
+      "pick": "Los Angeles Chargers +7",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 5,
+      "confidence_pct": 84,
+      "tier": "Tier 1 — Maximum conviction",
+      "buzz_score": 5,
+      "analysis": "The attraction here is the number as much as the team. MyBookie is giving Los Angeles a full +7, one of the NFL's most important spread numbers, against a Buffalo team that has looked explosive early. That makes this a disciplined price play rather than a fade of the Bills. Buffalo can absolutely win comfortably, which is the primary risk, but taking a full touchdown gives us substantially more protection than +6.5. We want the hook on our side: +7 is playable, +7.5 would be excellent, while +6.5 would reduce this from a premium position to a secondary lean.",
+      "home": "Buffalo Bills",
+      "away": "Los Angeles Chargers",
+      "homeColor": "#hex",
+      "awayColor": "#hex",
+      "current_context": {
+        "key_news": [],
+        "injuries": [],
+        "starter_status": [],
+        "coaching_notes": [],
+        "situational_edge": []
+      },
+      "published_pick": "Los Angeles Chargers +7",
+      "published_line": "-110",
+      "current_pick": "Los Angeles Chargers +7",
+      "current_line": "-110",
+      "playable_range": "Chargers +7 or better; +7.5 strong; downgrade materially at +6.5"
+    },
+    {
+      "matchup": "Los Angeles Rams vs Denver Broncos",
+      "pick": "Los Angeles Rams -2.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 5,
+      "confidence_pct": 81,
+      "tier": "Tier 1 — Maximum conviction",
+      "buzz_score": 5,
+      "analysis": "Rams -2.5 makes the premium group because MyBookie keeps us below the key field-goal number. The Rams are being asked to win rather than clear -3 or -3.5, and the wider market is also around -2.5. Denver's home field and altitude are real concerns, and Los Angeles will have one fewer recovery day after its Monday game, so this is not a certainty play. The price is the reason to act now: -2.5 is attractive; -3 becomes much less appealing; at -3.5 we would pass rather than repeat last week's mistake of paying through a key number.",
+      "home": "Denver Broncos",
+      "away": "Los Angeles Rams",
+      "homeColor": "#hex",
+      "awayColor": "#hex",
+      "current_context": {
+        "key_news": [],
+        "injuries": [],
+        "starter_status": [],
+        "coaching_notes": [],
+        "situational_edge": []
+      },
+      "published_pick": "Los Angeles Rams -2.5",
+      "published_line": "-110",
+      "current_pick": "Los Angeles Rams -2.5",
+      "current_line": "-110",
+      "playable_range": "Rams -2.5; downgrade sharply at -3; pass at -3.5"
+    },
+    {
+      "matchup": "Minnesota Vikings vs Tampa Bay Buccaneers",
+      "pick": "Minnesota Vikings -1.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "confidence_pct": 79,
+      "tier": "Tier 2 — Strong lean",
+      "buzz_score": 4,
+      "analysis": "Minnesota -1.5 moves onto the card after Kyler Murray cleared concussion protocol and was confirmed as the Week 3 starter. At this short spread, we prefer laying -1.5 at -110 rather than paying -133 on the moneyline: if Minnesota wins by a field goal or more, the spread gives us the better price. The Vikings are 2-0 while Tampa Bay is 0-2, but Murray is returning from a concussion and Minnesota's offensive-line health still needs monitoring. At -1.5 this is playable; -2.5 is still acceptable, but crossing to -3 would force a fresh evaluation.",
+      "home": "Tampa Bay Buccaneers",
+      "away": "Minnesota Vikings",
+      "homeColor": "#hex",
+      "awayColor": "#hex",
+      "current_context": {
+        "key_news": [
+          "Kyler Murray cleared concussion protocol on Sep. 21 and Kevin O'Connell confirmed he will start Week 3."
+        ],
+        "injuries": [
+          "Continue monitoring Minnesota's offensive line and Murray for any setback during the practice week."
+        ],
+        "starter_status": [
+          "Kyler Murray: confirmed Week 3 starter."
+        ],
+        "coaching_notes": [],
+        "situational_edge": [
+          "MyBookie offers Minnesota -1.5 (-110), preferable to the -133 moneyline if backing a normal Minnesota win."
+        ]
+      },
+      "published_pick": "Minnesota Vikings -1.5",
+      "published_line": "-110",
+      "current_pick": "Minnesota Vikings -1.5",
+      "current_line": "-110",
+      "playable_range": "Vikings -1.5 preferred; -2.5 still playable; reassess at -3 or worse"
+    },
+    {
+      "matchup": "Houston Texans vs Indianapolis Colts",
+      "pick": "Indianapolis Colts +2.5",
+      "line": "+100",
+      "type": "spread",
+      "confidence": 4,
+      "confidence_pct": 77,
+      "tier": "Tier 2 — Strong lean",
+      "buzz_score": 4,
+      "analysis": "Indianapolis +2.5 at even money is an early value position against a Houston offense that managed only six points in Week 2. The Texans also entered that game without Nico Collins, and his hamstring status is a major item to monitor before we lock the final Sunday card. Indianapolis has shown strong early red-zone quarterback efficiency, and MyBookie is giving us +100 rather than standard -110 juice. The risk is that Houston's defense creates a short-field game and Collins returns. We like +2.5 at plus money, but would prefer +3 if it appears and will re-check Houston's injury report.",
+      "home": "Indianapolis Colts",
+      "away": "Houston Texans",
+      "homeColor": "#hex",
+      "awayColor": "#hex",
+      "current_context": {
+        "key_news": [],
+        "injuries": [],
+        "starter_status": [],
+        "coaching_notes": [],
+        "situational_edge": []
+      },
+      "published_pick": "Indianapolis Colts +2.5",
+      "published_line": "+100",
+      "current_pick": "Indianapolis Colts +2.5",
+      "current_line": "+100",
+      "playable_range": "Colts +2.5 at +100 playable; +3 materially better; reassess below +2.5"
+    },
+    {
+      "matchup": "Cincinnati Bengals vs Pittsburgh Steelers",
+      "pick": "Pittsburgh Steelers +3.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "confidence_pct": 74,
+      "tier": "Tier 2 — Strong lean",
+      "buzz_score": 4,
+      "analysis": "Pittsburgh +3.5 is a buy-low, number-driven divisional play. The Steelers were poor offensively in the 20-3 loss to New England, so this is not based on recent form; the appeal is getting the home underdog through the key field-goal number against a 2-0 Cincinnati team. Divisional familiarity adds variance, and +3.5 gives Pittsburgh room to lose by a field goal and still cover. The obvious risk is an offense that just produced three points, so we will monitor personnel closely. +3.5 is the play; at +3 the edge is meaningfully smaller and this could become a pass.",
+      "home": "Pittsburgh Steelers",
+      "away": "Cincinnati Bengals",
+      "homeColor": "#hex",
+      "awayColor": "#hex",
+      "current_context": {
+        "key_news": [],
+        "injuries": [],
+        "starter_status": [],
+        "coaching_notes": [],
+        "situational_edge": []
+      },
+      "published_pick": "Pittsburgh Steelers +3.5",
+      "published_line": "-110",
+      "current_pick": "Pittsburgh Steelers +3.5",
+      "current_line": "-110",
+      "playable_range": "Steelers +3.5; downgrade at +3; pass below +3"
+    }
+  ],
+  "odds_snapshot": "MyBookie lines supplied Sep 21, 2026",
+  "excluded_games": [
+    "New York Giants at Los Angeles Rams — Sep 21 (excluded from main card at user's request)"
+  ],
+  "review_required": "This is today's card, not a locked Sunday card. Re-check Rams after tonight's game and re-check all injuries and MyBookie lines before publication. Do not chase through key numbers 3, 7 or 10.",
+  "version": "Week 3 second-pass comparison — Sep 21",
+  "watchlist": [
+    {
+      "matchup": "Carolina Panthers vs Cleveland Browns",
+      "line": "Carolina -3 (-110)",
+      "status": "WATCH — not selected",
+      "reason": "Carolina's form is interesting, but MyBookie's -3 is a worse entry than the -2.5 available in parts of the broader market. We will not pay through price value just to add the pick."
+    },
+    {
+      "matchup": "Las Vegas Raiders vs New Orleans Saints",
+      "line": "Under 43.5 (-110)",
+      "status": "WATCH — not selected",
+      "reason": "The low-scoring case is reasonable and New Orleans has offensive-line concerns, but 43.5 is not a sufficiently advantageous MyBookie number to displace one of the six ATS positions. Reconsider at Under 44.5 or better."
+    },
+    {
+      "matchup": "New York Jets vs Detroit Lions",
+      "line": "Jets +6.5 (-105)",
+      "status": "FIRST OUT",
+      "reason": "Detroit secondary injuries make the dog interesting, but Minnesota -1.5 gained a clearer catalyst with Kyler Murray confirmed to start. Jets become more attractive at +7."
+    }
+  ]
+}
