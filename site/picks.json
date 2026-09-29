@@ -1,1 +1,159 @@
-{"generated":"2026-09-29T20:30:08.526Z","week":"Preseason Week 3 — 2026 NFL Season","picks":[{"matchup":"Cincinnati Bengals vs Jacksonville Jaguars","pick":"Cincinnati Bengals -2.5","line":"-110","type":"spread","confidence":3,"buzz_score":5,"analysis":"The matchup features two competitive teams, with the Bengals favored by 2.5 points. Coach Zac Taylor's system has shown success against AFC opponents, making Cincinnati a promising pick here. Despite no injury updates affecting this game, the Bengals' strong recent form gives them the edge at home.","home":"Cincinnati Bengals","away":"Jacksonville Jaguars","homeColor":"#hex","awayColor":"#hex","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Arizona Cardinals vs New York Giants","pick":"Arizona Cardinals -1","line":"-110","type":"spread","confidence":3,"buzz_score":4,"analysis":"This closely matched game sees the Cardinals slightly favored. With Mike LaFleur at the helm, Arizona's offensive scheme could exploit the Giants' defensive weaknesses. The absence of significant injuries or lineup changes keeps this line firm in favor of the Cardinals.","home":"New York Giants","away":"Arizona Cardinals","homeColor":"#hex","awayColor":"#hex","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Buffalo Bills vs New England Patriots","pick":"Buffalo Bills -6.5","line":"-115","type":"spread","confidence":3,"buzz_score":4,"analysis":"Buffalo enters this game as a favorite against the Patriots. Their dynamic play under Coach Joe Brady can pressure New England's defense. Both teams enter without major headline-grabbing events, focusing on the Bills' momentum as the key to covering the spread.","home":"Buffalo Bills","away":"New England Patriots","homeColor":"#hex","awayColor":"#hex","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Tampa Bay Buccaneers vs Green Bay Packers","pick":"Green Bay Packers -3.5","line":"-110","type":"spread","confidence":3,"buzz_score":4,"analysis":"The Packers with Coach Matt LaFleur lead against the underdog Buccaneers. Their strategic handling in previous games sets up Green Bay as a reliable choice. The absence of key details about changes in lineup supports maintaining confidence in the Packers.","home":"Tampa Bay Buccaneers","away":"Green Bay Packers","homeColor":"#hex","awayColor":"#hex","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Seattle Seahawks vs Los Angeles Chargers","pick":"Los Angeles Chargers +7.5","line":"-120","type":"spread","confidence":2,"buzz_score":3,"analysis":"Though significant spread leans towards Seattle, Coach Jim Harbaugh's Chargers might challenge the expectations. Challenges in outcome prediction arise from limited context, but with Harbaugh's coaching prowess, the underdog Chargers could pull closer.","home":"Seattle Seahawks","away":"Los Angeles Chargers","homeColor":"#hex","awayColor":"#hex","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"San Francisco 49ers vs Denver Broncos","pick":"San Francisco 49ers Moneyline","line":"-155","type":"moneyline","confidence":3,"buzz_score":3,"analysis":"The 49ers are slight favorites at home against Denver. With Kyle Shanahan's well-established offensive game plan, they seem positioned to capitalize on the Broncos' vulnerabilities. Shifts in betting odds maintain focus on San Francisco's consistency without altering significant lineup or injury information.","home":"San Francisco 49ers","away":"Denver Broncos","homeColor":"#hex","awayColor":"#hex","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}}]}
+{
+  "generated": "2026-09-29T14:34:00-06:00",
+  "week": "Week 4 — 2026 NFL Season",
+  "picks": [
+    {
+      "matchup": "Pittsburgh Steelers vs Cleveland Browns",
+      "pick": "Pittsburgh Steelers -2.5",
+      "line": "-115",
+      "type": "spread",
+      "confidence": 4,
+      "buzz_score": 4,
+      "analysis": "Pittsburgh is laying only 2.5, keeping the pick below the key number of 3. Cleveland enters the short Thursday turnaround with center Elgton Jenkins in concussion protocol and guard Teven Jenkins dealing with a back injury, adding uncertainty to an offense already playing low-scoring games. The total is only 38, so laying points carries some risk, but -2.5 is materially better than -3. Pittsburgh is playable at -2.5; at -3 the value drops and we would reassess.",
+      "home": "Cleveland Browns",
+      "away": "Pittsburgh Steelers",
+      "homeColor": "#311D00",
+      "awayColor": "#FFB612",
+      "current_context": {
+        "key_news": [
+          "Thursday night divisional matchup; low total magnifies the importance of getting -2.5 instead of -3."
+        ],
+        "injuries": [
+          "Browns C Elgton Jenkins is in concussion protocol; G Teven Jenkins is dealing with a back injury."
+        ],
+        "starter_status": [],
+        "coaching_notes": [],
+        "situational_edge": [
+          "Pittsburgh -2.5 stays below the key number of 3."
+        ]
+      }
+    },
+    {
+      "matchup": "Indianapolis Colts vs Washington Commanders",
+      "pick": "Indianapolis Colts -3.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "buzz_score": 5,
+      "analysis": "Indianapolis is the cleaner side at the current number, but this is not a blind favorite play. Washington is still managing Jayden Daniels' dislocated elbow, while Sam Cosmi is in concussion protocol and the roster has additional attrition. Indianapolis enters without a comparable cluster of active injuries. The concern is the hook above the key number of 3, especially in a London game. We like -3.5, but would strongly prefer -3 if it appears; -4.5 would be a pass.",
+      "home": "Washington Commanders",
+      "away": "Indianapolis Colts",
+      "homeColor": "#5A1414",
+      "awayColor": "#002C5F",
+      "current_context": {
+        "key_news": [
+          "London game adds travel/variance; monitor Washington QB news."
+        ],
+        "injuries": [
+          "Jayden Daniels remains uncertain with a dislocated elbow; Sam Cosmi is in concussion protocol."
+        ],
+        "starter_status": [
+          "Marcus Mariota has started the past two games while Daniels has been out."
+        ],
+        "coaching_notes": [],
+        "situational_edge": [
+          "Indianapolis has the healthier active roster, but -3.5 crosses the key 3."
+        ]
+      }
+    },
+    {
+      "matchup": "Detroit Lions vs Carolina Panthers",
+      "pick": "Detroit Lions -3.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "buzz_score": 4,
+      "analysis": "Detroit gets a favorable matchup against a Carolina team dealing with problems exactly where the Lions can apply pressure. The Panthers are expected to be without both starting cornerbacks, while guard Damien Lewis is doubtful and the offensive line has additional uncertainty. Detroit's offense has the higher ceiling, and Carolina's secondary situation raises the risk of explosive plays. The main drawback is laying -3.5 on the road rather than -3. We play -3.5, love -3, and would become much more cautious at -4.5.",
+      "home": "Carolina Panthers",
+      "away": "Detroit Lions",
+      "homeColor": "#0085CA",
+      "awayColor": "#0076B6",
+      "current_context": {
+        "key_news": [
+          "Carolina's secondary is expected to be short both starting cornerbacks."
+        ],
+        "injuries": [
+          "Panthers G Damien Lewis is doubtful with an elbow injury; Carolina has additional offensive-line attrition."
+        ],
+        "starter_status": [],
+        "coaching_notes": [],
+        "situational_edge": [
+          "Detroit's passing-game ceiling matches well against Carolina's depleted secondary."
+        ]
+      }
+    },
+    {
+      "matchup": "San Francisco 49ers vs Denver Broncos",
+      "pick": "Denver Broncos +3",
+      "line": "-120",
+      "type": "spread",
+      "confidence": 4,
+      "buzz_score": 4,
+      "analysis": "This is a price-driven underdog play. Denver gets the full field-goal key number at +3 after its comeback win over the Rams, while San Francisco is monitoring Mike Evans and Trent Williams and already has other roster attrition. The 49ers are 3-0 and deserve to be favored at home, so this is not a fade of their quality; it is about taking the key number in a competitive matchup. +3 is the minimum we want. If Denver falls to +2.5, this comes off the card.",
+      "home": "San Francisco 49ers",
+      "away": "Denver Broncos",
+      "homeColor": "#AA0000",
+      "awayColor": "#FB4F14",
+      "current_context": {
+        "key_news": [
+          "San Francisco is 3-0; Denver enters 2-1 after a comeback win over the Rams."
+        ],
+        "injuries": [
+          "49ers WR Mike Evans is being evaluated for a rib injury; LT Trent Williams is monitoring a neck/stinger issue but is expected to be okay."
+        ],
+        "starter_status": [],
+        "coaching_notes": [],
+        "situational_edge": [
+          "Denver +3 captures the full key field-goal number."
+        ]
+      }
+    },
+    {
+      "matchup": "Buffalo Bills vs New England Patriots",
+      "pick": "Buffalo Bills -6.5",
+      "line": "-115",
+      "type": "spread",
+      "confidence": 4,
+      "buzz_score": 5,
+      "analysis": "Buffalo -6.5 is attractive specifically because it stays below the key number of 7. The Bills are undefeated and New England has struggled early, but Buffalo is not completely clean on the injury front, with cornerback Christian Benford being monitored after leaving Week 3. That keeps this below our top conviction tier. At the posted -6.5 we are willing to back Buffalo; -7 is substantially less attractive and -7.5 would be a pass rather than chasing the favorite.",
+      "home": "Buffalo Bills",
+      "away": "New England Patriots",
+      "homeColor": "#00338D",
+      "awayColor": "#C60C30",
+      "current_context": {
+        "key_news": [
+          "Buffalo enters Week 4 undefeated; New England has struggled through the first three weeks."
+        ],
+        "injuries": [
+          "Bills CB Christian Benford is being monitored after a Week 3 injury."
+        ],
+        "starter_status": [],
+        "coaching_notes": [],
+        "situational_edge": [
+          "-6.5 keeps Buffalo below the key number of 7."
+        ]
+      }
+    }
+  ],
+  "review_required": [
+    "Re-check all injury reports and MyBookie lines before publication.",
+    "Do not chase Buffalo through -7 or Denver below +3.",
+    "Prefer Indianapolis -3 if available; pass if the Colts reach -4.5.",
+    "Detroit is strongest at -3/-3.5; reassess at -4.5.",
+    "Thursday Pittsburgh -2.5 must be rechecked after the final injury report."
+  ],
+  "watchlist": [
+    {
+      "matchup": "Jacksonville Jaguars vs Cincinnati Bengals",
+      "note": "Bengals -2.5 is viable, but Jacksonville's strong Week 3 and Cincinnati WR/defensive injuries keep it just outside the final five."
+    },
+    {
+      "matchup": "Los Angeles Chargers vs Seattle Seahawks",
+      "note": "Chargers +7.5 is tempting on price, but the Chargers are 0-3 with significant offensive-line/injury concerns. Not enough to make the main card yet."
+    },
+    {
+      "matchup": "Tennessee Titans vs Baltimore Ravens",
+      "note": "Baltimore is the stronger team, but -11.5 is too expensive for our price-first approach."
+    }
+  ]
+}
