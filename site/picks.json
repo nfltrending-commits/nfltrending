@@ -1,1 +1,50 @@
-{"generated":"2026-11-09T18:51:57.074Z","week":"Preseason Week 3 — 2026 NFL Season","picks":[{"matchup":"Buffalo Bills vs New York Jets","pick":"Buffalo Bills -7.5","line":"-110","type":"spread","confidence":5,"buzz_score":5,"analysis":"The Buffalo Bills are set to face the New York Jets. With Buffalo favored by 7.5 points, and given the Jets' lower H2H odds and spread, the Bills' experienced coaching under Joe Brady gives them an edge over the developing Jets team coached by Aaron Glenn. This contest also garners high media attention, increasing the buzz around the matchup.","home":"New York Jets","away":"Buffalo Bills","homeColor":"#002244","awayColor":"#00338D","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Washington Commanders vs New York Giants","pick":"New York Giants -1.5","line":"-110","type":"spread","confidence":4,"buzz_score":4,"analysis":"The Giants, behind newly announced QB J.J. McCarthy, look to leverage their slight favorite status over the Commanders. Using John Harbaugh's strategic edge, the Giants should efficiently counter Washington's tactics, coached by Dan Quinn.","home":"New York Giants","away":"Washington Commanders","homeColor":"#0B2265","awayColor":"#773141","current_context":{"key_news":["Harbaugh: Giants 'feel fairly good' about McCarthy (hip) playing vs. Commanders"],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Cleveland Browns vs Houston Texans","pick":"Houston Texans -5","line":"-110","type":"spread","confidence":3,"buzz_score":3,"analysis":"With Deshaun Watson confirmed to start, the Texans, under DeMeco Ryans, find themselves slightly favored by 5 points against the Browns. Todd Monken's Browns will have to adjust quickly to Watson's return, while Houston appears more stable despite trade murmurs around Andre Cisco.","home":"Houston Texans","away":"Cleveland Browns","homeColor":"#03202F","awayColor":"#311D00","current_context":{"key_news":["Source: Browns returning to Watson as QB1 despite Sanders' strong fill-in start"],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Arizona Cardinals vs Los Angeles Rams","pick":"Los Angeles Rams -7","line":"-110","type":"spread","confidence":2,"buzz_score":2,"analysis":"Head coach Sean McVay leads the Rams as favorites at home against the Cardinals. With a spread of -7, the Rams look to assert dominance over Mike LaFleur's Cardinals, who have shown inconsistency in recent games.","home":"Los Angeles Rams","away":"Arizona Cardinals","homeColor":"#003594","awayColor":"#97233F","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Las Vegas Raiders vs Seattle Seahawks","pick":"Seattle Seahawks -3","line":"-110","type":"spread","confidence":2,"buzz_score":1,"analysis":"The Seahawks, starting backup QB Drew Lock against the Raiders, hold a slight edge under Mike Macdonald's scheme. Seattle's decision to rest regular starter Sam Darnold gives this game a unique intrigue.","home":"Seattle Seahawks","away":"Las Vegas Raiders","homeColor":"#4B92DB","awayColor":"#A5ACAF","current_context":{"key_news":["Seahawks to start QB Drew Lock vs. Raiders, giving Sam Darnold more time to heal"],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}}]}
+[
+  {
+    "matchup": "Buffalo Bills vs Minnesota Vikings",
+    "pick_type": "spread",
+    "pick": "Buffalo Bills -3",
+    "odds": "-120",
+    "analysis": "With Kyler Murray sidelined due to a hamstring injury, the Vikings turn to Carson Wentz under center. Wentz's inconsistency and the Vikings' offensive struggles make the Bills, led by a healthy Josh Allen, a strong pick to cover the spread.",
+    "buzz_score": 5
+  },
+  {
+    "matchup": "New York Giants vs Washington Commanders",
+    "pick_type": "moneyline",
+    "pick": "New York Giants",
+    "odds": "-122",
+    "analysis": "Despite J.J. McCarthy's recent hip injury, reports suggest he's likely to play. The Giants' defense has been solid, and with McCarthy under center, they have the edge over the Commanders.",
+    "buzz_score": 4
+  },
+  {
+    "matchup": "Las Vegas Raiders vs Seattle Seahawks",
+    "pick_type": "total",
+    "pick": "Under 43",
+    "odds": "-110",
+    "analysis": "With Sam Darnold out and Drew Lock nursing injuries, the Seahawks' offense may struggle. Coupled with the Raiders' inconsistent scoring, expect a low-scoring affair.",
+    "buzz_score": 3
+  },
+  {
+    "matchup": "Atlanta Falcons vs Kansas City Chiefs",
+    "pick_type": "spread",
+    "pick": "Kansas City Chiefs -3",
+    "odds": "-115",
+    "analysis": "Patrick Mahomes is expected to play despite a minor elbow issue. The Chiefs' high-powered offense should outpace the Falcons, covering the modest spread.",
+    "buzz_score": 3
+  },
+  {
+    "matchup": "New Orleans Saints vs Carolina Panthers",
+    "pick_type": "moneyline",
+    "pick": "New Orleans Saints",
+    "odds": "-120",
+    "analysis": "With Tyler Shough leading the Saints and Bryce Young under center for the Panthers, the Saints' experience gives them the upper hand in this matchup.",
+    "buzz_score": 2
+  },
+  {
+    "matchup": "Cleveland Browns vs Houston Texans",
+    "pick_type": "total",
+    "pick": "Under 39.5",
+    "odds": "-110",
+    "analysis": "Deshaun Watson's status is uncertain, and with Shedeur Sanders potentially starting, the Browns' offense may be limited. Expect a defensive battle with a low total score.",
+    "buzz_score": 2
+  }
+] 
