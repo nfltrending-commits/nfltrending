@@ -1,1 +1,255 @@
-{"generated":"2026-11-09T21:31:18.985Z","week":"Preseason Week 3 — 2026 NFL Season","picks":[{"matchup":"Dallas Cowboys vs San Francisco 49ers","pick":"San Francisco 49ers -4","line":"-110","type":"spread","confidence":4,"buzz_score":5,"analysis":"The 49ers are enjoying a strong 7-1 start to the season, with major contributions coming from their young players. The Cowboys face a tough challenge, and the spread reflects the 49ers' current form and coaching stability under Kyle Shanahan. Despite being underdogs, the Cowboys will look to test San Francisco's defensive resolve with their tactics.","home":"Dallas Cowboys","away":"San Francisco 49ers","homeColor":"#003594","awayColor":"#AA0000","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":["The 49ers rely on their youth in their 7-1 start."]}},{"matchup":"Buffalo Bills vs New York Jets","pick":"Buffalo Bills -7.5","line":"-110","type":"spread","confidence":3,"buzz_score":4,"analysis":"The Bills are favored strongly against the Jets, under the leadership of coach Joe Brady. The Bills have been competitive, and with the Jets losing safety Andre Cisco in a trade, Buffalo's offense may find more room to operate defensively. Brady's strategic acumen could be pivotal in ensuring the Bills cover the spread." ,"home":"New York Jets","away":"Buffalo Bills","homeColor":"#125740","awayColor":"#00338D","current_context":{"key_news":["Jets trade safety Andre Cisco to injury-plagued Lions."],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Buffalo Bills vs Minnesota Vikings","pick":"Buffalo Bills -194","line":"-194","type":"moneyline","confidence":4,"buzz_score":4,"analysis":"Facing the Vikings, the Bills have a favorable matchup that sees them as slight favorites on the moneyline. Led by coach Joe Brady, Buffalo is seeking to capitalize on the Vikings' middle-of-the-pack standing, using strategic game management to secure a win.","home":"Minnesota Vikings","away":"Buffalo Bills","homeColor":"#4F2683","awayColor":"#00338D","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Arizona Cardinals vs Los Angeles Rams","pick":"Los Angeles Rams -7","line":"-110","type":"spread","confidence":3,"buzz_score":3,"analysis":"The Rams, under Sean McVay, are heavy favorites against the Cardinals. McVay's experience and the Rams' advantageous positioning give them a strategic edge, as they aim to maintain standing over the Cardinals, who are currently in a rebuilding phase under coach Mike LaFleur.","home":"Arizona Cardinals","away":"Los Angeles Rams","homeColor":"#97233F","awayColor":"#002244","current_context":{"key_news":[],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"New York Giants vs Washington Commanders","pick":"New York Giants -1.5","line":"-110","type":"spread","confidence":3,"buzz_score":3,"analysis":"Coach John Harbaugh feels 'fairly good' about QB McCarthy's availability against the Commanders. With this positive outlook at quarterback, the Giants may look to leverage their home field advantage to cover the narrow spread in what promises to be a close contest.","home":"New York Giants","away":"Washington Commanders","homeColor":"#0B2265","awayColor":"#5A1414","current_context":{"key_news":["Harbaugh: Giants 'feel fairly good' about McCarthy (hip) playing vs. Commanders."],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}},{"matchup":"Seattle Seahawks vs Las Vegas Raiders","pick":"Seattle Seahawks -3.5","line":"-110","type":"spread","confidence":3,"buzz_score":3,"analysis":"With Drew Lock stepping in as the starting quarterback, Seattle is positioned to test the Raiders' defense. Mike Macdonald's squad will aim to exploit mismatches and control the tempo at home, covering the spread with effective playthrough their starters.","home":"Las Vegas Raiders","away":"Seattle Seahawks","homeColor":"#A5ACAF","awayColor":"#002244","current_context":{"key_news":["Seahawks to start QB Drew Lock vs. Raiders, giving Sam Darnold more time to heal."],"injuries":[],"starter_status":[],"coaching_notes":[],"situational_edge":[]}}]}
+{
+  "generated": "2026-11-09",
+  "week": "Week 10 — 2026 NFL Season",
+  "status": "provisional_six_picks_pending_final_injury_reports",
+  "source_lines": "User-provided MyBookie screenshots November 9, 2026",
+  "methodology": "Price first; key numbers 3/7; matchup, availability, situation, uncertainty. Confidence 1–5 is editorial conviction, not a win probability.",
+  "picks": [
+    {
+      "matchup": "Pittsburgh Steelers at Cincinnati Bengals",
+      "pick": "Pittsburgh Steelers +3.5",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "buzz_score": 5,
+      "analysis": "Pittsburgh gets the hook above the key number of three in a divisional matchup. That half-point matters in a game priced as competitive, and the posted +3.5 is more appealing than the +3 available at some shops. Cincinnati has the more explosive scoring profile, so this is not a prediction that Pittsburgh will necessarily win outright. It is a bet on the margin and the price. We would keep Pittsburgh at +3.5, reassess at +3 and pass below that number until final availability reports are confirmed.",
+      "home": "Cincinnati Bengals",
+      "away": "Pittsburgh Steelers",
+      "homeColor": "#FB4F14",
+      "awayColor": "#FFB612",
+      "current_context": {
+        "key_news": [
+          "MyBookie: Pittsburgh +3.5 -110; external reference shows Bengals -3.5."
+        ],
+        "injuries": [
+          "Final Week 10 injury report not yet confirmed as of Nov 9; verify before publishing."
+        ],
+        "starter_status": [
+          "Confirm starting QB and key offensive line/secondary availability before publishing."
+        ],
+        "coaching_notes": [],
+        "situational_edge": [
+          "Playable: +3.5 -110 or better; +3 requires re-evaluation."
+        ]
+      },
+      "playable_line": "Playable: +3.5 -110 or better; +3 requires re-evaluation.",
+      "risks": [
+        "Cincinnati offensive ceiling",
+        "Divisional volatility",
+        "Pending injury reports"
+      ],
+      "publication_status": "provisional_pending_final_injuries"
+    },
+    {
+      "matchup": "Kansas City Chiefs at Atlanta Falcons",
+      "pick": "Kansas City Chiefs -3",
+      "line": "-115",
+      "type": "spread",
+      "confidence": 4,
+      "buzz_score": 5,
+      "analysis": "Kansas City is favored by a field goal on the road, and that is the number we want to protect. A move to -3.5 would materially worsen the position because many NFL games finish with a three-point margin. The Chiefs bring the stronger overall defensive profile in available season summaries, while Atlanta can keep games competitive through its offense. We are willing to lay -3 at the posted -115, but not chase a worse spread. Confirm key starters and the final practice reports before locking this pick.",
+      "home": "Atlanta Falcons",
+      "away": "Kansas City Chiefs",
+      "homeColor": "#A71930",
+      "awayColor": "#E31837",
+      "current_context": {
+        "key_news": [
+          "MyBookie: Chiefs -3 -115; external reference: Chiefs around -3."
+        ],
+        "injuries": [
+          "Final Week 10 injury report not yet confirmed as of Nov 9; verify before publishing."
+        ],
+        "starter_status": [
+          "Confirm starting QB and key offensive line/secondary availability before publishing."
+        ],
+        "coaching_notes": [],
+        "situational_edge": [
+          "Playable: -3 -115 or better; pass at -3.5 unless re-priced."
+        ]
+      },
+      "playable_line": "Playable: -3 -115 or better; pass at -3.5 unless re-priced.",
+      "risks": [
+        "Road favorite",
+        "Atlanta explosive plays",
+        "Injury uncertainty"
+      ],
+      "publication_status": "provisional_pending_final_injuries"
+    },
+    {
+      "matchup": "Seattle Seahawks at Las Vegas Raiders",
+      "pick": "Las Vegas Raiders +3",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 4,
+      "buzz_score": 4,
+      "analysis": "Las Vegas gets the full field goal at home against Seattle, and that key number is the main reason to consider the underdog. Seattle's quarterback availability has been a major storyline, making the offensive projection less stable than a typical Seahawks favorite. Still, a quarterback change alone does not guarantee value, and the Raiders need to avoid turnovers and explosive plays. We prefer Las Vegas +3 at -110 or better, would welcome +3.5, and would not chase the pick at +2.5. Confirm Seattle's starter and final injury report before publishing.",
+      "home": "Las Vegas Raiders",
+      "away": "Seattle Seahawks",
+      "homeColor": "#000000",
+      "awayColor": "#002244",
+      "current_context": {
+        "key_news": [
+          "Seattle quarterback uncertainty is the primary situational factor; verify status before publication."
+        ],
+        "injuries": [
+          "Seattle quarterback injuries require final confirmation; no definitive starter status assumed."
+        ],
+        "starter_status": [
+          "Confirm Seattle starting QB on the final report."
+        ],
+        "coaching_notes": [],
+        "situational_edge": [
+          "Las Vegas +3 retains the key field-goal number."
+        ]
+      },
+      "playable_line": "Raiders +3 -110 or better; +2.5 pass pending reassessment.",
+      "risks": [
+        "Seattle QB status may improve",
+        "Raiders turnover risk",
+        "Home-field edge may be fully priced"
+      ],
+      "publication_status": "provisional_pending_final_injuries"
+    },
+    {
+      "matchup": "New England Patriots at Detroit Lions",
+      "pick": "New England Patriots +2.5",
+      "line": "-105",
+      "type": "spread",
+      "confidence": 3,
+      "buzz_score": 5,
+      "analysis": "The Patriots receive 2.5 points in Munich against a Detroit team with a strong offensive line and efficient scoring attack. New England has been competitive enough that the plus points deserve a closer look, and the -105 price is slightly cheaper than standard -110 juice. However, this is not the full field-goal key number: +3 would be substantially better, and the international setting adds uncertainty. We are listing New England as a conditional lean rather than a top-tier play, pending travel and injury information.",
+      "home": "Detroit Lions",
+      "away": "New England Patriots",
+      "homeColor": "#0076B6",
+      "awayColor": "#002244",
+      "current_context": {
+        "key_news": [
+          "International game in Munich; MyBookie Patriots +2.5 -105."
+        ],
+        "injuries": [
+          "Final Week 10 injury report not yet confirmed as of Nov 9; verify before publishing."
+        ],
+        "starter_status": [
+          "Confirm starting QB and key offensive line/secondary availability before publishing."
+        ],
+        "coaching_notes": [],
+        "situational_edge": [
+          "Playable: +3 preferred; +2.5 -105 only if availability supports it."
+        ]
+      },
+      "playable_line": "Playable: +3 preferred; +2.5 -105 only if availability supports it.",
+      "risks": [
+        "Detroit offensive-line strength",
+        "Travel and international-game variance",
+        "Missing key number 3"
+      ],
+      "publication_status": "provisional_pending_final_injuries"
+    },
+    {
+      "matchup": "Los Angeles Rams at Arizona Cardinals",
+      "pick": "Los Angeles Rams -7",
+      "line": "-110",
+      "type": "spread",
+      "confidence": 3,
+      "buzz_score": 4,
+      "analysis": "Los Angeles is laying exactly seven in Arizona, a meaningful key number that makes the current price borderline. The Rams have shown a stronger defensive baseline than the Cardinals, and Arizona has struggled to prevent scoring. Still, -7 offers much less cushion than -6.5, particularly for a road favorite. This is a secondary lean rather than a core selection: we would prefer Rams -6.5 and would not chase -7.5. A final injury and quarterback check is essential before moving this into the published card.",
+      "home": "Arizona Cardinals",
+      "away": "Los Angeles Rams",
+      "homeColor": "#97233F",
+      "awayColor": "#003594",
+      "current_context": {
+        "key_news": [
+          "MyBookie: Rams -7 -110; external reference around -7."
+        ],
+        "injuries": [
+          "Final Week 10 injury report not yet confirmed as of Nov 9; verify before publishing."
+        ],
+        "starter_status": [
+          "Confirm starting QB and key offensive line/secondary availability before publishing."
+        ],
+        "coaching_notes": [],
+        "situational_edge": [
+          "Playable: -6.5 preferred; -7 conditional; pass -7.5."
+        ]
+      },
+      "playable_line": "Playable: -6.5 preferred; -7 conditional; pass -7.5.",
+      "risks": [
+        "Road favorite at key number 7",
+        "Late quarterback/availability changes"
+      ],
+      "publication_status": "provisional_pending_final_injuries"
+    },
+    {
+      "matchup": "San Francisco 49ers at Dallas Cowboys",
+      "pick": "Under 56 points",
+      "line": "-110",
+      "type": "total",
+      "confidence": 3,
+      "buzz_score": 5,
+      "analysis": "This is one of the week's marquee games, but the betting case is about the total rather than the winner. Dallas has generated points and allowed plenty of them, making an under uncomfortable. San Francisco, however, has been much more restrictive defensively, and its receiving corps enters the week with meaningful availability questions. The posted 56 is a half-point above some early market references. We would consider Under 56 at -110, prefer 56.5 or better, and reassess at 55 or below. Final receiver and defensive injury reports are essential.",
+      "home": "Dallas Cowboys",
+      "away": "San Francisco 49ers",
+      "homeColor": "#003594",
+      "awayColor": "#AA0000",
+      "current_context": {
+        "key_news": [
+          "Marquee national late-afternoon matchup; among the highest-profile games of Week 10.",
+          "MyBookie total 56 versus 55.5 in an external early-market reference."
+        ],
+        "injuries": [
+          "San Francisco receiver availability needs confirmation; multiple receivers missed Week 9."
+        ],
+        "starter_status": [
+          "Verify starting quarterbacks before publication."
+        ],
+        "coaching_notes": [],
+        "situational_edge": [
+          "Playable Under 56 -110 or better; reassess at 55 or lower."
+        ]
+      },
+      "playable_line": "Under 56 -110 or better; reassess at 55 or lower.",
+      "risks": [
+        "Dallas high-scoring offense and permissive defense",
+        "Potential fast-paced shootout",
+        "Receiver availability could change"
+      ],
+      "publication_status": "provisional_pending_final_injuries"
+    }
+  ],
+  "watchlist": [
+    {
+      "matchup": "Minnesota Vikings at Green Bay Packers",
+      "candidate": "Vikings +3 +100",
+      "reason": "Full key number 3, but Minnesota plays Buffalo on Monday Nov 9; wait for injuries and turnaround."
+    },
+    {
+      "matchup": "Houston Texans at Cleveland Browns",
+      "candidate": "Texans -5 -110",
+      "reason": "Strong matchup on paper, but low 39.5 total makes five points expensive."
+    },
+    {
+      "matchup": "Seattle Seahawks at Las Vegas Raiders",
+      "candidate": "No play yet",
+      "reason": "Seattle QB uncertainty: Sam Darnold and Drew Lock."
+    },
+    {
+      "matchup": "Los Angeles Chargers at Baltimore Ravens",
+      "candidate": "Chargers +5.5 -110",
+      "reason": "Interesting underdog number in low-total game; requires injury/QB confirmation."
+    }
+  ],
+  "review_required": [
+    "Verify every posted MyBookie line again on publication day.",
+    "Obtain final injury reports and confirmed starting quarterbacks; early-week selections are provisional.",
+    "Consider reducing final card to 2–3 picks if conditional leans do not improve.",
+    "Minnesota plays Monday November 9; do not publish Vikings Week 10 pick before that game.",
+    "Recheck San Francisco receivers and Dallas offensive injuries before publishing Under 56.",
+    "Raiders +3: verify Seattle starting quarterback and final injury report; do not chase +2.5."
+  ],
+  "sources": [
+    "https://www.foxsports.com/stories/nfl/2026-nfl-odds-week-10-lines-spreads-results-all-14-games",
+    "https://www.pff.com/news/nfl-offensive-line-rankings-2026",
+    "https://www.reuters.com/sports/seahawks-qb-drew-lock-oblique-status-uncertain-vs-raiders--flm-2026-11-09/"
+  ],
+  "buzz_note": "Buzz scores are editorial estimates, not measured audience data. Six selections are provisional."
+}
