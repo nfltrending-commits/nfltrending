@@ -486,11 +486,11 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <h1>Your Edge for the <em>2026 Season</em><br>Starts Here</h1>
-    <p>Live NFL news, real-time odds from every major sportsbook, plus picks from our experts and AI-powered analysis</p>
+    <h1>Smarter NFL Picks.<br><em>Better Decisions.</em></h1>
+    <p>Weekly NFL picks backed by matchup analysis, injury updates, and line movement. Know the reasoning before you make your move.</p>
     <div class="hero-btns">
-      <a href="#picks" class="hero-pill picks" onclick="gtag('event','hero_cta',{label:'picks'})">🏆 Picks</a>
-      <a href="#news"  class="hero-pill news"  onclick="gtag('event','hero_cta',{label:'news'})">📡 News</a>
+      <a href="#picks" class="hero-pill picks" onclick="gtag('event','hero_cta',{label:'picks'})">🏆 See This Week's Picks</a>
+      <a href="#news"  class="hero-pill news"  onclick="gtag('event','hero_cta',{label:'news'})">📡 Latest NFL News</a>
       <a href="/books" class="hero-pill reviews" onclick="gtag('event','hero_cta',{label:'reviews'})">⭐ Reviews</a>
     </div>
     <div class="hero-picks" id="hero-picks"></div>
@@ -645,25 +645,60 @@
     </div>
   </div>
 </section>
-<!-- TEAMS -->
+<!-- TEAMS: manually maintained Super Bowl futures; not connected to odds.json -->
 <section class="section" id="teams" style="padding-top:0">
   <div class="container">
     <div class="section-header">
-      <div class="section-title">🏆 Super Bowl Futures</div>
-      <a href="https://record.webpartners.co/_xb3kIla32l8_N4b4FXAB62Nd7ZgqdRLk/1/" class="view-all" target="_blank" rel="noopener">Bet Futures →</a>
+      <div class="section-title">🏆 Super Bowl LXI — Winner Odds</div>
+      <a href="/topranking" class="view-all" target="_blank" rel="noopener">View Offers →</a>
     </div>
-    <div class="teams-grid">
-      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/lar.png" alt="Rams" loading="lazy"><div class="team-name">LA Rams</div><div class="team-record">SB 61 Favorite</div><div class="team-odds-pill">+550</div></div>
-      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" alt="Bills" loading="lazy"><div class="team-name">Buffalo Bills</div><div class="team-record">AFC Powerhouse</div><div class="team-odds-pill">+1000</div></div>
-      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/bal.png" alt="Ravens" loading="lazy"><div class="team-name">Baltimore Ravens</div><div class="team-record">AFC Contender</div><div class="team-odds-pill">+1050</div></div>
-      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/sea.png" alt="Seahawks" loading="lazy"><div class="team-name">Seattle Seahawks</div><div class="team-record">Defending Champions</div><div class="team-odds-pill">+1100</div></div>
-      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/cin.png" alt="Bengals" loading="lazy"><div class="team-name">Cincinnati Bengals</div><div class="team-record">AFC Dark Horse</div><div class="team-odds-pill">+1580</div></div>
-      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/kc.png" alt="Chiefs" loading="lazy"><div class="team-name">Kansas City Chiefs</div><div class="team-record">AFC Contender</div><div class="team-odds-pill">+1600</div></div>
-      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/ne.png" alt="Patriots" loading="lazy"><div class="team-name">New England Patriots</div><div class="team-record">Sleeper Pick</div><div class="team-odds-pill">+1600</div></div>
-      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/lac.png" alt="Chargers" loading="lazy"><div class="team-name">LA Chargers</div><div class="team-record">AFC Wild Card</div><div class="team-odds-pill">+1600</div></div>
+    <p style="font-size:12px;color:var(--muted);margin:-4px 0 18px">MyBookie futures · Manually updated Nov 9, 2026 · American odds · Subject to change</p>
+    <div class="teams-grid" id="superbowl-futures-grid">
+      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/sf.png" alt="San Francisco 49ers" loading="lazy"><div class="team-name">San Francisco 49ers</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+550</div></div>
+      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" alt="Buffalo Bills" loading="lazy"><div class="team-name">Buffalo Bills</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+600</div></div>
+      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/chi.png" alt="Chicago Bears" loading="lazy"><div class="team-name">Chicago Bears</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+750</div></div>
+      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/jax.png" alt="Jacksonville Jaguars" loading="lazy"><div class="team-name">Jacksonville Jaguars</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+850</div></div>
+      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/kc.png" alt="Kansas City Chiefs" loading="lazy"><div class="team-name">Kansas City Chiefs</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+1000</div></div>
+      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/lar.png" alt="Los Angeles Rams" loading="lazy"><div class="team-name">Los Angeles Rams</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+1100</div></div>
+      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/cin.png" alt="Cincinnati Bengals" loading="lazy"><div class="team-name">Cincinnati Bengals</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+1138</div></div>
+      <div class="team-card"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/den.png" alt="Denver Broncos" loading="lazy"><div class="team-name">Denver Broncos</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+1500</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/sea.png" alt="Seattle Seahawks" loading="lazy"><div class="team-name">Seattle Seahawks</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+1500</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/det.png" alt="Detroit Lions" loading="lazy"><div class="team-name">Detroit Lions</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+1700</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/gb.png" alt="Green Bay Packers" loading="lazy"><div class="team-name">Green Bay Packers</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+2200</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/min.png" alt="Minnesota Vikings" loading="lazy"><div class="team-name">Minnesota Vikings</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+2400</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/ne.png" alt="New England Patriots" loading="lazy"><div class="team-name">New England Patriots</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+2400</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/hou.png" alt="Houston Texans" loading="lazy"><div class="team-name">Houston Texans</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+4000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" alt="Pittsburgh Steelers" loading="lazy"><div class="team-name">Pittsburgh Steelers</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+4000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png" alt="Dallas Cowboys" loading="lazy"><div class="team-name">Dallas Cowboys</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+5600</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/tb.png" alt="Tampa Bay Buccaneers" loading="lazy"><div class="team-name">Tampa Bay Buccaneers</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+6000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png" alt="New York Giants" loading="lazy"><div class="team-name">New York Giants</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+6000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/atl.png" alt="Atlanta Falcons" loading="lazy"><div class="team-name">Atlanta Falcons</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+10000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/car.png" alt="Carolina Panthers" loading="lazy"><div class="team-name">Carolina Panthers</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+10000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/lv.png" alt="Las Vegas Raiders" loading="lazy"><div class="team-name">Las Vegas Raiders</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+15000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/bal.png" alt="Baltimore Ravens" loading="lazy"><div class="team-name">Baltimore Ravens</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+15000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png" alt="Washington Commanders" loading="lazy"><div class="team-name">Washington Commanders</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+15000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/no.png" alt="New Orleans Saints" loading="lazy"><div class="team-name">New Orleans Saints</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+20000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/cle.png" alt="Cleveland Browns" loading="lazy"><div class="team-name">Cleveland Browns</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+20000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/ari.png" alt="Arizona Cardinals" loading="lazy"><div class="team-name">Arizona Cardinals</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+70000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/mia.png" alt="Miami Dolphins" loading="lazy"><div class="team-name">Miami Dolphins</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+100000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/ten.png" alt="Tennessee Titans" loading="lazy"><div class="team-name">Tennessee Titans</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+100000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/ind.png" alt="Indianapolis Colts" loading="lazy"><div class="team-name">Indianapolis Colts</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+100000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" alt="Philadelphia Eagles" loading="lazy"><div class="team-name">Philadelphia Eagles</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+100000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png" alt="New York Jets" loading="lazy"><div class="team-name">New York Jets</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+100000</div></div>
+      <div class="team-card" data-future-extra="true" style="display:none"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/lac.png" alt="Los Angeles Chargers" loading="lazy"><div class="team-name">Los Angeles Chargers</div><div class="team-record">Super Bowl LXI Winner</div><div class="team-odds-pill">+100000</div></div>
     </div>
+    <div style="text-align:center;margin-top:18px"><button type="button" id="toggle-superbowl-futures" aria-expanded="false" onclick="toggleSuperBowlFutures()" style="background:transparent;color:var(--text);border:1px solid var(--border);border-radius:8px;padding:11px 22px;font:inherit;font-weight:700;cursor:pointer">Show All 32 Teams ↓</button></div>
   </div>
 </section>
+<script>
+function toggleSuperBowlFutures(){
+  var button=document.getElementById('toggle-superbowl-futures');
+  var expand=button.getAttribute('aria-expanded')!=='true';
+  document.querySelectorAll('#superbowl-futures-grid [data-future-extra]').forEach(function(card){card.style.display=expand?'':'none';});
+  button.setAttribute('aria-expanded',String(expand));
+  button.textContent=expand?'Show Top 8 Teams ↑':'Show All 32 Teams ↓';
+}
+</script>
 <!-- NEWSLETTER -->
 <section class="section" id="newsletter" style="padding-top:0">
   <div class="container">
