@@ -1,7 +1,7 @@
 {
   "generated": "2026-11-09",
   "week": "Week 10 — 2026 NFL Season",
-  "status": "provisional_six_picks_pending_final_injury_reports",
+  "status": "provisional_six_picks_updated_injury_review_pending_final_designations_and_live_prices",
   "source_lines": "User-provided MyBookie screenshots November 9, 2026",
   "methodology": "Price first; key numbers 3/7; matchup, availability, situation, uncertainty. Confidence 1–5 is editorial conviction, not a win probability.",
   "picks": [
@@ -38,7 +38,7 @@
         "Divisional volatility",
         "Pending injury reports"
       ],
-      "publication_status": "provisional_pending_final_injuries"
+      "publication_status": "provisional_pending_final_injuries_and_live_price"
     },
     {
       "matchup": "Kansas City Chiefs at Atlanta Falcons",
@@ -73,7 +73,7 @@
         "Atlanta explosive plays",
         "Injury uncertainty"
       ],
-      "publication_status": "provisional_pending_final_injuries"
+      "publication_status": "provisional_pending_final_injuries_and_live_price"
     },
     {
       "matchup": "Seattle Seahawks at Las Vegas Raiders",
@@ -82,20 +82,20 @@
       "type": "spread",
       "confidence": 4,
       "buzz_score": 4,
-      "analysis": "Las Vegas gets the full field goal at home against Seattle, and that key number is the main reason to consider the underdog. Seattle's quarterback availability has been a major storyline, making the offensive projection less stable than a typical Seahawks favorite. Still, a quarterback change alone does not guarantee value, and the Raiders need to avoid turnovers and explosive plays. We prefer Las Vegas +3 at -110 or better, would welcome +3.5, and would not chase the pick at +2.5. Confirm Seattle's starter and final injury report before publishing.",
+      "analysis": "Las Vegas gets the full field goal at home against Seattle, and that key number is the main reason to consider the underdog. Seattle confirmed Sam Darnold will not play, and Drew Lock is expected to start while managing elbow and oblique injuries. That adds uncertainty to Seattle's offensive outlook. Still, a quarterback change alone does not guarantee value, and the Raiders need to avoid turnovers and explosive plays. We prefer Las Vegas +3 at -110 or better, would welcome +3.5, and would not chase the pick at +2.5. Confirm Drew Lock’s game-day availability and the final injury report before upgrading confidence.",
       "home": "Las Vegas Raiders",
       "away": "Seattle Seahawks",
       "homeColor": "#000000",
       "awayColor": "#002244",
       "current_context": {
         "key_news": [
-          "Seattle quarterback uncertainty is the primary situational factor; verify status before publication."
+          "Seattle official Nov 11 injury report: Sam Darnold will not play at Las Vegas; Drew Lock expected to start for second consecutive week."
         ],
         "injuries": [
-          "Seattle quarterback injuries require final confirmation; no definitive starter status assumed."
+          "Darnold out (quadricep/ribs); Lock limited (elbow/oblique). Seattle offensive line also has injury concerns; final designations pending."
         ],
         "starter_status": [
-          "Confirm Seattle starting QB on the final report."
+          "Drew Lock expected to start, per Seahawks official Nov 11 report; confirm game-day status."
         ],
         "coaching_notes": [],
         "situational_edge": [
@@ -104,11 +104,11 @@
       },
       "playable_line": "Raiders +3 -110 or better; +2.5 pass pending reassessment.",
       "risks": [
-        "Seattle QB status may improve",
+        "Drew Lock game-day health and availability",
         "Raiders turnover risk",
-        "Home-field edge may be fully priced"
+        "Market movement may erase +3 value"
       ],
-      "publication_status": "provisional_pending_final_injuries"
+      "publication_status": "provisional_pending_final_injuries_and_live_price"
     },
     {
       "matchup": "New England Patriots at Detroit Lions",
@@ -143,7 +143,7 @@
         "Travel and international-game variance",
         "Missing key number 3"
       ],
-      "publication_status": "provisional_pending_final_injuries"
+      "publication_status": "provisional_pending_final_injuries_and_live_price"
     },
     {
       "matchup": "Los Angeles Rams at Arizona Cardinals",
@@ -177,7 +177,7 @@
         "Road favorite at key number 7",
         "Late quarterback/availability changes"
       ],
-      "publication_status": "provisional_pending_final_injuries"
+      "publication_status": "provisional_pending_final_injuries_and_live_price"
     },
     {
       "matchup": "San Francisco 49ers at Dallas Cowboys",
@@ -213,7 +213,7 @@
         "Potential fast-paced shootout",
         "Receiver availability could change"
       ],
-      "publication_status": "provisional_pending_final_injuries"
+      "publication_status": "provisional_pending_final_injuries_and_live_price"
     }
   ],
   "watchlist": [
@@ -239,17 +239,21 @@
     }
   ],
   "review_required": [
-    "Verify every posted MyBookie line again on publication day.",
-    "Obtain final injury reports and confirmed starting quarterbacks; early-week selections are provisional.",
-    "Consider reducing final card to 2–3 picks if conditional leans do not improve.",
-    "Minnesota plays Monday November 9; do not publish Vikings Week 10 pick before that game.",
-    "Recheck San Francisco receivers and Dallas offensive injuries before publishing Under 56.",
-    "Raiders +3: verify Seattle starting quarterback and final injury report; do not chase +2.5."
+    "Recheck each MyBookie price against original Nov 9 captured prices; do not imply those are live odds.",
+    "Check official final injury reports and confirmed starters before marking any selection final.",
+    "Raiders +3: Darnold ruled out per Seahawks Nov 11; Drew Lock expected but limited (elbow/oblique); confirm game-day health and price.",
+    "Chiefs -3: external Nov 12 market reference shows Chiefs -3.5; do not chase beyond -3 without re-evaluation.",
+    "Patriots +2.5 and Rams -7 remain conditional leans; assess final availability and number.",
+    "49ers–Cowboys Under 56: check final SF receiver/secondary injuries and total movement."
   ],
   "sources": [
     "https://www.foxsports.com/stories/nfl/2026-nfl-odds-week-10-lines-spreads-results-all-14-games",
     "https://www.pff.com/news/nfl-offensive-line-rankings-2026",
-    "https://www.reuters.com/sports/seahawks-qb-drew-lock-oblique-status-uncertain-vs-raiders--flm-2026-11-09/"
+    "https://www.reuters.com/sports/seahawks-qb-drew-lock-oblique-status-uncertain-vs-raiders--flm-2026-11-09/",
+    "https://www.seahawks.com/news/week-10-injury-report-seahawks-at-raiders",
+    "https://www.rotowire.com/football/article/nfl-week-10-odds-biggest-line-moves-betting-splits-and-key-injuries-146202",
+    "https://www.nfl.com/injuries/league/2026/reg10"
   ],
-  "buzz_note": "Buzz scores are editorial estimates, not measured audience data. Six selections are provisional."
+  "buzz_note": "Buzz scores are editorial estimates, not measured audience data. Six selections remain provisional pending final injury reports and live prices.",
+  "last_reviewed": "2026-11-12"
 }
