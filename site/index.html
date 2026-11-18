@@ -244,6 +244,21 @@
     .btn-pick:hover{background:var(--red-dk)}
     .pick-analysis{font-size:12px;color:var(--muted);line-height:1.5;padding:0 16px 14px;display:none}
     .picks-table tr.expanded .pick-analysis{display:block}
+
+    /* PICKS AD independent of the number of straight picks */
+    .picks-ad{text-align:center;padding:18px 12px;background:var(--navy2);border:1px solid var(--border);border-top:0;border-radius:0 0 10px 10px}
+    .picks-ad img{max-width:100%;height:auto;margin:auto}
+    .picks-ad-mobile{display:none}
+    .parlays-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .parlay-card{background:var(--navy2);border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:10px;padding:22px}
+    .parlay-card h3{font-size:18px;line-height:1.35;margin-bottom:10px}
+    .parlay-odds{font-size:15px;color:var(--gold);font-weight:800;margin:8px 0 14px}
+    .parlay-leg{border-left:3px solid var(--red);padding:10px 12px;margin:10px 0;background:var(--navy3);border-radius:0 6px 6px 0}
+    .parlay-leg strong{display:block;font-size:14px}
+    .parlay-leg p,.parlay-analysis{font-size:13px;color:var(--muted);line-height:1.7;margin-top:8px}
+    .parlay-note{font-size:11px;color:var(--muted);margin:12px 0}
+    .parlay-card .btn-pick{margin-top:10px}
+    @media(max-width:768px){.parlays-grid{grid-template-columns:1fr}.picks-ad-desktop{display:none}.picks-ad-mobile{display:block}}
     /* MOBILE BANNER STRIP */
     .mb-mobile-strip{display:none;text-align:center;padding:12px 0;background:var(--navy2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
     @media(max-width:768px){.mb-mobile-strip{display:block}}
@@ -549,6 +564,18 @@
         </tbody>
       </table>
       <div class="picks-cards" id="picks-cards"></div>
+    </div>
+    <div id="picks-banner" class="picks-ad" aria-label="Sponsored MyBookie banner">
+      <a href="https://record.webpartners.co/_xb3kIla32l-x_bpT0hXbLs8aL0G0ZN0y/1/" target="_blank" rel="noopener sponsored">
+        <img class="picks-ad-desktop" src="https://media.webpartners.co/uploads/MB-BETBACK-BONUS-728x90.jpg" width="728" height="90" alt="MyBookie sports promotion" loading="lazy">
+      </a>
+      <a href="https://record.webpartners.co/_xb3kIla32l-x_bpT0hXbLj7KtFlMlgiX/1/" target="_blank" rel="noopener sponsored">
+        <img class="picks-ad-mobile" src="https://media.webpartners.co/uploads/MB-BETBACK-BONUS-320x50.jpg" width="320" height="50" alt="MyBookie sports promotion" loading="lazy">
+      </a>
+    </div>
+    <div id="parlays-section" style="display:none;margin-top:32px">
+      <div class="section-header"><div class="section-title">Two-Team Parlays</div><span class="feed-status">Both legs must win · Prices subject to change</span></div>
+      <div id="parlays-grid" class="parlays-grid"></div>
     </div>
   </div>
 </section>
@@ -1092,14 +1119,6 @@ async function loadPicks() {
     var r = await safeFetch('/picks.json?v=' + Date.now());
     if (!r.ok) throw new Error();
     var data = await r.json();
-    var desktopBanner = '<tr><td colspan="4" style="padding:12px 0;text-align:center;border-bottom:none">' +
-      '<a href="https://record.webpartners.co/_xb3kIla32l-x_bpT0hXbLs8aL0G0ZN0y/1/" target="_new" rel="noopener">' +
-      '<img src="https://media.webpartners.co/uploads/MB-BETBACK-BONUS-728x90.jpg" width="728" height="90" alt="MyBookie Bonus" style="border:none;max-width:100%;height:auto;display:block;margin:0 auto"/>' +
-      '</a></td></tr>';
-    var mobileBanner = '<div style="text-align:center;padding:12px 0">' +
-      '<a href="https://record.webpartners.co/_xb3kIla32l-x_bpT0hXbLj7KtFlMlgiX/1/" target="_new" rel="noopener">' +
-      '<img src="https://media.webpartners.co/uploads/MB-BETBACK-BONUS-320x50.jpg" width="320" height="50" alt="MyBookie Bonus" style="border:none;max-width:100%;height:auto;display:block;margin:0 auto"/>' +
-      '</a></div>';
     var desktopRows = '';
     var mobileCards = '';
     data.picks.forEach(function(p, idx) {
@@ -1127,13 +1146,35 @@ async function loadPicks() {
         '<div class="pcm-analysis">' + p.analysis + '</div>' +
         '<a href="' + CONFIG.affiliateLink + '" class="pcm-btn" target="_blank" rel="noopener">View Odds →</a>' +
         '</div>';
-      if ((idx + 1) % 3 === 0 && idx + 1 < data.picks.length) {
-        desktopRows += desktopBanner;
-        mobileCards += mobileBanner;
-      }
     });
     tbody.innerHTML = desktopRows;
     cardsEl.innerHTML = mobileCards;
+    var parlaySection = document.getElementById('parlays-section');
+    var parlayGrid = document.getElementById('parlays-grid');
+    var parlays = Array.isArray(data.parlays) ? data.parlays : [];
+    // Escape editorial text before injecting into HTML.
+    function safeText(v) { return String(v == null ? '' : v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+    function formatAmerican(n) { n=Number(n); return Number.isFinite(n) ? (n>0?'+':'')+n : 'Check odds'; }
+    if (parlays.length) {
+      parlayGrid.innerHTML = parlays.map(function(parlay, idx) {
+        var legs = Array.isArray(parlay.legs) ? parlay.legs : [];
+        var legHtml = legs.map(function(leg, i) {
+          return '<div class="parlay-leg"><strong>Leg '+(i+1)+': '+safeText(leg.pick)+' <span style="color:var(--gold)">'+safeText(leg.line)+'</span></strong>'+
+            '<div style="font-size:11px;color:var(--muted)">'+safeText(leg.matchup)+'</div>'+
+            (leg.analysis ? '<p>'+safeText(leg.analysis)+'</p>' : '')+'</div>';
+        }).join('');
+        return '<article class="parlay-card"><div class="hp-label">Two-team parlay #'+(idx+1)+'</div>'+
+          '<h3>'+safeText(parlay.label || 'Two-team parlay')+'</h3>'+
+          '<div class="parlay-odds">Combined odds: '+formatAmerican(parlay.estimated_combined_american_odds)+'</div>'+
+          legHtml+'<p class="parlay-analysis">'+safeText(parlay.analysis)+'</p>'+
+          '<p class="parlay-note">'+safeText(parlay.risk_note || 'Both legs must win. Odds may change.')+'</p>'+
+          '<a href="'+CONFIG.affiliateLink+'" class="btn-pick" target="_blank" rel="noopener sponsored">View Odds</a></article>';
+      }).join('');
+      parlaySection.style.display = '';
+    } else {
+      parlayGrid.innerHTML = '';
+      parlaySection.style.display = 'none';
+    }
     statusEl.innerHTML = '<span class="live-badge"><span class="live-dot"></span> ' + data.week + '</span>';
     statusEl.className = 'feed-status live';
   } catch(e) {
