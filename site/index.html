@@ -258,6 +258,10 @@
     .parlay-leg p,.parlay-analysis{font-size:13px;color:var(--muted);line-height:1.7;margin-top:8px}
     .parlay-note{font-size:11px;color:var(--muted);margin:12px 0}
     .parlay-card .btn-pick{margin-top:10px}
+    /* Compact parlays: keep original working JavaScript unchanged */
+    .parlay-leg p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3;overflow:hidden;line-height:1.55}
+    .parlay-analysis{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3;overflow:hidden;margin:10px 0}
+    .parlay-note{display:none}
     @media(max-width:768px){.parlays-grid{grid-template-columns:1fr}.picks-ad-desktop{display:none}.picks-ad-mobile{display:block}}
     /* MOBILE BANNER STRIP */
     .mb-mobile-strip{display:none;text-align:center;padding:12px 0;background:var(--navy2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
