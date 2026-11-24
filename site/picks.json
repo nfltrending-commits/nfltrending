@@ -1,182 +1,174 @@
 {
-  "generated": "2026-11-18",
-  "week": "Week 11 — 2026 NFL Season",
-  "status": "week_11_editorial_draft_three_straights_two_two_leg_parlays",
-  "source_lines": "User-provided MyBookie screenshots in conversation Nov 18, 2026; prices are a screenshot snapshot, not live feed",
-  "methodology": "Three independent spread picks plus two separate two-leg moneyline parlays. Confidence is editorial, not probability. Player references and injury status require final verification.",
+  "generated": "2026-11-24",
+  "week": "Week 12 — 2026 NFL Season",
+  "status": "week_12_editorial_draft_three_straights_two_two_leg_parlays",
+  "source_lines": "User-provided MyBookie screenshots, November 24, 2026; static snapshot.",
+  "methodology": "Three straight selections and two independent two-leg moneyline parlays. Confidence is editorial, not calibrated probability.",
   "picks": [
     {
-      "matchup": "Indianapolis Colts at Houston Texans",
-      "pick": "Indianapolis Colts +12.5",
+      "matchup": "Green Bay Packers at Los Angeles Rams",
+      "pick": "Los Angeles Rams -2",
       "line": "-110",
       "type": "spread",
-      "confidence": 3,
-      "buzz_score": 3,
-      "analysis": "Indianapolis +12.5 is a bet against an inflated margin, not a prediction that the Colts win in Houston. The market has moved roughly eight points toward the Texans from an opening Houston -4.5, making this one of the week's biggest repricings. Daniel Jones is the central Indianapolis question: he must protect the football and get the ball out before Houston's pass rush disrupts the pocket. Indianapolis' offensive-line availability matters just as much—tackle Bernhard Raimann and other linemen appeared on the midweek practice report. A quick passing game, manageable third downs and fewer short fields can keep a double-digit underdog inside 13 points even if Houston controls the game. The danger is obvious: if the Texans generate sacks and takeaways early, Indianapolis can fall behind the script and lose by three scores. We want the full +12.5 at -110, not a reduced number; this is a market-overreaction thesis, not a high-certainty projection.",
-      "home": "Houston Texans",
-      "away": "Indianapolis Colts",
-      "homeColor": "#03202F",
-      "awayColor": "#002C5F",
+      "confidence": 4,
+      "buzz_score": 4,
+      "analysis": "Matthew Stafford and the Rams host Green Bay on Thanksgiving Eve. The key matchup is protection against the Packers pass rush: Stafford needs clean pockets to attack intermediate windows, while Green Bay can disrupt that rhythm with pressure. At -2, Los Angeles covers with a field-goal win; -3 would turn that same result into a push. The home setting and favorable spread are the appeal, but offensive-line availability is crucial.",
+      "home": "Los Angeles Rams",
+      "away": "Green Bay Packers",
+      "homeColor": "#003594",
+      "awayColor": "#203731",
       "current_context": {
         "key_news": [
-          "Week 11 public market movement documented Nov 17; MyBookie odds from user screenshot, not live quote."
+          "Thanksgiving week; User-provided MyBookie screenshots, November 24, 2026; static snapshot."
         ],
         "injuries": [
-          "Official final injury designations not yet verified."
+          "Final injury designations not independently verified for this update."
         ],
         "starter_status": [
-          "Verify named players are active and starting in the final game-day report."
+          "Confirm named quarterbacks before kickoff."
         ],
         "coaching_notes": [],
         "situational_edge": [
-          "+12.5 at -110 or better; reassess at +11.5 or lower."
+          "-2 at -110 or better"
         ]
       },
-      "playable_line": "+12.5 at -110 or better; reassess at +11.5 or lower.",
+      "playable_line": "-2 at -110 or better",
       "risks": [
-        "Houston pass rush",
-        "Indianapolis passing efficiency",
-        "Large market movement"
+        "Pass protection",
+        "Green Bay pressure"
       ],
       "publication_status": "editorial_draft_pending_final_roster_and_price_check"
     },
     {
-      "matchup": "Baltimore Ravens at Carolina Panthers",
-      "pick": "Baltimore Ravens +2.5",
-      "line": "-110",
+      "matchup": "Chicago Bears at Detroit Lions",
+      "pick": "Chicago Bears -2.5",
+      "line": "-105",
       "type": "spread",
       "confidence": 3,
-      "buzz_score": 3,
-      "analysis": "Baltimore +2.5 is a contrarian play on a team whose market perception has deteriorated. Carolina opened around a four-point underdog and is now favored by 2.5—roughly a 6.5-point swing. Lamar Jackson's ability to extend plays and Derrick Henry's downhill running are the clearest Baltimore routes to keeping the chains moving and controlling possession, assuming both are active and deployed normally. Carolina's home-field advantage and improved recent form explain the price, but Baltimore does not need to dominate to cover: it needs to stay within a field goal or win outright. The weak spot in this ticket is the number itself: +2.5 loses on a three-point Panthers victory, so +3 would be materially stronger. Check Jackson, Henry and defensive availability before kickoff; at +2.5 -110 this is a measured underdog opinion, not a premium edge.",
-      "home": "Carolina Panthers",
-      "away": "Baltimore Ravens",
-      "homeColor": "#0085CA",
-      "awayColor": "#241773",
+      "buzz_score": 4,
+      "analysis": "Caleb Williams and Jared Goff headline an NFC North Thanksgiving clash. Chicago can use Williams’ mobility to extend drives and challenge Detroit’s coverage, but Goff’s timing-based passing attack makes the Lions dangerous at home. The Bears need to finish possessions with touchdowns rather than settle for field goals. At -2.5, a three-point Chicago victory covers, and -105 requires a lower break-even rate than -110.",
+      "home": "Detroit Lions",
+      "away": "Chicago Bears",
+      "homeColor": "#0076B6",
+      "awayColor": "#0B162A",
       "current_context": {
         "key_news": [
-          "Week 11 public market movement documented Nov 17; MyBookie odds from user screenshot, not live quote."
+          "Thanksgiving week; User-provided MyBookie screenshots, November 24, 2026; static snapshot."
         ],
         "injuries": [
-          "Official final injury designations not yet verified."
+          "Final injury designations not independently verified for this update."
         ],
         "starter_status": [
-          "Verify named players are active and starting in the final game-day report."
+          "Confirm named quarterbacks before kickoff."
         ],
         "coaching_notes": [],
         "situational_edge": [
-          "+2.5 at -110 or better; prefer +3; pass if key injuries worsen."
+          "-2.5 at -105 or better"
         ]
       },
-      "playable_line": "+2.5 at -110 or better; prefer +3; pass if key injuries worsen.",
+      "playable_line": "-2.5 at -105 or better",
       "risks": [
-        "Not getting full +3",
-        "Injury uncertainty",
-        "Carolina home field"
+        "Detroit home offense",
+        "Defensive availability"
       ],
       "publication_status": "editorial_draft_pending_final_roster_and_price_check"
     },
     {
-      "matchup": "Pittsburgh Steelers at Philadelphia Eagles",
-      "pick": "Pittsburgh Steelers -4.5",
+      "matchup": "Kansas City Chiefs at Buffalo Bills",
+      "pick": "Over 47.5 points",
       "line": "-110",
-      "type": "spread",
-      "confidence": 3,
-      "buzz_score": 3,
-      "analysis": "Pittsburgh -4.5 is an unusually aggressive road-favorite position, and the line movement is the story: the Steelers reportedly opened around +6.5 and are now laying 4.5, an eleven-point reversal. That is not a routine adjustment. The football case is that Pittsburgh's defense can put Philadelphia into longer passing downs, shorten drives and hand its offense advantageous field position. Jalen Hurts' mobility is the major counter: if he escapes pressure and turns broken plays into explosives, a four-to-five-point favorite has little margin for error. Pittsburgh needs sustained drives and red-zone efficiency; simply winning by a field goal does not cash this spread. We are not claiming the move itself creates value—it may mean the best number has already disappeared. The published recommendation is tied strictly to -4.5 -110, with a fresh starter and injury check essential before the game.",
-      "home": "Philadelphia Eagles",
-      "away": "Pittsburgh Steelers",
-      "homeColor": "#004C54",
-      "awayColor": "#FFB612",
+      "type": "total",
+      "confidence": 4,
+      "buzz_score": 4,
+      "analysis": "Patrick Mahomes and Josh Allen headline the Thanksgiving night matchup. Both quarterbacks can extend plays beyond the initial design, creating opportunities for explosive gains and red-zone touchdowns. Kansas City scored 34 last week and Buffalo scored 26; those results are context, not a projection. A 27–21 finish clears 47.5, making the number more attractive than a total above 50. Wind, precipitation and stalled red-zone drives are the principal threats.",
+      "home": "Buffalo Bills",
+      "away": "Kansas City Chiefs",
+      "homeColor": "#00338D",
+      "awayColor": "#E31837",
       "current_context": {
         "key_news": [
-          "Week 11 public market movement documented Nov 17; MyBookie odds from user screenshot, not live quote."
+          "Thanksgiving week; User-provided MyBookie screenshots, November 24, 2026; static snapshot."
         ],
         "injuries": [
-          "Official final injury designations not yet verified."
+          "Final injury designations not independently verified for this update."
         ],
         "starter_status": [
-          "Verify named players are active and starting in the final game-day report."
+          "Confirm named quarterbacks before kickoff."
         ],
         "coaching_notes": [],
         "situational_edge": [
-          "-4.5 at -110 or better; reassess if -5 or worse."
+          "Over 47.5 at -110 or better"
         ]
       },
-      "playable_line": "-4.5 at -110 or better; reassess if -5 or worse.",
+      "playable_line": "Over 47.5 at -110 or better",
       "risks": [
-        "Road favorite",
-        "Price movement",
-        "Starting lineup status"
+        "Buffalo weather",
+        "Red-zone efficiency"
       ],
       "publication_status": "editorial_draft_pending_final_roster_and_price_check"
     }
   ],
   "watchlist": [],
   "review_required": [
-    "Confirm named players remain on their teams, active and expected to start before publication.",
-    "Check current MyBookie lines and recalculate both parlays; screenshots are not live prices.",
-    "Do not represent parlays as guaranteed wins or as verified positive-EV bets.",
-    "Verify site frontend renders the new top-level parlays array."
+    "Confirm starting quarterbacks, final injuries, Buffalo weather and current prices before publication."
   ],
   "sources": [
-    "User supplied MyBookie screenshots (Nov 18 2026)",
-    "https://www.rotowire.com/football/article/nfl-week-11-odds-biggest-line-moves-betting-splits-and-key-injuries-146888",
-    "https://www.foxsports.com/stories/nfl/2026-nfl-odds-week-11-lines-spreads-results-all-13-games",
-    "https://amp.nfl.com/injuries/",
-    "https://www.cbssports.com/nfl/news/priscos-week-11-nfl-picks-odds-expert-picks-predictions/"
+    "User-provided MyBookie screenshots, November 24, 2026; static snapshot.",
+    "https://www.nfl.com/schedules/2026/by-week/week-12",
+    "https://www.nfl.com/injuries/"
   ],
-  "buzz_note": "All five options are provisional and have not been independently shown to be positive expected value.",
-  "last_reviewed": "2026-11-18",
+  "buzz_note": "Editorial selections; positive expected value has not been established.",
+  "last_reviewed": "2026-11-24",
   "parlays": [
     {
       "id": "parlay_1",
-      "label": "Two-favorite moneyline parlay — Bears + Cowboys",
+      "label": "Holiday moneyline parlay — Cowboys + Broncos",
       "type": "parlay",
       "legs": [
         {
-          "matchup": "New Orleans Saints at Chicago Bears",
-          "pick": "Chicago Bears moneyline",
-          "line": "-752",
-          "analysis": "Bears to win outright at home after a bye. Caleb Williams and Chicago defense are the matchup anchors; monitor Tyler Shough, Chris Olave and late injury changes. A Saints upset loses the entire parlay."
+          "matchup": "Philadelphia Eagles at Dallas Cowboys",
+          "pick": "Dallas Cowboys moneyline",
+          "line": "-459",
+          "analysis": "Dak Prescott and Dallas scored 51 last week; the moneyline avoids needing a nine-point margin."
         },
         {
-          "matchup": "Tennessee Titans at Dallas Cowboys",
-          "pick": "Dallas Cowboys moneyline",
-          "line": "-439",
-          "analysis": "Cowboys to win outright against Tennessee. Dak Prescott and Dallas passing efficiency drive the case; the Cowboys defense and Titans explosive plays are the main upset routes. No need to cover the large spread."
+          "matchup": "Denver Broncos at Pittsburgh Steelers",
+          "pick": "Denver Broncos moneyline",
+          "line": "-162",
+          "analysis": "Bo Nix and Denver scored 38 last week; Pittsburgh’s defense makes the outright result preferable to laying three."
         }
       ],
-      "estimated_combined_american_odds": -256,
-      "confidence": 2,
-      "analysis": "This ticket combines two distinct game scripts rather than requiring either favorite to cover a large spread. Chicago hosts New Orleans after a bye, with Caleb Williams positioned to attack a Saints defense that must also respect his mobility. Chicago's defensive improvement gives it a plausible route to controlling possessions, while Saints quarterback Tyler Shough and receiver Chris Olave are the primary names to monitor for upset potential. Dallas hosts Tennessee in a game with a sharply rising total. Dak Prescott's passing attack can exploit opportunities, but the Cowboys' defense has been vulnerable enough that a Titans scoring surge is a genuine risk; that is why we prefer Dallas to win rather than laying 8.5 points. The two-leg payout is modest: roughly -256 from the screenshot's Bears -752 and Cowboys -439, and both teams must win. The pairing is relatively lower payout, not 'safe' or automatically good value. Verify Williams, Prescott, Shough and key offensive-line availability, and recalculate the combined price at bet time.",
+      "estimated_combined_american_odds": -103,
+      "confidence": 3,
+      "analysis": "Two separate holiday games, with no spread to cover. Denver’s road matchup is the more demanding leg; Dallas still faces divisional upset risk.",
       "publication_status": "editorial_draft_pending_final_roster_and_price_check",
       "risk_note": "Two legs must both win. Parlay pricing is not evidence of positive expected value.",
-      "odds_source": "User-supplied MyBookie screenshot, November 18 2026; not live or guaranteed executable."
+      "odds_source": "User-provided MyBookie screenshots, November 24, 2026; static snapshot."
     },
     {
       "id": "parlay_2",
-      "label": "Two-favorite moneyline parlay — Jaguars + Lions",
+      "label": "Sunday moneyline parlay — Giants + Jets",
       "type": "parlay",
       "legs": [
         {
-          "matchup": "Jacksonville Jaguars at New York Giants",
-          "pick": "Jacksonville Jaguars moneyline",
-          "line": "-272",
-          "analysis": "Jacksonville outright at the Giants. Trevor Lawrence must limit turnovers and turn scoring chances into touchdowns; New York can threaten through field position and defensive pressure."
+          "matchup": "New York Giants at Indianapolis Colts",
+          "pick": "New York Giants moneyline",
+          "line": "-310",
+          "analysis": "New York beat Jacksonville 23–18 last week; Indianapolis scored three against Houston."
         },
         {
-          "matchup": "Tampa Bay Buccaneers at Detroit Lions",
-          "pick": "Detroit Lions moneyline",
-          "line": "-330",
-          "analysis": "Detroit outright at home versus Tampa Bay. Jared Goff and the Lions offense provide the base case; Buccaneers pressure, turnovers and explosive scoring are the main risks."
+          "matchup": "New York Jets at Miami Dolphins",
+          "pick": "New York Jets moneyline",
+          "line": "-210",
+          "analysis": "The Jets beat the Chargers 27–24 last week; Miami scored nine against Buffalo."
         }
       ],
-      "estimated_combined_american_odds": -128,
-      "confidence": 2,
-      "analysis": "Jacksonville and Detroit form the higher-paying alternative because neither leg is priced as prohibitively short as Chicago. The Jaguars travel to face a Giants team that has been competitive enough to demand respect; Trevor Lawrence's ability to protect the ball and finish drives is the swing factor for Jacksonville. The Giants can keep this close if their offense avoids negative plays and wins field position, so this is not a free square. Detroit hosts Tampa Bay with Jared Goff and the Lions' structured passing game facing a Buccaneers team capable of making games uncomfortable through pressure and explosive plays. Detroit's home environment and offensive efficiency support the moneyline case, but Tampa's ability to create turnovers is the upset path. Combining Jaguars -272 and Lions -330 from the supplied screenshot yields approximately -128. Both must win; a single upset voids the entire return. Check Lawrence, Goff, offensive-line availability and the live price before publication.",
+      "estimated_combined_american_odds": -105,
+      "confidence": 3,
+      "analysis": "Both selections avoid spread margins, but both favorites are on the road. Divisional volatility in Miami and Indianapolis’ ability to rebound are the main risks.",
       "publication_status": "editorial_draft_pending_final_roster_and_price_check",
       "risk_note": "Two legs must both win. Parlay pricing is not evidence of positive expected value.",
-      "odds_source": "User-supplied MyBookie screenshot, November 18 2026; not live or guaranteed executable."
+      "odds_source": "User-provided MyBookie screenshots, November 24, 2026; static snapshot."
     }
   ]
 }
