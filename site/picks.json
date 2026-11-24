@@ -1,174 +1,632 @@
-{
-  "generated": "2026-11-24",
-  "week": "Week 12 — 2026 NFL Season",
-  "status": "week_12_editorial_draft_three_straights_two_two_leg_parlays",
-  "source_lines": "User-provided MyBookie screenshots, November 24, 2026; static snapshot.",
-  "methodology": "Three straight selections and two independent two-leg moneyline parlays. Confidence is editorial, not calibrated probability.",
-  "picks": [
-    {
-      "matchup": "Green Bay Packers at Los Angeles Rams",
-      "pick": "Los Angeles Rams -2",
-      "line": "-110",
-      "type": "spread",
-      "confidence": 4,
-      "buzz_score": 4,
-      "analysis": "Matthew Stafford and the Rams host Green Bay on Thanksgiving Eve. The key matchup is protection against the Packers pass rush: Stafford needs clean pockets to attack intermediate windows, while Green Bay can disrupt that rhythm with pressure. At -2, Los Angeles covers with a field-goal win; -3 would turn that same result into a push. The home setting and favorable spread are the appeal, but offensive-line availability is crucial.",
-      "home": "Los Angeles Rams",
-      "away": "Green Bay Packers",
-      "homeColor": "#003594",
-      "awayColor": "#203731",
-      "current_context": {
-        "key_news": [
-          "Thanksgiving week; User-provided MyBookie screenshots, November 24, 2026; static snapshot."
-        ],
-        "injuries": [
-          "Final injury designations not independently verified for this update."
-        ],
-        "starter_status": [
-          "Confirm named quarterbacks before kickoff."
-        ],
-        "coaching_notes": [],
-        "situational_edge": [
-          "-2 at -110 or better"
+[
+  {
+    "id": "09d28240-fedc-5650-82ef-fb7cfa2a8754",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-26T01:00:00Z",
+    "home_team": "Los Angeles Rams",
+    "away_team": "Green Bay Packers",
+    "bookmakers": [
+      {
+        "key": "mybookieag",
+        "title": "MyBookie.ag",
+        "last_update": null,
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Green Bay Packers",
+                "price": 115
+              },
+              {
+                "name": "Los Angeles Rams",
+                "price": -140
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Green Bay Packers",
+                "price": -110,
+                "point": 2
+              },
+              {
+                "name": "Los Angeles Rams",
+                "price": -110,
+                "point": -2
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 44
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 44
+              }
+            ]
+          }
         ]
-      },
-      "playable_line": "-2 at -110 or better",
-      "risks": [
-        "Pass protection",
-        "Green Bay pressure"
-      ],
-      "publication_status": "editorial_draft_pending_final_roster_and_price_check"
-    },
-    {
-      "matchup": "Chicago Bears at Detroit Lions",
-      "pick": "Chicago Bears -2.5",
-      "line": "-105",
-      "type": "spread",
-      "confidence": 3,
-      "buzz_score": 4,
-      "analysis": "Caleb Williams and Jared Goff headline an NFC North Thanksgiving clash. Chicago can use Williams’ mobility to extend drives and challenge Detroit’s coverage, but Goff’s timing-based passing attack makes the Lions dangerous at home. The Bears need to finish possessions with touchdowns rather than settle for field goals. At -2.5, a three-point Chicago victory covers, and -105 requires a lower break-even rate than -110.",
-      "home": "Detroit Lions",
-      "away": "Chicago Bears",
-      "homeColor": "#0076B6",
-      "awayColor": "#0B162A",
-      "current_context": {
-        "key_news": [
-          "Thanksgiving week; User-provided MyBookie screenshots, November 24, 2026; static snapshot."
-        ],
-        "injuries": [
-          "Final injury designations not independently verified for this update."
-        ],
-        "starter_status": [
-          "Confirm named quarterbacks before kickoff."
-        ],
-        "coaching_notes": [],
-        "situational_edge": [
-          "-2.5 at -105 or better"
+      }
+    ]
+  },
+  {
+    "id": "0d0dc66c-b788-520a-802c-0413282478b1",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-26T18:00:00Z",
+    "home_team": "Detroit Lions",
+    "away_team": "Chicago Bears",
+    "bookmakers": [
+      {
+        "key": "mybookieag",
+        "title": "MyBookie.ag",
+        "last_update": null,
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Chicago Bears",
+                "price": -141
+              },
+              {
+                "name": "Detroit Lions",
+                "price": 115
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Chicago Bears",
+                "price": -105,
+                "point": -2.5
+              },
+              {
+                "name": "Detroit Lions",
+                "price": -115,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 55
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 55
+              }
+            ]
+          }
         ]
-      },
-      "playable_line": "-2.5 at -105 or better",
-      "risks": [
-        "Detroit home offense",
-        "Defensive availability"
-      ],
-      "publication_status": "editorial_draft_pending_final_roster_and_price_check"
-    },
-    {
-      "matchup": "Kansas City Chiefs at Buffalo Bills",
-      "pick": "Over 47.5 points",
-      "line": "-110",
-      "type": "total",
-      "confidence": 4,
-      "buzz_score": 4,
-      "analysis": "Patrick Mahomes and Josh Allen headline the Thanksgiving night matchup. Both quarterbacks can extend plays beyond the initial design, creating opportunities for explosive gains and red-zone touchdowns. Kansas City scored 34 last week and Buffalo scored 26; those results are context, not a projection. A 27–21 finish clears 47.5, making the number more attractive than a total above 50. Wind, precipitation and stalled red-zone drives are the principal threats.",
-      "home": "Buffalo Bills",
-      "away": "Kansas City Chiefs",
-      "homeColor": "#00338D",
-      "awayColor": "#E31837",
-      "current_context": {
-        "key_news": [
-          "Thanksgiving week; User-provided MyBookie screenshots, November 24, 2026; static snapshot."
-        ],
-        "injuries": [
-          "Final injury designations not independently verified for this update."
-        ],
-        "starter_status": [
-          "Confirm named quarterbacks before kickoff."
-        ],
-        "coaching_notes": [],
-        "situational_edge": [
-          "Over 47.5 at -110 or better"
+      }
+    ]
+  },
+  {
+    "id": "b1ef5047-9df7-5a37-ad8a-b65956e35d46",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-26T21:30:00Z",
+    "home_team": "Dallas Cowboys",
+    "away_team": "Philadelphia Eagles",
+    "bookmakers": [
+      {
+        "key": "mybookieag",
+        "title": "MyBookie.ag",
+        "last_update": null,
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Philadelphia Eagles",
+                "price": 345
+              },
+              {
+                "name": "Dallas Cowboys",
+                "price": -459
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Philadelphia Eagles",
+                "price": -110,
+                "point": 9
+              },
+              {
+                "name": "Dallas Cowboys",
+                "price": -110,
+                "point": -9
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 48
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 48
+              }
+            ]
+          }
         ]
-      },
-      "playable_line": "Over 47.5 at -110 or better",
-      "risks": [
-        "Buffalo weather",
-        "Red-zone efficiency"
-      ],
-      "publication_status": "editorial_draft_pending_final_roster_and_price_check"
-    }
-  ],
-  "watchlist": [],
-  "review_required": [
-    "Confirm starting quarterbacks, final injuries, Buffalo weather and current prices before publication."
-  ],
-  "sources": [
-    "User-provided MyBookie screenshots, November 24, 2026; static snapshot.",
-    "https://www.nfl.com/schedules/2026/by-week/week-12",
-    "https://www.nfl.com/injuries/"
-  ],
-  "buzz_note": "Editorial selections; positive expected value has not been established.",
-  "last_reviewed": "2026-11-24",
-  "parlays": [
-    {
-      "id": "parlay_1",
-      "label": "Holiday moneyline parlay — Cowboys + Broncos",
-      "type": "parlay",
-      "legs": [
-        {
-          "matchup": "Philadelphia Eagles at Dallas Cowboys",
-          "pick": "Dallas Cowboys moneyline",
-          "line": "-459",
-          "analysis": "Dak Prescott and Dallas scored 51 last week; the moneyline avoids needing a nine-point margin."
-        },
-        {
-          "matchup": "Denver Broncos at Pittsburgh Steelers",
-          "pick": "Denver Broncos moneyline",
-          "line": "-162",
-          "analysis": "Bo Nix and Denver scored 38 last week; Pittsburgh’s defense makes the outright result preferable to laying three."
-        }
-      ],
-      "estimated_combined_american_odds": -103,
-      "confidence": 3,
-      "analysis": "Two separate holiday games, with no spread to cover. Denver’s road matchup is the more demanding leg; Dallas still faces divisional upset risk.",
-      "publication_status": "editorial_draft_pending_final_roster_and_price_check",
-      "risk_note": "Two legs must both win. Parlay pricing is not evidence of positive expected value.",
-      "odds_source": "User-provided MyBookie screenshots, November 24, 2026; static snapshot."
-    },
-    {
-      "id": "parlay_2",
-      "label": "Sunday moneyline parlay — Giants + Jets",
-      "type": "parlay",
-      "legs": [
-        {
-          "matchup": "New York Giants at Indianapolis Colts",
-          "pick": "New York Giants moneyline",
-          "line": "-310",
-          "analysis": "New York beat Jacksonville 23–18 last week; Indianapolis scored three against Houston."
-        },
-        {
-          "matchup": "New York Jets at Miami Dolphins",
-          "pick": "New York Jets moneyline",
-          "line": "-210",
-          "analysis": "The Jets beat the Chargers 27–24 last week; Miami scored nine against Buffalo."
-        }
-      ],
-      "estimated_combined_american_odds": -105,
-      "confidence": 3,
-      "analysis": "Both selections avoid spread margins, but both favorites are on the road. Divisional volatility in Miami and Indianapolis’ ability to rebound are the main risks.",
-      "publication_status": "editorial_draft_pending_final_roster_and_price_check",
-      "risk_note": "Two legs must both win. Parlay pricing is not evidence of positive expected value.",
-      "odds_source": "User-provided MyBookie screenshots, November 24, 2026; static snapshot."
-    }
-  ]
-}
+      }
+    ]
+  },
+  {
+    "id": "8f28e737-cc07-5334-9553-1af26bd1ae63",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-27T01:20:00Z",
+    "home_team": "Buffalo Bills",
+    "away_team": "Kansas City Chiefs",
+    "bookmakers": [
+      {
+        "key": "mybookieag",
+        "title": "MyBookie.ag",
+        "last_update": null,
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Kansas City Chiefs",
+                "price": 124
+              },
+              {
+                "name": "Buffalo Bills",
+                "price": -153
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Kansas City Chiefs",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Buffalo Bills",
+                "price": -120,
+                "point": -2.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 47.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 47.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4050d044-2867-51a7-b0af-0cb15ea5a17d",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-27T20:00:00Z",
+    "home_team": "Pittsburgh Steelers",
+    "away_team": "Denver Broncos",
+    "bookmakers": [
+      {
+        "key": "mybookieag",
+        "title": "MyBookie.ag",
+        "last_update": null,
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Denver Broncos",
+                "price": -162
+              },
+              {
+                "name": "Pittsburgh Steelers",
+                "price": 132
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Denver Broncos",
+                "price": 100,
+                "point": -3
+              },
+              {
+                "name": "Pittsburgh Steelers",
+                "price": -120,
+                "point": 3
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 37.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 37.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "8e7e576a-1c84-545c-8abe-e5b11f661eda",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-29T18:00:00Z",
+    "home_team": "Indianapolis Colts",
+    "away_team": "New York Giants",
+    "bookmakers": [
+      {
+        "key": "mybookieag",
+        "title": "MyBookie.ag",
+        "last_update": null,
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "New York Giants",
+                "price": -310
+              },
+              {
+                "name": "Indianapolis Colts",
+                "price": 240
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "New York Giants",
+                "price": -110,
+                "point": -6.5
+              },
+              {
+                "name": "Indianapolis Colts",
+                "price": -110,
+                "point": 6.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 41.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 41.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "202b1b84-c7b9-5a6b-a3a8-b3f8abee36ff",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-29T18:00:00Z",
+    "home_team": "Cincinnati Bengals",
+    "away_team": "New Orleans Saints",
+    "bookmakers": [
+      {
+        "key": "mybookieag",
+        "title": "MyBookie.ag",
+        "last_update": null,
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "New Orleans Saints",
+                "price": 398
+              },
+              {
+                "name": "Cincinnati Bengals",
+                "price": -566
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "New Orleans Saints",
+                "price": -110,
+                "point": 10
+              },
+              {
+                "name": "Cincinnati Bengals",
+                "price": -110,
+                "point": -10
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 50.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 50.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "8678d948-9b32-5563-9cc6-456f30e58fb4",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-29T18:00:00Z",
+    "home_team": "Jacksonville Jaguars",
+    "away_team": "Tennessee Titans",
+    "bookmakers": [
+      {
+        "key": "mybookieag",
+        "title": "MyBookie.ag",
+        "last_update": null,
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Tennessee Titans",
+                "price": 710
+              },
+              {
+                "name": "Jacksonville Jaguars",
+                "price": -1299
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Tennessee Titans",
+                "price": -110,
+                "point": 15
+              },
+              {
+                "name": "Jacksonville Jaguars",
+                "price": -110,
+                "point": -15
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 48
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 48
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "d56a3cbd-f6a5-5914-a3ce-b7cde90a4489",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-29T18:00:00Z",
+    "home_team": "Minnesota Vikings",
+    "away_team": "Atlanta Falcons",
+    "bookmakers": [
+      {
+        "key": "mybookieag",
+        "title": "MyBookie.ag",
+        "last_update": null,
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Atlanta Falcons",
+                "price": 250
+              },
+              {
+                "name": "Minnesota Vikings",
+                "price": -319
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Atlanta Falcons",
+                "price": -120,
+                "point": 7
+              },
+              {
+                "name": "Minnesota Vikings",
+                "price": 100,
+                "point": -7
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 42.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 42.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "305e3fce-bb73-5c0b-beec-e20d215c4beb",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-29T18:00:00Z",
+    "home_team": "Miami Dolphins",
+    "away_team": "New York Jets",
+    "bookmakers": [
+      {
+        "key": "mybookieag",
+        "title": "MyBookie.ag",
+        "last_update": null,
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "New York Jets",
+                "price": -210
+              },
+              {
+                "name": "Miami Dolphins",
+                "price": 168
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "New York Jets",
+                "price": -110,
+                "point": -3.5
+              },
+              {
+                "name": "Miami Dolphins",
+                "price": -110,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": null,
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 41
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 41
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
