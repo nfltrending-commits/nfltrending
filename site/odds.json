@@ -18,11 +18,11 @@
             "outcomes": [
               {
                 "name": "Green Bay Packers",
-                "price": 115
+                "price": 121
               },
               {
                 "name": "Los Angeles Rams",
-                "price": -140
+                "price": -142
               }
             ]
           },
@@ -33,12 +33,12 @@
               {
                 "name": "Green Bay Packers",
                 "price": -110,
-                "point": 2
+                "point": 2.5
               },
               {
                 "name": "Los Angeles Rams",
                 "price": -110,
-                "point": -2
+                "point": -2.5
               }
             ]
           },
@@ -49,12 +49,12 @@
               {
                 "name": "Over",
                 "price": -110,
-                "point": 44
+                "point": 43.5
               },
               {
                 "name": "Under",
                 "price": -110,
-                "point": 44
+                "point": 43.5
               }
             ]
           }
@@ -81,11 +81,11 @@
             "outcomes": [
               {
                 "name": "Chicago Bears",
-                "price": -141
+                "price": -123
               },
               {
                 "name": "Detroit Lions",
-                "price": 115
+                "price": 100
               }
             ]
           },
@@ -95,13 +95,13 @@
             "outcomes": [
               {
                 "name": "Chicago Bears",
-                "price": -105,
-                "point": -2.5
+                "price": -110,
+                "point": -1
               },
               {
                 "name": "Detroit Lions",
-                "price": -115,
-                "point": 2.5
+                "price": -110,
+                "point": 1
               }
             ]
           },
@@ -112,12 +112,12 @@
               {
                 "name": "Over",
                 "price": -110,
-                "point": 55
+                "point": 55.5
               },
               {
                 "name": "Under",
                 "price": -110,
-                "point": 55
+                "point": 55.5
               }
             ]
           }
@@ -207,7 +207,7 @@
             "outcomes": [
               {
                 "name": "Kansas City Chiefs",
-                "price": 124
+                "price": 125
               },
               {
                 "name": "Buffalo Bills",
@@ -238,12 +238,12 @@
               {
                 "name": "Over",
                 "price": -110,
-                "point": 47.5
+                "point": 46.5
               },
               {
                 "name": "Under",
                 "price": -110,
-                "point": 47.5
+                "point": 46.5
               }
             ]
           }
@@ -270,11 +270,11 @@
             "outcomes": [
               {
                 "name": "Denver Broncos",
-                "price": -162
+                "price": -200
               },
               {
                 "name": "Pittsburgh Steelers",
-                "price": 132
+                "price": 161
               }
             ]
           },
@@ -284,13 +284,13 @@
             "outcomes": [
               {
                 "name": "Denver Broncos",
-                "price": 100,
-                "point": -3
+                "price": -110,
+                "point": -3.5
               },
               {
                 "name": "Pittsburgh Steelers",
-                "price": -120,
-                "point": 3
+                "price": -110,
+                "point": 3.5
               }
             ]
           },
@@ -301,12 +301,12 @@
               {
                 "name": "Over",
                 "price": -110,
-                "point": 37.5
+                "point": 36.5
               },
               {
                 "name": "Under",
                 "price": -110,
-                "point": 37.5
+                "point": 36.5
               }
             ]
           }
@@ -333,11 +333,11 @@
             "outcomes": [
               {
                 "name": "New York Giants",
-                "price": -310
+                "price": -290
               },
               {
                 "name": "Indianapolis Colts",
-                "price": 240
+                "price": 226
               }
             ]
           },
@@ -348,12 +348,12 @@
               {
                 "name": "New York Giants",
                 "price": -110,
-                "point": -6.5
+                "point": -6
               },
               {
                 "name": "Indianapolis Colts",
                 "price": -110,
-                "point": 6.5
+                "point": 6
               }
             ]
           },
@@ -427,12 +427,12 @@
               {
                 "name": "Over",
                 "price": -110,
-                "point": 50.5
+                "point": 49.5
               },
               {
                 "name": "Under",
                 "price": -110,
-                "point": 50.5
+                "point": 49.5
               }
             ]
           }
@@ -459,7 +459,7 @@
             "outcomes": [
               {
                 "name": "Tennessee Titans",
-                "price": 710
+                "price": 730
               },
               {
                 "name": "Jacksonville Jaguars",
@@ -474,12 +474,12 @@
               {
                 "name": "Tennessee Titans",
                 "price": -110,
-                "point": 15
+                "point": 14.5
               },
               {
                 "name": "Jacksonville Jaguars",
                 "price": -110,
-                "point": -15
+                "point": -14.5
               }
             ]
           },
@@ -526,7 +526,7 @@
               },
               {
                 "name": "Minnesota Vikings",
-                "price": -319
+                "price": -330
               }
             ]
           },
@@ -553,12 +553,12 @@
               {
                 "name": "Over",
                 "price": -110,
-                "point": 42.5
+                "point": 41.5
               },
               {
                 "name": "Under",
                 "price": -110,
-                "point": 42.5
+                "point": 41.5
               }
             ]
           }
@@ -585,11 +585,11 @@
             "outcomes": [
               {
                 "name": "New York Jets",
-                "price": -210
+                "price": -208
               },
               {
                 "name": "Miami Dolphins",
-                "price": 168
+                "price": 166
               }
             ]
           },
@@ -616,12 +616,12 @@
               {
                 "name": "Over",
                 "price": -110,
-                "point": 41
+                "point": 40.5
               },
               {
                 "name": "Under",
                 "price": -110,
-                "point": 41
+                "point": 40.5
               }
             ]
           }
