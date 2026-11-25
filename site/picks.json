@@ -1,124 +1,124 @@
 {
-  "generated": "2026-11-24",
+  "generated": "2026-11-25",
   "week": "Week 12 — 2026 NFL Season",
   "status": "week_12_editorial_draft_three_straights_two_two_leg_parlays",
-  "source_lines": "User-provided MyBookie screenshots, November 24, 2026; static snapshot.",
+  "source_lines": "User-provided MyBookie screenshots, November 25, 2026; static snapshot.",
   "methodology": "Three straight selections and two independent two-leg moneyline parlays. Confidence is editorial, not calibrated probability.",
   "picks": [
     {
       "matchup": "Green Bay Packers at Los Angeles Rams",
-      "pick": "Los Angeles Rams -2",
+      "pick": "Los Angeles Rams -2.5",
       "line": "-110",
       "type": "spread",
-      "confidence": 4,
+      "confidence": 3,
       "buzz_score": 4,
-      "analysis": "Matthew Stafford and the Rams host Green Bay on Thanksgiving Eve. The key matchup is protection against the Packers pass rush: Stafford needs clean pockets to attack intermediate windows, while Green Bay can disrupt that rhythm with pressure. At -2, Los Angeles covers with a field-goal win; -3 would turn that same result into a push. The home setting and favorable spread are the appeal, but offensive-line availability is crucial.",
+      "analysis": "Matthew Stafford faces a Green Bay team whose Jordan Love ranks third in passing yards entering Week 12. Myles Garrett offers Los Angeles a potential pressure advantage, but Steve Avila and Coleman Shelton are out, making protection a major concern. Both clubs are 6-4. A field-goal Rams victory covers -2.5; the injury uncertainty limits confidence.",
       "home": "Los Angeles Rams",
       "away": "Green Bay Packers",
       "homeColor": "#003594",
       "awayColor": "#203731",
       "current_context": {
         "key_news": [
-          "Thanksgiving week; User-provided MyBookie screenshots, November 24, 2026; static snapshot."
+          "User-provided MyBookie screenshots, November 25, 2026; static snapshot."
         ],
         "injuries": [
-          "Final injury designations not independently verified for this update."
+          "Avila and Shelton out; Micah Parsons listed questionable in NFL injury report."
         ],
         "starter_status": [
-          "Confirm named quarterbacks before kickoff."
+          "Confirm final starters before kickoff."
         ],
         "coaching_notes": [],
         "situational_edge": [
-          "-2 at -110 or better"
+          "-2.5 at -110 or better"
         ]
       },
-      "playable_line": "-2 at -110 or better",
+      "playable_line": "-2.5 at -110 or better",
       "risks": [
-        "Pass protection",
-        "Green Bay pressure"
+        "Injury uncertainty",
+        "Price and matchup risk"
       ],
       "publication_status": "editorial_draft_pending_final_roster_and_price_check"
     },
     {
       "matchup": "Chicago Bears at Detroit Lions",
-      "pick": "Chicago Bears -2.5",
-      "line": "-105",
+      "pick": "Chicago Bears -1",
+      "line": "-110",
       "type": "spread",
-      "confidence": 3,
+      "confidence": 4,
       "buzz_score": 4,
-      "analysis": "Caleb Williams and Jared Goff headline an NFC North Thanksgiving clash. Chicago can use Williams’ mobility to extend drives and challenge Detroit’s coverage, but Goff’s timing-based passing attack makes the Lions dangerous at home. The Bears need to finish possessions with touchdowns rather than settle for field goals. At -2.5, a three-point Chicago victory covers, and -105 requires a lower break-even rate than -110.",
+      "analysis": "Chicago and Detroit enter 8-2, with five and six consecutive wins respectively. Caleb Williams has thrown multiple touchdown passes in each of his four starts against Detroit. His mobility offers a way to extend drives, but Jared Goff has a strong Thanksgiving record and Jahmyr Gibbs is a major threat. At -1, any Chicago victory by two or more covers.",
       "home": "Detroit Lions",
       "away": "Chicago Bears",
       "homeColor": "#0076B6",
       "awayColor": "#0B162A",
       "current_context": {
         "key_news": [
-          "Thanksgiving week; User-provided MyBookie screenshots, November 24, 2026; static snapshot."
+          "User-provided MyBookie screenshots, November 25, 2026; static snapshot."
         ],
         "injuries": [
-          "Final injury designations not independently verified for this update."
+          "Final Thanksgiving injury designations require confirmation."
         ],
         "starter_status": [
-          "Confirm named quarterbacks before kickoff."
+          "Confirm final starters before kickoff."
         ],
         "coaching_notes": [],
         "situational_edge": [
-          "-2.5 at -105 or better"
+          "-1 at -110 or better"
         ]
       },
-      "playable_line": "-2.5 at -105 or better",
+      "playable_line": "-1 at -110 or better",
       "risks": [
-        "Detroit home offense",
-        "Defensive availability"
+        "Injury uncertainty",
+        "Price and matchup risk"
       ],
       "publication_status": "editorial_draft_pending_final_roster_and_price_check"
     },
     {
-      "matchup": "Kansas City Chiefs at Buffalo Bills",
-      "pick": "Over 47.5 points",
-      "line": "-110",
-      "type": "total",
-      "confidence": 4,
-      "buzz_score": 4,
-      "analysis": "Patrick Mahomes and Josh Allen headline the Thanksgiving night matchup. Both quarterbacks can extend plays beyond the initial design, creating opportunities for explosive gains and red-zone touchdowns. Kansas City scored 34 last week and Buffalo scored 26; those results are context, not a projection. A 27–21 finish clears 47.5, making the number more attractive than a total above 50. Wind, precipitation and stalled red-zone drives are the principal threats.",
-      "home": "Buffalo Bills",
-      "away": "Kansas City Chiefs",
-      "homeColor": "#00338D",
-      "awayColor": "#E31837",
+      "matchup": "Atlanta Falcons at Minnesota Vikings",
+      "pick": "Atlanta Falcons +7",
+      "line": "-120",
+      "type": "spread",
+      "confidence": 3,
+      "buzz_score": 3,
+      "analysis": "Minnesota scored only 10 points against San Francisco last week. Atlanta can use Bijan Robinson to sustain possessions and reduce the number of opportunities for Minnesota to build a large lead. The full touchdown provides a push on a seven-point loss, but Atlanta enters 3-7 and has lost five of its last six. The -120 price and Sunday availability uncertainty make this a measured lean.",
+      "home": "Minnesota Vikings",
+      "away": "Atlanta Falcons",
+      "homeColor": "#4F2683",
+      "awayColor": "#A71930",
       "current_context": {
         "key_news": [
-          "Thanksgiving week; User-provided MyBookie screenshots, November 24, 2026; static snapshot."
+          "User-provided MyBookie screenshots, November 25, 2026; static snapshot."
         ],
         "injuries": [
-          "Final injury designations not independently verified for this update."
+          "Sunday final injury reports pending."
         ],
         "starter_status": [
-          "Confirm named quarterbacks before kickoff."
+          "Confirm final starters before kickoff."
         ],
         "coaching_notes": [],
         "situational_edge": [
-          "Over 47.5 at -110 or better"
+          "+7 at -120 or better"
         ]
       },
-      "playable_line": "Over 47.5 at -110 or better",
+      "playable_line": "+7 at -120 or better",
       "risks": [
-        "Buffalo weather",
-        "Red-zone efficiency"
+        "Injury uncertainty",
+        "Price and matchup risk"
       ],
       "publication_status": "editorial_draft_pending_final_roster_and_price_check"
     }
   ],
   "watchlist": [],
   "review_required": [
-    "Confirm starting quarterbacks, final injuries, Buffalo weather and current prices before publication."
+    "Confirm final starters, injuries and current prices before kickoff; Sunday injury reports remain incomplete."
   ],
   "sources": [
-    "User-provided MyBookie screenshots, November 24, 2026; static snapshot.",
-    "https://www.nfl.com/schedules/2026/by-week/week-12",
-    "https://www.nfl.com/injuries/"
+    "User-provided MyBookie screenshots, November 25, 2026; static snapshot.",
+    "https://www.nfl.com/news/nfl-week-12-injury-report-2026-season",
+    "https://media.nfl.com/content/dam/communications/football-communications/2026/weekly-preview/11%2024%2026%20Week%2012%20NFL%20Preview.pdf"
   ],
   "buzz_note": "Editorial selections; positive expected value has not been established.",
-  "last_reviewed": "2026-11-24",
+  "last_reviewed": "2026-11-25",
   "parlays": [
     {
       "id": "parlay_1",
@@ -134,16 +134,16 @@
         {
           "matchup": "Denver Broncos at Pittsburgh Steelers",
           "pick": "Denver Broncos moneyline",
-          "line": "-162",
-          "analysis": "Bo Nix and Denver scored 38 last week; Pittsburgh’s defense makes the outright result preferable to laying three."
+          "line": "-200",
+          "analysis": "Bo Nix and Denver face Pittsburgh on the road; the moneyline avoids laying 3.5, but the price has risen to -200."
         }
       ],
-      "estimated_combined_american_odds": -103,
+      "estimated_combined_american_odds": -121,
       "confidence": 3,
       "analysis": "Two separate holiday games, with no spread to cover. Denver’s road matchup is the more demanding leg; Dallas still faces divisional upset risk.",
       "publication_status": "editorial_draft_pending_final_roster_and_price_check",
       "risk_note": "Two legs must both win. Parlay pricing is not evidence of positive expected value.",
-      "odds_source": "User-provided MyBookie screenshots, November 24, 2026; static snapshot."
+      "odds_source": "User-provided MyBookie screenshots, November 25, 2026; static snapshot."
     },
     {
       "id": "parlay_2",
@@ -153,22 +153,22 @@
         {
           "matchup": "New York Giants at Indianapolis Colts",
           "pick": "New York Giants moneyline",
-          "line": "-310",
+          "line": "-290",
           "analysis": "New York beat Jacksonville 23–18 last week; Indianapolis scored three against Houston."
         },
         {
           "matchup": "New York Jets at Miami Dolphins",
           "pick": "New York Jets moneyline",
-          "line": "-210",
+          "line": "-208",
           "analysis": "The Jets beat the Chargers 27–24 last week; Miami scored nine against Buffalo."
         }
       ],
-      "estimated_combined_american_odds": -105,
+      "estimated_combined_american_odds": -101,
       "confidence": 3,
       "analysis": "Both selections avoid spread margins, but both favorites are on the road. Divisional volatility in Miami and Indianapolis’ ability to rebound are the main risks.",
       "publication_status": "editorial_draft_pending_final_roster_and_price_check",
       "risk_note": "Two legs must both win. Parlay pricing is not evidence of positive expected value.",
-      "odds_source": "User-provided MyBookie screenshots, November 24, 2026; static snapshot."
+      "odds_source": "User-provided MyBookie screenshots, November 25, 2026; static snapshot."
     }
   ]
 }
